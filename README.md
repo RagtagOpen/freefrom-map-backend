@@ -23,7 +23,7 @@ This should return something like `Python 3.7.3`.
 We use virtualenv to ensure that every developer is using the same dependency versions.
 
 ```
-pip install --user virtualenv
+pip3 install --user virtualenv
 ```
 
 ### Install Postgres
@@ -51,15 +51,18 @@ cp .env.template .env
 ### Start the virtualenv (aka venv)
 
 ```
+python3 -m venv env
 source env/bin/activate
 ```
 
 Now, when you run `which python`, you should get something like: `/path/to/your/repo/env/bin/python`. You can deactivate the venv at any time by running `deactivate`.
 
+You only have to run `python3 -m venv env` once, but you should run `source env/bin/activate` every time you work on this repository.
+
 ### Install the requirements
 
 ```
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Running the application
@@ -67,7 +70,7 @@ pip install -r requirements.txt
 Run the application with the following command:
 
 ```
-python manage.py runserver
+python3 manage.py runserver
 ```
 
 Then, in your browser, navigate to `localhost:5000/`. You should see the message "Hello world!" on your screen.
