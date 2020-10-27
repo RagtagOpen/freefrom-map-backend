@@ -18,14 +18,6 @@ python3 --version
 
 This should return something like `Python 3.7.3`.
 
-### Install virtualenv
-
-We use virtualenv to ensure that every developer is using the same dependency versions.
-
-```
-pip3 install --user virtualenv
-```
-
 ### Install Postgres
 
 Install and run a PostgreSQL on your computer.
@@ -48,7 +40,9 @@ cp .env.template .env
 
 `.env` is included in the `.gitignore` for this repo and won't be included when you commit your changes.
 
-### Start the virtualenv (aka venv)
+### Start the virtual environment (aka venv)
+
+We use [venv](https://docs.python.org/3/library/venv.html) to ensure that every developer is using the same dependency versions.
 
 ```
 python3 -m venv env
