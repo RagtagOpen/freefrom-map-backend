@@ -68,3 +68,11 @@ python3 manage.py runserver
 ```
 
 Then, in your browser, navigate to `localhost:5000/`. You should see the message "Hello world!" on your screen.
+
+## Running tests
+
+Run tests with the following command:
+
+```
+python3 -m unittest
+```
