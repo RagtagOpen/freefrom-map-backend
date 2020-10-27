@@ -1,0 +1,10 @@
+# https://circleci.com/developer/orbs/orb/circleci/python#quick-start
+version: 2.1
+
+orbs:
+  python: circleci/python@1.2.1
+
+workflows:
+  main:
+    jobs:
+      - python/test
