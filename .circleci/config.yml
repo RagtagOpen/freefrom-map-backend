@@ -1,10 +1,28 @@
-# https://circleci.com/developer/orbs/orb/circleci/python#quick-start
 version: 2.1
 
-orbs:
-  python: circleci/python@1.2.1
-
+jobs:
+  test:
+    docker:
+      - image: circleci/python:3.7.3
+        environment:
+          APP_SETTINGS: config.DevelopmentConfig
+          DATABASE_URL: postgresql://127.0.0.1/freefrom_map_dev
+          PGHOST: 127.0.0.1
+          PGUSER: freefrom_map_user
+      - image: circleci/postgres:11.4
+        environment:
+          POSTGRES_DB: freefrom_map_dev
+          POSTGRES_USER: freefrom_map_user
+    working_directory: ~/freefrom-map-backend
+    steps:
+      - checkout
+      - run: pip install --user -r requirements.txt
+      - run: python manage.py db stamp head
+      - run: python manage.py db migrate
+      - run: python manage.py db upgrade
+      - run: python -m unittest
+        
 workflows:
   main:
     jobs:
-      - python/test
+      - test
