@@ -4,6 +4,7 @@ import json
 from flask_sqlalchemy import SQLAlchemy
 from app import app, db
 from models import Category
+from tests.test_utils import clearDatabase
 
 class CategoryTestCase(unittest.TestCase):
   def setUp(self):
@@ -19,8 +20,7 @@ class CategoryTestCase(unittest.TestCase):
     self.db.session.commit()
 
   def tearDown(self):
-    self.db.session.query(Category).delete()
-    self.db.session.commit()
+    clearDatabase(self.db)
 
   def test_init(self):
     self.assertEqual(self.category.title, "Definition of Domestic Violence")
