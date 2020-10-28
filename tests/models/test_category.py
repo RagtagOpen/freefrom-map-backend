@@ -2,13 +2,13 @@ import unittest
 import json
 
 from flask_sqlalchemy import SQLAlchemy
-from app import app
+from app import app, db
 from models import Category
 
 class CategoryTestCase(unittest.TestCase):
   def setUp(self):
     self.client = app.test_client()
-    self.db = SQLAlchemy(app)
+    self.db = db
 
     self.category=Category(
         title="Definition of Domestic Violence",
