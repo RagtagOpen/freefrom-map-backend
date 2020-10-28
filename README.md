@@ -59,6 +59,13 @@ You only have to run `python3 -m venv env` once, but you should run `source env/
 pip3 install -r requirements.txt
 ```
 
+### Migrate the database
+
+```
+python manage.py db migrate
+python manage.py db upgrade
+```
+
 ## Running the application
 
 Run the application with the following command:

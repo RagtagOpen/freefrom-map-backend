@@ -1,15 +1,15 @@
 from app import db
 
-class State(db.Model):
-    __tablename__ = 'states'
+class Category(db.Model):
+    __tablename__ = 'categories'
 
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String())
-    code = db.Column(db.String())
+    title = db.Column(db.String())
+    active = db.Column(db.Boolean())
 
-    def __init__(self, name, code):
-        self.name = name
-        self.code = code
+    def __init__(self, title, active):
+        self.title = title
+        self.active = active
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -17,6 +17,6 @@ class State(db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'name': self.name,
-            'code': self.code,
+            'title': self.title,
+            'active': self.active,
         }
