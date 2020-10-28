@@ -21,5 +21,17 @@ def get_categories():
 	except Exception as e:
 		return(str(e))
 
+@app.route("/categories/<id_>")
+def get_category(id_):
+	try:
+		category=Category.query.filter_by(id=id_).first()
+
+		if category is None:
+			return jsonify(error=404, text="Category does not exist"), 404
+
+		return  jsonify(category.serialize())
+	except Exception as e:
+		return(str(e))
+
 if __name__ == '__main__':
 		app.run()
