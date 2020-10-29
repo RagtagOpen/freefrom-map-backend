@@ -11,7 +11,7 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from models import Category, Criterion
+from models import Category, Criterion, Score
 
 @app.route("/")
 def hello():
