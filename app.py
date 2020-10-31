@@ -13,9 +13,25 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion
 
-@app.route("/")
-def hello():
-    return jsonify({ "message": "Hello World!"})
+@app.route("/categories")
+def get_categories():
+	try:
+		categories=Category.query.all()
+		return  jsonify([category.serialize() for category in categories])
+	except Exception as e:
+		return(str(e))
+
+@app.route("/categories/<id_>")
+def get_category(id_):
+	try:
+		category=Category.query.filter_by(id=id_).first()
+
+		if category is None:
+			return jsonify(error=404, text="Category does not exist"), 404
+
+		return  jsonify(category.serialize())
+	except Exception as e:
+		return(str(e))
 
 if __name__ == '__main__':
-    app.run()
+		app.run()
