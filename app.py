@@ -33,5 +33,25 @@ def get_category(id_):
 	except Exception as e:
 		return(str(e))
 
+@app.route("/criteria")
+def get_criteria():
+	try:
+		criteria=Criterion.query.all()
+		return  jsonify([criterion.serialize() for criterion in criteria])
+	except Exception as e:
+		return(str(e))
+
+@app.route("/criteria/<id_>")
+def get_criterion(id_):
+	try:
+		criterion=Criterion.query.filter_by(id=id_).first()
+
+		if criterion is None:
+			return jsonify(error=404, text="Criterion does not exist"), 404
+
+		return  jsonify(criterion.serialize())
+	except Exception as e:
+		return(str(e))
+
 if __name__ == '__main__':
 		app.run()

@@ -83,3 +83,46 @@ Run tests with the following command:
 ```
 python3 -m unittest
 ```
+
+## API Reference
+The following section describes the FreeFrom map backend API. All responses will be formatted as JSON, and all
+request bodies should be provided as JSON.
+
+### Categories
+A category represents a group of criteria in the map scorecard. A category has the following fields:
+
+|  Name  |   Type  |    Notes    |
+|--------|---------|-------------|
+| id     | Integer | Primary key |
+| title  | String  |             |
+| active | Boolean |             |
+
+#### GET /categories
+
+This endpoint returns a list of all existing categories. It will return an empty array if no categories exist.
+
+#### GET /categories/<id>
+
+This endpoint returns one category corresponding to the id provided in the request. If no category with that
+id exists, it will return a 404 response code.
+
+### Criteria
+
+A criterion represents one measure in the state scorecard to determine whether a state has strong survivor wealth policies.
+
+|         Name        |   Type   |    Notes    |
+|---------------------|----------|-------------|
+| id                  | Integer  | Primary key |
+| category_id         | Integer  | Foreign key |
+| title               | String   |             |
+| recommendation_text | String   |             |
+| active              | Boolean  |             |
+
+### GET /criteria
+
+This endpoint returns a list of all existing criteria. It will return an empty array if no criteria exist.
+
+### GET /criteria/<id>
+
+This endpoint returns one criterion corresponding to the id provided in the request. If no criterion with that
+id exists, it will return a 404 response code.
