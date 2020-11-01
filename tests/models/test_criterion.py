@@ -9,14 +9,13 @@ from tests.test_utils import clearDatabase
 class CriterionTestCase(unittest.TestCase):
   def setUp(self):
     self.client = app.test_client()
-    self.db = db
 
     self.category=Category(
         title="Definition of Domestic Violence",
         active=True,
     )
-    self.db.session.add(self.category)
-    self.db.session.commit()
+    db.session.add(self.category)
+    db.session.commit()
 
     self.criterion=Criterion(
       category_id=self.category.id,
@@ -25,11 +24,11 @@ class CriterionTestCase(unittest.TestCase):
       active=True
     )
 
-    self.db.session.add(self.criterion)
-    self.db.session.commit()
+    db.session.add(self.criterion)
+    db.session.commit()
 
   def tearDown(self):
-    clearDatabase(self.db)
+    clearDatabase(db)
 
   def test_init(self):
     self.assertEqual(self.criterion.category_id, self.category.id)
