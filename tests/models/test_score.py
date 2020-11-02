@@ -5,27 +5,15 @@ import datetime
 from flask_sqlalchemy import SQLAlchemy
 from app import app, db
 from models import Category, Criterion, Score
-from tests.test_utils import clearDatabase
+from tests.test_utils import clearDatabase, createCategory, createCriterion
 
 class ScoreTestCase(unittest.TestCase):
   def setUp(self):
-    self.client = app.test_client()
-
-    self.category=Category(
-        title="Definition of Domestic Violence",
-        active=True,
-    )
-
+    self.category=createCategory()
     db.session.add(self.category)
     db.session.commit()
 
-    self.criterion=Criterion(
-      category_id=self.category.id,
-      title="Includes economic abuse framework",
-      recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
-      active=True
-    )
-
+    self.criterion=createCriterion(self.category.id)
     db.session.add(self.criterion)
     db.session.commit()
 
@@ -50,7 +38,7 @@ class ScoreTestCase(unittest.TestCase):
   
   def test_init_invalid_state_code(self):
     with self.assertRaises(AssertionError):
-      score = Score(
+      Score(
         criterion_id=self.criterion.id,
         state="fake-state",
         meets_criterion=True

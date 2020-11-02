@@ -3,17 +3,13 @@ import json
 
 from app import app, db
 from models import Category, Criterion
-from tests.test_utils import clearDatabase
+from tests.test_utils import clearDatabase, createCategory
 
 class CriteriaTestCase(unittest.TestCase):
   def setUp(self):
     self.client = app.test_client()
 
-    self.category=Category(
-      title="Definition of Domestic Violence",
-      active=True,
-    )
-
+    self.category=createCategory()
     db.session.add(self.category)
     db.session.commit()
 
@@ -25,6 +21,7 @@ class CriteriaTestCase(unittest.TestCase):
       category_id=self.category.id,
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
+      help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       active=True
     )
 
@@ -32,6 +29,7 @@ class CriteriaTestCase(unittest.TestCase):
       category_id=self.category.id,
       title="Uses coercive control framework",
       recommendation_text="The state's definition of domestic violence should use a framework of coercive control",
+      help_text="This means that the state acknowledges the role that coercion can play in domestic violence",
       active=True
     )
 
@@ -48,6 +46,7 @@ class CriteriaTestCase(unittest.TestCase):
       "category_id": criterion1.category_id,
       "title": "Includes economic abuse framework",
       "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
+      "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       "active": True
     })
     self.assertEqual(json_response[1], {
@@ -55,6 +54,7 @@ class CriteriaTestCase(unittest.TestCase):
       "category_id": criterion2.category_id,
       "title": "Uses coercive control framework",
       "recommendation_text": "The state's definition of domestic violence should use a framework of coercive control",
+      "help_text": "This means that the state acknowledges the role that coercion can play in domestic violence",
       "active": True
     })
 
@@ -70,6 +70,7 @@ class CriteriaTestCase(unittest.TestCase):
       category_id=self.category.id,
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
+      help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       active=True
     )
     db.session.add(criterion)
@@ -84,6 +85,7 @@ class CriteriaTestCase(unittest.TestCase):
       "category_id": criterion.category_id,
       "title": "Includes economic abuse framework",
       "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
+      "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       "active": True
     })
 

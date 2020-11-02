@@ -9,27 +9,30 @@ from tests.test_utils import clearDatabase
 class CategoryTestCase(unittest.TestCase):
   def setUp(self):
     self.client = app.test_client()
-    self.db = db
 
     self.category=Category(
         title="Definition of Domestic Violence",
+        help_text="This is how a state legally defines the term 'domestic violence'",
         active=True,
     )
 
-    self.db.session.add(self.category)
-    self.db.session.commit()
+    db.session.add(self.category)
+    db.session.commit()
 
   def tearDown(self):
-    clearDatabase(self.db)
+    clearDatabase(db)
 
   def test_init(self):
     self.assertEqual(self.category.title, "Definition of Domestic Violence")
+    self.assertEqual(self.category.help_text, "This is how a state legally defines the term 'domestic violence'")
     self.assertTrue(self.category.active)
 
   def test_serialize(self):
-    self.assertDictContainsSubset(
+    self.assertEqual(
       {
+        "id": self.category.id,
         "title": "Definition of Domestic Violence",
+        "help_text": "This is how a state legally defines the term 'domestic violence'",
         "active": True
       },
       self.category.serialize()

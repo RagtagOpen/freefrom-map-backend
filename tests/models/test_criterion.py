@@ -4,16 +4,13 @@ import json
 from flask_sqlalchemy import SQLAlchemy
 from app import app, db
 from models import Category, Criterion
-from tests.test_utils import clearDatabase
+from tests.test_utils import clearDatabase, createCategory
 
 class CriterionTestCase(unittest.TestCase):
   def setUp(self):
     self.client = app.test_client()
 
-    self.category=Category(
-        title="Definition of Domestic Violence",
-        active=True,
-    )
+    self.category=createCategory()
     db.session.add(self.category)
     db.session.commit()
 
@@ -21,6 +18,7 @@ class CriterionTestCase(unittest.TestCase):
       category_id=self.category.id,
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
+      help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       active=True
     )
 
@@ -34,14 +32,17 @@ class CriterionTestCase(unittest.TestCase):
     self.assertEqual(self.criterion.category_id, self.category.id)
     self.assertEqual(self.criterion.title, "Includes economic abuse framework")
     self.assertEqual(self.criterion.recommendation_text, "The state's definition of domestic violence should include a framework of economic abuse")
+    self.assertEqual(self.criterion.help_text, "This means that the state acknowledges the role that economic control and abuse can play in domestic violence")
     self.assertTrue(self.criterion.active)
 
   def test_serialize(self):
-    self.assertDictContainsSubset(
+    self.assertEqual(
       {
+        "id": self.criterion.id,
         "category_id": self.category.id,
         "title": "Includes economic abuse framework",
         "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
+        "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
         "active": True
       },
       self.criterion.serialize()
