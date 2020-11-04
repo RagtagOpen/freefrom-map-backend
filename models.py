@@ -12,10 +12,12 @@ class Category(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
     active = db.Column(db.Boolean())
+    help_text = db.Column(db.String())
 
-    def __init__(self, title, active):
+    def __init__(self, title, active, help_text):
         self.title = title
         self.active = active
+        self.help_text = help_text
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -25,6 +27,7 @@ class Category(db.Model):
             'id': self.id,
             'title': self.title,
             'active': self.active,
+            'help_text': self.help_text,
         }
 
 class Criterion(db.Model):
@@ -34,12 +37,14 @@ class Criterion(db.Model):
     category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False, index=True)
     title = db.Column(db.String())
     recommendation_text = db.Column(db.String())
+    help_text = db.Column(db.String())
     active = db.Column(db.Boolean())
 
-    def __init__(self, category_id, title, recommendation_text, active):
+    def __init__(self, category_id, title, recommendation_text, help_text, active):
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
+        self.help_text = help_text
         self.active = active
 
     def __repr__(self):
@@ -51,6 +56,7 @@ class Criterion(db.Model):
             'category_id': self.category_id,
             'title': self.title,
             'recommendation_text': self.recommendation_text,
+            'help_text': self.help_text,
             'active': self.active,
         }
         

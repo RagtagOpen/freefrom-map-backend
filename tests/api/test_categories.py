@@ -15,10 +15,12 @@ class CategoriesTestCase(unittest.TestCase):
   def test_get_categories(self):
     category1=Category(
       title="Definition of Domestic Violence",
+      help_text="This is how a state legally defines the term 'domestic violence'",
       active=True,
     )
     category2=Category(
       title="Worker Protections",
+      help_text="This category defines whether the state protects the jobs of victims of domestic violence",
       active=False,
     )
     db.session.add_all([category1, category2])
@@ -32,11 +34,13 @@ class CategoriesTestCase(unittest.TestCase):
     self.assertEqual(json_response[0], {
       "id": category1.id,
       "title": "Definition of Domestic Violence",
+      "help_text": "This is how a state legally defines the term 'domestic violence'",
       "active": True
     })
     self.assertEqual(json_response[1], {
       "id": category2.id,
       "title": "Worker Protections",
+      "help_text": "This category defines whether the state protects the jobs of victims of domestic violence",
       "active": False
     })
 
@@ -50,6 +54,7 @@ class CategoriesTestCase(unittest.TestCase):
   def test_get_category(self):
     category=Category(
       title="Definition of Domestic Violence",
+      help_text="This is how a state legally defines the term 'domestic violence'",
       active=True,
     )
     db.session.add(category)
@@ -62,6 +67,7 @@ class CategoriesTestCase(unittest.TestCase):
     self.assertEqual(json_response, {
       "id": category.id,
       "title": "Definition of Domestic Violence",
+      "help_text": "This is how a state legally defines the term 'domestic violence'",
       "active": True
     })
 

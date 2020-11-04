@@ -4,25 +4,15 @@ import json
 from flask_sqlalchemy import SQLAlchemy
 from app import app, db
 from models import Category, Criterion, Link
-from tests.test_utils import clearDatabase
+from tests.test_utils import clearDatabase, createCategory, createCriterion
 
 class LinkTestCase(unittest.TestCase):
   def setUp(self):
-    self.category=Category(
-        title="Definition of Domestic Violence",
-        active=True,
-    )
-
+    self.category=createCategory()
     db.session.add(self.category)
     db.session.commit()
 
-    self.criterion=Criterion(
-      category_id=self.category.id,
-      title="Includes economic abuse framework",
-      recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
-      active=True
-    )
-
+    self.criterion=createCriterion(self.category.id)
     db.session.add(self.criterion)
     db.session.commit()
 
