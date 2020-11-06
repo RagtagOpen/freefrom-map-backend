@@ -53,5 +53,25 @@ def get_criterion(id_):
 	except Exception as e:
 		return(str(e))
 
+@app.route("/links")
+def get_links():
+	try:
+		links=Link.query.all()
+		return  jsonify([link.serialize() for link in links])
+	except Exception as e:
+		return(str(e))
+
+@app.route("/links/<id_>")
+def get_link(id_):
+	try:
+		link=Link.query.filter_by(id=id_).first()
+
+		if link is None:
+			return jsonify(error=404, text="Link does not exist"), 404
+
+		return  jsonify(link.serialize())
+	except Exception as e:
+		return(str(e))
+
 if __name__ == '__main__':
 		app.run()
