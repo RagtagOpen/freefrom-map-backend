@@ -1,0 +1,40 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    user: root
+    container_name: freefrom_map_app
+    depends_on:
+      - db
+    ports:
+      - "5001:5000"
+    working_dir: /app
+    volumes:
+      - ./:/app
+    networks:
+      - default
+    restart: always
+
+  db:
+    image: postgres:latest
+    container_name: freefrom_map_db
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: freefrom_map_dev
+      POSTGRES_USER: freefrom_map_user
+      POSTGRES_PASSWORD: password
+    networks:
+      - default
+    restart: always
+
+volumes:
+  db-data:
+
+networks:
+  default:
+    driver: bridge

@@ -6,9 +6,27 @@ Welcome to the FreeFrom Map project backend! This page is under construction so 
 
 ## Local Development Setup
 
-This is a Python Flask app. Follow these steps to run it locally:
+This is a Python Flask app. 
 
-### Install Python
+#### Set up environment variables
+
+Use the provided template to set up a `.env` file with some environment variables you'll need:
+
+```
+cp .env.template .env
+```
+
+`.env` is included in the `.gitignore` for this repo and won't be included when you commit your changes.
+
+#### Setup Instructions
+This app can be set up either locally or within docker.
+
+[Follow these steps to setup and run it locally](#local-setup)
+
+[Follow these steps to setup and run it in docker](#docker-setup)
+
+### Local Setup
+#### Install Python
 
 If you don't already have it installed, install Python 3. You can check that you have it installed using this command:
 
@@ -18,11 +36,11 @@ python3 --version
 
 This should return something like `Python 3.7.3`.
 
-### Install Postgres
+#### Install Postgres
 
 Install and run a PostgreSQL on your computer.
 
-### Set up database roles
+#### Set up database roles
 
 1. Start a Postgres client session: `psql`
 2. Create a new user: `create user "freefrom_map_user";`
@@ -56,13 +74,13 @@ Now, when you run `which python`, you should get something like: `/path/to/your/
 
 You only have to run `python3 -m venv env` once, but you should run `source env/bin/activate` every time you work on this repository.
 
-### Install the requirements
+#### Install the requirements
 
 ```
 pip3 install -r requirements.txt
 ```
 
-### Migrate the database
+#### Migrate the database
 
 ```
 python3 manage.py db migrate
@@ -71,7 +89,7 @@ python3 manage.py db upgrade
 
 If you receive a "Target database is not up to date." error, try `python3 manage.py db stamp head`
 
-## Running the application
+#### Running the application
 
 Run the application with the following command:
 
@@ -81,12 +99,31 @@ python3 manage.py runserver
 
 Then, in your browser, navigate to `localhost:5000/`. You should see the message "Hello world!" on your screen.
 
+### Docker Setup
+1. Download latest docker
+    1. Make sure `docker --version` returns a version
+1. Run `docker-compose up` to build the images.
+
+Then, in your browser, you can navigate to `localhost:5001/categories` and it will return an empty array. 
+
+### Docker Tips
+If you need to shell into a container, either the app or db, you can run: `docker exec -it freefrom_map_app /bin/sh`
+and you will enter into a shell. This is handy if you prefer `psql` over a Database IDE, or need to hop on the containers
+to check something.
+
 ## Running tests
 
 Run tests with the following command:
 
 ```
 python3 -m unittest
+```
+
+
+If in docker, you can run:
+
+```
+docker exec -it freefrom_map_app python -m unittest
 ```
 
 ## Linting
