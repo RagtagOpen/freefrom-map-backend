@@ -45,14 +45,15 @@ class ScoreTestCase(unittest.TestCase):
       )
 
   def test_serialize(self):
-    self.assertDictContainsSubset(
-      {
-        "id": self.score.id,
-        "criterion_id": self.criterion.id,
-        "state": "NY",
-        "meets_criterion": True
-      },
-      self.score.serialize()
-    )
+    expected_result = {
+      "id": self.score.id,
+      "criterion_id": self.criterion.id,
+      "state": "NY",
+      "meets_criterion": True
+    }
 
-    self.assertIn("created_at", self.score.serialize().keys())
+    actual_result = self.score.serialize()
+
+    # Assert that the expected results are a subset of the actual results
+    self.assertTrue(expected_result.items() <= actual_result.items())
+    self.assertTrue(isinstance(actual_result["created_at"], datetime.datetime))

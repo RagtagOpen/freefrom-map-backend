@@ -22,7 +22,6 @@ class CriteriaTestCase(unittest.TestCase):
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
       help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
-      active=True
     )
 
     criterion2=Criterion(
@@ -30,9 +29,9 @@ class CriteriaTestCase(unittest.TestCase):
       title="Uses coercive control framework",
       recommendation_text="The state's definition of domestic violence should use a framework of coercive control",
       help_text="This means that the state acknowledges the role that coercion can play in domestic violence",
-      active=True
     )
 
+    criterion2.deactivate()
     db.session.add_all([criterion1, criterion2])
     db.session.commit()
 
@@ -47,16 +46,22 @@ class CriteriaTestCase(unittest.TestCase):
       "title": "Includes economic abuse framework",
       "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
       "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
-      "active": True
+      "active": True,
+      "deactivated_at": None
     })
-    self.assertEqual(json_response[1], {
+
+    criterion2_expected = {
       "id": criterion2.id,
       "category_id": criterion2.category_id,
       "title": "Uses coercive control framework",
       "recommendation_text": "The state's definition of domestic violence should use a framework of coercive control",
       "help_text": "This means that the state acknowledges the role that coercion can play in domestic violence",
-      "active": True
-    })
+      "active": False
+    }
+
+    # Assert that the expected results are a subset of the actual results
+    self.assertTrue(criterion2_expected.items() <= json_response[1].items())
+    self.assertTrue(isinstance(json_response[1]["deactivated_at"], str))
 
   def test_get_criteria_empty(self):
     response = self.client.get("/criteria")
@@ -71,7 +76,6 @@ class CriteriaTestCase(unittest.TestCase):
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
       help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
-      active=True
     )
     db.session.add(criterion)
     db.session.commit()
@@ -86,7 +90,8 @@ class CriteriaTestCase(unittest.TestCase):
       "title": "Includes economic abuse framework",
       "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
       "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
-      "active": True
+      "active": True,
+      "deactivated_at": None
     })
 
   def test_get_category_doesnt_exist(self):
