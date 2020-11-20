@@ -13,10 +13,11 @@ class Category(db.Model):
     title = db.Column(db.String())
     active = db.Column(db.Boolean())
     help_text = db.Column(db.String())
+    deactivated_at = db.Column(db.DateTime)
 
-    def __init__(self, title, active, help_text):
+    def __init__(self, title, help_text):
         self.title = title
-        self.active = active
+        self.active = True
         self.help_text = help_text
 
     def __repr__(self):
@@ -28,7 +29,14 @@ class Category(db.Model):
             'title': self.title,
             'active': self.active,
             'help_text': self.help_text,
+            'deactivated_at': self.deactivated_at
         }
+
+    def deactivate(self):
+        self.active = False
+        self.deactivated_at = datetime.datetime.utcnow()
+
+        return True
 
 class Criterion(db.Model):
     __tablename__ = 'criteria'
@@ -39,13 +47,14 @@ class Criterion(db.Model):
     recommendation_text = db.Column(db.String())
     help_text = db.Column(db.String())
     active = db.Column(db.Boolean())
+    deactivated_at = db.Column(db.DateTime)
 
-    def __init__(self, category_id, title, recommendation_text, help_text, active):
+    def __init__(self, category_id, title, recommendation_text, help_text):
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
         self.help_text = help_text
-        self.active = active
+        self.active = True
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -58,7 +67,12 @@ class Criterion(db.Model):
             'recommendation_text': self.recommendation_text,
             'help_text': self.help_text,
             'active': self.active,
+            'deactivated_at': self.deactivated_at
         }
+
+    def deactivate(self):
+        self.active = False
+        self.deactivated_at = datetime.datetime.utcnow()
         
 class Score(db.Model):
     __tablename__ = 'scores'

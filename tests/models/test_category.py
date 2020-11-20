@@ -1,5 +1,6 @@
 import unittest
 import json
+import datetime
 
 from flask_sqlalchemy import SQLAlchemy
 from app import app, db
@@ -13,7 +14,6 @@ class CategoryTestCase(unittest.TestCase):
     self.category=Category(
         title="Definition of Domestic Violence",
         help_text="This is how a state legally defines the term 'domestic violence'",
-        active=True,
     )
 
     db.session.add(self.category)
@@ -33,7 +33,15 @@ class CategoryTestCase(unittest.TestCase):
         "id": self.category.id,
         "title": "Definition of Domestic Violence",
         "help_text": "This is how a state legally defines the term 'domestic violence'",
-        "active": True
+        "active": True,
+        "deactivated_at": None
       },
       self.category.serialize()
     )
+  
+  def test_deactivate(self):
+    self.category.deactivate()
+
+    self.assertFalse(self.category.active)
+    self.assertTrue(isinstance(self.category.deactivated_at, datetime.datetime))
+    self.assertTrue(self.category.deactivated_at < datetime.datetime.utcnow())

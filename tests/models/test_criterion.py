@@ -1,5 +1,6 @@
 import unittest
 import json
+import datetime
 
 from flask_sqlalchemy import SQLAlchemy
 from app import app, db
@@ -19,7 +20,6 @@ class CriterionTestCase(unittest.TestCase):
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
       help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
-      active=True
     )
 
     db.session.add(self.criterion)
@@ -43,7 +43,15 @@ class CriterionTestCase(unittest.TestCase):
         "title": "Includes economic abuse framework",
         "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
         "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
-        "active": True
+        "active": True,
+        "deactivated_at": None
       },
       self.criterion.serialize()
     )
+
+  def test_deactivate(self):
+    self.criterion.deactivate()
+
+    self.assertFalse(self.criterion.active)
+    self.assertTrue(isinstance(self.criterion.deactivated_at, datetime.datetime))
+    self.assertTrue(self.criterion.deactivated_at < datetime.datetime.utcnow())
