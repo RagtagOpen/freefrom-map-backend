@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
-from auth import AuthError, requires_auth, requires_scope
+from auth import AuthError, requires_auth
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
@@ -95,19 +95,6 @@ def public():
 def private():
     response = "Hello from a private endpoint! You need to be authenticated to see this."
     return jsonify(message=response)
-
-# This needs authorization
-@app.route("/api/private-scoped")
-@cross_origin(headers=["Content-Type", "Authorization"])
-@requires_auth
-def private_scoped():
-    if requires_scope("read:messages"):
-        response = "Hello from a private endpoint! You need to be authenticated and have a scope of read:messages to see this."
-        return jsonify(message=response)
-    raise AuthError({
-        "code": "Unauthorized",
-        "description": "You don't have access to this resource"
-    }, 403)
 
 if __name__ == '__main__':
 		app.run()
