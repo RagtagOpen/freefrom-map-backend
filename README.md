@@ -62,9 +62,11 @@ pip3 install -r requirements.txt
 ### Migrate the database
 
 ```
-python manage.py db migrate
-python manage.py db upgrade
+python3 manage.py db migrate
+python3 manage.py db upgrade
 ```
+
+If you receive a "Target database is not up to date." error, try `python3 manage.py db stamp head`
 
 ## Running the application
 
