@@ -17,6 +17,8 @@ class TestAuth(unittest.TestCase):
 
     self.assertEqual(json_response["description"], "Authorization header is expected")
   
+  @unittest.skipIf(not os.environ.get("AUTH0_CLIENT_ID") or not os.environ.get("AUTH0_CLIENT_SECRET"),
+                     "Cannot run test without AUTH0_CLIENT_ID and AUTH0_CLIENT_SECRET environment variables")
   def test_private_endpoint_auth(self):
     data = {
       "client_id": os.environ.get('AUTH0_CLIENT_ID'),

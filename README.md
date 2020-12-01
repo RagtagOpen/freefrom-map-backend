@@ -40,6 +40,9 @@ cp .env.template .env
 
 `.env` is included in the `.gitignore` for this repo and won't be included when you commit your changes.
 
+While .env.template contains some non-sensitive environment variables, there are a few that you'll
+need to get from the team. Ask in the #proj-freefrom-map-dev channel for these variables.
+
 ### Start the virtual environment (aka venv)
 
 We use [venv](https://docs.python.org/3/library/venv.html) to ensure that every developer is using the same dependency versions.
