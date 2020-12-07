@@ -2,8 +2,8 @@ import datetime
 from app import db
 from sqlalchemy.orm import validates
 
-states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", 
-    "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", 
+states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
+    "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA",
     "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
 
 class Category(db.Model):
@@ -73,7 +73,7 @@ class Criterion(db.Model):
     def deactivate(self):
         self.active = False
         self.deactivated_at = datetime.datetime.utcnow()
-        
+
 class Score(db.Model):
     __tablename__ = 'scores'
 
@@ -112,13 +112,13 @@ class Link(db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
-    criterion_id = db.Column(db.Integer, db.ForeignKey("criteria.id"), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False)
     state = db.Column(db.String(), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
 
-    def __init__(self, criterion_id, state, text, url):
-        self.criterion_id = criterion_id
+    def __init__(self, category_id, state, text, url):
+        self.category_id = category_id
         self.state = state
         self.text = text
         self.url = url
@@ -134,10 +134,10 @@ class Link(db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'criterion_id': self.criterion_id,
+            'category_id': self.category_id,
             'state': self.state,
             'text': self.text,
             'url': self.url,
         }
 
-db.Index('state_criterion', Link.state, Link.criterion_id)
+db.Index('state_category', Link.state, Link.category_id)
