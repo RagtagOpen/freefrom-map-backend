@@ -84,40 +84,6 @@ Run tests with the following command:
 python3 -m unittest
 ```
 
-## Deploying the application
-
-Deployment will require the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli), and access to the `freefrom-map-api` app on Heroku (ask in #proj-freefrom-map-dev). 
-
-From the command line, log in to your Heroku account:
-
-```
-heroku login
-```
-
-Add a remote to the `freefrom-map-api` Heroku app to your local repository: 
-
-```
-heroku git:remote -a freefrom-map-api
-```
-
-If any of the changes require new environment variables, they can be set with the command:
-
-```
-heroku config:set VARIABLE=value
-```
-
-To push your local changes to Heroku, this command will deploy the latest committed version of your branch to `heroku/main`:
-
-```
-git push heroku main
-```
-
-If your changes have any migrations, migrate the remote database:
-
-```
-heroku run python manage.py db upgrade
-```
-
 ## API Reference
 The following section describes the FreeFrom map backend API. All responses will be formatted as JSON, and all
 request bodies should be provided as JSON.
