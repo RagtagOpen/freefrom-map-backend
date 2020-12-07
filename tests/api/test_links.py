@@ -31,6 +31,8 @@ class LinksTestCase(unittest.TestCase):
       url="az.gov/link/to/statute",
     )
 
+    link2.deactivate()
+
     db.session.add_all([link1, link2])
     db.session.commit()
 
@@ -45,14 +47,22 @@ class LinksTestCase(unittest.TestCase):
       "state": "NY",
       "text": "Section 20 of Statute 39-B",
       "url": "ny.gov/link/to/statute",
+      "active": True,
+      "deactivated_at": None
     })
-    self.assertEqual(json_response[1], {
+
+    link2_expected = {
       "id": link2.id,
       "category_id": link2.category_id,
       "state": "AZ",
       "text": "Statute 20 of Policy ABC",
       "url": "az.gov/link/to/statute",
-    })
+      "active": False
+    }
+
+    # Assert that the expected results are a subset of the actual results
+    self.assertTrue(link2_expected.items() <= json_response[1].items())
+    self.assertTrue(isinstance(json_response[1]["deactivated_at"], str))
 
   def test_get_links_empty(self):
     response = self.client.get("/links")
@@ -81,6 +91,8 @@ class LinksTestCase(unittest.TestCase):
       "state": "NY",
       "text": "Section 20 of Statute 39-B",
       "url": "ny.gov/link/to/statute",
+      "active": True,
+      "deactivated_at": None
     })
 
   def test_get_link_doesnt_exist(self):
