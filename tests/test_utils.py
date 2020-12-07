@@ -19,4 +19,5 @@ def createCriterion(category_id):
     title="Includes economic abuse framework",
     recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
     help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
+    adverse=False
   )

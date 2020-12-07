@@ -48,13 +48,15 @@ class Criterion(db.Model):
     help_text = db.Column(db.String())
     active = db.Column(db.Boolean())
     deactivated_at = db.Column(db.DateTime)
+    adverse = db.Column(db.Boolean())
 
-    def __init__(self, category_id, title, recommendation_text, help_text):
+    def __init__(self, category_id, title, recommendation_text, help_text, adverse):
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
         self.help_text = help_text
         self.active = True
+        self.adverse = adverse
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -67,7 +69,8 @@ class Criterion(db.Model):
             'recommendation_text': self.recommendation_text,
             'help_text': self.help_text,
             'active': self.active,
-            'deactivated_at': self.deactivated_at
+            'deactivated_at': self.deactivated_at,
+            'adverse': self.adverse
         }
 
     def deactivate(self):

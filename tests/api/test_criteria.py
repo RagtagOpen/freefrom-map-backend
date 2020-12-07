@@ -22,6 +22,7 @@ class CriteriaTestCase(unittest.TestCase):
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
       help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
+      adverse=False,
     )
 
     criterion2=Criterion(
@@ -29,6 +30,7 @@ class CriteriaTestCase(unittest.TestCase):
       title="Uses coercive control framework",
       recommendation_text="The state's definition of domestic violence should use a framework of coercive control",
       help_text="This means that the state acknowledges the role that coercion can play in domestic violence",
+      adverse=True,
     )
 
     criterion2.deactivate()
@@ -47,7 +49,8 @@ class CriteriaTestCase(unittest.TestCase):
       "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
       "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       "active": True,
-      "deactivated_at": None
+      "deactivated_at": None,
+      "adverse": False
     })
 
     criterion2_expected = {
@@ -56,7 +59,8 @@ class CriteriaTestCase(unittest.TestCase):
       "title": "Uses coercive control framework",
       "recommendation_text": "The state's definition of domestic violence should use a framework of coercive control",
       "help_text": "This means that the state acknowledges the role that coercion can play in domestic violence",
-      "active": False
+      "active": False,
+      "adverse": True
     }
 
     # Assert that the expected results are a subset of the actual results
@@ -76,6 +80,7 @@ class CriteriaTestCase(unittest.TestCase):
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
       help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
+      adverse=False
     )
     db.session.add(criterion)
     db.session.commit()
@@ -91,7 +96,8 @@ class CriteriaTestCase(unittest.TestCase):
       "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
       "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
       "active": True,
-      "deactivated_at": None
+      "deactivated_at": None,
+      "adverse": False
     })
 
   def test_get_category_doesnt_exist(self):
