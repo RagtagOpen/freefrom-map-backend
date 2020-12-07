@@ -20,6 +20,7 @@ class CriterionTestCase(unittest.TestCase):
       title="Includes economic abuse framework",
       recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
       help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
+      adverse=False
     )
 
     db.session.add(self.criterion)
@@ -34,6 +35,7 @@ class CriterionTestCase(unittest.TestCase):
     self.assertEqual(self.criterion.recommendation_text, "The state's definition of domestic violence should include a framework of economic abuse")
     self.assertEqual(self.criterion.help_text, "This means that the state acknowledges the role that economic control and abuse can play in domestic violence")
     self.assertTrue(self.criterion.active)
+    self.assertFalse(self.criterion.adverse)
 
   def test_serialize(self):
     self.assertEqual(
@@ -44,7 +46,8 @@ class CriterionTestCase(unittest.TestCase):
         "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
         "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
         "active": True,
-        "deactivated_at": None
+        "deactivated_at": None,
+        "adverse": False,
       },
       self.criterion.serialize()
     )

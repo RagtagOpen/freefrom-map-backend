@@ -2,18 +2,24 @@ import datetime
 from app import db
 from sqlalchemy.orm import validates
 
-states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", 
-    "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", 
+states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
+    "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA",
     "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
 
-class Category(db.Model):
+class Deactivatable(object):
+    active = db.Column(db.Boolean())
+    deactivated_at = db.Column(db.DateTime)
+
+    def deactivate(self):
+        self.active = False
+        self.deactivated_at = datetime.datetime.utcnow()
+
+class Category(Deactivatable, db.Model):
     __tablename__ = 'categories'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
-    active = db.Column(db.Boolean())
     help_text = db.Column(db.String())
-    deactivated_at = db.Column(db.DateTime)
 
     def __init__(self, title, help_text):
         self.title = title
@@ -32,13 +38,8 @@ class Category(db.Model):
             'deactivated_at': self.deactivated_at
         }
 
-    def deactivate(self):
-        self.active = False
-        self.deactivated_at = datetime.datetime.utcnow()
 
-        return True
-
-class Criterion(db.Model):
+class Criterion(Deactivatable, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -46,15 +47,15 @@ class Criterion(db.Model):
     title = db.Column(db.String())
     recommendation_text = db.Column(db.String())
     help_text = db.Column(db.String())
-    active = db.Column(db.Boolean())
-    deactivated_at = db.Column(db.DateTime)
+    adverse = db.Column(db.Boolean())
 
-    def __init__(self, category_id, title, recommendation_text, help_text):
+    def __init__(self, category_id, title, recommendation_text, help_text, adverse):
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
         self.help_text = help_text
         self.active = True
+        self.adverse = adverse
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -67,13 +68,10 @@ class Criterion(db.Model):
             'recommendation_text': self.recommendation_text,
             'help_text': self.help_text,
             'active': self.active,
-            'deactivated_at': self.deactivated_at
+            'deactivated_at': self.deactivated_at,
+            'adverse': self.adverse
         }
 
-    def deactivate(self):
-        self.active = False
-        self.deactivated_at = datetime.datetime.utcnow()
-        
 class Score(db.Model):
     __tablename__ = 'scores'
 
@@ -108,20 +106,21 @@ class Score(db.Model):
 
 db.Index('state_criterion_created_at', Score.state, Score.criterion_id, Score.created_at)
 
-class Link(db.Model):
+class Link(Deactivatable, db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
-    criterion_id = db.Column(db.Integer, db.ForeignKey("criteria.id"), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False)
     state = db.Column(db.String(), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
 
-    def __init__(self, criterion_id, state, text, url):
-        self.criterion_id = criterion_id
+    def __init__(self, category_id, state, text, url):
+        self.category_id = category_id
         self.state = state
         self.text = text
         self.url = url
+        self.active = True
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -134,10 +133,12 @@ class Link(db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'criterion_id': self.criterion_id,
+            'category_id': self.category_id,
             'state': self.state,
             'text': self.text,
             'url': self.url,
+            'active': self.active,
+            'deactivated_at': self.deactivated_at
         }
 
-db.Index('state_criterion', Link.state, Link.criterion_id)
+db.Index('state_category', Link.state, Link.category_id)
