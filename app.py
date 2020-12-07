@@ -21,13 +21,29 @@ def handle_auth_error(ex):
 	response.status_code = ex.status_code
 	return response
 
-@app.route("/categories")
+@app.errorhandler(Exception)
+def handle_exception(ex):
+	response = jsonify(ex.error)
+	response.status_code = ex.status_code
+	return response
+
+@app.route("/categories", methods=["GET", "POST"])
 def get_categories():
-	try:
-		categories=Category.query.all()
-		return  jsonify([category.serialize() for category in categories])
-	except Exception as e:
-		return(str(e))
+    if request.method == "GET":
+      categories=Category.query.all()
+      return  jsonify([category.serialize() for category in categories])
+    elif request.method == "POST":
+      data = request.form
+      category=Category(
+        title=data['title'],
+        help_text=data['help_text']
+      )
+      db.session.add(category)
+      db.session.commit()
+
+      return jsonify(category.serialize()), 201
+    else:
+      return jsonify(error=405, text="Method not allowed"), 405
 
 @app.route("/categories/<id_>")
 def get_category(id_):

@@ -84,3 +84,26 @@ class CategoriesTestCase(unittest.TestCase):
     json_response = json.loads(response.data.decode("utf-8"))
 
     self.assertEqual(json_response["text"], "Category does not exist")
+
+  def test_post_category(self):
+    data = {
+      "title": "Definition of Domestic Violence",
+      "help_text": "This is how a state legally defines the term 'domestic violence'"
+    }
+
+    response = self.client.post("/categories", data=data)
+    self.assertEqual(response.status_code, 201)
+
+    new_category = Category.query.first()
+    self.assertEqual(new_category.title, "Definition of Domestic Violence")
+    self.assertEqual(new_category.help_text, "This is how a state legally defines the term 'domestic violence'")
+
+    json_response = json.loads(response.data.decode("utf-8"))
+
+    self.assertEqual(json_response, {
+      "id": new_category.id,
+      "title": "Definition of Domestic Violence",
+      "help_text": "This is how a state legally defines the term 'domestic violence'",
+      "active": True,
+      "deactivated_at": None
+    })
