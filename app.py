@@ -14,6 +14,7 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
+from api_helper import build_category
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
@@ -21,41 +22,54 @@ def handle_auth_error(ex):
 	response.status_code = ex.status_code
 	return response
 
-@app.errorhandler(Exception)
-def handle_exception(ex):
-	response = jsonify(ex.error)
-	response.status_code = ex.status_code
-	return response
+# @app.errorhandler(Exception)
+# def handle_exception(e):
+#   if hasattr(e, 'message'):
+#     message = e.message
+#   else:
+#     message = "Something went wrong"
 
-@app.route("/categories", methods=["GET", "POST"])
+#   return jsonify(error=500, text=message), 500
+
+@app.route("/categories", methods=["GET"])
 def get_categories():
-    if request.method == "GET":
-      categories=Category.query.all()
-      return  jsonify([category.serialize() for category in categories])
-    elif request.method == "POST":
-      data = request.form
-      category=Category(
-        title=data['title'],
-        help_text=data['help_text']
-      )
-      db.session.add(category)
-      db.session.commit()
+    categories=Category.query.all()
+    return  jsonify([category.serialize() for category in categories])
 
-      return jsonify(category.serialize()), 201
-    else:
-      return jsonify(error=405, text="Method not allowed"), 405
+@app.route("/categories", methods=["POST"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def create_category():
+  data = request.form
+  category = build_category(data=data)
+  db.session.add(category)
+  db.session.commit()
 
-@app.route("/categories/<id_>")
+  return jsonify(category.serialize()), 201
+
+@app.route("/categories/<id_>", methods=["GET"])
 def get_category(id_):
-	try:
-		category=Category.query.filter_by(id=id_).first()
+  category=Category.query.filter_by(id=id_).first()
 
-		if category is None:
-			return jsonify(error=404, text="Category does not exist"), 404
+  if category is None:
+    return jsonify(error=404, text="Category does not exist"), 404
 
-		return  jsonify(category.serialize())
-	except Exception as e:
-		return(str(e))
+  return  jsonify(category.serialize())
+
+@app.route("/categories/<id_>", methods=["PUT"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def update_category(id_):
+  category=Category.query.filter_by(id=id_).first()
+
+  if category is None:
+    return jsonify(error=404, text="Category does not exist"), 404
+
+  category = build_category(category=category, data=request.form)
+  db.session.add(category)
+  db.session.commit()
+
+  return  jsonify(category.serialize())
 
 @app.route("/criteria")
 def get_criteria():
