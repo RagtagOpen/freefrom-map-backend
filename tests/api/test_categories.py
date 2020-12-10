@@ -4,7 +4,7 @@ import datetime
 
 from app import app, db
 from models import Category
-from tests.test_utils import clearDatabase, createCategory, auth_headers
+from tests.test_utils import clearDatabase, createCategory, auth_headers, require_auth0_secrets
 
 class CategoriesTestCase(unittest.TestCase):
   def setUp(self):
@@ -85,6 +85,7 @@ class CategoriesTestCase(unittest.TestCase):
 
     self.assertEqual(json_response["text"], "Category does not exist")
 
+  @require_auth0_secrets()
   def test_post_category(self):
     data = {
       "title": "Definition of Domestic Violence",
@@ -112,6 +113,7 @@ class CategoriesTestCase(unittest.TestCase):
     response = self.client.post("/categories", data={}, headers={})
     self.assertEqual(response.status_code, 401)
 
+  @require_auth0_secrets()
   def test_put_category(self):
     category = createCategory()
     db.session.add(category)
@@ -145,6 +147,7 @@ class CategoriesTestCase(unittest.TestCase):
     response = self.client.put("/categories/1", data={}, headers={})
     self.assertEqual(response.status_code, 401)
 
+  @require_auth0_secrets()
   def test_put_category_deactivate(self):
     category = createCategory()
     db.session.add(category)

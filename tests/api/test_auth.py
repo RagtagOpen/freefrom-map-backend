@@ -1,7 +1,5 @@
 import unittest
 import json
-import requests
-import os
 
 from app import app, db
 from tests.test_utils import auth_headers, require_auth0_secrets

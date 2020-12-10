@@ -14,22 +14,13 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
-from api_helper import build_category
+from factories import build_or_update_category
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
 	response = jsonify(ex.error)
 	response.status_code = ex.status_code
 	return response
-
-# @app.errorhandler(Exception)
-# def handle_exception(e):
-#   if hasattr(e, 'message'):
-#     message = e.message
-#   else:
-#     message = "Something went wrong"
-
-#   return jsonify(error=500, text=message), 500
 
 @app.route("/categories", methods=["GET"])
 def get_categories():
@@ -41,7 +32,7 @@ def get_categories():
 @requires_auth
 def create_category():
   data = request.form
-  category = build_category(data=data)
+  category = build_or_update_category(data=data)
   db.session.add(category)
   db.session.commit()
 
@@ -65,7 +56,7 @@ def update_category(id_):
   if category is None:
     return jsonify(error=404, text="Category does not exist"), 404
 
-  category = build_category(category=category, data=request.form)
+  category = build_or_update_category(category=category, data=request.form)
   db.session.add(category)
   db.session.commit()
 
