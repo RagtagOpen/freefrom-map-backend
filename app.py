@@ -14,6 +14,7 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
+from factories import build_or_update_category
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
@@ -21,25 +22,45 @@ def handle_auth_error(ex):
 	response.status_code = ex.status_code
 	return response
 
-@app.route("/categories")
+@app.route("/categories", methods=["GET"])
 def get_categories():
-	try:
-		categories=Category.query.all()
-		return  jsonify([category.serialize() for category in categories])
-	except Exception as e:
-		return(str(e))
+    categories=Category.query.all()
+    return  jsonify([category.serialize() for category in categories])
 
-@app.route("/categories/<id_>")
+@app.route("/categories", methods=["POST"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def create_category():
+  data = request.form
+  category = build_or_update_category(data=data)
+  db.session.add(category)
+  db.session.commit()
+
+  return jsonify(category.serialize()), 201
+
+@app.route("/categories/<id_>", methods=["GET"])
 def get_category(id_):
-	try:
-		category=Category.query.filter_by(id=id_).first()
+  category=Category.query.filter_by(id=id_).first()
 
-		if category is None:
-			return jsonify(error=404, text="Category does not exist"), 404
+  if category is None:
+    return jsonify(error=404, text="Category does not exist"), 404
 
-		return  jsonify(category.serialize())
-	except Exception as e:
-		return(str(e))
+  return  jsonify(category.serialize())
+
+@app.route("/categories/<id_>", methods=["PUT"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def update_category(id_):
+  category=Category.query.filter_by(id=id_).first()
+
+  if category is None:
+    return jsonify(error=404, text="Category does not exist"), 404
+
+  category = build_or_update_category(category=category, data=request.form)
+  db.session.add(category)
+  db.session.commit()
+
+  return  jsonify(category.serialize())
 
 @app.route("/criteria")
 def get_criteria():

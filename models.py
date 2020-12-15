@@ -21,7 +21,7 @@ class Category(Deactivatable, db.Model):
     title = db.Column(db.String())
     help_text = db.Column(db.String())
 
-    def __init__(self, title, help_text):
+    def __init__(self, title=None, help_text=None):
         self.title = title
         self.active = True
         self.help_text = help_text

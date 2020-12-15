@@ -1,4 +1,10 @@
+import json
+import os
+import requests
+import unittest
+
 import models
+from auth import AUTH0_DOMAIN, API_AUDIENCE
 
 def clearDatabase(db):
   db.session.query(models.Link).delete()
@@ -21,3 +27,22 @@ def createCriterion(category_id):
     help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
     adverse=False
   )
+
+def require_auth0_secrets():
+  return unittest.skipIf(
+    not os.environ.get("AUTH0_CLIENT_ID") or not os.environ.get("AUTH0_CLIENT_SECRET"),
+    "Cannot run test without AUTH0_CLIENT_ID and AUTH0_CLIENT_SECRET environment variables"
+  )
+
+def auth_headers():
+  data = {
+    "client_id": os.environ.get('AUTH0_CLIENT_ID'),
+    "client_secret": os.environ.get('AUTH0_CLIENT_SECRET'),
+    "audience": API_AUDIENCE,
+    "grant_type":"client_credentials"
+  }
+
+  jwt_response = requests.post(f'https://{AUTH0_DOMAIN}/oauth/token', data=data)
+  jwt = json.loads(jwt_response.text)['access_token']
+
+  return {'Authorization': f'Bearer {jwt}'}
