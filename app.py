@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
-from factories import build_or_update_category
+from services import update_or_create_category
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
@@ -32,7 +32,7 @@ def get_categories():
 @requires_auth
 def create_category():
   data = request.form
-  category = build_or_update_category(data=data)
+  category = update_or_create_category(data=data)
   db.session.add(category)
   db.session.commit()
 
@@ -56,7 +56,7 @@ def update_category(id_):
   if category is None:
     return jsonify(error=404, text="Category does not exist"), 404
 
-  category = build_or_update_category(category=category, data=request.form)
+  category = update_or_create_category(category=category, data=request.form)
   db.session.add(category)
   db.session.commit()
 

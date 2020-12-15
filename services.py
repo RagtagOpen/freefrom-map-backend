@@ -1,6 +1,6 @@
 from models import Category
 
-def build_or_update_category(data, category=Category()):
+def update_or_create_category(data, category=Category()):
   """Takes a dict of data where the keys are fields of the category model.
       Valid keys are title, help_text, and active. The 'active' key only uses
       a False value.
