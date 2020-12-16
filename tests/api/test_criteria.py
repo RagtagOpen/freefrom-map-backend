@@ -3,7 +3,8 @@ import json
 
 from app import app, db
 from models import Category, Criterion
-from tests.test_utils import clearDatabase, createCategory
+import strings
+from tests.test_utils import clearDatabase, createCategory, createCriterion, auth_headers, require_auth0_secrets
 
 class CriteriaTestCase(unittest.TestCase):
   def setUp(self):
@@ -100,9 +101,99 @@ class CriteriaTestCase(unittest.TestCase):
       "adverse": False
     })
 
-  def test_get_category_doesnt_exist(self):
+  def test_get_criterion_doesnt_exist(self):
     response = self.client.get("/criteria/1")
     self.assertEqual(response.status_code, 404)
     json_response = json.loads(response.data.decode("utf-8"))
 
     self.assertEqual(json_response["text"], "Criterion does not exist")
+
+  @require_auth0_secrets()
+  def test_post_criterion(self):
+    category_id = self.category.id
+    data = {
+      "category_id": category_id,
+      "title": "Includes economic abuse framework",
+      "recommendation_text": "The state's definition of domestic violence should include a framework of economic abuse",
+      "help_text": "This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
+      "adverse": False
+    }
+
+    response = self.client.post("/criteria", json=data, headers=auth_headers())
+    self.assertEqual(response.status_code, 201)
+
+    new_criterion = Criterion.query.one()
+    self.assertEqual(new_criterion.category_id, category_id)
+    self.assertEqual(new_criterion.title, "Includes economic abuse framework")
+    self.assertEqual(new_criterion.recommendation_text, "The state's definition of domestic violence should include a framework of economic abuse")
+    self.assertEqual(new_criterion.help_text, "This means that the state acknowledges the role that economic control and abuse can play in domestic violence")
+    self.assertFalse(new_criterion.adverse)
+    self.assertTrue(new_criterion.active)
+    self.assertIsNone(new_criterion.deactivated_at)
+
+  @require_auth0_secrets()
+  def test_post_criterion_category_doesnt_exist(self):
+    category_id = self.category.id + 1
+    data = { "category_id": category_id }
+
+    response = self.client.post("/criteria", json=data, headers=auth_headers())
+    json_response = json.loads(response.data)
+
+    self.assertEqual(response.status_code, 404)
+    self.assertEqual(json_response['text'], strings.category_not_found)
+
+  def test_post_criterion_no_auth(self):
+    response = self.client.post("/criteria", data={}, headers={})
+    self.assertEqual(response.status_code, 401) 
+
+  @require_auth0_secrets()
+  def test_put_criterion(self):
+    category_id = self.category.id
+    criterion = createCriterion(category_id)
+    db.session.add(criterion)
+    db.session.commit()
+
+    data = {
+      "title": "A New Title",
+      "help_text": "Some new help text",
+    }
+
+    response = self.client.put("/criteria/%i" % criterion.id, json=data, headers=auth_headers())
+    self.assertEqual(response.status_code, 200)
+
+    criterion = Criterion.query.first()
+
+    self.assertEqual(criterion.category_id, category_id)
+    self.assertEqual(criterion.title, "A New Title")
+    self.assertEqual(criterion.recommendation_text, "The state's definition of domestic violence should include a framework of economic abuse")
+    self.assertEqual(criterion.help_text, "Some new help text")
+    self.assertFalse(criterion.adverse)
+    self.assertTrue(criterion.active)
+    self.assertIsNone(criterion.deactivated_at)
+
+  @require_auth0_secrets()
+  def test_put_criterion_change_category(self):
+    category_id = self.category.id
+    criterion = createCriterion(category_id)
+    db.session.add(criterion)
+    db.session.commit()
+
+    data = { "category_id": category_id + 1 }
+
+    response = self.client.put("/criteria/%i" % criterion.id, json=data, headers=auth_headers())
+    json_response = json.loads(response.data)
+
+    self.assertEqual(response.status_code, 400)
+    self.assertEqual(json_response['text'], strings.criterion_cannot_change_category)
+
+  @require_auth0_secrets()
+  def test_put_criterion_doesnt_exist(self):
+    response = self.client.put("/criteria/1", json={}, headers=auth_headers())
+    json_response = json.loads(response.data)
+
+    self.assertEqual(response.status_code, 404)
+    self.assertEqual(json_response['text'], strings.criterion_not_found)
+
+  def test_put_category_no_auth(self):
+    response = self.client.put("/criteria/1", data={}, headers={})
+    self.assertEqual(response.status_code, 401)

@@ -14,6 +14,28 @@ class Deactivatable(object):
         self.active = False
         self.deactivated_at = datetime.datetime.utcnow()
 
+
+class GenericMixin:
+    @classmethod
+    def create(cls, **kwargs):
+        instance = cls(**kwargs)
+        return instance.save()
+
+    def update(self, **kwargs):
+        for attr, value in kwargs.items():
+            setattr(self, attr, value)
+        return self.save()
+
+    def save(self):
+        db.session.add(self)
+        try:
+            db.session.commit()
+        except Exception:
+            db.session.rollback()
+            raise Exception
+        return self
+    
+
 class Category(Deactivatable, db.Model):
     __tablename__ = 'categories'
 
@@ -39,7 +61,7 @@ class Category(Deactivatable, db.Model):
         }
 
 
-class Criterion(Deactivatable, db.Model):
+class Criterion(Deactivatable, GenericMixin, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
