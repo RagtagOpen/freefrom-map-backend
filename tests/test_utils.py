@@ -1,10 +1,8 @@
 import json
 import os
-import requests
 import unittest
 
 import models
-from auth import AUTH0_DOMAIN, API_AUDIENCE
 
 def clearDatabase(db):
   db.session.query(models.Link).delete()
@@ -35,14 +33,4 @@ def require_auth0_secrets():
   )
 
 def auth_headers():
-  data = {
-    "client_id": os.environ.get('AUTH0_CLIENT_ID'),
-    "client_secret": os.environ.get('AUTH0_CLIENT_SECRET'),
-    "audience": API_AUDIENCE,
-    "grant_type":"client_credentials"
-  }
-
-  jwt_response = requests.post(f'https://{AUTH0_DOMAIN}/oauth/token', data=data)
-  jwt = json.loads(jwt_response.text)['access_token']
-
-  return {'Authorization': f'Bearer {jwt}'}
+  return {'Authorization': 'Bearer fake token'}

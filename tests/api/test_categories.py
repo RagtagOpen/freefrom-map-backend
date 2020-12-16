@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 import json
 import datetime
 
@@ -86,7 +87,8 @@ class CategoriesTestCase(unittest.TestCase):
     self.assertEqual(json_response["text"], "Category does not exist")
 
   @require_auth0_secrets()
-  def test_post_category(self):
+  @patch('auth.is_token_valid', return_value=True)
+  def test_post_category(self, mock_auth):
     data = {
       "title": "Definition of Domestic Violence",
       "help_text": "This is how a state legally defines the term 'domestic violence'"
@@ -94,6 +96,7 @@ class CategoriesTestCase(unittest.TestCase):
 
     response = self.client.post("/categories", data=data, headers=auth_headers())
     self.assertEqual(response.status_code, 201)
+    mock_auth.assert_called_once()
 
     new_category = Category.query.first()
     self.assertEqual(new_category.title, "Definition of Domestic Violence")
@@ -114,7 +117,8 @@ class CategoriesTestCase(unittest.TestCase):
     self.assertEqual(response.status_code, 401)
 
   @require_auth0_secrets()
-  def test_put_category(self):
+  @patch('auth.is_token_valid', return_value=True)
+  def test_put_category(self, mock_auth):
     category = createCategory()
     db.session.add(category)
     db.session.commit()
@@ -126,6 +130,7 @@ class CategoriesTestCase(unittest.TestCase):
 
     response = self.client.put("/categories/%i" % category.id, data=data, headers=auth_headers())
     self.assertEqual(response.status_code, 200)
+    mock_auth.assert_called_once()
 
     # Refresh category object
     category = Category.query.first()
@@ -143,12 +148,13 @@ class CategoriesTestCase(unittest.TestCase):
       "deactivated_at": None
     })
 
-  def test_put_category_no_auth(self):
+  def test_put_category_no_auth(self, mock_auth):
     response = self.client.put("/categories/1", data={}, headers={})
     self.assertEqual(response.status_code, 401)
 
   @require_auth0_secrets()
-  def test_put_category_deactivate(self):
+  @patch('auth.is_token_valid', return_value=True)
+  def test_put_category_deactivate(self, mock_auth):
     category = createCategory()
     db.session.add(category)
     db.session.commit()
@@ -159,6 +165,7 @@ class CategoriesTestCase(unittest.TestCase):
 
     response = self.client.put("/categories/%i" % category.id, data=data, headers=auth_headers())
     self.assertEqual(response.status_code, 200)
+    mock_auth.assert_called_once()
 
     # Refresh category object
     category = Category.query.first()
