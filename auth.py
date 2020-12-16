@@ -6,8 +6,8 @@ from functools import wraps
 from flask import request, jsonify, _request_ctx_stack
 from jose import jwt
 
-AUTH0_DOMAIN = 'dev-yhcdtf5o.us.auth0.com'
-API_AUDIENCE = 'freefrom-map-backend'
+AUTH0_DOMAIN = 'freefrom-map-api.us.auth0.com'
+API_AUDIENCE = 'https://freefrom-map-api.herokuapp.com/'
 ALGORITHMS = ["RS256"]
 
 
