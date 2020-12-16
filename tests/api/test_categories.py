@@ -173,3 +173,14 @@ class CategoriesTestCase(unittest.TestCase):
     json_response = json.loads(response.data.decode("utf-8"))
 
     self.assertTrue(isinstance(json_response["deactivated_at"], str))
+
+    # Category cannot be reactivated
+    deactivated_at = category.deactivated_at
+    data = {
+      "active": True
+    }
+
+    response = self.client.put("/categories/%i" % category.id, data=data, headers=auth_headers())
+    category = Category.query.first()
+    self.assertFalse(category.active)
+    self.assertEqual(category.deactivated_at, deactivated_at)

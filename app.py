@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
-from services import update_or_create_category
+from services import update_or_create_category, update_or_create_criterion
 import strings
 
 @app.errorhandler(AuthError)
@@ -81,8 +81,11 @@ def create_criterion():
     category = Category.query.filter_by(id=data.get('category_id')).first()
     if category is None:
       return jsonify(text=strings.category_not_found), 404
-  
-    criterion = Criterion.create(**data)
+
+    criterion = update_or_create_criterion(data=data)
+    db.session.add(criterion)
+    db.session.commit()
+
     return jsonify(criterion.serialize()), 201
 
   except Exception as e:
@@ -116,7 +119,10 @@ def update_criterion(id_):
     if category_id and category_id != criterion.category_id:
       return jsonify(text=strings.criterion_cannot_change_category), 400
 
-    criterion.update(**data)
+    update_or_create_criterion(data, criterion)
+    db.session.add(criterion)
+    db.session.commit()
+
     return jsonify(criterion.serialize())
 
   except Exception as e:
