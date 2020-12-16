@@ -148,7 +148,7 @@ class CategoriesTestCase(unittest.TestCase):
       "deactivated_at": None
     })
 
-  def test_put_category_no_auth(self, mock_auth):
+  def test_put_category_no_auth(self):
     response = self.client.put("/categories/1", data={}, headers={})
     self.assertEqual(response.status_code, 401)
 
