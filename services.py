@@ -1,4 +1,4 @@
-from models import Category
+from models import Category, Link
 
 def update_or_create_category(data, category=Category()):
   """Takes a dict of data where the keys are fields of the category model.
@@ -16,3 +16,24 @@ def update_or_create_category(data, category=Category()):
     category.deactivate()
 
   return category
+
+def update_or_create_link(data, link=None):
+  """Takes a dict of data where the keys are fields of the link model.
+     Valid keys are category_id, state, text, url, and active. The 'active'
+     key only uses a False value to deactivate the link.
+  """
+
+  if link is None:
+    # TODO: raise error
+    link = Link(category_id=data["category_id"], state=data["state"])
+
+  if 'text' in data.keys():
+    link.text = data['text']
+  if 'url' in data.keys():
+    link.url = data['url']
+
+  # You cannot reactivate a category after deactivating it
+  if 'active' in data.keys() and data['active'] == 'False':
+    link.deactivate()
+
+  return link

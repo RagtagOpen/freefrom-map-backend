@@ -14,7 +14,7 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
-from services import update_or_create_category
+from services import update_or_create_category, update_or_create_link
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
@@ -82,25 +82,45 @@ def get_criterion(id_):
 	except Exception as e:
 		return(str(e))
 
-@app.route("/links")
+@app.route("/links", methods=["GET"])
 def get_links():
-	try:
-		links=Link.query.all()
-		return  jsonify([link.serialize() for link in links])
-	except Exception as e:
-		return(str(e))
+	links=Link.query.all()
+	return  jsonify([link.serialize() for link in links])
 
-@app.route("/links/<id_>")
+@app.route("/links", methods=["POST"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def create_link():
+  data = request.form
+  link = update_or_create_link(data=data)
+  db.session.add(link)
+  db.session.commit()
+
+  return jsonify(link.serialize()), 201
+
+@app.route("/links/<id_>", methods=["GET"])
 def get_link(id_):
-	try:
-		link=Link.query.filter_by(id=id_).first()
+	link=Link.query.filter_by(id=id_).first()
 
-		if link is None:
-			return jsonify(error=404, text="Link does not exist"), 404
+	if link is None:
+		return jsonify(error=404, text="Link does not exist"), 404
 
-		return  jsonify(link.serialize())
-	except Exception as e:
-		return(str(e))
+	return  jsonify(link.serialize())
+
+@app.route("/links/<id_>", methods=["PUT"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def update_link(id_):
+  link=Link.query.filter_by(id=id_).first()
+
+  if link is None:
+    return jsonify(error=404, text="Lategory does not exist"), 404
+
+  link = update_or_create_link(link=link, data=request.form)
+  db.session.add(link)
+  db.session.commit()
+
+  return  jsonify(link.serialize())
 
 # This doesn't need authentication
 @app.route("/api/public")
