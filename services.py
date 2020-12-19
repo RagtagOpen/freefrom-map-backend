@@ -24,7 +24,8 @@ def update_or_create_link(data, link=None):
   """
 
   if link is None:
-    # TODO: raise error
+    # TODO: Raise an appropriate error if category_id and state are not present
+    #  (see issue #57)
     link = Link(category_id=data["category_id"], state=data["state"])
 
   if 'text' in data.keys():
@@ -32,7 +33,7 @@ def update_or_create_link(data, link=None):
   if 'url' in data.keys():
     link.url = data['url']
 
-  # You cannot reactivate a category after deactivating it
+  # You cannot reactivate a link after deactivating it
   if 'active' in data.keys() and data['active'] == 'False':
     link.deactivate()
 
