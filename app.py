@@ -14,7 +14,8 @@ db = SQLAlchemy(app)
 
 from models import Category, Criterion, Link, Score
 from auth import AuthError, requires_auth
-from services import update_or_create_category, update_or_create_link
+from services import update_or_create_category, update_or_create_criterion, update_or_create_link
+import strings
 
 @app.errorhandler(AuthError)
 def handle_auth_error(ex):
@@ -31,7 +32,7 @@ def get_categories():
 @cross_origin(headers=["Content-Type", "Authorization"])
 @requires_auth
 def create_category():
-  data = request.form
+  data = request.get_json()
   category = update_or_create_category(data=data)
   db.session.add(category)
   db.session.commit()
@@ -43,7 +44,7 @@ def get_category(id_):
   category=Category.query.filter_by(id=id_).first()
 
   if category is None:
-    return jsonify(error=404, text="Category does not exist"), 404
+    return jsonify(error=404, text=strings.category_not_found), 404
 
   return  jsonify(category.serialize())
 
@@ -52,17 +53,18 @@ def get_category(id_):
 @requires_auth
 def update_category(id_):
   category=Category.query.filter_by(id=id_).first()
+  data = request.get_json()
 
   if category is None:
-    return jsonify(error=404, text="Category does not exist"), 404
+    return jsonify(error=404, text=strings.category_not_found), 404
 
-  category = update_or_create_category(category=category, data=request.form)
+  category = update_or_create_category(data, category=category)
   db.session.add(category)
   db.session.commit()
 
   return  jsonify(category.serialize())
 
-@app.route("/criteria")
+@app.route("/criteria", methods=["GET"])
 def get_criteria():
 	try:
 		criteria=Criterion.query.all()
@@ -70,19 +72,65 @@ def get_criteria():
 	except Exception as e:
 		return(str(e))
 
-@app.route("/criteria/<id_>")
+@app.route("/criteria", methods=["POST"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def create_criterion():
+  try:
+    data = request.get_json()
+
+    category = Category.query.filter_by(id=data.get('category_id')).first()
+    if category is None:
+      return jsonify(text=strings.category_not_found), 404
+
+    criterion = update_or_create_criterion(data=data)
+    db.session.add(criterion)
+    db.session.commit()
+
+    return jsonify(criterion.serialize()), 201
+
+  except Exception as e:
+    return jsonify(text=str(e)), 500
+
+@app.route("/criteria/<id_>", methods=["GET"])
 def get_criterion(id_):
 	try:
 		criterion=Criterion.query.filter_by(id=id_).first()
 
 		if criterion is None:
-			return jsonify(error=404, text="Criterion does not exist"), 404
+			return jsonify(text=strings.criterion_not_found), 404
 
 		return  jsonify(criterion.serialize())
 	except Exception as e:
 		return(str(e))
 
+@app.route("/criteria/<id_>", methods=["PUT"])
+@cross_origin(headers=["Content-Type", "Authorization"])
+@requires_auth
+def update_criterion(id_):
+  try:
+    criterion = Criterion.query.filter_by(id=id_).first()
+
+    if criterion is None:
+      return jsonify(text=strings.criterion_not_found), 404
+
+    data = request.get_json()
+
+    category_id = data.get('category_id')
+    if category_id and category_id != criterion.category_id:
+      return jsonify(text=strings.cannot_change_category), 400
+
+    update_or_create_criterion(data, criterion)
+    db.session.add(criterion)
+    db.session.commit()
+
+    return jsonify(criterion.serialize())
+
+  except Exception as e:
+    return jsonify(text=str(e)), 500
+
 @app.route("/links", methods=["GET"])
+@app.route("/links")
 def get_links():
 	links=Link.query.all()
 	return  jsonify([link.serialize() for link in links])
@@ -91,7 +139,12 @@ def get_links():
 @cross_origin(headers=["Content-Type", "Authorization"])
 @requires_auth
 def create_link():
-  data = request.form
+  data = request.get_json()
+
+  category = Category.query.filter_by(id=data.get('category_id')).first()
+  if category is None:
+    return jsonify(text=strings.category_not_found), 404
+
   link = update_or_create_link(data=data)
   db.session.add(link)
   db.session.commit()
@@ -103,7 +156,7 @@ def get_link(id_):
 	link=Link.query.filter_by(id=id_).first()
 
 	if link is None:
-		return jsonify(error=404, text="Link does not exist"), 404
+		return jsonify(error=404, text=strings.link_not_found), 404
 
 	return  jsonify(link.serialize())
 
@@ -112,11 +165,20 @@ def get_link(id_):
 @requires_auth
 def update_link(id_):
   link=Link.query.filter_by(id=id_).first()
+  data=request.get_json()
 
   if link is None:
-    return jsonify(error=404, text="Lategory does not exist"), 404
+    return jsonify(error=404, text=strings.link_not_found), 404
 
-  link = update_or_create_link(link=link, data=request.form)
+  category_id = data.get('category_id')
+  if category_id and category_id != link.category_id:
+    return jsonify(text=strings.cannot_change_category), 400
+
+  state = data.get('state')
+  if state and state != link.state:
+    return jsonify(text=strings.cannot_change_state), 400
+
+  link = update_or_create_link(data, link=link)
   db.session.add(link)
   db.session.commit()
 

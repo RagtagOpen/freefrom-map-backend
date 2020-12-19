@@ -114,7 +114,7 @@ class LinksTestCase(unittest.TestCase):
       "url": "ny.gov/link/to/statute"
     }
 
-    response = self.client.post("/links", data=data, headers=auth_headers())
+    response = self.client.post("/links", json=data, headers=auth_headers())
     self.assertEqual(response.status_code, 201)
     mock_auth.assert_called_once()
 
@@ -139,7 +139,7 @@ class LinksTestCase(unittest.TestCase):
     })
 
   def test_post_link_no_auth(self):
-    response = self.client.post("/links", data={}, headers={})
+    response = self.client.post("/links", json={}, headers={})
     self.assertEqual(response.status_code, 401)
 
   @patch('auth.is_token_valid', return_value=True)
@@ -153,7 +153,7 @@ class LinksTestCase(unittest.TestCase):
       "url": "ny.gov/link/to/statute"
     }
 
-    response = self.client.put("/links/%i" % link.id, data=data, headers=auth_headers())
+    response = self.client.put("/links/%i" % link.id, json=data, headers=auth_headers())
     self.assertEqual(response.status_code, 200)
     mock_auth.assert_called_once()
 
@@ -177,7 +177,7 @@ class LinksTestCase(unittest.TestCase):
     })
 
   def test_put_category_no_auth(self):
-    response = self.client.put("/links/1", data={}, headers={})
+    response = self.client.put("/links/1", json={}, headers={})
     self.assertEqual(response.status_code, 401)
 
   @patch('auth.is_token_valid', return_value=True)
@@ -190,7 +190,7 @@ class LinksTestCase(unittest.TestCase):
       "active": False
     }
 
-    response = self.client.put("/links/%i" % link.id, data=data, headers=auth_headers())
+    response = self.client.put("/links/%i" % link.id, json=data, headers=auth_headers())
     self.assertEqual(response.status_code, 200)
     mock_auth.assert_called_once()
 
