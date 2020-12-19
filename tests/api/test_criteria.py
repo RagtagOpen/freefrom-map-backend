@@ -6,7 +6,7 @@ import datetime
 from app import app, db
 from models import Category, Criterion
 import strings
-from tests.test_utils import clearDatabase, createCategory, createCriterion, auth_headers, require_auth0_secrets
+from tests.test_utils import clearDatabase, createCategory, createCriterion, auth_headers
 
 class CriteriaTestCase(unittest.TestCase):
   def setUp(self):
@@ -110,7 +110,6 @@ class CriteriaTestCase(unittest.TestCase):
 
     self.assertEqual(json_response["text"], "Criterion does not exist")
 
-  @require_auth0_secrets()
   @patch('auth.is_token_valid', return_value=True)
   def test_post_criterion(self, mock_auth):
     category_id = self.category.id
@@ -147,7 +146,6 @@ class CriteriaTestCase(unittest.TestCase):
       "deactivated_at": None,
     })
 
-  @require_auth0_secrets()
   @patch('auth.is_token_valid', return_value=True)
   def test_post_criterion_category_doesnt_exist(self, mock_auth):
     category_id = self.category.id + 1
@@ -164,7 +162,6 @@ class CriteriaTestCase(unittest.TestCase):
     response = self.client.post("/criteria", data={}, headers={})
     self.assertEqual(response.status_code, 401) 
 
-  @require_auth0_secrets()
   @patch('auth.is_token_valid', return_value=True)
   def test_put_criterion(self, mock_auth):
     category_id = self.category.id
@@ -202,7 +199,6 @@ class CriteriaTestCase(unittest.TestCase):
       "deactivated_at": None,
     })
 
-  @require_auth0_secrets()
   @patch('auth.is_token_valid', return_value=True)
   def test_put_criterion_change_category(self, mock_auth):
     category_id = self.category.id
@@ -223,7 +219,6 @@ class CriteriaTestCase(unittest.TestCase):
     response = self.client.put("/criteria/1", json={}, headers={})
     self.assertEqual(response.status_code, 401)
 
-  @require_auth0_secrets()
   @patch('auth.is_token_valid', return_value=True)
   def test_put_criterion_doesnt_exist(self, mock_auth):
     response = self.client.put("/criteria/1", json={}, headers=auth_headers())
@@ -233,7 +228,6 @@ class CriteriaTestCase(unittest.TestCase):
     json_response = json.loads(response.data)
     self.assertEqual(json_response['text'], strings.criterion_not_found)
 
-  @require_auth0_secrets()
   @patch('auth.is_token_valid', return_value=True)
   def test_put_criterion_deactivate(self, mock_auth):
     criterion = createCriterion(self.category.id)
