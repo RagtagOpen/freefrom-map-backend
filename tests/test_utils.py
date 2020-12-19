@@ -1,7 +1,3 @@
-import json
-import os
-import unittest
-
 import models
 
 def clearDatabase(db):
@@ -24,12 +20,6 @@ def createCriterion(category_id):
     recommendation_text="The state's definition of domestic violence should include a framework of economic abuse",
     help_text="This means that the state acknowledges the role that economic control and abuse can play in domestic violence",
     adverse=False
-  )
-
-def require_auth0_secrets():
-  return unittest.skipIf(
-    not os.environ.get("AUTH0_CLIENT_ID") or not os.environ.get("AUTH0_CLIENT_SECRET"),
-    "Cannot run test without AUTH0_CLIENT_ID and AUTH0_CLIENT_SECRET environment variables"
   )
 
 def auth_headers():

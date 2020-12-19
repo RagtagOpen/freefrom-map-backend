@@ -5,7 +5,12 @@ import requests
 
 from app import app, db
 from auth import AUTH0_DOMAIN, API_AUDIENCE
-from tests.test_utils import require_auth0_secrets
+
+def require_auth0_secrets():
+  return unittest.skipIf(
+    not os.environ.get("AUTH0_CLIENT_ID") or not os.environ.get("AUTH0_CLIENT_SECRET"),
+    "Cannot run test without AUTH0_CLIENT_ID and AUTH0_CLIENT_SECRET environment variables"
+  )
 
 def auth_headers():
   data = {
