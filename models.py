@@ -115,7 +115,7 @@ class Link(Deactivatable, db.Model):
     text = db.Column(db.String())
     url = db.Column(db.String())
 
-    def __init__(self, category_id, state, text, url):
+    def __init__(self, category_id, state, text=None, url=None):
         self.category_id = category_id
         self.state = state
         self.text = text

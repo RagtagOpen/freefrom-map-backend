@@ -160,7 +160,7 @@ class CriteriaTestCase(unittest.TestCase):
 
   def test_post_criterion_no_auth(self):
     response = self.client.post("/criteria", data={}, headers={})
-    self.assertEqual(response.status_code, 401) 
+    self.assertEqual(response.status_code, 401)
 
   @patch('auth.is_token_valid', return_value=True)
   def test_put_criterion(self, mock_auth):
@@ -213,7 +213,7 @@ class CriteriaTestCase(unittest.TestCase):
     mock_auth.assert_called_once()
 
     json_response = json.loads(response.data)
-    self.assertEqual(json_response['text'], strings.criterion_cannot_change_category)
+    self.assertEqual(json_response['text'], strings.cannot_change_category)
 
   def test_put_category_no_auth(self):
     response = self.client.put("/criteria/1", json={}, headers={})

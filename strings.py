@@ -1,3 +1,5 @@
+cannot_change_category = 'Category cannot be changed'
+cannot_change_state = 'State cannot be changed'
 category_not_found = 'Category does not exist'
-criterion_cannot_change_category = 'Category cannot be changed'
 criterion_not_found = 'Criterion does not exist'
+link_not_found = 'Link does not exist'

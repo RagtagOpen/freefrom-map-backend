@@ -93,7 +93,7 @@ class CategoriesTestCase(unittest.TestCase):
       "help_text": "This is how a state legally defines the term 'domestic violence'"
     }
 
-    response = self.client.post("/categories", data=data, headers=auth_headers())
+    response = self.client.post("/categories", json=data, headers=auth_headers())
     self.assertEqual(response.status_code, 201)
     mock_auth.assert_called_once()
 
@@ -112,7 +112,7 @@ class CategoriesTestCase(unittest.TestCase):
     })
 
   def test_post_category_no_auth(self):
-    response = self.client.post("/categories", data={}, headers={})
+    response = self.client.post("/categories", json={}, headers={})
     self.assertEqual(response.status_code, 401)
 
   @patch('auth.is_token_valid', return_value=True)
@@ -126,7 +126,7 @@ class CategoriesTestCase(unittest.TestCase):
       "help_text": "Some new help text",
     }
 
-    response = self.client.put("/categories/%i" % category.id, data=data, headers=auth_headers())
+    response = self.client.put("/categories/%i" % category.id, json=data, headers=auth_headers())
     self.assertEqual(response.status_code, 200)
     mock_auth.assert_called_once()
 
@@ -147,7 +147,7 @@ class CategoriesTestCase(unittest.TestCase):
     })
 
   def test_put_category_no_auth(self):
-    response = self.client.put("/categories/1", data={}, headers={})
+    response = self.client.put("/categories/1", json={}, headers={})
     self.assertEqual(response.status_code, 401)
 
   @patch('auth.is_token_valid', return_value=True)
@@ -160,7 +160,7 @@ class CategoriesTestCase(unittest.TestCase):
       "active": False
     }
 
-    response = self.client.put("/categories/%i" % category.id, data=data, headers=auth_headers())
+    response = self.client.put("/categories/%i" % category.id, json=data, headers=auth_headers())
     self.assertEqual(response.status_code, 200)
     mock_auth.assert_called_once()
 
@@ -180,7 +180,7 @@ class CategoriesTestCase(unittest.TestCase):
       "active": True
     }
 
-    response = self.client.put("/categories/%i" % category.id, data=data, headers=auth_headers())
+    response = self.client.put("/categories/%i" % category.id, json=data, headers=auth_headers())
     category = Category.query.first()
     self.assertFalse(category.active)
     self.assertEqual(category.deactivated_at, deactivated_at)
