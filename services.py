@@ -18,7 +18,7 @@ def update_or_create_category(data, category=Category()):
   return category
 
 
-def update_or_create_criterion(data, criterion=Criterion()):
+def update_or_create_criterion(data, criterion):
   """Takes a dict of data where the keys are fields of the criterion model.
       Valid keys are category_id, title, recommendation_text, help_text, adverse,
       and active. The 'active' key only uses a False value.

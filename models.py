@@ -49,7 +49,7 @@ class Criterion(Deactivatable, db.Model):
     help_text = db.Column(db.String())
     adverse = db.Column(db.Boolean())
 
-    def __init__(self, category_id=None, title=None, recommendation_text=None, help_text=None, adverse=None):
+    def __init__(self, category_id, title=None, recommendation_text=None, help_text=None, adverse=None):
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text

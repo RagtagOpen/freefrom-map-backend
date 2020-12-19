@@ -82,7 +82,10 @@ def create_criterion():
     if category is None:
       return jsonify(text=strings.category_not_found), 404
 
-    criterion = update_or_create_criterion(data=data)
+    criterion = update_or_create_criterion(
+      data=data,
+      criterion=Criterion(category_id=category.id),
+    )
     db.session.add(criterion)
     db.session.commit()
 
