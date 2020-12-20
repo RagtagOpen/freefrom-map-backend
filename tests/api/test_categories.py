@@ -5,7 +5,7 @@ import datetime
 
 from app import app, db
 from models import Category
-from tests.test_utils import clear_database, create_category, auth_headers
+from tests.test_utils import clear_database, create_category, create_criterion, auth_headers
 
 
 class CategoriesTestCase(unittest.TestCase):
@@ -55,7 +55,25 @@ class CategoriesTestCase(unittest.TestCase):
 
         # Assert that the expected results are a subset of the actual results
         self.assertTrue(category_2_expected.items() <= json_response[1].items())
-        self.assertTrue(isinstance(json_response[1]['deactivated_at'], str))
+
+    def test_get_categories_with_criteria(self):
+        category = create_category()
+        criterion = create_criterion(category.id)
+
+        response = self.client.get('/categories?withCriteria=true')
+        self.assertEqual(response.status_code, 200)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(len(json_response), 1)
+
+        self.assertEqual(json_response[0], {
+            'id': category.id,
+            'title': 'Definition of Domestic Violence',
+            'help_text': "This is how a state legally defines the term 'domestic violence'",
+            'active': True,
+            'deactivated_at': None,
+            'criteria': [criterion.serialize()],
+        })
 
     def test_get_categories_empty(self):
         response = self.client.get('/categories')
@@ -80,6 +98,26 @@ class CategoriesTestCase(unittest.TestCase):
             'help_text': "This is how a state legally defines the term 'domestic violence'",
             'active': True,
             'deactivated_at': None,
+        })
+
+    def test_get_category_with_criteria(self):
+        category = Category(
+            title='Definition of Domestic Violence',
+            help_text="This is how a state legally defines the term 'domestic violence'",
+        ).save()
+        criterion = create_criterion(category.id)
+
+        response = self.client.get('/categories/%i?withCriteria=true' % category.id)
+        self.assertEqual(response.status_code, 200)
+        json_response = json.loads(response.data.decode('utf-8'))
+
+        self.assertEqual(json_response, {
+            'id': category.id,
+            'title': 'Definition of Domestic Violence',
+            'help_text': "This is how a state legally defines the term 'domestic violence'",
+            'active': True,
+            'deactivated_at': None,
+            'criteria': [criterion.serialize()],
         })
 
     def test_get_category_doesnt_exist(self):

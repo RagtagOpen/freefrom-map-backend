@@ -46,6 +46,7 @@ class Category(BaseMixin, Deactivatable, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
     help_text = db.Column(db.String())
+    criteria = db.relationship('Criterion', backref='category', lazy=True)
 
     def __init__(self, title=None, help_text=None):
         self.title = title
@@ -55,14 +56,19 @@ class Category(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    def serialize(self):
-        return {
+    def serialize(self, with_criteria=False):
+        data = {
             'id': self.id,
             'title': self.title,
             'active': self.active,
             'help_text': self.help_text,
             'deactivated_at': self.deactivated_at,
         }
+
+        if with_criteria:
+            data['criteria'] = [criterion.serialize() for criterion in self.criteria]
+
+        return data
 
 
 class Criterion(BaseMixin, Deactivatable, db.Model):

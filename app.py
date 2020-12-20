@@ -31,8 +31,10 @@ def handle_auth_error(ex):
 
 @app.route('/categories', methods=['GET'])
 def get_categories():
+    with_criteria = request.args.get('withCriteria') == 'true'
+
     categories = Category.query.all()
-    return jsonify([category.serialize() for category in categories])
+    return jsonify([category.serialize(with_criteria) for category in categories])
 
 
 @app.route('/categories', methods=['POST'])
@@ -51,7 +53,8 @@ def get_category(id_):
     if category is None:
         return jsonify(error=404, text=strings.category_not_found), 404
 
-    return jsonify(category.serialize())
+    with_criteria = request.args.get('withCriteria') == 'true'
+    return jsonify(category.serialize(with_criteria))
 
 
 @app.route('/categories/<id_>', methods=['PUT'])
