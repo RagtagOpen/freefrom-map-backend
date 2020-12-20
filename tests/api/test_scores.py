@@ -49,7 +49,7 @@ class ScoresTestCase(unittest.TestCase):
             'criterion_id': criterion_id,
             'state': 'NY',
             'meets_criterion': True,
-            'created_at': score.created_at.strftime('%c'),
+            'created_at': score.created_at.strftime('%a, %d %b %Y %X GMT'),
         })
 
     @patch('auth.is_token_valid', return_value=True)
