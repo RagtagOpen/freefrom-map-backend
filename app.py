@@ -19,7 +19,7 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Criterion, Link  # noqa: E402
+from models import Category, Criterion, Link, Score  # noqa: E402
 
 
 @app.errorhandler(AuthError)
@@ -200,9 +200,7 @@ def create_score():
         criterion_id=data['criterion_id'],
         state=data['state'],
         meets_criterion=data['meets_criterion'],
-    )
-    db.session.add(score)
-    db.session.commit()
+    ).save()
 
     return jsonify(score.serialize()), 201
 
