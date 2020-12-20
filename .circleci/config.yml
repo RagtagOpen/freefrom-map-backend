@@ -20,8 +20,9 @@ jobs:
       - run: python manage.py db stamp head
       - run: python manage.py db migrate
       - run: python manage.py db upgrade
+      - run: flake8
       - run: python -m unittest
-        
+
 workflows:
   main:
     jobs:
