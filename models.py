@@ -30,6 +30,7 @@ class BaseMixin():
             raise Exception
         return objects
 
+
 class Deactivatable(object):
     active = db.Column(db.Boolean())
     deactivated_at = db.Column(db.DateTime)
@@ -62,6 +63,7 @@ class Category(BaseMixin, Deactivatable, db.Model):
             'help_text': self.help_text,
             'deactivated_at': self.deactivated_at,
         }
+
 
 class Criterion(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'criteria'
