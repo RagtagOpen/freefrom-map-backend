@@ -3,7 +3,7 @@ import datetime
 
 from app import app, db
 from models import Category
-from tests.test_utils import clear_database
+from tests.test_utils import clear_database, create_criterion
 
 
 class CategoryTestCase(unittest.TestCase):
