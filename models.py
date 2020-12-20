@@ -2,9 +2,13 @@ import datetime
 from app import db
 from sqlalchemy.orm import validates
 
-states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA",
-    "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA",
-    "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+states = [
+    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA',
+    'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM',
+    'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA',
+    'WV', 'WI', 'WY',
+]
+
 
 class Deactivatable(object):
     active = db.Column(db.Boolean())
@@ -13,6 +17,7 @@ class Deactivatable(object):
     def deactivate(self):
         self.active = False
         self.deactivated_at = datetime.datetime.utcnow()
+
 
 class Category(Deactivatable, db.Model):
     __tablename__ = 'categories'
@@ -35,7 +40,7 @@ class Category(Deactivatable, db.Model):
             'title': self.title,
             'active': self.active,
             'help_text': self.help_text,
-            'deactivated_at': self.deactivated_at
+            'deactivated_at': self.deactivated_at,
         }
 
 
@@ -43,13 +48,15 @@ class Criterion(Deactivatable, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False, index=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False, index=True)
     title = db.Column(db.String())
     recommendation_text = db.Column(db.String())
     help_text = db.Column(db.String())
     adverse = db.Column(db.Boolean())
 
-    def __init__(self, category_id, title=None, recommendation_text=None, help_text=None, adverse=None):
+    def __init__(
+        self, category_id, title=None, recommendation_text=None, help_text=None, adverse=None,
+    ):
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
@@ -69,14 +76,15 @@ class Criterion(Deactivatable, db.Model):
             'help_text': self.help_text,
             'active': self.active,
             'deactivated_at': self.deactivated_at,
-            'adverse': self.adverse
+            'adverse': self.adverse,
         }
+
 
 class Score(db.Model):
     __tablename__ = 'scores'
 
     id = db.Column(db.Integer, primary_key=True)
-    criterion_id = db.Column(db.Integer, db.ForeignKey("criteria.id"), nullable=False)
+    criterion_id = db.Column(db.Integer, db.ForeignKey('criteria.id'), nullable=False)
     state = db.Column(db.String(), nullable=False)
     meets_criterion = db.Column(db.Boolean())
     created_at = db.Column(db.DateTime)
@@ -104,13 +112,15 @@ class Score(db.Model):
             'meets_criterion': self.meets_criterion,
         }
 
+
 db.Index('state_criterion_created_at', Score.state, Score.criterion_id, Score.created_at)
+
 
 class Link(Deactivatable, db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey("categories.id"), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     state = db.Column(db.String(), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
@@ -138,7 +148,8 @@ class Link(Deactivatable, db.Model):
             'text': self.text,
             'url': self.url,
             'active': self.active,
-            'deactivated_at': self.deactivated_at
+            'deactivated_at': self.deactivated_at,
         }
+
 
 db.Index('state_category', Link.state, Link.category_id)
