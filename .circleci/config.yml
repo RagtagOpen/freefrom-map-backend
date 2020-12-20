@@ -9,6 +9,7 @@ jobs:
           DATABASE_URL: postgresql://127.0.0.1/freefrom_map_dev
           PGHOST: 127.0.0.1
           PGUSER: freefrom_map_user
+          PATH: /home/circleci/.local/bin:${PATH}
       - image: circleci/postgres:11.4
         environment:
           POSTGRES_DB: freefrom_map_dev
