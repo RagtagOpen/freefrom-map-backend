@@ -55,6 +55,7 @@ class CategoriesTestCase(unittest.TestCase):
 
         # Assert that the expected results are a subset of the actual results
         self.assertTrue(category_2_expected.items() <= json_response[1].items())
+        self.assertTrue(isinstance(json_response[1]['deactivated_at'], str))
 
     def test_get_categories_with_criteria(self):
         category = create_category()
