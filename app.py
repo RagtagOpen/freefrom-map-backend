@@ -202,6 +202,29 @@ def update_link(id_):
     return jsonify(link.serialize())
 
 
+@app.route('/scores', methods=['POST'])
+@cross_origin(headers=['Content-Type', 'Authorization'])
+@requires_auth
+def create_score():
+    data = request.get_json()
+
+    criterion = Criterion.query.filter_by(id=data.get('criterion_id')).first()
+    if criterion is None:
+        return jsonify(text=strings.criterion_not_found), 404
+
+    # TODO: Raise an appropriate error if category_id and state are not present
+    #  (see issue #57)
+    score = Score(
+        criterion_id=data['criterion_id'],
+        state=data['state'],
+        meets_criterion=data['meets_criterion'],
+    )
+    db.session.add(score)
+    db.session.commit()
+
+    return jsonify(score.serialize()), 201
+
+
 # This doesn't need authentication
 @app.route('/api/public')
 @cross_origin(headers=['Content-Type', 'Authorization'])
