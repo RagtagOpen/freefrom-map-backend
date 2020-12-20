@@ -114,8 +114,10 @@ def is_token_valid():
                 401,
             )
 
-    _request_ctx_stack.top.current_user = payload
-    return True
+        _request_ctx_stack.top.current_user = payload
+        return True
+
+    return False
 
 
 def requires_auth(f):
