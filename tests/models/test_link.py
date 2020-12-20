@@ -9,18 +9,12 @@ from tests.test_utils import clear_database, create_category
 class LinkTestCase(unittest.TestCase):
     def setUp(self):
         self.category = create_category()
-        db.session.add(self.category)
-        db.session.commit()
-
         self.link = Link(
             category_id=self.category.id,
             state='NY',
             text='Section 20 of Statute 39-B',
             url='ny.gov/link/to/statute',
-        )
-
-        db.session.add(self.link)
-        db.session.commit()
+        ).save()
 
     def tearDown(self):
         clear_database(db)

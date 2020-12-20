@@ -17,7 +17,7 @@ def update_or_create_category(data, category=Category()):
     if 'active' in data.keys() and not data['active']:
         category.deactivate()
 
-    return category
+    return category.save()
 
 
 def update_or_create_link(data, link=None):
@@ -41,7 +41,7 @@ def update_or_create_link(data, link=None):
     if 'active' in data.keys() and not data['active']:
         link.deactivate()
 
-    return link
+    return link.save()
 
 
 def update_or_create_criterion(data, criterion=None):
@@ -69,4 +69,4 @@ def update_or_create_criterion(data, criterion=None):
     if 'active' in data and not data['active']:
         criterion.deactivate()
 
-    return criterion
+    return criterion.save()

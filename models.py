@@ -10,6 +10,26 @@ states = [
 ]
 
 
+class BaseMixin():
+    def save(self):
+        db.session.add(self)
+        try:
+            db.session.commit()
+        except Exception:
+            db.session.rollback()
+            raise Exception
+        return self
+
+    @classmethod
+    def save_all(cls, objects):
+        db.session.add_all(objects)
+        try:
+            db.session.commit()
+        except Exception:
+            db.session.rollback()
+            raise Exception
+        return objects
+
 class Deactivatable(object):
     active = db.Column(db.Boolean())
     deactivated_at = db.Column(db.DateTime)
@@ -19,7 +39,7 @@ class Deactivatable(object):
         self.deactivated_at = datetime.datetime.utcnow()
 
 
-class Category(Deactivatable, db.Model):
+class Category(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'categories'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -43,8 +63,7 @@ class Category(Deactivatable, db.Model):
             'deactivated_at': self.deactivated_at,
         }
 
-
-class Criterion(Deactivatable, db.Model):
+class Criterion(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -80,7 +99,7 @@ class Criterion(Deactivatable, db.Model):
         }
 
 
-class Score(db.Model):
+class Score(BaseMixin, db.Model):
     __tablename__ = 'scores'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -116,7 +135,7 @@ class Score(db.Model):
 db.Index('state_criterion_created_at', Score.state, Score.criterion_id, Score.created_at)
 
 
-class Link(Deactivatable, db.Model):
+class Link(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)

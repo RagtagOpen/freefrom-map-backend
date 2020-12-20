@@ -11,9 +11,6 @@ class CriterionTestCase(unittest.TestCase):
         self.client = app.test_client()
 
         self.category = create_category()
-        db.session.add(self.category)
-        db.session.commit()
-
         self.criterion = Criterion(
             category_id=self.category.id,
             title='Includes economic abuse framework',
@@ -26,10 +23,7 @@ class CriterionTestCase(unittest.TestCase):
                 'can play in domestic violence'
             ),
             adverse=False,
-        )
-
-        db.session.add(self.criterion)
-        db.session.commit()
+        ).save()
 
     def tearDown(self):
         clear_database(db)
