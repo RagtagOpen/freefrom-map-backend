@@ -89,6 +89,14 @@ Run tests with the following command:
 python3 -m unittest
 ```
 
+## Linting
+
+Before merging your code, check that it passes the linter (PEP8 style):
+
+```
+flake8
+```
+
 ## API Reference
 The following section describes the FreeFrom map backend API. All responses will be formatted as JSON, and all
 request bodies should be provided as JSON.

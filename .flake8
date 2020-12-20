@@ -1,0 +1,11 @@
+[flake8]
+max-line-length = 99
+inline-quotes = single
+multiline-quotes = '''
+docstring-quotes = '''
+exclude =
+    migrations
+    __pycache__
+    env
+    .env
+    __init__.py

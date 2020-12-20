@@ -1,59 +1,58 @@
 import unittest
-import json
 import datetime
 
-from flask_sqlalchemy import SQLAlchemy
-from app import app, db
-from models import Category, Criterion, Score
-from tests.test_utils import clearDatabase, createCategory, createCriterion
+from app import db
+from models import Score
+from tests.test_utils import clear_database, create_category, create_criterion
+
 
 class ScoreTestCase(unittest.TestCase):
-  def setUp(self):
-    self.category=createCategory()
-    db.session.add(self.category)
-    db.session.commit()
+    def setUp(self):
+        self.category = create_category()
+        db.session.add(self.category)
+        db.session.commit()
 
-    self.criterion=createCriterion(self.category.id)
-    db.session.add(self.criterion)
-    db.session.commit()
+        self.criterion = create_criterion(self.category.id)
+        db.session.add(self.criterion)
+        db.session.commit()
 
-    self.score = Score(
-      criterion_id=self.criterion.id,
-      state="NY",
-      meets_criterion=True
-    )
+        self.score = Score(
+            criterion_id=self.criterion.id,
+            state='NY',
+            meets_criterion=True,
+        )
 
-    db.session.add(self.score)
-    db.session.commit()
+        db.session.add(self.score)
+        db.session.commit()
 
-  def tearDown(self):
-    clearDatabase(db)
+    def tearDown(self):
+        clear_database(db)
 
-  def test_init(self):
-    self.assertEqual(self.score.criterion_id, self.criterion.id)
-    self.assertEqual(self.score.state, "NY")
-    self.assertTrue(self.score.meets_criterion)
-    self.assertTrue(isinstance(self.score.created_at, datetime.datetime))
-    self.assertTrue(self.score.created_at < datetime.datetime.utcnow())
-  
-  def test_init_invalid_state_code(self):
-    with self.assertRaises(AssertionError):
-      Score(
-        criterion_id=self.criterion.id,
-        state="fake-state",
-        meets_criterion=True
-      )
+    def test_init(self):
+        self.assertEqual(self.score.criterion_id, self.criterion.id)
+        self.assertEqual(self.score.state, 'NY')
+        self.assertTrue(self.score.meets_criterion)
+        self.assertTrue(isinstance(self.score.created_at, datetime.datetime))
+        self.assertTrue(self.score.created_at < datetime.datetime.utcnow())
 
-  def test_serialize(self):
-    expected_result = {
-      "id": self.score.id,
-      "criterion_id": self.criterion.id,
-      "state": "NY",
-      "meets_criterion": True
-    }
+    def test_init_invalid_state_code(self):
+        with self.assertRaises(AssertionError):
+            Score(
+                criterion_id=self.criterion.id,
+                state='fake-state',
+                meets_criterion=True,
+            )
 
-    actual_result = self.score.serialize()
+    def test_serialize(self):
+        expected_result = {
+            'id': self.score.id,
+            'criterion_id': self.criterion.id,
+            'state': 'NY',
+            'meets_criterion': True,
+        }
 
-    # Assert that the expected results are a subset of the actual results
-    self.assertTrue(expected_result.items() <= actual_result.items())
-    self.assertTrue(isinstance(actual_result["created_at"], datetime.datetime))
+        actual_result = self.score.serialize()
+
+        # Assert that the expected results are a subset of the actual results
+        self.assertTrue(expected_result.items() <= actual_result.items())
+        self.assertTrue(isinstance(actual_result['created_at'], datetime.datetime))
