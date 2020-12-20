@@ -107,7 +107,7 @@ class Score(db.Model):
         return {
             'id': self.id,
             'criterion_id': self.criterion_id,
-            'created_at': self.created_at,
+            'created_at': self.created_at.strftime('%c'),
             'state': self.state,
             'meets_criterion': self.meets_criterion,
         }
