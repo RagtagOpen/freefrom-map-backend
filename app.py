@@ -19,7 +19,7 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Criterion, Link, Score  # noqa: #402
+from models import Category, Criterion, Link, Score  # noqa: E402
 
 
 @app.errorhandler(AuthError)
