@@ -28,8 +28,7 @@ class CategoriesTestCase(unittest.TestCase):
             ),
         )
         category2.deactivate()
-        db.session.add_all([category1, category2])
-        db.session.commit()
+        Category.save_all([category1, category2])
 
         response = self.client.get('/categories')
         self.assertEqual(response.status_code, 200)
@@ -69,9 +68,7 @@ class CategoriesTestCase(unittest.TestCase):
         category = Category(
             title='Definition of Domestic Violence',
             help_text="This is how a state legally defines the term 'domestic violence'",
-        )
-        db.session.add(category)
-        db.session.commit()
+        ).save()
 
         response = self.client.get('/categories/%i' % category.id)
         self.assertEqual(response.status_code, 200)
@@ -127,8 +124,6 @@ class CategoriesTestCase(unittest.TestCase):
     @patch('auth.is_token_valid', return_value=True)
     def test_put_category(self, mock_auth):
         category = create_category()
-        db.session.add(category)
-        db.session.commit()
 
         data = {
             'title': 'A New Title',
@@ -166,8 +161,6 @@ class CategoriesTestCase(unittest.TestCase):
     @patch('auth.is_token_valid', return_value=True)
     def test_put_category_deactivate(self, mock_auth):
         category = create_category()
-        db.session.add(category)
-        db.session.commit()
 
         data = {
             'active': False,

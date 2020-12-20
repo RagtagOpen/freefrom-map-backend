@@ -12,14 +12,8 @@ from tests.test_utils import clear_database, create_category, create_criterion, 
 class ScoresTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
-
         self.category = create_category()
-        db.session.add(self.category)
-        db.session.commit()
-
         self.criterion = create_criterion(self.category.id)
-        db.session.add(self.criterion)
-        db.session.commit()
 
     def tearDown(self):
         clear_database(db)

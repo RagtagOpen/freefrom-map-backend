@@ -11,11 +11,7 @@ from tests.test_utils import clear_database, create_category, auth_headers
 class LinksTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
-
         self.category = create_category()
-
-        db.session.add(self.category)
-        db.session.commit()
 
     def tearDown(self):
         clear_database(db)
@@ -37,8 +33,7 @@ class LinksTestCase(unittest.TestCase):
 
         link2.deactivate()
 
-        db.session.add_all([link1, link2])
-        db.session.commit()
+        Link.save_all([link1, link2])
 
         response = self.client.get('/links')
         self.assertEqual(response.status_code, 200)
@@ -81,9 +76,7 @@ class LinksTestCase(unittest.TestCase):
             state='NY',
             text='Section 20 of Statute 39-B',
             url='ny.gov/link/to/statute',
-        )
-        db.session.add(link)
-        db.session.commit()
+        ).save()
 
         response = self.client.get('/links/%i' % link.id)
         self.assertEqual(response.status_code, 200)
@@ -145,9 +138,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link(self, mock_auth):
-        link = Link(state='NY', category_id=self.category.id)
-        db.session.add(link)
-        db.session.commit()
+        link = Link(state='NY', category_id=self.category.id).save()
 
         data = {
             'text': 'Section 20 of Statute 39-B',
@@ -183,9 +174,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_deactivate(self, mock_auth):
-        link = Link(state='NY', category_id=self.category.id)
-        db.session.add(link)
-        db.session.commit()
+        link = Link(state='NY', category_id=self.category.id).save()
 
         data = {
             'active': False,

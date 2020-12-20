@@ -9,14 +9,10 @@ from tests.test_utils import clear_database
 class CategoryTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
-
         self.category = Category(
             title='Definition of Domestic Violence',
             help_text="This is how a state legally defines the term 'domestic violence'",
-        )
-
-        db.session.add(self.category)
-        db.session.commit()
+        ).save()
 
     def tearDown(self):
         clear_database(db)
