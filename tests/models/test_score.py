@@ -46,4 +46,3 @@ class ScoreTestCase(unittest.TestCase):
 
         # Assert that the expected results are a subset of the actual results
         self.assertTrue(expected_result.items() <= actual_result.items())
-        self.assertTrue(isinstance(actual_result['created_at'], datetime.datetime))
