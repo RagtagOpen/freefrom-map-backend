@@ -1,4 +1,6 @@
-from models import Category, Criterion, Link
+from models import Category, Criterion, Link, Score
+from app import db
+from sqlalchemy import func, and_
 
 
 def update_or_create_category(data, category=Category()):
@@ -72,22 +74,22 @@ def update_or_create_criterion(data, criterion=None):
     return criterion.save()
 
 def state_information(state):
-    links = Link.query.filter_by(state=state, active=True)
+    links = Link.query.filter_by(state=state, active=True).all()
 
-    subquery = Score.query(
-        Score.category,
-        func.max(Score.created_at).label('most_recent')
-    ).filter_by(state=state_).group_by(Score.state, Score.category).subquery
+    # https://stackoverflow.com/questions/58333162/how-to-get-top-n-results-per-group-from-a-pool-of-ids-in-sqlalchemy
+    subquery = db.session.query(
+        Score,
+        func.rank().over(
+            order_by=Score.created_at.desc(),
+            partition_by=Score.criterion_id
+        ).label('rank')
+    ).filter(Score.state == state).subquery()
 
-    scores = Score.query.join(
-        subquery,
-        and_(
-            Score.category_id == subquery.c.category_id,
-            Score.created_at == subquery.c.most_recent
-        )
-    )
+    scores = db.session.query(subquery).filter(subquery.c.rank <= 1).all()
+    serialized_scores = [score._asdict() for score in scores]
+    [score.pop('rank') for score in serialized_scores]
 
     return {
         'links': links,
-        'scores': scores
+        'scores': serialized_scores
     }

@@ -2,7 +2,7 @@ import strings
 from auth import AuthError, requires_auth
 import os
 from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy, func, and_
+from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 from flask_cors import cross_origin
 
@@ -20,7 +20,7 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Criterion, Link, Score  # noqa: E402
+from models import Category, Criterion, Link, Score, states  # noqa: E402
 
 
 @app.errorhandler(AuthError)
@@ -210,10 +210,15 @@ def create_score():
 
 @app.route('/states/<state_>', methods=['GET'])
 def get_state(state_):
-    if not state_ models.states:
+    if not state_ in states:
         return jsonify(text=strings.invalid_state), 400
 
-    return jsonify(state_information(state_)), 201
+    state = state_information(state_)
+
+    return jsonify({
+        'links': [link.serialize() for link in state['links']],
+        'scores': [score for score in state['scores']]
+    }), 200
 
 # This doesn't need authentication
 @app.route('/api/public')
