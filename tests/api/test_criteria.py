@@ -12,10 +12,7 @@ from tests.test_utils import clear_database, create_category, create_criterion, 
 class CriteriaTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
-
         self.category = create_category()
-        db.session.add(self.category)
-        db.session.commit()
 
     def tearDown(self):
         clear_database(db)
@@ -50,8 +47,7 @@ class CriteriaTestCase(unittest.TestCase):
         )
 
         criterion2.deactivate()
-        db.session.add_all([criterion1, criterion2])
-        db.session.commit()
+        Criterion.save_all([criterion1, criterion2])
 
         response = self.client.get('/criteria')
         self.assertEqual(response.status_code, 200)
@@ -111,9 +107,7 @@ class CriteriaTestCase(unittest.TestCase):
                 'can play in domestic violence'
             ),
             adverse=False,
-        )
-        db.session.add(criterion)
-        db.session.commit()
+        ).save()
 
         response = self.client.get('/criteria/%i' % criterion.id)
         self.assertEqual(response.status_code, 200)
@@ -213,8 +207,6 @@ class CriteriaTestCase(unittest.TestCase):
     def test_put_criterion(self, mock_auth):
         category_id = self.category.id
         criterion = create_criterion(category_id)
-        db.session.add(criterion)
-        db.session.commit()
 
         data = {
             'title': 'A New Title',
@@ -260,8 +252,6 @@ class CriteriaTestCase(unittest.TestCase):
     def test_put_criterion_change_category(self, mock_auth):
         category_id = self.category.id
         criterion = create_criterion(category_id)
-        db.session.add(criterion)
-        db.session.commit()
 
         data = {'category_id': category_id + 1}
 
@@ -292,8 +282,6 @@ class CriteriaTestCase(unittest.TestCase):
     @patch('auth.is_token_valid', return_value=True)
     def test_put_criterion_deactivate(self, mock_auth):
         criterion = create_criterion(self.category.id)
-        db.session.add(criterion)
-        db.session.commit()
 
         data = {
             'active': False,

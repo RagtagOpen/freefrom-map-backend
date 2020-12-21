@@ -9,21 +9,12 @@ from tests.test_utils import clear_database, create_category, create_criterion
 class ScoreTestCase(unittest.TestCase):
     def setUp(self):
         self.category = create_category()
-        db.session.add(self.category)
-        db.session.commit()
-
         self.criterion = create_criterion(self.category.id)
-        db.session.add(self.criterion)
-        db.session.commit()
-
         self.score = Score(
             criterion_id=self.criterion.id,
             state='NY',
             meets_criterion=True,
-        )
-
-        db.session.add(self.score)
-        db.session.commit()
+        ).save()
 
     def tearDown(self):
         clear_database(db)

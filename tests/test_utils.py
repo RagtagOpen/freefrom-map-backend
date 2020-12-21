@@ -13,7 +13,7 @@ def create_category():
     return models.Category(
         title='Definition of Domestic Violence',
         help_text="This is how a state legally defines the term 'domestic violence'",
-    )
+    ).save()
 
 
 def create_criterion(category_id):
@@ -29,7 +29,7 @@ def create_criterion(category_id):
             'play in domestic violence'
         ),
         adverse=False
-    )
+    ).save()
 
 def create_link(category_id):
     return models.Link(category_id=category.id)

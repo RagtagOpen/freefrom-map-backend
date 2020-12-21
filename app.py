@@ -20,7 +20,7 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Criterion, Link  # noqa: E402
+from models import Category, Criterion, Link, Score  # noqa: E402
 
 
 @app.errorhandler(AuthError)
@@ -32,8 +32,10 @@ def handle_auth_error(ex):
 
 @app.route('/categories', methods=['GET'])
 def get_categories():
+    with_criteria = request.args.get('withCriteria') == 'true'
+
     categories = Category.query.all()
-    return jsonify([category.serialize() for category in categories])
+    return jsonify([category.serialize(with_criteria) for category in categories])
 
 
 @app.route('/categories', methods=['POST'])
@@ -42,9 +44,6 @@ def get_categories():
 def create_category():
     data = request.get_json()
     category = update_or_create_category(data=data)
-    db.session.add(category)
-    db.session.commit()
-
     return jsonify(category.serialize()), 201
 
 
@@ -55,7 +54,8 @@ def get_category(id_):
     if category is None:
         return jsonify(error=404, text=strings.category_not_found), 404
 
-    return jsonify(category.serialize())
+    with_criteria = request.args.get('withCriteria') == 'true'
+    return jsonify(category.serialize(with_criteria))
 
 
 @app.route('/categories/<id_>', methods=['PUT'])
@@ -69,9 +69,6 @@ def update_category(id_):
         return jsonify(error=404, text=strings.category_not_found), 404
 
     category = update_or_create_category(data, category=category)
-    db.session.add(category)
-    db.session.commit()
-
     return jsonify(category.serialize())
 
 
@@ -96,9 +93,6 @@ def create_criterion():
             return jsonify(text=strings.category_not_found), 404
 
         criterion = update_or_create_criterion(data=data)
-        db.session.add(criterion)
-        db.session.commit()
-
         return jsonify(criterion.serialize()), 201
 
     except Exception as e:
@@ -135,9 +129,6 @@ def update_criterion(id_):
             return jsonify(text=strings.cannot_change_category), 400
 
         update_or_create_criterion(data, criterion)
-        db.session.add(criterion)
-        db.session.commit()
-
         return jsonify(criterion.serialize())
 
     except Exception as e:
@@ -162,9 +153,6 @@ def create_link():
         return jsonify(text=strings.category_not_found), 404
 
     link = update_or_create_link(data=data)
-    db.session.add(link)
-    db.session.commit()
-
     return jsonify(link.serialize()), 201
 
 
@@ -197,9 +185,6 @@ def update_link(id_):
         return jsonify(text=strings.cannot_change_state), 400
 
     link = update_or_create_link(data, link=link)
-    db.session.add(link)
-    db.session.commit()
-
     return jsonify(link.serialize())
 
 
@@ -219,9 +204,7 @@ def create_score():
         criterion_id=data['criterion_id'],
         state=data['state'],
         meets_criterion=data['meets_criterion'],
-    )
-    db.session.add(score)
-    db.session.commit()
+    ).save()
 
     return jsonify(score.serialize()), 201
 

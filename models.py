@@ -10,6 +10,27 @@ states = [
 ]
 
 
+class BaseMixin():
+    def save(self):
+        db.session.add(self)
+        try:
+            db.session.commit()
+        except Exception:
+            db.session.rollback()
+            raise Exception
+        return self
+
+    @classmethod
+    def save_all(cls, objects):
+        db.session.add_all(objects)
+        try:
+            db.session.commit()
+        except Exception:
+            db.session.rollback()
+            raise Exception
+        return objects
+
+
 class Deactivatable(object):
     active = db.Column(db.Boolean())
     deactivated_at = db.Column(db.DateTime)
@@ -19,12 +40,13 @@ class Deactivatable(object):
         self.deactivated_at = datetime.datetime.utcnow()
 
 
-class Category(Deactivatable, db.Model):
+class Category(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'categories'
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
     help_text = db.Column(db.String())
+    criteria = db.relationship('Criterion', backref='category', lazy=True)
 
     def __init__(self, title=None, help_text=None):
         self.title = title
@@ -34,8 +56,8 @@ class Category(Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    def serialize(self):
-        return {
+    def serialize(self, with_criteria=False):
+        data = {
             'id': self.id,
             'title': self.title,
             'active': self.active,
@@ -43,8 +65,13 @@ class Category(Deactivatable, db.Model):
             'deactivated_at': self.deactivated_at,
         }
 
+        if with_criteria:
+            data['criteria'] = [criterion.serialize() for criterion in self.criteria]
 
-class Criterion(Deactivatable, db.Model):
+        return data
+
+
+class Criterion(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -80,7 +107,7 @@ class Criterion(Deactivatable, db.Model):
         }
 
 
-class Score(db.Model):
+class Score(BaseMixin, db.Model):
     __tablename__ = 'scores'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -116,7 +143,7 @@ class Score(db.Model):
 db.Index('state_criterion_created_at', Score.state, Score.criterion_id, Score.created_at)
 
 
-class Link(Deactivatable, db.Model):
+class Link(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
