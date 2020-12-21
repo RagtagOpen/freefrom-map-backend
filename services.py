@@ -1,6 +1,6 @@
 from models import Category, Criterion, Link, Score
 from app import db
-from sqlalchemy import func, and_
+from sqlalchemy import func
 
 
 def update_or_create_category(data, category=Category()):
@@ -72,6 +72,7 @@ def update_or_create_criterion(data, criterion=None):
         criterion.deactivate()
 
     return criterion.save()
+
 
 def state_information(state):
     links = Link.query.filter_by(state=state, active=True).all()

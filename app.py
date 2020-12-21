@@ -208,9 +208,10 @@ def create_score():
 
     return jsonify(score.serialize()), 201
 
+
 @app.route('/states/<state_>', methods=['GET'])
 def get_state(state_):
-    if not state_ in states:
+    if state_ not in states:
         return jsonify(text=strings.invalid_state), 400
 
     state = state_information(state_)
@@ -219,6 +220,7 @@ def get_state(state_):
         'links': [link.serialize() for link in state['links']],
         'scores': state['scores']
     }), 200
+
 
 # This doesn't need authentication
 @app.route('/api/public')
