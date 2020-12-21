@@ -87,7 +87,10 @@ def state_information(state):
 
     scores = db.session.query(subquery).filter(subquery.c.rank <= 1).all()
     serialized_scores = [score._asdict() for score in scores]
-    [score.pop('rank') for score in serialized_scores]
+
+    for score in serialized_scores:
+        score.pop('rank')
+        score.pop('created_at')
 
     return {
         'links': links,

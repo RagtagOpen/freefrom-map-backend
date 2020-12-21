@@ -134,7 +134,6 @@ class Score(BaseMixin, db.Model):
         return {
             'id': self.id,
             'criterion_id': self.criterion_id,
-            'created_at': self.created_at.strftime('%a, %d %b %Y %X GMT'),
             'state': self.state,
             'meets_criterion': self.meets_criterion,
         }

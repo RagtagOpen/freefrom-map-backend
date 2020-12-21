@@ -73,3 +73,21 @@ class StatesTestCase(unittest.TestCase):
       self.assertEqual(len(scores), 2)
       self.assertEqual(scores[0], score1.serialize())
       self.assertEqual(scores[1], score2.serialize())
+
+
+    def test_get_state_invalid_state(self):
+      response = self.client.get('/states/PP')
+      self.assertEqual(response.status_code, 400)
+
+
+    def test_get_state_no_data(self):
+      response = self.client.get('/states/KY')
+      self.assertEqual(response.status_code, 200)
+
+      json_response = json.loads(response.data.decode('utf-8'))
+
+      self.assertIn('links', json_response)
+      self.assertIn('scores', json_response)
+
+      self.assertEqual(json_response['links'], [])
+      self.assertEqual(json_response['scores'], [])

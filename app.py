@@ -217,7 +217,7 @@ def get_state(state_):
 
     return jsonify({
         'links': [link.serialize() for link in state['links']],
-        'scores': [score for score in state['scores']]
+        'scores': state['scores']
     }), 200
 
 # This doesn't need authentication
