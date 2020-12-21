@@ -2,7 +2,7 @@ import strings
 from auth import AuthError, requires_auth
 import os
 from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy, func, and_
 from dotenv import load_dotenv
 from flask_cors import cross_origin
 
@@ -15,6 +15,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from services import (  # noqa: E402
+    state_information,
     update_or_create_category,
     update_or_create_criterion,
     update_or_create_link,
@@ -224,6 +225,12 @@ def create_score():
 
     return jsonify(score.serialize()), 201
 
+@app.route('/states/<state_>', methods=['GET'])
+def get_state(state_):
+    if not state_ models.states:
+        return jsonify(text=strings.invalid_state), 400
+
+    return jsonify(state_information(state_)), 201
 
 # This doesn't need authentication
 @app.route('/api/public')

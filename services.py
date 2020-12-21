@@ -70,3 +70,24 @@ def update_or_create_criterion(data, criterion=None):
         criterion.deactivate()
 
     return criterion
+
+def state_information(state):
+    links = Link.query.filter_by(state=state, active=True)
+
+    subquery = Score.query(
+        Score.category,
+        func.max(Score.created_at).label('most_recent')
+    ).filter_by(state=state_).group_by(Score.state, Score.category).subquery
+
+    scores = Score.query.join(
+        subquery,
+        and_(
+            Score.category_id == subquery.c.category_id,
+            Score.created_at == subquery.c.most_recent
+        )
+    )
+
+    return {
+        'links': links,
+        'scores': scores
+    }

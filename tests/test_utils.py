@@ -31,6 +31,9 @@ def create_criterion(category_id):
         adverse=False
     )
 
+def create_link(category_id):
+    return models.Link(category_id=category.id)
+
 
 def auth_headers():
     return {'Authorization': 'Bearer fake token'}
