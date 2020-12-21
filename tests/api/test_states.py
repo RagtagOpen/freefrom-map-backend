@@ -25,7 +25,7 @@ class StatesTestCase(unittest.TestCase):
         self.score2 = Score(
           criterion_id=self.criterion2.id,
           state='NY',
-          meets_criterion=True
+          meets_criterion=False
         )
         self.score3 = Score(
           criterion_id=self.criterion2.id,
@@ -72,6 +72,8 @@ class StatesTestCase(unittest.TestCase):
         self.assertEqual(len(scores), 2)
         self.assertEqual(scores[0], score1.serialize())
         self.assertEqual(scores[1], score2.serialize())
+        self.assertTrue(scores[0]['meets_criterion'])
+        self.assertFalse(scores[1]['meets_criterion'])
 
     def test_get_state_invalid_state(self):
         response = self.client.get('/states/PP')
