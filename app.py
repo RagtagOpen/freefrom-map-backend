@@ -15,11 +15,12 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from services import (  # noqa: E402
+    get_state_information,
     update_or_create_category,
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Criterion, Link, Score  # noqa: E402
+from models import Category, Criterion, Link, Score, states  # noqa: E402
 
 
 @app.errorhandler(AuthError)
@@ -206,6 +207,19 @@ def create_score():
     ).save()
 
     return jsonify(score.serialize()), 201
+
+
+@app.route('/states/<state_>', methods=['GET'])
+def get_state(state_):
+    if state_ not in states:
+        return jsonify(text=strings.invalid_state), 400
+
+    state = get_state_information(state_)
+
+    return jsonify({
+        'links': [link.serialize() for link in state['links']],
+        'scores': state['scores']
+    }), 200
 
 
 # This doesn't need authentication

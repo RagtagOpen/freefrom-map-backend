@@ -32,5 +32,9 @@ def create_criterion(category_id):
     ).save()
 
 
+def create_link(category_id, state):
+    return models.Link(category_id=category_id, state=state).save()
+
+
 def auth_headers():
     return {'Authorization': 'Bearer fake token'}
