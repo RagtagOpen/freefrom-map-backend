@@ -2,6 +2,8 @@ import unittest
 from unittest.mock import patch
 import json
 import datetime
+import warnings
+from sqlalchemy.exc import SAWarning
 
 from app import app, db
 from models import Category, Link
@@ -132,6 +134,36 @@ class LinksTestCase(unittest.TestCase):
             'deactivated_at': None,
         })
 
+    @patch('auth.is_token_valid', return_value=True)
+    def test_post_link_no_category(self, mock_auth):
+        data = {
+            'state': 'NY',
+            'text': 'Section 20 of Statute 39-B',
+            'url': 'ny.gov/link/to/statute',
+        }
+
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/links', json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.category_not_found)
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_post_link_no_state(self, mock_auth):
+        data = {
+            'category_id': self.category.id,
+            'text': 'Section 20 of Statute 39-B',
+            'url': 'ny.gov/link/to/statute',
+        }
+
+        response = self.client.post('/links', json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.invalid_state)
+
     def test_post_link_no_auth(self):
         response = self.client.post('/links', json={}, headers={})
         self.assertEqual(response.status_code, 401)
@@ -167,6 +199,34 @@ class LinksTestCase(unittest.TestCase):
             'active': True,
             'deactivated_at': None,
         })
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_put_link_cannot_change_category(self, mock_auth):
+        link = Link(state='NY', category_id=self.category.id).save()
+
+        data = {
+            'category_id': 1,
+        }
+
+        response = self.client.put('/links/%i' % link.id, json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.cannot_change_category)
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_put_link_cannot_change_state(self, mock_auth):
+        link = Link(state='NY', category_id=self.category.id).save()
+
+        data = {
+            'state': 'AZ',
+        }
+
+        response = self.client.put('/links/%i' % link.id, json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.cannot_change_state)
 
     def test_put_category_no_auth(self):
         response = self.client.put('/links/1', json={}, headers={})

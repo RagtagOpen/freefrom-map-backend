@@ -2,6 +2,8 @@ import unittest
 from unittest.mock import patch
 import json
 import datetime
+import warnings
+from sqlalchemy.exc import SAWarning
 
 from app import app, db
 from models import Score
@@ -49,15 +51,41 @@ class ScoresTestCase(unittest.TestCase):
     def test_post_score_criterion_doesnt_exist(self, mock_auth):
         criterion_id = self.criterion.id + 1
         data = {
-            'category_id': criterion_id,
+            'criterion_id': criterion_id,
         }
 
         response = self.client.post('/scores', json=data, headers=auth_headers())
-        self.assertEqual(response.status_code, 404)
+        self.assertEqual(response.status_code, 400)
         mock_auth.assert_called_once()
 
         json_response = json.loads(response.data)
         self.assertEqual(json_response['description'], strings.criterion_not_found)
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_post_score_no_criterion(self, mock_auth):
+        data = {
+            'state': 'NY',
+        }
+
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/scores', json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.criterion_not_found)
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_post_score_no_state(self, mock_auth):
+        data = {
+            'criterion_id': self.criterion.id,
+        }
+
+        response = self.client.post('/scores', json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.invalid_state)
 
     def test_post_score_no_auth(self):
         response = self.client.post('/scores', data={}, headers={})

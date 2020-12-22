@@ -28,6 +28,11 @@ def handle_bad_request(e):
     return jsonify(description=str(e.description)), 400
 
 
+@app.errorhandler(ValueError)
+def handle_value_error(e):
+    return jsonify(description=str(e)), 400
+
+
 @app.errorhandler(AuthError)
 def handle_auth_error(e):
     return jsonify(e.error), 401
@@ -101,11 +106,6 @@ def get_criteria():
 @requires_auth
 def create_criterion():
     data = request.get_json()
-
-    category = Category.query.filter_by(id=data.get('category_id')).first()
-    if category is None:
-        abort(404, strings.category_not_found)
-
     criterion = update_or_create_criterion(data=data)
     return jsonify(criterion.serialize()), 201
 
@@ -130,11 +130,6 @@ def update_criterion(id_):
         abort(404, strings.criterion_not_found)
 
     data = request.get_json()
-
-    category_id = data.get('category_id')
-    if category_id and category_id != criterion.category_id:
-        abort(400, strings.cannot_change_category)
-
     update_or_create_criterion(data, criterion)
     return jsonify(criterion.serialize())
 
@@ -151,11 +146,6 @@ def get_links():
 @requires_auth
 def create_link():
     data = request.get_json()
-
-    category = Category.query.filter_by(id=data.get('category_id')).first()
-    if category is None:
-        abort(404, strings.category_not_found)
-
     link = update_or_create_link(data=data)
     return jsonify(link.serialize()), 201
 
@@ -180,14 +170,6 @@ def update_link(id_):
     if link is None:
         abort(404, strings.link_not_found)
 
-    category_id = data.get('category_id')
-    if category_id and category_id != link.category_id:
-        abort(400, strings.cannot_change_category)
-
-    state = data.get('state')
-    if state and state != link.state:
-        abort(400, strings.cannot_change_state)
-
     link = update_or_create_link(data, link=link)
     return jsonify(link.serialize())
 
@@ -197,17 +179,10 @@ def update_link(id_):
 @requires_auth
 def create_score():
     data = request.get_json()
-
-    criterion = Criterion.query.filter_by(id=data.get('criterion_id')).first()
-    if criterion is None:
-        abort(404, strings.criterion_not_found)
-
-    # TODO: Raise an appropriate error if category_id and state are not present
-    #  (see issue #57)
     score = Score(
-        criterion_id=data['criterion_id'],
-        state=data['state'],
-        meets_criterion=data['meets_criterion'],
+        criterion_id=data.get('criterion_id'),
+        state=data.get('state'),
+        meets_criterion=data.get('meets_criterion'),
     ).save()
 
     return jsonify(score.serialize()), 201

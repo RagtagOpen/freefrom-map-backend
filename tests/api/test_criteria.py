@@ -2,6 +2,8 @@ import unittest
 from unittest.mock import patch
 import json
 import datetime
+import warnings
+from sqlalchemy.exc import SAWarning
 
 from app import app, db
 from models import Criterion
@@ -192,8 +194,17 @@ class CriteriaTestCase(unittest.TestCase):
         data = {'category_id': category_id}
 
         response = self.client.post('/criteria', json=data, headers=auth_headers())
-        self.assertEqual(response.status_code, 404)
-        mock_auth.assert_called_once()
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.category_not_found)
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_post_criterion_no_category(self, mock_auth):
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/criteria', json={}, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
 
         json_response = json.loads(response.data)
         self.assertEqual(json_response['description'], strings.category_not_found)
@@ -248,7 +259,7 @@ class CriteriaTestCase(unittest.TestCase):
         })
 
     @patch('auth.is_token_valid', return_value=True)
-    def test_put_criterion_change_category(self, mock_auth):
+    def test_put_criterion_cannot_change_category(self, mock_auth):
         category_id = self.category.id
         criterion = create_criterion(category_id)
 
