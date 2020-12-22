@@ -40,9 +40,6 @@ class StatesTestCase(unittest.TestCase):
           meets_criterion=True
         )
 
-        Category.save_all([self.category1, self.category2])
-        Criterion.save_all([self.criterion1, self.criterion2])
-        Link.save_all([self.link1, self.link2])
         Score.save_all([self.score1, self.score2, self.score3, self.score4])
 
         self.score1_id = self.score1.id

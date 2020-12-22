@@ -15,7 +15,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 from services import (  # noqa: E402
-    state_information,
+    get_state_information,
     update_or_create_category,
     update_or_create_criterion,
     update_or_create_link,
@@ -214,7 +214,7 @@ def get_state(state_):
     if state_ not in states:
         return jsonify(text=strings.invalid_state), 400
 
-    state = state_information(state_)
+    state = get_state_information(state_)
 
     return jsonify({
         'links': [link.serialize() for link in state['links']],

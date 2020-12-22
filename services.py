@@ -74,7 +74,7 @@ def update_or_create_criterion(data, criterion=None):
     return criterion.save()
 
 
-def state_information(state):
+def get_state_information(state):
     links = Link.query.filter_by(state=state, active=True).all()
 
     # https://stackoverflow.com/questions/58333162/how-to-get-top-n-results-per-group-from-a-pool-of-ids-in-sqlalchemy
