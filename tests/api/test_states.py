@@ -2,7 +2,7 @@ import unittest
 import json
 
 from app import app, db
-from models import Category, Criterion, Link, Score
+from models import Score
 from datetime import datetime, timedelta
 from tests.test_utils import clear_database, create_category, create_criterion, create_link
 
