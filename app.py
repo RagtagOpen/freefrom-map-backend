@@ -109,9 +109,6 @@ def create_criterion():
     criterion = update_or_create_criterion(data=data)
     return jsonify(criterion.serialize()), 201
 
-    # except Exception as e:
-    #     return jsonify(text=str(e)), 500
-
 
 @app.route('/criteria/<id_>', methods=['GET'])
 def get_criterion(id_):
