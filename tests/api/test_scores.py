@@ -57,7 +57,7 @@ class ScoresTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['text'], strings.criterion_not_found)
+        self.assertEqual(json_response['description'], strings.criterion_not_found)
 
     def test_post_score_no_auth(self):
         response = self.client.post('/scores', data={}, headers={})

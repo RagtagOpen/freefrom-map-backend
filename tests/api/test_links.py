@@ -6,6 +6,7 @@ import datetime
 from app import app, db
 from models import Category, Link
 from tests.test_utils import clear_database, create_category, auth_headers
+import strings
 
 
 class LinksTestCase(unittest.TestCase):
@@ -95,9 +96,8 @@ class LinksTestCase(unittest.TestCase):
     def test_get_link_doesnt_exist(self):
         response = self.client.get('/links/1')
         self.assertEqual(response.status_code, 404)
-        json_response = json.loads(response.data.decode('utf-8'))
-
-        self.assertEqual(json_response['text'], 'Link does not exist')
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.link_not_found)
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_link(self, mock_auth):

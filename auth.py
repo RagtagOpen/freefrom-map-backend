@@ -12,9 +12,8 @@ ALGORITHMS = ['RS256']
 
 
 class AuthError(Exception):
-    def __init__(self, error, status_code):
+    def __init__(self, error):
         self.error = error
-        self.status_code = status_code
 
 
 def get_token_auth_header():
@@ -27,8 +26,7 @@ def get_token_auth_header():
             {
                 'code': 'authorization_header_missing',
                 'description': 'Authorization header is expected',
-            },
-            401,
+            }
         )
 
     parts = auth.split()
@@ -38,24 +36,21 @@ def get_token_auth_header():
             {
                 'code': 'invalid_header',
                 'description': 'Authorization header must start with Bearer',
-            },
-            401,
+            }
         )
     elif len(parts) == 1:
         raise AuthError(
             {
                 'code': 'invalid_header',
                 'description': 'Token not found',
-            },
-            401,
+            }
         )
     elif len(parts) > 2:
         raise AuthError(
             {
                 'code': 'invalid_header',
                 'description': 'Authorization header must be Bearer token',
-            },
-            401,
+            }
         )
 
     token = parts[1]
@@ -94,24 +89,21 @@ def is_token_valid():
                 {
                     'code': 'token_expired',
                     'description': 'token is expired',
-                },
-                401,
+                }
             )
         except jwt.JWTClaimsError:
             raise AuthError(
                 {
                     'code': 'invalid_claims',
                     'description': 'incorrect claims, please check the audience and issuer',
-                },
-                401,
+                }
             )
         except Exception:
             raise AuthError(
                 {
                     'code': 'invalid_header',
                     'description': 'Unable to parse authentication token.',
-                },
-                401,
+                }
             )
 
         _request_ctx_stack.top.current_user = payload
@@ -129,7 +121,6 @@ def requires_auth(f):
             {
                 'code': 'invalid_header',
                 'description': 'Unable to find appropriate key',
-            },
-            401,
+            }
         )
     return decorated
