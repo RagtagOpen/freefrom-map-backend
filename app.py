@@ -1,7 +1,7 @@
 import strings
 from auth import AuthError, requires_auth
 import os
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 from flask_cors import cross_origin
@@ -23,11 +23,29 @@ from services import (  # noqa: E402
 from models import Category, Criterion, Link, Score, states  # noqa: E402
 
 
+@app.errorhandler(400)
+def handle_bad_request(e):
+    return jsonify(description=str(e.description)), 400
+
+
 @app.errorhandler(AuthError)
-def handle_auth_error(ex):
-    response = jsonify(ex.error)
-    response.status_code = ex.status_code
-    return response
+def handle_auth_error(e):
+    return jsonify(e.error), 401
+
+
+@app.errorhandler(404)
+def handle_not_found(e):
+    return jsonify(description=str(e.description)), 404
+
+
+@app.errorhandler(405)
+def handle_not_allowed(e):
+    return jsonify(description=str(e.description)), 405
+
+
+@app.errorhandler(Exception)
+def handle_server_error(e):
+    return jsonify(description='Internal server error'), 500
 
 
 @app.route('/categories', methods=['GET'])
@@ -52,7 +70,7 @@ def get_category(id_):
     category = Category.query.filter_by(id=id_).first()
 
     if category is None:
-        return jsonify(error=404, text=strings.category_not_found), 404
+        abort(404, strings.category_not_found)
 
     with_criteria = request.args.get('withCriteria') == 'true'
     return jsonify(category.serialize(with_criteria))
@@ -66,7 +84,7 @@ def update_category(id_):
     data = request.get_json()
 
     if category is None:
-        return jsonify(error=404, text=strings.category_not_found), 404
+        abort(404, strings.category_not_found)
 
     category = update_or_create_category(data, category=category)
     return jsonify(category.serialize())
@@ -74,65 +92,51 @@ def update_category(id_):
 
 @app.route('/criteria', methods=['GET'])
 def get_criteria():
-    try:
-        criteria = Criterion.query.all()
-        return jsonify([criterion.serialize() for criterion in criteria])
-    except Exception as e:
-        return(str(e))
+    criteria = Criterion.query.all()
+    return jsonify([criterion.serialize() for criterion in criteria])
 
 
 @app.route('/criteria', methods=['POST'])
 @cross_origin(headers=['Content-Type', 'Authorization'])
 @requires_auth
 def create_criterion():
-    try:
-        data = request.get_json()
+    data = request.get_json()
 
-        category = Category.query.filter_by(id=data.get('category_id')).first()
-        if category is None:
-            return jsonify(text=strings.category_not_found), 404
+    category = Category.query.filter_by(id=data.get('category_id')).first()
+    if category is None:
+        abort(404, strings.category_not_found)
 
-        criterion = update_or_create_criterion(data=data)
-        return jsonify(criterion.serialize()), 201
-
-    except Exception as e:
-        return jsonify(text=str(e)), 500
+    criterion = update_or_create_criterion(data=data)
+    return jsonify(criterion.serialize()), 201
 
 
 @app.route('/criteria/<id_>', methods=['GET'])
 def get_criterion(id_):
-    try:
-        criterion = Criterion.query.filter_by(id=id_).first()
+    criterion = Criterion.query.filter_by(id=id_).first()
 
-        if criterion is None:
-            return jsonify(text=strings.criterion_not_found), 404
+    if criterion is None:
+        abort(404, strings.criterion_not_found)
 
-        return jsonify(criterion.serialize())
-    except Exception as e:
-        return(str(e))
+    return jsonify(criterion.serialize())
 
 
 @app.route('/criteria/<id_>', methods=['PUT'])
 @cross_origin(headers=['Content-Type', 'Authorization'])
 @requires_auth
 def update_criterion(id_):
-    try:
-        criterion = Criterion.query.filter_by(id=id_).first()
+    criterion = Criterion.query.filter_by(id=id_).first()
 
-        if criterion is None:
-            return jsonify(text=strings.criterion_not_found), 404
+    if criterion is None:
+        abort(404, strings.criterion_not_found)
 
-        data = request.get_json()
+    data = request.get_json()
 
-        category_id = data.get('category_id')
-        if category_id and category_id != criterion.category_id:
-            return jsonify(text=strings.cannot_change_category), 400
+    category_id = data.get('category_id')
+    if category_id and category_id != criterion.category_id:
+        abort(400, strings.cannot_change_category)
 
-        update_or_create_criterion(data, criterion)
-        return jsonify(criterion.serialize())
-
-    except Exception as e:
-        return jsonify(text=str(e)), 500
+    update_or_create_criterion(data, criterion)
+    return jsonify(criterion.serialize())
 
 
 @app.route('/links', methods=['GET'])
@@ -150,7 +154,7 @@ def create_link():
 
     category = Category.query.filter_by(id=data.get('category_id')).first()
     if category is None:
-        return jsonify(text=strings.category_not_found), 404
+        abort(404, strings.category_not_found)
 
     link = update_or_create_link(data=data)
     return jsonify(link.serialize()), 201
@@ -161,7 +165,7 @@ def get_link(id_):
     link = Link.query.filter_by(id=id_).first()
 
     if link is None:
-        return jsonify(error=404, text=strings.link_not_found), 404
+        abort(404, strings.link_not_found)
 
     return jsonify(link.serialize())
 
@@ -174,15 +178,15 @@ def update_link(id_):
     data = request.get_json()
 
     if link is None:
-        return jsonify(error=404, text=strings.link_not_found), 404
+        abort(404, strings.link_not_found)
 
     category_id = data.get('category_id')
     if category_id and category_id != link.category_id:
-        return jsonify(text=strings.cannot_change_category), 400
+        abort(400, strings.cannot_change_category)
 
     state = data.get('state')
     if state and state != link.state:
-        return jsonify(text=strings.cannot_change_state), 400
+        abort(400, strings.cannot_change_state)
 
     link = update_or_create_link(data, link=link)
     return jsonify(link.serialize())
@@ -196,7 +200,7 @@ def create_score():
 
     criterion = Criterion.query.filter_by(id=data.get('criterion_id')).first()
     if criterion is None:
-        return jsonify(text=strings.criterion_not_found), 404
+        abort(404, strings.criterion_not_found)
 
     # TODO: Raise an appropriate error if category_id and state are not present
     #  (see issue #57)
@@ -212,7 +216,7 @@ def create_score():
 @app.route('/states/<state_>', methods=['GET'])
 def get_state(state_):
     if state_ not in states:
-        return jsonify(text=strings.invalid_state), 400
+        abort(400, strings.invalid_state)
 
     state = get_state_information(state_)
 

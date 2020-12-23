@@ -131,9 +131,8 @@ class CriteriaTestCase(unittest.TestCase):
     def test_get_criterion_doesnt_exist(self):
         response = self.client.get('/criteria/1')
         self.assertEqual(response.status_code, 404)
-        json_response = json.loads(response.data.decode('utf-8'))
-
-        self.assertEqual(json_response['text'], 'Criterion does not exist')
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.criterion_not_found)
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_criterion(self, mock_auth):
@@ -197,7 +196,7 @@ class CriteriaTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['text'], strings.category_not_found)
+        self.assertEqual(json_response['description'], strings.category_not_found)
 
     def test_post_criterion_no_auth(self):
         response = self.client.post('/criteria', data={}, headers={})
@@ -264,7 +263,7 @@ class CriteriaTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['text'], strings.cannot_change_category)
+        self.assertEqual(json_response['description'], strings.cannot_change_category)
 
     def test_put_category_no_auth(self):
         response = self.client.put('/criteria/1', json={}, headers={})
@@ -277,7 +276,7 @@ class CriteriaTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['text'], strings.criterion_not_found)
+        self.assertEqual(json_response['description'], strings.criterion_not_found)
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_criterion_deactivate(self, mock_auth):

@@ -124,9 +124,8 @@ class CategoriesTestCase(unittest.TestCase):
     def test_get_category_doesnt_exist(self):
         response = self.client.get('/categories/1')
         self.assertEqual(response.status_code, 404)
-        json_response = json.loads(response.data.decode('utf-8'))
-
-        self.assertEqual(json_response['text'], 'Category does not exist')
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], 'Category does not exist')
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_category(self, mock_auth):
