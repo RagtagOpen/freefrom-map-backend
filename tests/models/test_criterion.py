@@ -3,6 +3,7 @@ import datetime
 
 from app import app, db
 from models import Criterion
+from strings import category_not_found
 from tests.test_utils import clear_database, create_category
 
 
@@ -43,6 +44,23 @@ class CriterionTestCase(unittest.TestCase):
         ),
         self.assertTrue(self.criterion.active)
         self.assertFalse(self.criterion.adverse)
+
+    def test_init_invalid_category(self):
+        with self.assertRaises(ValueError) as e:
+            Criterion(
+                category_id=0,
+                title='Includes economic abuse framework',
+                recommendation_text=(
+                    "The state's definition of domestic violence should include a framework of "
+                    'economic abuse'
+                ),
+                help_text=(
+                    'This means that the state acknowledges the role that economic control and '
+                    'abuse can play in domestic violence'
+                ),
+                adverse=False,
+            )
+        self.assertEqual(str(e.exception), category_not_found)
 
     def test_serialize(self):
         self.assertEqual(

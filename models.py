@@ -1,6 +1,7 @@
 import datetime
 from app import db
 from sqlalchemy.orm import validates
+import strings
 
 states = [
     'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA',
@@ -94,6 +95,12 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
+        return value
+
     def serialize(self):
         return {
             'id': self.id,
@@ -125,9 +132,16 @@ class Score(BaseMixin, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
+    @validates('criterion_id')
+    def validate_criterion(self, key, value):
+        if Criterion.query.get(value) is None:
+            raise ValueError(strings.criterion_not_found)
+        return value
+
     @validates('state')
     def validate_state(self, key, value):
-        assert value in states
+        if value not in states:
+            raise ValueError(strings.invalid_state)
         return value
 
     def serialize(self):
@@ -161,9 +175,16 @@ class Link(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
+        return value
+
     @validates('state')
     def validate_state(self, key, value):
-        assert value in states
+        if value not in states:
+            raise ValueError(strings.invalid_state)
         return value
 
     def serialize(self):

@@ -1,6 +1,7 @@
 from models import Category, Criterion, Link, Score
 from app import db
 from sqlalchemy import func
+import strings
 
 
 def update_or_create_category(data, category=Category()):
@@ -27,12 +28,17 @@ def update_or_create_link(data, link=None):
     Takes a dict of data where the keys are fields of the link model.
     Valid keys are category_id, state, text, url, and active. The 'active'
     key only uses a False value to deactivate the link.
-    '''
 
+    Once created, a link's category or state cannot be changed.
+    '''
+    category_id = data.get('category_id')
+    state = data.get('state')
     if link is None:
-        # TODO: Raise an appropriate error if category_id and state are not present
-        #  (see issue #57)
-        link = Link(category_id=data['category_id'], state=data['state'])
+        link = Link(category_id=category_id, state=state)
+    elif category_id and category_id != link.category_id:
+        raise ValueError(strings.cannot_change_category)
+    elif state and state != link.state:
+        raise ValueError(strings.cannot_change_state)
 
     if 'text' in data.keys():
         link.text = data['text']
@@ -51,12 +57,14 @@ def update_or_create_criterion(data, criterion=None):
     Takes a dict of data where the keys are fields of the criterion model.
     Valid keys are category_id, title, recommendation_text, help_text, adverse,
     and active. The 'active' key only uses a False value.
-    '''
 
+    Once created, a criterion's category cannot be changed.
+    '''
+    category_id = data.get('category_id')
     if criterion is None:
-        # TODO: Raise an appropriate error if category_id and state are not present
-        #  (see issue #57)
-        criterion = Criterion(category_id=data['category_id'])
+        criterion = Criterion(category_id=category_id)
+    elif category_id and category_id != criterion.category_id:
+        raise ValueError(strings.cannot_change_category)
 
     if 'title' in data:
         criterion.title = data['title']

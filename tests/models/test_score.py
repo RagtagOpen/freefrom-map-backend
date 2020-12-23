@@ -3,6 +3,7 @@ import datetime
 
 from app import db
 from models import Score
+from strings import criterion_not_found, invalid_state
 from tests.test_utils import clear_database, create_category, create_criterion
 
 
@@ -26,13 +27,23 @@ class ScoreTestCase(unittest.TestCase):
         self.assertTrue(isinstance(self.score.created_at, datetime.datetime))
         self.assertTrue(self.score.created_at < datetime.datetime.utcnow())
 
+    def test_init_invalid_criterion(self):
+        with self.assertRaises(ValueError) as e:
+            Score(
+                criterion_id=0,
+                state='NY',
+                meets_criterion=True,
+            )
+        self.assertEqual(str(e.exception), criterion_not_found)
+
     def test_init_invalid_state_code(self):
-        with self.assertRaises(AssertionError):
+        with self.assertRaises(ValueError) as e:
             Score(
                 criterion_id=self.criterion.id,
                 state='fake-state',
                 meets_criterion=True,
             )
+        self.assertEqual(str(e.exception), invalid_state)
 
     def test_serialize(self):
         expected_result = {
