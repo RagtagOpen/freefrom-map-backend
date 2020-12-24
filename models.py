@@ -41,6 +41,26 @@ class Deactivatable(object):
         self.deactivated_at = datetime.datetime.utcnow()
 
 
+class State(BaseMixin, db.Model):
+    __tablename__ = 'states'
+
+    code = db.Column(db.String(2), primary_key=True)
+    name = db.Column(db.String())
+
+    def __init__(self, code, name=None):
+        self.code = code
+        self.name = name
+
+    def __repr__(self):
+        return '<id {}>'.format(self.code)
+
+    def serialize(self):
+        return {
+            'code': self.code,
+            'name': self.name,
+        }
+
+
 class Category(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'categories'
 
@@ -119,7 +139,7 @@ class Score(BaseMixin, db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     criterion_id = db.Column(db.Integer, db.ForeignKey('criteria.id'), nullable=False)
-    state = db.Column(db.String(), nullable=False)
+    state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     meets_criterion = db.Column(db.Boolean())
     created_at = db.Column(db.DateTime)
 
@@ -140,7 +160,7 @@ class Score(BaseMixin, db.Model):
 
     @validates('state')
     def validate_state(self, key, value):
-        if value not in states:
+        if State.query.get(value) is None:
             raise ValueError(strings.invalid_state)
         return value
 
@@ -161,7 +181,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
-    state = db.Column(db.String(), nullable=False)
+    state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
 
@@ -183,7 +203,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
 
     @validates('state')
     def validate_state(self, key, value):
-        if value not in states:
+        if State.query.get(value) is None:
             raise ValueError(strings.invalid_state)
         return value
 

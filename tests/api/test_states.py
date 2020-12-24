@@ -4,40 +4,45 @@ import json
 from app import app, db
 from models import Score
 from datetime import datetime, timedelta
-from tests.test_utils import clear_database, create_category, create_criterion, create_link
+from tests.test_utils import clear_database, create_state, create_category, create_criterion, create_link
 
 
 class StatesTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
 
+        self.state1 = 'NY'
+        self.state2 = 'AK'
+        create_state(code=self.state1)
+        create_state(code=self.state2)
+
         self.category1 = create_category()
         self.category2 = create_category()
         self.criterion1 = create_criterion(self.category1.id)
         self.criterion2 = create_criterion(self.category2.id)
-        self.link1 = create_link(self.category1.id, 'NY')
-        self.link2 = create_link(self.category2.id, 'NY')
+        self.link1 = create_link(self.category1.id, self.state1)
+        self.link2 = create_link(self.category2.id, self.state1)
         self.score1 = Score(
-          criterion_id=self.criterion1.id,
-          state='NY',
-          meets_criterion=True
+            criterion_id=self.criterion1.id,
+            state=self.state1,
+            meets_criterion=True,
         )
         self.score2 = Score(
-          criterion_id=self.criterion2.id,
-          state='NY',
-          meets_criterion=False
+            criterion_id=self.criterion2.id,
+            state=self.state1,
+            meets_criterion=False,
         )
         self.score3 = Score(
-          criterion_id=self.criterion2.id,
-          state='NY',
-          meets_criterion=True
+            criterion_id=self.criterion2.id,
+            state=self.state1,
+            meets_criterion=True,
         )
         # score2 is more recent than score3
         self.score3.created_at = datetime.utcnow() - timedelta(5)
         self.score4 = Score(
-          criterion_id=self.criterion2.id,
-          state='AK',
-          meets_criterion=True
+            criterion_id=self.criterion2.id,
+            state=self.state2,
+            meets_criterion=True,
         )
 
         Score.save_all([self.score1, self.score2, self.score3, self.score4])
@@ -49,7 +54,7 @@ class StatesTestCase(unittest.TestCase):
         clear_database(db)
 
     def test_get_state(self):
-        response = self.client.get('/states/NY')
+        response = self.client.get(f'/states/{self.state1}')
         self.assertEqual(response.status_code, 200)
         json_response = json.loads(response.data.decode('utf-8'))
 
@@ -72,11 +77,12 @@ class StatesTestCase(unittest.TestCase):
         self.assertTrue(scores[0]['meets_criterion'])
         self.assertFalse(scores[1]['meets_criterion'])
 
-    def test_get_state_invalid_state(self):
+    def test_get_state_doesnt_exist(self):
         response = self.client.get('/states/PP')
         self.assertEqual(response.status_code, 400)
 
     def test_get_state_no_data(self):
+        state = create_state(code='KY')
         response = self.client.get('/states/KY')
         self.assertEqual(response.status_code, 200)
 
