@@ -101,6 +101,23 @@ flake8
 The following section describes the FreeFrom map backend API. All responses will be formatted as JSON, and all
 request bodies should be provided as JSON.
 
+### States
+
+A state has the following fields:
+
+|  Name             |  Type   |    Notes    |
+|-------------------|---------|-------------|
+| code              | String  | Primary key |
+| name              | String  |             |
+| innovative_idea   | String  |             |
+| honorable_mention | String  |             |
+| scores            | [Score] |             |
+| links             | [Link]  |             |
+
+#### GET /states/{code}
+
+This endpoint returns the state corresponding to the state code provided in the request. If no state with that code exists, it will return a 404 response code.
+
 ### Categories
 A category represents a group of criteria in the map scorecard. A category has the following fields:
 
@@ -114,7 +131,7 @@ A category represents a group of criteria in the map scorecard. A category has t
 
 This endpoint returns a list of all existing categories. It will return an empty array if no categories exist.
 
-#### GET /categories/<id>
+#### GET /categories/{id}
 
 This endpoint returns one category corresponding to the id provided in the request. If no category with that
 id exists, it will return a 404 response code.
@@ -135,7 +152,7 @@ A criterion represents one measure in the state scorecard to determine whether a
 
 This endpoint returns a list of all existing criteria. It will return an empty array if no criteria exist.
 
-### GET /criteria/<id>
+### GET /criteria/{id}
 
 This endpoint returns one criterion corresponding to the id provided in the request. If no criterion with that
 id exists, it will return a 404 response code.
