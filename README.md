@@ -148,11 +148,11 @@ A criterion represents one measure in the state scorecard to determine whether a
 | recommendation_text | String   |             |
 | active              | Boolean  |             |
 
-### GET /criteria
+#### GET /criteria
 
 This endpoint returns a list of all existing criteria. It will return an empty array if no criteria exist.
 
-### GET /criteria/{id}
+#### GET /criteria/{id}
 
 This endpoint returns one criterion corresponding to the id provided in the request. If no criterion with that
 id exists, it will return a 404 response code.
