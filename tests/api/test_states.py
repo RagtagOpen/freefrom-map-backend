@@ -4,7 +4,14 @@ import json
 from app import app, db
 from models import Score
 from datetime import datetime, timedelta
-from tests.test_utils import clear_database, create_state, create_category, create_criterion, create_link
+import strings
+from tests.test_utils import (
+    clear_database,
+    create_state,
+    create_category,
+    create_criterion,
+    create_link,
+)
 
 
 class StatesTestCase(unittest.TestCase):
@@ -79,11 +86,13 @@ class StatesTestCase(unittest.TestCase):
 
     def test_get_state_doesnt_exist(self):
         response = self.client.get('/states/PP')
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 404)
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.invalid_state)
 
     def test_get_state_no_data(self):
         state = create_state(code='KY')
-        response = self.client.get('/states/KY')
+        response = self.client.get(f'/states/{state.code}')
         self.assertEqual(response.status_code, 200)
 
         json_response = json.loads(response.data.decode('utf-8'))

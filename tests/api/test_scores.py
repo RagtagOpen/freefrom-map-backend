@@ -8,7 +8,13 @@ from sqlalchemy.exc import SAWarning
 from app import app, db
 from models import Score
 import strings
-from tests.test_utils import clear_database, create_state, create_category, create_criterion, auth_headers
+from tests.test_utils import (
+    clear_database,
+    create_state,
+    create_category,
+    create_criterion,
+    auth_headers,
+)
 
 
 class ScoresTestCase(unittest.TestCase):
@@ -84,7 +90,9 @@ class ScoresTestCase(unittest.TestCase):
             'criterion_id': self.criterion.id,
         }
 
-        response = self.client.post('/scores', json=data, headers=auth_headers())
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/scores', json=data, headers=auth_headers())
         self.assertEqual(response.status_code, 400)
 
         json_response = json.loads(response.data)

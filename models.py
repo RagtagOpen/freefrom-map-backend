@@ -3,13 +3,6 @@ from app import db
 from sqlalchemy.orm import validates
 import strings
 
-states = [
-    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA',
-    'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM',
-    'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA',
-    'WV', 'WI', 'WY',
-]
-
 
 class BaseMixin():
     def save(self):
@@ -46,10 +39,14 @@ class State(BaseMixin, db.Model):
 
     code = db.Column(db.String(2), primary_key=True)
     name = db.Column(db.String())
+    innovative_idea = db.Column(db.String())
+    honorable_mention = db.Column(db.String())
 
-    def __init__(self, code, name=None):
+    def __init__(self, code, name=None, innovative_idea=None, honorable_mention=None):
         self.code = code
         self.name = name
+        self.innovative_idea = innovative_idea
+        self.honorable_mention = honorable_mention
 
     def __repr__(self):
         return '<id {}>'.format(self.code)
@@ -58,6 +55,8 @@ class State(BaseMixin, db.Model):
         return {
             'code': self.code,
             'name': self.name,
+            'innovative_idea': self.innovative_idea,
+            'honorable_mention': self.honorable_mention,
         }
 
 

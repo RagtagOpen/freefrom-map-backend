@@ -162,7 +162,9 @@ class LinksTestCase(unittest.TestCase):
             'url': 'ny.gov/link/to/statute',
         }
 
-        response = self.client.post('/links', json=data, headers=auth_headers())
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/links', json=data, headers=auth_headers())
         self.assertEqual(response.status_code, 400)
 
         json_response = json.loads(response.data)
