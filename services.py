@@ -1,6 +1,4 @@
-from models import Category, Criterion, Link, Score
-from app import db
-from sqlalchemy import func
+from models import Category, Criterion, Link
 import strings
 
 
@@ -80,28 +78,3 @@ def update_or_create_criterion(data, criterion=None):
         criterion.deactivate()
 
     return criterion.save()
-
-
-def get_state_information(state):
-    links = Link.query.filter_by(state=state, active=True).all()
-
-    # https://stackoverflow.com/questions/58333162/how-to-get-top-n-results-per-group-from-a-pool-of-ids-in-sqlalchemy
-    subquery = db.session.query(
-        Score,
-        func.rank().over(
-            order_by=Score.created_at.desc(),
-            partition_by=Score.criterion_id
-        ).label('rank')
-    ).filter(Score.state == state).subquery()
-
-    scores = db.session.query(subquery).filter(subquery.c.rank <= 1).all()
-    serialized_scores = [score._asdict() for score in scores]
-
-    for score in serialized_scores:
-        score.pop('rank')
-        score.pop('created_at')
-
-    return {
-        'links': links,
-        'scores': serialized_scores
-    }
