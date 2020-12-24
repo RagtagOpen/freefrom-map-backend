@@ -18,37 +18,37 @@ class StatesTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
 
-        self.state1 = 'NY'
-        self.state2 = 'AK'
-        create_state(code=self.state1)
-        create_state(code=self.state2)
+        self.state1_code = 'NY'
+        self.state2_code = 'AK'
+        create_state(code=self.state1_code)
+        create_state(code=self.state2_code)
 
         self.category1 = create_category()
         self.category2 = create_category()
         self.criterion1 = create_criterion(self.category1.id)
         self.criterion2 = create_criterion(self.category2.id)
-        self.link1 = create_link(self.category1.id, self.state1)
-        self.link2 = create_link(self.category2.id, self.state1)
+        self.link1 = create_link(self.category1.id, self.state1_code)
+        self.link2 = create_link(self.category2.id, self.state1_code)
         self.score1 = Score(
             criterion_id=self.criterion1.id,
-            state=self.state1,
+            state=self.state1_code,
             meets_criterion=True,
         )
         self.score2 = Score(
             criterion_id=self.criterion2.id,
-            state=self.state1,
+            state=self.state1_code,
             meets_criterion=False,
         )
         self.score3 = Score(
             criterion_id=self.criterion2.id,
-            state=self.state1,
+            state=self.state1_code,
             meets_criterion=True,
         )
         # score2 is more recent than score3
         self.score3.created_at = datetime.utcnow() - timedelta(5)
         self.score4 = Score(
             criterion_id=self.criterion2.id,
-            state=self.state2,
+            state=self.state2_code,
             meets_criterion=True,
         )
 
@@ -61,7 +61,7 @@ class StatesTestCase(unittest.TestCase):
         clear_database(db)
 
     def test_get_state(self):
-        response = self.client.get(f'/states/{self.state1}')
+        response = self.client.get(f'/states/{self.state1_code}')
         self.assertEqual(response.status_code, 200)
         json_response = json.loads(response.data.decode('utf-8'))
 

@@ -30,10 +30,10 @@ class ScoresTestCase(unittest.TestCase):
     @patch('auth.is_token_valid', return_value=True)
     def test_post_score(self, mock_auth):
         criterion_id = self.criterion.id
-        state = self.state.code
+        state_code = self.state.code
         data = {
             'criterion_id': criterion_id,
-            'state': state,
+            'state': state_code,
             'meets_criterion': True,
         }
 
@@ -43,7 +43,7 @@ class ScoresTestCase(unittest.TestCase):
 
         score = Score.query.one()
         self.assertEqual(score.criterion_id, criterion_id)
-        self.assertEqual(score.state, state)
+        self.assertEqual(score.state, state_code)
         self.assertTrue(score.meets_criterion)
         self.assertTrue(isinstance(score.created_at, datetime.datetime))
 
@@ -51,7 +51,7 @@ class ScoresTestCase(unittest.TestCase):
         self.assertEqual(json_response, {
             'id': score.id,
             'criterion_id': criterion_id,
-            'state': state,
+            'state': state_code,
             'meets_criterion': True,
         })
 
@@ -71,9 +71,8 @@ class ScoresTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_score_no_criterion(self, mock_auth):
-        state = self.state.code
         data = {
-            'state': state,
+            'state': self.state.code,
         }
 
         with warnings.catch_warnings():

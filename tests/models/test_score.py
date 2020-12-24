@@ -14,7 +14,7 @@ class ScoreTestCase(unittest.TestCase):
         self.criterion = create_criterion(self.category.id)
         self.score = Score(
             criterion_id=self.criterion.id,
-            state='NY',
+            state=self.state.code,
             meets_criterion=True,
         ).save()
 
@@ -32,7 +32,7 @@ class ScoreTestCase(unittest.TestCase):
         with self.assertRaises(ValueError) as e:
             Score(
                 criterion_id=0,
-                state='NY',
+                state=self.state.code,
                 meets_criterion=True,
             )
         self.assertEqual(str(e.exception), criterion_not_found)

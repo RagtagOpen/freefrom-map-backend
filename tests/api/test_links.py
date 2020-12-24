@@ -15,10 +15,10 @@ class LinksTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
         self.category = create_category()
-        self.state1 = 'NY'
-        self.state2 = 'AZ'
-        create_state(code=self.state1)
-        create_state(code=self.state2)
+        self.state1_code = 'NY'
+        self.state2_code = 'AZ'
+        create_state(code=self.state1_code)
+        create_state(code=self.state2_code)
 
     def tearDown(self):
         clear_database(db)
@@ -26,14 +26,14 @@ class LinksTestCase(unittest.TestCase):
     def test_get_links(self):
         link1 = Link(
             category_id=self.category.id,
-            state=self.state1,
+            state=self.state1_code,
             text='Section 20 of Statute 39-B',
             url='ny.gov/link/to/statute',
         )
 
         link2 = Link(
             category_id=self.category.id,
-            state=self.state2,
+            state=self.state2_code,
             text='Statute 20 of Policy ABC',
             url='az.gov/link/to/statute',
         )
@@ -50,7 +50,7 @@ class LinksTestCase(unittest.TestCase):
         self.assertEqual(json_response[0], {
             'id': link1.id,
             'category_id': link1.category_id,
-            'state': self.state1,
+            'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
             'active': True,
@@ -80,7 +80,7 @@ class LinksTestCase(unittest.TestCase):
     def test_get_link(self):
         link = Link(
             category_id=self.category.id,
-            state=self.state1,
+            state=self.state1_code,
             text='Section 20 of Statute 39-B',
             url='ny.gov/link/to/statute',
         ).save()
@@ -92,7 +92,7 @@ class LinksTestCase(unittest.TestCase):
         self.assertEqual(json_response, {
             'id': link.id,
             'category_id': link.category_id,
-            'state': self.state1,
+            'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
             'active': True,
@@ -109,7 +109,7 @@ class LinksTestCase(unittest.TestCase):
     def test_post_link(self, mock_auth):
         data = {
             'category_id': self.category.id,
-            'state': self.state1,
+            'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
         }
@@ -122,7 +122,7 @@ class LinksTestCase(unittest.TestCase):
         category = Category.query.first()
 
         self.assertEqual(new_link.category_id, category.id)
-        self.assertEqual(new_link.state, self.state1)
+        self.assertEqual(new_link.state, self.state1_code)
         self.assertEqual(new_link.text, 'Section 20 of Statute 39-B')
         self.assertEqual(new_link.url, 'ny.gov/link/to/statute')
 
@@ -131,7 +131,7 @@ class LinksTestCase(unittest.TestCase):
         self.assertEqual(json_response, {
             'id': new_link.id,
             'category_id': category.id,
-            'state': self.state1,
+            'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
             'active': True,
@@ -141,7 +141,7 @@ class LinksTestCase(unittest.TestCase):
     @patch('auth.is_token_valid', return_value=True)
     def test_post_link_no_category(self, mock_auth):
         data = {
-            'state': self.state1,
+            'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
         }
@@ -176,7 +176,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link(self, mock_auth):
-        link = Link(state=self.state1, category_id=self.category.id).save()
+        link = Link(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'text': 'Section 20 of Statute 39-B',
@@ -199,7 +199,7 @@ class LinksTestCase(unittest.TestCase):
         self.assertEqual(json_response, {
             'id': link.id,
             'category_id': category.id,
-            'state': self.state1,
+            'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
             'active': True,
@@ -208,7 +208,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_cannot_change_category(self, mock_auth):
-        link = Link(state=self.state1, category_id=self.category.id).save()
+        link = Link(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'category_id': 1,
@@ -222,10 +222,10 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_cannot_change_state(self, mock_auth):
-        link = Link(state=self.state1, category_id=self.category.id).save()
+        link = Link(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
-            'state': self.state2,
+            'state': self.state2_code,
         }
 
         response = self.client.put('/links/%i' % link.id, json=data, headers=auth_headers())
@@ -240,7 +240,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_deactivate(self, mock_auth):
-        link = Link(state=self.state1, category_id=self.category.id).save()
+        link = Link(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'active': False,
