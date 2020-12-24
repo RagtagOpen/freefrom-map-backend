@@ -11,10 +11,7 @@ def clear_database(db):
 
 
 def create_state(code='NY'):
-    state = models.State.query.get(code)
-    if state is None:
-        return models.State(code=code).save()
-    return state
+    return models.State(code=code).save()
 
 
 def create_category():
