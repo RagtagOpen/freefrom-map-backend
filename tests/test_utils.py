@@ -46,8 +46,8 @@ def create_criterion(subcategory_id):
     ).save()
 
 
-def create_link(category_id, state):
-    return models.Link(category_id=category_id, state=state).save()
+def create_link(subcategory_id, state):
+    return models.Link(subcategory_id=subcategory_id, state=state).save()
 
 
 def auth_headers():
