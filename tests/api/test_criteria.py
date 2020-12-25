@@ -8,20 +8,27 @@ from sqlalchemy.exc import SAWarning
 from app import app, db
 from models import Criterion
 import strings
-from tests.test_utils import clear_database, create_category, create_criterion, auth_headers
+from tests.test_utils import (
+    clear_database,
+    create_category,
+    create_subcategory,
+    create_criterion,
+    auth_headers,
+)
 
 
 class CriteriaTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
         self.category = create_category()
+        self.subcategory = create_subcategory(self.category.id)
 
     def tearDown(self):
         clear_database(db)
 
     def test_get_criteria(self):
         criterion1 = Criterion(
-            category_id=self.category.id,
+            subcategory_id=self.subcategory.id,
             title='Includes economic abuse framework',
             recommendation_text=(
                 "The state's definition of domestic violence should include a framework of "
@@ -35,7 +42,7 @@ class CriteriaTestCase(unittest.TestCase):
         )
 
         criterion2 = Criterion(
-            category_id=self.category.id,
+            subcategory_id=self.subcategory.id,
             title='Uses coercive control framework',
             recommendation_text=(
                 "The state's definition of domestic violence should use a framework of coercive "
@@ -58,7 +65,7 @@ class CriteriaTestCase(unittest.TestCase):
         self.assertEqual(len(json_response), 2)
         self.assertEqual(json_response[0], {
             'id': criterion1.id,
-            'category_id': criterion1.category_id,
+            'subcategory_id': criterion1.subcategory_id,
             'title': 'Includes economic abuse framework',
             'recommendation_text':
                 "The state's definition of domestic violence should include a framework of "
@@ -73,7 +80,7 @@ class CriteriaTestCase(unittest.TestCase):
 
         criterion2_expected = {
             'id': criterion2.id,
-            'category_id': criterion2.category_id,
+            'subcategory_id': criterion2.subcategory_id,
             'title': 'Uses coercive control framework',
             'recommendation_text':
                 "The state's definition of domestic violence should use a framework of coercive "
@@ -98,7 +105,7 @@ class CriteriaTestCase(unittest.TestCase):
 
     def test_get_criterion(self):
         criterion = Criterion(
-            category_id=self.category.id,
+            subcategory_id=self.subcategory.id,
             title='Includes economic abuse framework',
             recommendation_text=(
                 "The state's definition of domestic violence should include a framework of "
@@ -117,7 +124,7 @@ class CriteriaTestCase(unittest.TestCase):
 
         self.assertEqual(json_response, {
             'id': criterion.id,
-            'category_id': criterion.category_id,
+            'subcategory_id': criterion.subcategory_id,
             'title': 'Includes economic abuse framework',
             'recommendation_text':
                 "The state's definition of domestic violence should include a framework of "
@@ -138,9 +145,9 @@ class CriteriaTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_criterion(self, mock_auth):
-        category_id = self.category.id
+        subcategory_id = self.subcategory.id
         data = {
-            'category_id': category_id,
+            'subcategory_id': subcategory_id,
             'title': 'Includes economic abuse framework',
             'recommendation_text':
                 "The state's definition of domestic violence should include a framework of "
@@ -156,7 +163,7 @@ class CriteriaTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         criterion = Criterion.query.one()
-        self.assertEqual(criterion.category_id, category_id)
+        self.assertEqual(criterion.subcategory_id, subcategory_id)
         self.assertEqual(criterion.title, 'Includes economic abuse framework')
         self.assertEqual(
             criterion.recommendation_text,
@@ -175,7 +182,7 @@ class CriteriaTestCase(unittest.TestCase):
         json_response = json.loads(response.data)
         self.assertEqual(json_response, {
             'id': criterion.id,
-            'category_id': category_id,
+            'subcategory_id': subcategory_id,
             'title': 'Includes economic abuse framework',
             'recommendation_text':
                 "The state's definition of domestic violence should include a framework of "
@@ -189,25 +196,24 @@ class CriteriaTestCase(unittest.TestCase):
         })
 
     @patch('auth.is_token_valid', return_value=True)
-    def test_post_criterion_category_doesnt_exist(self, mock_auth):
-        category_id = self.category.id + 1
-        data = {'category_id': category_id}
+    def test_post_criterion_subcategory_doesnt_exist(self, mock_auth):
+        data = {'subcategory_id': 0}
 
         response = self.client.post('/criteria', json=data, headers=auth_headers())
         self.assertEqual(response.status_code, 400)
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['description'], strings.category_not_found)
+        self.assertEqual(json_response['description'], strings.subcategory_not_found)
 
     @patch('auth.is_token_valid', return_value=True)
-    def test_post_criterion_no_category(self, mock_auth):
+    def test_post_criterion_no_subcategory(self, mock_auth):
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', category=SAWarning)
             response = self.client.post('/criteria', json={}, headers=auth_headers())
         self.assertEqual(response.status_code, 400)
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['description'], strings.category_not_found)
+        self.assertEqual(json_response['description'], strings.subcategory_not_found)
 
     def test_post_criterion_no_auth(self):
         response = self.client.post('/criteria', data={}, headers={})
@@ -215,8 +221,8 @@ class CriteriaTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_criterion(self, mock_auth):
-        category_id = self.category.id
-        criterion = create_criterion(category_id)
+        subcategory_id = self.subcategory.id
+        criterion = create_criterion(subcategory_id)
 
         data = {
             'title': 'A New Title',
@@ -232,7 +238,7 @@ class CriteriaTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         criterion = Criterion.query.first()
-        self.assertEqual(criterion.category_id, category_id)
+        self.assertEqual(criterion.subcategory_id, subcategory_id)
         self.assertEqual(criterion.title, 'A New Title')
         self.assertEqual(
             criterion.recommendation_text,
@@ -247,7 +253,7 @@ class CriteriaTestCase(unittest.TestCase):
         json_response = json.loads(response.data)
         self.assertEqual(json_response, {
             'id': criterion.id,
-            'category_id': category_id,
+            'subcategory_id': subcategory_id,
             'title': 'A New Title',
             'recommendation_text':
                 "The state's definition of domestic violence should include a framework of "
@@ -259,11 +265,11 @@ class CriteriaTestCase(unittest.TestCase):
         })
 
     @patch('auth.is_token_valid', return_value=True)
-    def test_put_criterion_cannot_change_category(self, mock_auth):
-        category_id = self.category.id
-        criterion = create_criterion(category_id)
+    def test_put_criterion_cannot_change_subcategory(self, mock_auth):
+        subcategory_id = self.subcategory.id
+        criterion = create_criterion(subcategory_id)
 
-        data = {'category_id': category_id + 1}
+        data = {'subcategory_id': subcategory_id + 1}
 
         response = self.client.put(
             '/criteria/%i' % criterion.id,
@@ -274,9 +280,9 @@ class CriteriaTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['description'], strings.cannot_change_category)
+        self.assertEqual(json_response['description'], strings.cannot_change_subcategory)
 
-    def test_put_category_no_auth(self):
+    def test_put_criterion_no_auth(self):
         response = self.client.put('/criteria/1', json={}, headers={})
         self.assertEqual(response.status_code, 401)
 
@@ -291,7 +297,7 @@ class CriteriaTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_criterion_deactivate(self, mock_auth):
-        criterion = create_criterion(self.category.id)
+        criterion = create_criterion(self.subcategory.id)
 
         data = {
             'active': False,

@@ -1,6 +1,8 @@
 cannot_change_category = 'Category cannot be changed'
+cannot_change_subcategory = 'Subcategory cannot be changed'
 cannot_change_state = 'State cannot be changed'
 category_not_found = 'Category does not exist'
+subcategory_not_found = 'Subcategory does not exist'
 criterion_not_found = 'Criterion does not exist'
 invalid_state = 'State code is invalid'
 link_not_found = 'Link does not exist'

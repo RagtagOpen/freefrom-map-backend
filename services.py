@@ -24,17 +24,17 @@ def update_or_create_category(data, category=Category()):
 def update_or_create_link(data, link=None):
     '''
     Takes a dict of data where the keys are fields of the link model.
-    Valid keys are category_id, state, text, url, and active. The 'active'
+    Valid keys are subcategory_id, state, text, url, and active. The 'active'
     key only uses a False value to deactivate the link.
 
-    Once created, a link's category or state cannot be changed.
+    Once created, a link's subcategory or state cannot be changed.
     '''
-    category_id = data.get('category_id')
+    subcategory_id = data.get('subcategory_id')
     state = data.get('state')
     if link is None:
-        link = Link(category_id=category_id, state=state)
-    elif category_id and category_id != link.category_id:
-        raise ValueError(strings.cannot_change_category)
+        link = Link(subcategory_id=subcategory_id, state=state)
+    elif subcategory_id and subcategory_id != link.subcategory_id:
+        raise ValueError(strings.cannot_change_subcategory)
     elif state and state != link.state:
         raise ValueError(strings.cannot_change_state)
 
@@ -53,16 +53,16 @@ def update_or_create_link(data, link=None):
 def update_or_create_criterion(data, criterion=None):
     '''
     Takes a dict of data where the keys are fields of the criterion model.
-    Valid keys are category_id, title, recommendation_text, help_text, adverse,
+    Valid keys are subcategory_id, title, recommendation_text, help_text, adverse,
     and active. The 'active' key only uses a False value.
 
-    Once created, a criterion's category cannot be changed.
+    Once created, a criterion's subcategory cannot be changed.
     '''
-    category_id = data.get('category_id')
+    subcategory_id = data.get('subcategory_id')
     if criterion is None:
-        criterion = Criterion(category_id=category_id)
-    elif category_id and category_id != criterion.category_id:
-        raise ValueError(strings.cannot_change_category)
+        criterion = Criterion(subcategory_id=subcategory_id)
+    elif subcategory_id and subcategory_id != criterion.subcategory_id:
+        raise ValueError(strings.cannot_change_subcategory)
 
     if 'title' in data:
         criterion.title = data['title']
