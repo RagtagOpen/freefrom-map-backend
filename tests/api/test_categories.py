@@ -71,8 +71,8 @@ class CategoriesTestCase(unittest.TestCase):
     def test_get_categories_empty(self):
         response = self.client.get('/categories')
         self.assertEqual(response.status_code, 200)
-
         json_response = json.loads(response.data.decode('utf-8'))
+
         self.assertEqual(json_response, [])
 
     def test_get_category(self):
@@ -82,7 +82,7 @@ class CategoriesTestCase(unittest.TestCase):
         response = self.client.get(f'/categories/{category.id}')
         self.assertEqual(response.status_code, 200)
 
-        json_response = json.loads(response.data.decode('utf-8'))
+        json_response = json.loads(response.data)
         self.assertEqual(json_response, category.serialize())
 
     def test_get_category_with_subcategories(self):
@@ -99,7 +99,6 @@ class CategoriesTestCase(unittest.TestCase):
     def test_get_category_doesnt_exist(self):
         response = self.client.get('/categories/1')
         self.assertEqual(response.status_code, 404)
-
         json_response = json.loads(response.data)
         self.assertEqual(json_response['description'], 'Category does not exist')
 

@@ -143,7 +143,7 @@ A criterion represents one measure in the state scorecard to determine whether a
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
 | id                  | Integer  | Primary key |
-| category_id         | Integer  | Foreign key |
+| subcategory_id      | Integer  | Foreign key |
 | title               | String   |             |
 | recommendation_text | String   |             |
 | active              | Boolean  |             |
