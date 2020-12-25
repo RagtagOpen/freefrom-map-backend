@@ -54,10 +54,10 @@ def handle_server_error(e):
 
 @app.route('/categories', methods=['GET'])
 def get_categories():
-    with_criteria = request.args.get('withCriteria') == 'true'
+    with_subcategories = request.args.get('withSubcategories') == 'true'
 
     categories = Category.query.all()
-    return jsonify([category.serialize(with_criteria) for category in categories])
+    return jsonify([category.serialize(with_subcategories) for category in categories])
 
 
 @app.route('/categories', methods=['POST'])
@@ -76,8 +76,8 @@ def get_category(id_):
     if category is None:
         abort(404, strings.category_not_found)
 
-    with_criteria = request.args.get('withCriteria') == 'true'
-    return jsonify(category.serialize(with_criteria))
+    with_subcategories = request.args.get('withSubcategories') == 'true'
+    return jsonify(category.serialize(with_subcategories))
 
 
 @app.route('/categories/<id_>', methods=['PUT'])
