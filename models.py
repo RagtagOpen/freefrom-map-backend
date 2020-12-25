@@ -41,6 +41,8 @@ class State(BaseMixin, db.Model):
     name = db.Column(db.String())
     innovative_idea = db.Column(db.String())
     honorable_mention = db.Column(db.String())
+    scores = db.relationship('Score', lazy=True)
+    links = db.relationship('Link', lazy=True)
 
     def __init__(self, code, name=None, innovative_idea=None, honorable_mention=None):
         self.code = code
@@ -52,11 +54,24 @@ class State(BaseMixin, db.Model):
         return '<id {}>'.format(self.code)
 
     def serialize(self):
+        links = [link.serialize() for link in self.links]
+        scores = []
+
+        for criterion in Criterion.query.all():
+            score = Score.query.filter_by(
+                criterion_id=criterion.id,
+                state=self.code,
+            ).order_by(Score.created_at.desc()).first()
+            if score:
+                scores.append(score.serialize())
+
         return {
             'code': self.code,
             'name': self.name,
             'innovative_idea': self.innovative_idea,
             'honorable_mention': self.honorable_mention,
+            'links': links,
+            'scores': scores,
         }
 
 
