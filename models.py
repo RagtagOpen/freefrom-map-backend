@@ -3,13 +3,6 @@ from app import db
 from sqlalchemy.orm import validates
 import strings
 
-states = [
-    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA',
-    'KS', 'KY', 'LA', 'ME', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM',
-    'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA',
-    'WV', 'WI', 'WY',
-]
-
 
 class BaseMixin():
     def save(self):
@@ -39,6 +32,32 @@ class Deactivatable(object):
     def deactivate(self):
         self.active = False
         self.deactivated_at = datetime.datetime.utcnow()
+
+
+class State(BaseMixin, db.Model):
+    __tablename__ = 'states'
+
+    code = db.Column(db.String(2), primary_key=True)
+    name = db.Column(db.String())
+    innovative_idea = db.Column(db.String())
+    honorable_mention = db.Column(db.String())
+
+    def __init__(self, code, name=None, innovative_idea=None, honorable_mention=None):
+        self.code = code
+        self.name = name
+        self.innovative_idea = innovative_idea
+        self.honorable_mention = honorable_mention
+
+    def __repr__(self):
+        return '<id {}>'.format(self.code)
+
+    def serialize(self):
+        return {
+            'code': self.code,
+            'name': self.name,
+            'innovative_idea': self.innovative_idea,
+            'honorable_mention': self.honorable_mention,
+        }
 
 
 class Category(BaseMixin, Deactivatable, db.Model):
@@ -119,7 +138,7 @@ class Score(BaseMixin, db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     criterion_id = db.Column(db.Integer, db.ForeignKey('criteria.id'), nullable=False)
-    state = db.Column(db.String(), nullable=False)
+    state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     meets_criterion = db.Column(db.Boolean())
     created_at = db.Column(db.DateTime)
 
@@ -140,7 +159,7 @@ class Score(BaseMixin, db.Model):
 
     @validates('state')
     def validate_state(self, key, value):
-        if value not in states:
+        if State.query.get(value) is None:
             raise ValueError(strings.invalid_state)
         return value
 
@@ -161,7 +180,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
-    state = db.Column(db.String(), nullable=False)
+    state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
 
@@ -183,7 +202,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
 
     @validates('state')
     def validate_state(self, key, value):
-        if value not in states:
+        if State.query.get(value) is None:
             raise ValueError(strings.invalid_state)
         return value
 

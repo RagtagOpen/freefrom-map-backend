@@ -6,7 +6,12 @@ def clear_database(db):
     db.session.query(models.Score).delete()
     db.session.query(models.Criterion).delete()
     db.session.query(models.Category).delete()
+    db.session.query(models.State).delete()
     db.session.commit()
+
+
+def create_state(code='NY'):
+    return models.State(code=code).save()
 
 
 def create_category():

@@ -20,7 +20,7 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Criterion, Link, Score, states  # noqa: E402
+from models import Category, Criterion, Link, Score, State  # noqa: E402
 
 
 @app.errorhandler(400)
@@ -72,7 +72,7 @@ def create_category():
 
 @app.route('/categories/<id_>', methods=['GET'])
 def get_category(id_):
-    category = Category.query.filter_by(id=id_).first()
+    category = Category.query.get(id_)
 
     if category is None:
         abort(404, strings.category_not_found)
@@ -85,7 +85,7 @@ def get_category(id_):
 @cross_origin(headers=['Content-Type', 'Authorization'])
 @requires_auth
 def update_category(id_):
-    category = Category.query.filter_by(id=id_).first()
+    category = Category.query.get(id_)
     data = request.get_json()
 
     if category is None:
@@ -112,7 +112,7 @@ def create_criterion():
 
 @app.route('/criteria/<id_>', methods=['GET'])
 def get_criterion(id_):
-    criterion = Criterion.query.filter_by(id=id_).first()
+    criterion = Criterion.query.get(id_)
 
     if criterion is None:
         abort(404, strings.criterion_not_found)
@@ -124,7 +124,7 @@ def get_criterion(id_):
 @cross_origin(headers=['Content-Type', 'Authorization'])
 @requires_auth
 def update_criterion(id_):
-    criterion = Criterion.query.filter_by(id=id_).first()
+    criterion = Criterion.query.get(id_)
 
     if criterion is None:
         abort(404, strings.criterion_not_found)
@@ -152,7 +152,7 @@ def create_link():
 
 @app.route('/links/<id_>', methods=['GET'])
 def get_link(id_):
-    link = Link.query.filter_by(id=id_).first()
+    link = Link.query.get(id_)
 
     if link is None:
         abort(404, strings.link_not_found)
@@ -164,7 +164,7 @@ def get_link(id_):
 @cross_origin(headers=['Content-Type', 'Authorization'])
 @requires_auth
 def update_link(id_):
-    link = Link.query.filter_by(id=id_).first()
+    link = Link.query.get(id_)
     data = request.get_json()
 
     if link is None:
@@ -190,8 +190,10 @@ def create_score():
 
 @app.route('/states/<state_>', methods=['GET'])
 def get_state(state_):
-    if state_ not in states:
-        abort(400, strings.invalid_state)
+    state = State.query.get(state_)
+
+    if state is None:
+        abort(404, strings.invalid_state)
 
     state = get_state_information(state_)
 

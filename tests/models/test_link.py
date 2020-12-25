@@ -4,15 +4,17 @@ import datetime
 from app import db
 from models import Link
 from strings import category_not_found, invalid_state
-from tests.test_utils import clear_database, create_category
+from tests.test_utils import clear_database, create_state, create_category
 
 
 class LinkTestCase(unittest.TestCase):
     def setUp(self):
+        self.state_code = 'NY'
+        create_state(code=self.state_code)
         self.category = create_category()
         self.link = Link(
             category_id=self.category.id,
-            state='NY',
+            state=self.state_code,
             text='Section 20 of Statute 39-B',
             url='ny.gov/link/to/statute',
         ).save()
@@ -22,7 +24,7 @@ class LinkTestCase(unittest.TestCase):
 
     def test_init(self):
         self.assertEqual(self.link.category_id, self.category.id)
-        self.assertEqual(self.link.state, 'NY')
+        self.assertEqual(self.link.state, self.state_code)
         self.assertEqual(self.link.text, 'Section 20 of Statute 39-B')
         self.assertEqual(self.link.url, 'ny.gov/link/to/statute')
         self.assertTrue(self.category.active)
@@ -31,7 +33,7 @@ class LinkTestCase(unittest.TestCase):
         with self.assertRaises(ValueError) as e:
             Link(
                 category_id=0,
-                state='NY',
+                state=self.state_code,
                 text='Section 20 of Statute 39-B',
                 url='ny.gov/link/to/statute',
             )
@@ -41,7 +43,7 @@ class LinkTestCase(unittest.TestCase):
         with self.assertRaises(ValueError) as e:
             Link(
                 category_id=self.category.id,
-                state='fake-state',
+                state='fake-state_code',
                 text='Section 20 of Statute 39-B',
                 url='ny.gov/link/to/statute',
             )
@@ -52,7 +54,7 @@ class LinkTestCase(unittest.TestCase):
             {
                 'id': self.link.id,
                 'category_id': self.category.id,
-                'state': 'NY',
+                'state': self.state_code,
                 'text': 'Section 20 of Statute 39-B',
                 'url': 'ny.gov/link/to/statute',
                 'active': True,
