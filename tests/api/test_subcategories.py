@@ -37,6 +37,34 @@ class SubcategoryTestCase(unittest.TestCase):
             subcategory2.serialize(),
         ])
 
+    def test_get_subcategories_with_criteria(self):
+        subcategory = create_subcategory(self.category.id)
+        expected_response = [subcategory.serialize(with_criteria=True)]
+
+        response = self.client.get('/subcategories?withCriteria=true')
+        self.assertEqual(response.status_code, 200)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response, expected_response)
+
+    def test_get_subcategory_with_criteria(self):
+        subcategory = create_subcategory(self.category.id)
+
+        response = self.client.get(f'/subcategories/{subcategory.id}')
+        self.assertEqual(response.status_code, 200)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response, subcategory.serialize())
+
+    def test_get_subcategory_with_criteria(self):
+        subcategory = create_subcategory(self.category.id)
+
+        response = self.client.get(f'/subcategories/{subcategory.id}?withCriteria=true')
+        self.assertEqual(response.status_code, 200)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response, subcategory.serialize(with_criteria=True))
+
     def test_get_subcategory_doesnt_exist(self):
         response = self.client.get('/subcategories/1')
         self.assertEqual(response.status_code, 404)
