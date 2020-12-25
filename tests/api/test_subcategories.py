@@ -68,7 +68,7 @@ class SubcategoryTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_subcategory_category_doesnt_exist(self, mock_auth):
-        data = { 'category_id': 0 }
+        data = {'category_id': 0}
         response = self.client.post('/subcategories', json=data, headers=auth_headers())
         self.assertEqual(response.status_code, 400)
 
@@ -122,7 +122,7 @@ class SubcategoryTestCase(unittest.TestCase):
         category_id = self.category.id
         subcategory = create_subcategory(category_id)
 
-        data = { 'category_id': subcategory.category_id + 1 }
+        data = {'category_id': subcategory.category_id + 1}
         response = self.client.put(
             f'/subcategories/{subcategory.id}',
             json=data,
@@ -151,7 +151,7 @@ class SubcategoryTestCase(unittest.TestCase):
     def test_put_subcategory_deactivate(self, mock_auth):
         subcategory = create_subcategory(self.category.id)
 
-        data = { 'active': False }
+        data = {'active': False}
         response = self.client.put(
             f'/subcategories/{subcategory.id}',
             json=data,
@@ -167,7 +167,7 @@ class SubcategoryTestCase(unittest.TestCase):
         # Subcategory cannot be reactivated
         deactivated_at = subcategory.deactivated_at
 
-        data = { 'active': True }
+        data = {'active': True}
         response = self.client.put(
             f'/subcategories/{subcategory.id}',
             json=data,

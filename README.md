@@ -119,7 +119,7 @@ A state has the following fields:
 This endpoint returns the state corresponding to the state code provided in the request. If no state with that code exists, it will return a 404 response code.
 
 ### Categories
-A category represents a group of criteria in the map scorecard. A category has the following fields:
+A category represents a group of subcategories in the map scorecard. A category has the following fields:
 
 |  Name  |   Type  |    Notes    |
 |--------|---------|-------------|
@@ -135,6 +135,51 @@ This endpoint returns a list of all existing categories. It will return an empty
 
 This endpoint returns one category corresponding to the id provided in the request. If no category with that
 id exists, it will return a 404 response code.
+
+### Subcategories
+A subcategory represents a group of criteria in the map scorecard. A category has the following fields:
+
+|  Name       |   Type  |    Notes    |
+|-------------|---------|-------------|
+| id          | Integer | Primary key |
+| category_id | Integer |             |
+| title       | String  |             |
+| active      | Boolean |             |
+
+#### GET /subcategories
+
+This endpoint returns a list of all existing subcategories. It will return an empty array if no subcategories exist.
+
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategories' criteria in the response body. 
+
+#### GET /subcategories/{id}
+
+This endpoint returns one subcategory corresponding to the id provided in the request. If no subcategory with that
+id exists, it will return a 404 response code.
+
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategory's criteria in the response body. 
+
+#### POST /subcategories
+
+This endpoint creates a subcategory. It accepts a JSON body with the following format:
+
+|  Name       |   Type  |    Notes                                                         |
+|-------------|---------|------------------------------------------------------------------|
+| category_id | Integer | *Required*. The category ID to which the subcategory is related. |
+| title       | String  | *Optional*.                                                      |
+| help_text   | String  | *Optional*.                                                      |
+| active      | Boolean | *Optional*. Defaults to `true`.                                  |
+
+#### PUT /subcategories/{id}
+
+This endpoint changes a subcategory's details. It accepts a JSON body with the following format:
+
+|  Name       |   Type  |    Notes                                                         |
+|-------------|---------|------------------------------------------------------------------|
+| category_id | Integer | *Optional*. The category ID to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| title       | String  | *Optional*.                                                      |
+| help_text   | String  | *Optional*.                                                      |
+| active      | Boolean | *Optional*. Once a subcategory is deactivated, it cannot be reactivated. |
 
 ### Criteria
 
