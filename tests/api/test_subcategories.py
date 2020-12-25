@@ -47,7 +47,7 @@ class SubcategoryTestCase(unittest.TestCase):
         json_response = json.loads(response.data)
         self.assertEqual(json_response, expected_response)
 
-    def test_get_subcategory_with_criteria(self):
+    def test_get_subcategory(self):
         subcategory = create_subcategory(self.category.id)
 
         response = self.client.get(f'/subcategories/{subcategory.id}')
