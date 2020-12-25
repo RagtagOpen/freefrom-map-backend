@@ -244,13 +244,13 @@ class Link(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+    subcategory_id = db.Column(db.Integer, db.ForeignKey('subcategories.id'), nullable=False)
     state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
 
-    def __init__(self, category_id, state, text=None, url=None):
-        self.category_id = category_id
+    def __init__(self, subcategory_id, state, text=None, url=None):
+        self.subcategory_id = subcategory_id
         self.state = state
         self.text = text
         self.url = url
@@ -259,10 +259,10 @@ class Link(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    @validates('category_id')
-    def validate_category(self, key, value):
-        if Category.query.get(value) is None:
-            raise ValueError(strings.category_not_found)
+    @validates('subcategory_id')
+    def validate_subcategory(self, key, value):
+        if Subcategory.query.get(value) is None:
+            raise ValueError(strings.subcategory_not_found)
         return value
 
     @validates('state')
@@ -274,7 +274,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'category_id': self.category_id,
+            'subcategory_id': self.subcategory_id,
             'state': self.state,
             'text': self.text,
             'url': self.url,
@@ -283,4 +283,4 @@ class Link(BaseMixin, Deactivatable, db.Model):
         }
 
 
-db.Index('state_category', Link.state, Link.category_id)
+db.Index('state_subcategory', Link.state, Link.subcategory_id)

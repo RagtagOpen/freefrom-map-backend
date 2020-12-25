@@ -24,17 +24,17 @@ def update_or_create_category(data, category=Category()):
 def update_or_create_link(data, link=None):
     '''
     Takes a dict of data where the keys are fields of the link model.
-    Valid keys are category_id, state, text, url, and active. The 'active'
+    Valid keys are subcategory_id, state, text, url, and active. The 'active'
     key only uses a False value to deactivate the link.
 
-    Once created, a link's category or state cannot be changed.
+    Once created, a link's subcategory or state cannot be changed.
     '''
-    category_id = data.get('category_id')
+    subcategory_id = data.get('subcategory_id')
     state = data.get('state')
     if link is None:
-        link = Link(category_id=category_id, state=state)
-    elif category_id and category_id != link.category_id:
-        raise ValueError(strings.cannot_change_category)
+        link = Link(subcategory_id=subcategory_id, state=state)
+    elif subcategory_id and subcategory_id != link.subcategory_id:
+        raise ValueError(strings.cannot_change_subcategory)
     elif state and state != link.state:
         raise ValueError(strings.cannot_change_state)
 
