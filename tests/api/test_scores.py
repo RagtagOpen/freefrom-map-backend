@@ -12,6 +12,7 @@ from tests.test_utils import (
     clear_database,
     create_state,
     create_category,
+    create_subcategory,
     create_criterion,
     auth_headers,
 )
@@ -21,7 +22,8 @@ class ScoresTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
         self.category = create_category()
-        self.criterion = create_criterion(self.category.id)
+        self.subcategory = create_subcategory(self.category.id)
+        self.criterion = create_criterion(self.subcategory.id)
         self.state = create_state()
 
     def tearDown(self):
