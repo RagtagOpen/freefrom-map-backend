@@ -9,7 +9,6 @@ from tests.test_utils import clear_database
 
 class StatesTestCase(unittest.TestCase):
     def setUp(self):
-        clear_database(db)
         self.client = app.test_client()
 
     def tearDown(self):

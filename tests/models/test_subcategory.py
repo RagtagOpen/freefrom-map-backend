@@ -8,7 +8,6 @@ from tests.test_utils import clear_database, create_category, create_criterion
 
 class SubcategoryTestCase(unittest.TestCase):
     def setUp(self):
-        clear_database(db)
         self.client = app.test_client()
         self.category = create_category()
         self.subcategory = Subcategory(

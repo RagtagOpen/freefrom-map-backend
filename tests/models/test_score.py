@@ -4,7 +4,13 @@ import datetime
 from app import db
 from models import Score
 from strings import criterion_not_found, invalid_state
-from tests.test_utils import clear_database, create_state, create_category, create_subcategory, create_criterion
+from tests.test_utils import (
+    clear_database,
+    create_state,
+    create_category,
+    create_subcategory,
+    create_criterion,
+)
 
 
 class ScoreTestCase(unittest.TestCase):

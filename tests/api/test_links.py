@@ -6,9 +6,15 @@ import warnings
 from sqlalchemy.exc import SAWarning
 
 from app import app, db
-from models import Subategory, Link
-from tests.test_utils import clear_database, create_state, create_category, create_subcategory, auth_headers
+from models import Subcategory, Link
 import strings
+from tests.test_utils import (
+    clear_database,
+    create_state,
+    create_category,
+    create_subcategory,
+    auth_headers,
+)
 
 
 class LinksTestCase(unittest.TestCase):
