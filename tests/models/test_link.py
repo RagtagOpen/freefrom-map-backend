@@ -44,7 +44,7 @@ class LinkTestCase(unittest.TestCase):
         with self.assertRaises(ValueError) as e:
             Link(
                 subcategory_id=self.subcategory.id,
-                state='fake-state_code',
+                state='fake-state-code',
                 text='Section 20 of Statute 39-B',
                 url='ny.gov/link/to/statute',
             )
