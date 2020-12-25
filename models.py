@@ -54,7 +54,7 @@ class State(BaseMixin, db.Model):
         return '<id {}>'.format(self.code)
 
     def serialize(self):
-        links = [link.serialize() for link in self.links if link.active]
+        links = [link.serialize() for link in self.links]
         scores = []
 
         for criterion in Criterion.query.all():
