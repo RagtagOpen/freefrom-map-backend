@@ -81,7 +81,7 @@ class Category(BaseMixin, Deactivatable, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
     help_text = db.Column(db.String())
-    criteria = db.relationship('Criterion', backref='category', lazy=True)
+    subcategories = db.relationship('Subcategory', backref='category', lazy=True)
 
     def __init__(self, title=None, help_text=None):
         self.title = title
@@ -91,12 +91,52 @@ class Category(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    def serialize(self, with_criteria=False):
+    def serialize(self, with_subcategories=False):
         data = {
             'id': self.id,
             'title': self.title,
-            'active': self.active,
             'help_text': self.help_text,
+            'active': self.active,
+            'deactivated_at': self.deactivated_at,
+        }
+
+        if with_subcategories:
+            data['subcategories'] = [subcategory.serialize() for subcategory in self.subcategories]
+
+        return data
+
+
+class Subcategory(BaseMixin, Deactivatable, db.Model):
+    __tablename__ = 'subcategories'
+
+    id = db.Column(db.Integer, primary_key=True)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False, index=True)
+    title = db.Column(db.String())
+    help_text = db.Column(db.String())
+    criteria = db.relationship('Criterion', backref='category', lazy=True)
+
+    def __init__(self, category_id, title=None, help_text=None):
+        self.category_id = category_id
+        self.title = title
+        self.help_text = help_text
+        self.active = True
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
+        return value
+
+    def serialize(self, with_criteria=False):
+        data = {
+            'id': self.id,
+            'category_id': self.category_id,
+            'title': self.title,
+            'help_text': self.help_text,
+            'active': self.active,
             'deactivated_at': self.deactivated_at,
         }
 
@@ -110,16 +150,26 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False, index=True)
+    subcategory_id = db.Column(
+        db.Integer,
+        db.ForeignKey('subcategories.id'),
+        nullable=False,
+        index=True,
+    )
     title = db.Column(db.String())
     recommendation_text = db.Column(db.String())
     help_text = db.Column(db.String())
     adverse = db.Column(db.Boolean())
 
     def __init__(
-        self, category_id, title=None, recommendation_text=None, help_text=None, adverse=None,
+        self,
+        subcategory_id,
+        title=None,
+        recommendation_text=None,
+        help_text=None,
+        adverse=None,
     ):
-        self.category_id = category_id
+        self.subcategory_id = subcategory_id
         self.title = title
         self.recommendation_text = recommendation_text
         self.help_text = help_text
@@ -129,16 +179,16 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    @validates('category_id')
-    def validate_category(self, key, value):
-        if Category.query.get(value) is None:
-            raise ValueError(strings.category_not_found)
+    @validates('subcategory_id')
+    def validate_subcategory(self, key, value):
+        if Subcategory.query.get(value) is None:
+            raise ValueError(strings.subcategory_not_found)
         return value
 
     def serialize(self):
         return {
             'id': self.id,
-            'category_id': self.category_id,
+            'subcategory_id': self.subcategory_id,
             'title': self.title,
             'recommendation_text': self.recommendation_text,
             'help_text': self.help_text,

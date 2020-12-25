@@ -3,7 +3,7 @@ import datetime
 
 from app import app, db
 from models import Category
-from tests.test_utils import clear_database, create_criterion
+from tests.test_utils import clear_database, create_subcategory
 
 
 class CategoryTestCase(unittest.TestCase):
@@ -13,8 +13,6 @@ class CategoryTestCase(unittest.TestCase):
             title='Definition of Domestic Violence',
             help_text="This is how a state legally defines the term 'domestic violence'",
         ).save()
-        self.criterion1 = create_criterion(self.category.id)
-        self.criterion2 = create_criterion(self.category.id)
 
     def tearDown(self):
         clear_database(db)
@@ -39,7 +37,9 @@ class CategoryTestCase(unittest.TestCase):
             self.category.serialize()
         )
 
-    def test_serialize_with_criteria(self):
+    def test_serialize_with_subcategories(self):
+        subcategory1 = create_subcategory(self.category.id)
+        subcategory2 = create_subcategory(self.category.id)
         self.assertEqual(
             {
                 'id': self.category.id,
@@ -47,12 +47,12 @@ class CategoryTestCase(unittest.TestCase):
                 'help_text': "This is how a state legally defines the term 'domestic violence'",
                 'active': True,
                 'deactivated_at': None,
-                'criteria': [
-                    self.criterion1.serialize(),
-                    self.criterion2.serialize(),
+                'subcategories': [
+                    subcategory1.serialize(),
+                    subcategory2.serialize(),
                 ]
             },
-            self.category.serialize(with_criteria=True)
+            self.category.serialize(with_subcategories=True)
         )
 
     def test_deactivate(self):
