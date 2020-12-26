@@ -240,6 +240,12 @@ def get_state(code_):
     return jsonify(state.serialize()), 200
 
 
+@app.route('/states', methods=['GET'])
+def get_states():
+    states = State.query.all()
+    return jsonify([state.serialize() for state in states]), 200
+
+
 # This doesn't need authentication
 @app.route('/api/public')
 @cross_origin(headers=['Content-Type', 'Authorization'])

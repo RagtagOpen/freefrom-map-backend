@@ -31,3 +31,25 @@ class StatesTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 404)
         json_response = json.loads(response.data)
         self.assertEqual(json_response['description'], strings.invalid_state)
+
+    def test_get_states(self):
+        state_ny = State(
+            code='NY',
+            name='New York',
+            innovative_idea='Innovative idea',
+            honorable_mention='Honorable mention',
+        ).save()
+
+        state_ca = State(
+            code='CA',
+            name='California',
+            innovative_idea='Innovative idea',
+            honorable_mention='Honorable mention',
+        ).save()
+
+        response = self.client.get('/states')
+        self.assertEqual(response.status_code, 200)
+        json_response = json.loads(response.data)
+        self.assertEqual(len(json_response), 2)
+        self.assertEqual(json_response[0], state_ny.serialize())
+        self.assertEqual(json_response[1], state_ca.serialize())
