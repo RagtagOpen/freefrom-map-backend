@@ -41,6 +41,7 @@ class State(BaseMixin, db.Model):
     name = db.Column(db.String())
     innovative_idea = db.Column(db.String())
     honorable_mention = db.Column(db.String())
+    grades = db.relationship('StateGrade', order_by='desc(StateGrade.created_at)', lazy=True)
     scores = db.relationship('Score', lazy=True)
     links = db.relationship('Link', lazy=True)
 
@@ -55,23 +56,38 @@ class State(BaseMixin, db.Model):
 
     def serialize(self):
         links = [link.serialize() for link in self.links]
-        scores = []
 
+        grade = self.grades[0].serialize() if self.grades else None
+        category_grades = []
+        criterion_scores = []
+
+        # Get the most recent grade for each category
+        for category in Category.query.all():
+            category_grade = StateCategoryGrade.query.filter_by(
+                state_code=self.code,
+                category_id=category.id,
+            ).order_by(StateCategoryGrade.created_at.desc()).first()
+            if category_grade:
+                category_grades.append(category_grade.serialize())
+
+        # Get the most recent score for each criterion
         for criterion in Criterion.query.all():
-            score = Score.query.filter_by(
+            criterion_score = Score.query.filter_by(
                 criterion_id=criterion.id,
                 state=self.code,
             ).order_by(Score.created_at.desc()).first()
-            if score:
-                scores.append(score.serialize())
+            if criterion_score:
+                criterion_scores.append(criterion_score.serialize())
 
         return {
             'code': self.code,
             'name': self.name,
             'innovative_idea': self.innovative_idea,
             'honorable_mention': self.honorable_mention,
+            'grade': grade,
+            'category_grades': category_grades,
+            'criterion_scores': criterion_scores,
             'links': links,
-            'scores': scores,
         }
 
 
@@ -195,6 +211,87 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
             'active': self.active,
             'deactivated_at': self.deactivated_at,
             'adverse': self.adverse,
+        }
+
+
+class StateGrade(BaseMixin, db.Model):
+    __tablename__ = 'state_grades'
+
+    id = db.Column(db.Integer, primary_key=True)
+    state_code = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
+    grade = db.Column(db.Integer())
+    created_at = db.Column(db.DateTime)
+
+    def __init__(self, state_code, grade):
+        self.state_code = state_code
+        self.grade = grade
+        self.created_at = datetime.datetime.utcnow()
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    @validates('state_code')
+    def validate_state_code(self, key, value):
+        if State.query.get(value) is None:
+            raise ValueError(strings.invalid_state)
+        return value
+
+    @validates('grade')
+    def validate_grade(self, key, value):
+        if not -1 <= value <= 3:
+            raise ValueError(strings.invalid_grade)
+        return value
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'state_code': self.state_code,
+            'grade': self.grade,
+        }
+
+
+class StateCategoryGrade(BaseMixin, db.Model):
+    __tablename__ = 'state_category_grades'
+
+    id = db.Column(db.Integer, primary_key=True)
+    state_code = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+    grade = db.Column(db.Integer())
+    created_at = db.Column(db.DateTime)
+
+    def __init__(self, state_code, category_id, grade):
+        self.state_code = state_code
+        self.grade = grade
+        self.category_id = category_id
+        self.created_at = datetime.datetime.utcnow()
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    @validates('state_code')
+    def validate_state(self, key, value):
+        if State.query.get(value) is None:
+            raise ValueError(strings.invalid_state)
+        return value
+
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
+        return value
+
+    @validates('grade')
+    def validate_grade(self, key, value):
+        if not -1 <= value <= 3:
+            raise ValueError(strings.invalid_grade)
+        return value
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'state_code': self.state_code,
+            'category_id': self.category_id,
+            'grade': self.grade,
         }
 
 

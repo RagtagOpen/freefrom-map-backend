@@ -216,6 +216,20 @@ def update_link(id_):
     return jsonify(link.serialize())
 
 
+@app.route('/grades/<code_>', methods=['GET'])
+def get_state_grades(code_):
+    state = State.query.get(code_)
+
+    if state is None:
+        abort(404, strings.invalid_state)
+
+    state_data = state.serialize()
+    return jsonify(
+        grade=state_data['grade'],
+        category_grades=state_data['category_grades'],
+    ), 200
+
+
 @app.route('/scores', methods=['POST'])
 @cross_origin(headers=['Content-Type', 'Authorization'])
 @requires_auth

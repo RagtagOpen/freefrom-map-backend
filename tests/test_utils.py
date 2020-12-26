@@ -4,6 +4,8 @@ import models
 def clear_database(db):
     db.session.query(models.Link).delete()
     db.session.query(models.Score).delete()
+    db.session.query(models.StateCategoryGrade).delete()
+    db.session.query(models.StateGrade).delete()
     db.session.query(models.Criterion).delete()
     db.session.query(models.Subcategory).delete()
     db.session.query(models.Category).delete()
@@ -43,6 +45,21 @@ def create_criterion(subcategory_id):
             'play in domestic violence'
         ),
         adverse=False
+    ).save()
+
+
+def create_state_grade(state_code):
+    return models.StateGrade(
+        state_code=state_code,
+        grade=2,
+    ).save()
+
+
+def create_state_category_grade(state_code, category_id):
+    return models.StateCategoryGrade(
+        state_code=state_code,
+        category_id=category_id,
+        grade=1,
     ).save()
 
 
