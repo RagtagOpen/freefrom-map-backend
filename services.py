@@ -1,4 +1,4 @@
-from models import Category, Criterion, Link
+from models import Category, Subcategory, Criterion, Link
 import strings
 
 
@@ -21,6 +21,32 @@ def update_or_create_category(data, category=Category()):
     return category.save()
 
 
+def update_or_create_subcategory(data, subcategory=None):
+    '''
+    Takes a dict of data where the keys are fields of the subcategory model.
+    Valid keys are category_id, title, help_text, and active. The
+    'active' key only uses a False value.
+
+    Once created, a subcategory's category cannot be changed.
+    '''
+    category_id = data.get('category_id')
+    if subcategory is None:
+        subcategory = Subcategory(category_id=category_id)
+    elif category_id is not None and category_id != subcategory.category_id:
+        raise ValueError(strings.cannot_change_category)
+
+    if 'title' in data:
+        subcategory.title = data['title']
+    if 'help_text' in data:
+        subcategory.help_text = data['help_text']
+
+    # You cannot reactivate a subcategory after deactivating it
+    if 'active' in data and not data['active']:
+        subcategory.deactivate()
+
+    return subcategory.save()
+
+
 def update_or_create_link(data, link=None):
     '''
     Takes a dict of data where the keys are fields of the link model.
@@ -33,9 +59,9 @@ def update_or_create_link(data, link=None):
     state = data.get('state')
     if link is None:
         link = Link(subcategory_id=subcategory_id, state=state)
-    elif subcategory_id and subcategory_id != link.subcategory_id:
+    elif subcategory_id is not None and subcategory_id != link.subcategory_id:
         raise ValueError(strings.cannot_change_subcategory)
-    elif state and state != link.state:
+    elif state is not None and state != link.state:
         raise ValueError(strings.cannot_change_state)
 
     if 'text' in data.keys():
@@ -61,7 +87,7 @@ def update_or_create_criterion(data, criterion=None):
     subcategory_id = data.get('subcategory_id')
     if criterion is None:
         criterion = Criterion(subcategory_id=subcategory_id)
-    elif subcategory_id and subcategory_id != criterion.subcategory_id:
+    elif subcategory_id is not None and subcategory_id != criterion.subcategory_id:
         raise ValueError(strings.cannot_change_subcategory)
 
     if 'title' in data:
@@ -73,7 +99,7 @@ def update_or_create_criterion(data, criterion=None):
     if 'adverse' in data:
         criterion.adverse = data['adverse']
 
-    # You cannot reactivate a category after deactivating it
+    # You cannot reactivate a criterion after deactivating it
     if 'active' in data and not data['active']:
         criterion.deactivate()
 
