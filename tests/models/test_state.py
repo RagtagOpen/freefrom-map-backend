@@ -33,8 +33,8 @@ class StateTestCase(unittest.TestCase):
         criterion1 = create_criterion(subcategory.id)
         criterion2 = create_criterion(subcategory.id)
 
-        self.link1 = create_link(subcategory_id=subcategory.id, state=self.state.code)
-        self.link2 = create_link(subcategory_id=subcategory.id, state=self.state.code)
+        self.link1 = create_link(subcategory.id, self.state.code)
+        self.link2 = create_link(subcategory.id, self.state.code)
 
         self.state_grade1 = create_state_grade(self.state.code)
         self.state_grade2 = create_state_grade(self.state.code)
