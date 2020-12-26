@@ -105,15 +105,15 @@ request bodies should be provided as JSON.
 
 A state has the following fields:
 
-|  Name             |  Type                 |    Notes    |
+|       Name        |          Type         |    Notes    |
 |-------------------|-----------------------|-------------|
 | code              | String                | Primary key |
 | name              | String                |             |
 | innovative_idea   | String                |             |
 | honorable_mention | String                |             |
-| grade             | StateGrade            | The most recent grade for the state. |
-| category_grades   | [StateCategoryGrade]  | The most recent grade for each category. |
-| criterion_scores  | [Score]               | The most recent score for each criterion.|
+| grade             | StateGrade            | The most recent grade for the state.      |
+| category_grades   | [StateCategoryGrade]  | The most recent grade for each category.  |
+| criterion_scores  | [Score]               | The most recent score for each criterion. |
 | links             | [Link]                |             |
 
 #### GET /states/{code}
