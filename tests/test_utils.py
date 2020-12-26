@@ -4,6 +4,8 @@ import models
 def clear_database(db):
     db.session.query(models.Link).delete()
     db.session.query(models.Score).delete()
+    db.session.query(models.StateCategoryGrade).delete()
+    db.session.query(models.StateGrade).delete()
     db.session.query(models.Criterion).delete()
     db.session.query(models.Subcategory).delete()
     db.session.query(models.Category).delete()

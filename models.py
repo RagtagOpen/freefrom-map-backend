@@ -41,6 +41,8 @@ class State(BaseMixin, db.Model):
     name = db.Column(db.String())
     innovative_idea = db.Column(db.String())
     honorable_mention = db.Column(db.String())
+    grade = db.relationship('StateGrade', backref='state', lazy=True)
+    category_grades = db.relationship('StateCategoryGrade', backref='state', lazy=True)
     scores = db.relationship('Score', lazy=True)
     links = db.relationship('Link', lazy=True)
 
@@ -195,6 +197,87 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
             'active': self.active,
             'deactivated_at': self.deactivated_at,
             'adverse': self.adverse,
+        }
+
+
+class StateGrade(BaseMixin, db.Model):
+    __tablename__ = 'state_grades'
+
+    id = db.Column(db.Integer, primary_key=True)
+    state_code = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
+    grade = db.Column(db.Integer())
+    created_at = db.Column(db.DateTime)
+
+    def __init__(self, state_code, grade):
+        self.state_code = state_code
+        self.grade = grade
+        self.created_at = datetime.datetime.utcnow()
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    @validates('state_code')
+    def validate_state_code(self, key, value):
+        if State.query.get(value) is None:
+            raise ValueError(strings.invalid_state)
+        return value
+
+    @validates('grade')
+    def validate_grade(self, key, value):
+        if not -1 <= value <= 3:
+            raise ValueError(strings.invalid_grade)
+        return value
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'state_code': self.state_code,
+            'grade': self.grade,
+        }
+
+
+class StateCategoryGrade(BaseMixin, db.Model):
+    __tablename__ = 'state_category_grades'
+
+    id = db.Column(db.Integer, primary_key=True)
+    state_code = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+    grade = db.Column(db.Integer())
+    created_at = db.Column(db.DateTime)
+
+    def __init__(self, state_code, category_id, grade):
+        self.state_code = state_code
+        self.grade = grade
+        self.category_id = category_id
+        self.created_at = datetime.datetime.utcnow()
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    @validates('state_code')
+    def validate_state(self, key, value):
+        if State.query.get(value) is None:
+            raise ValueError(strings.invalid_state)
+        return value
+
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
+        return value
+
+    @validates('grade')
+    def validate_grade(self, key, value):
+        if not -1 <= value <= 3:
+            raise ValueError(strings.invalid_grade)
+        return value
+
+    def serialize(self):
+        return {
+            'id': self.id,
+            'state_code': self.state_code,
+            'category_id': self.category_id,
+            'grade': self.grade,
         }
 
 
