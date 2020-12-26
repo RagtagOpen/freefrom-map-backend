@@ -41,8 +41,7 @@ class State(BaseMixin, db.Model):
     name = db.Column(db.String())
     innovative_idea = db.Column(db.String())
     honorable_mention = db.Column(db.String())
-    grade = db.relationship('StateGrade', backref='state', lazy=True)
-    category_grades = db.relationship('StateCategoryGrade', backref='state', lazy=True)
+    grades = db.relationship('StateGrade', order_by='desc(StateGrade.created_at)', lazy=True)
     scores = db.relationship('Score', lazy=True)
     links = db.relationship('Link', lazy=True)
 
@@ -57,23 +56,38 @@ class State(BaseMixin, db.Model):
 
     def serialize(self):
         links = [link.serialize() for link in self.links]
-        scores = []
 
+        grade = self.grades[0].serialize() if self.grades else None
+        category_grades = []
+        criterion_scores = []
+
+        # Get the most recent grade for each category
+        for category in Category.query.all():
+            category_grade = StateCategoryGrade.query.filter_by(
+                state_code=self.code,
+                category_id=category.id,
+            ).order_by(StateCategoryGrade.created_at.desc()).first()
+            if category_grade:
+                category_grades.append(category_grade.serialize())
+
+        # Get the most recent score for each criterion
         for criterion in Criterion.query.all():
-            score = Score.query.filter_by(
+            criterion_score = Score.query.filter_by(
                 criterion_id=criterion.id,
                 state=self.code,
             ).order_by(Score.created_at.desc()).first()
-            if score:
-                scores.append(score.serialize())
+            if criterion_score:
+                criterion_scores.append(criterion_score.serialize())
 
         return {
             'code': self.code,
             'name': self.name,
             'innovative_idea': self.innovative_idea,
             'honorable_mention': self.honorable_mention,
+            'grade': grade,
+            'category_grades': category_grades,
+            'criterion_scores': criterion_scores,
             'links': links,
-            'scores': scores,
         }
 
 

@@ -48,6 +48,21 @@ def create_criterion(subcategory_id):
     ).save()
 
 
+def create_state_grade(state_code):
+    return models.StateGrade(
+        state_code=state_code,
+        grade=2,
+    ).save()
+
+
+def create_state_category_grade(state_code, category_id):
+    return models.StateCategoryGrade(
+        state_code=state_code,
+        category_id=category_id,
+        grade=1,
+    ).save()
+
+
 def create_link(subcategory_id, state):
     return models.Link(subcategory_id=subcategory_id, state=state).save()
 

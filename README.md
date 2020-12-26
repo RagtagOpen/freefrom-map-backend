@@ -105,14 +105,16 @@ request bodies should be provided as JSON.
 
 A state has the following fields:
 
-|  Name             |  Type   |    Notes    |
-|-------------------|---------|-------------|
-| code              | String  | Primary key |
-| name              | String  |             |
-| innovative_idea   | String  |             |
-| honorable_mention | String  |             |
-| scores            | [Score] |             |
-| links             | [Link]  |             |
+|  Name             |  Type                 |    Notes    |
+|-------------------|-----------------------|-------------|
+| code              | String                | Primary key |
+| name              | String                |             |
+| innovative_idea   | String                |             |
+| honorable_mention | String                |             |
+| grade             | StateGrade            | The most recent grade for the state. |
+| category_grades   | [StateCategoryGrade]  | The most recent grade for each category. |
+| criterion_scores  | [Score]               | The most recent score for each criterion.|
+| links             | [Link]                |             |
 
 #### GET /states/{code}
 
@@ -201,3 +203,26 @@ This endpoint returns a list of all existing criteria. It will return an empty a
 
 This endpoint returns one criterion corresponding to the id provided in the request. If no criterion with that
 id exists, it will return a 404 response code.
+
+### Grades
+
+A **state grade** represents the overall grade assigned to a state based on their survivor wealth policies.
+
+|    Name    |  Type   |          Notes          |
+|------------|---------|-------------------------|
+| id         | Integer | Primary key             |
+| state_code | String  |                         |
+| grade      | Integer | One of (-1, 0, 1, 2, 3) |
+
+A **state category grade** represents the grade assigned to a state based on a specific category.
+
+|    Name     |  Type   |          Notes          |
+|-------------|---------|-------------------------|
+| id          | Integer | Primary key             |
+| state_code  | String  |                         |
+| category_id | Integer |                         |
+| grade       | Integer | One of (-1, 0, 1, 2, 3) |
+
+#### GET /grades/{code}
+
+Returns the state's overall grade, and its grades for each category. If no state with that code exists, it will return a 404 response code.
