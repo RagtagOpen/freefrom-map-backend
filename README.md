@@ -134,7 +134,7 @@ This endpoint returns the state corresponding to the state code provided in the 
 
 #### PUT /states/{code} (UPCOMING)
 
-This endpoint updates the state corresponding to the state code pvodied in the request. It requires [authentication](Authentication)
+This endpoint updates the state corresponding to the state code pvodied in the request. It requires [authentication](#Authentication)
 and accepts a JSON body with the following format:
 
 |       Name        |          Type         |    Notes    |
@@ -165,7 +165,7 @@ id exists, it will return a 404 response code.
 
 #### POST /categories
 
-This endpoint creates a new category. It requires [authentication](Authentication). It accepts the following
+This endpoint creates a new category. It requires [authentication](#Authentication). It accepts the following
 parameters in the request body as JSON:
 
 |  Name      |   Type  |    Notes    |
@@ -176,7 +176,7 @@ parameters in the request body as JSON:
 
 #### PUT /categories/{id}
 
-This endpoint updates an existing category. It requires [authentication](Authentication). It accepts the following
+This endpoint updates an existing category. It requires [authentication](#Authentication). It accepts the following
 parameters in the request body as JSON:
 
 |  Name      |   Type  |    Notes    |
@@ -211,7 +211,7 @@ Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is pr
 
 #### POST /subcategories
 
-This endpoint creates a subcategory. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint creates a subcategory. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
@@ -222,7 +222,7 @@ This endpoint creates a subcategory. It requires [authentication](Authentication
 
 #### PUT /subcategories/{id}
 
-This endpoint changes a subcategory's details. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint changes a subcategory's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
@@ -255,7 +255,7 @@ id exists, it will return a 404 response code.
 
 #### POST /criteria
 
-This endpoint creates a criterion. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint creates a criterion. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
@@ -268,7 +268,7 @@ This endpoint creates a criterion. It requires [authentication](Authentication).
 
 #### PUT /criteria/{id}
 
-This endpoint changes a criterion's details. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint changes a criterion's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
@@ -303,7 +303,7 @@ id exists, it will return a 404 response code.
 
 #### POST /links
 
-This endpoint creates a link. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint creates a link. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
@@ -315,7 +315,7 @@ This endpoint creates a link. It requires [authentication](Authentication). It a
 
 #### PUT /links/{id}
 
-This endpoint changes a link's details. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint changes a link's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
@@ -341,7 +341,7 @@ A score represents whether a state meets a certain criteria.
 This endpoint creates a new score. Note that scores CANNOT be updated, only overwritten. To overwrite
 a score, create a new score for the same state and criterion.
 
-This endpoint requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 | Name            | Type    | Notes                                                     |
 |-----------------|---------|-----------------------------------------------------------|
@@ -377,7 +377,7 @@ Returns the state's overall grade, and its grades for each category. If no state
 This endpoint creates an overall state grade. Note that state grades CANNOT be updated, only overwritten. To overwrite
 a grade, create a new grade for the same state.
 
-This endpoint requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |    Name    |  Type   |          Notes          |
 |------------|---------|-------------------------|
@@ -389,7 +389,7 @@ This endpoint requires [authentication](Authentication). It accepts a JSON body 
 This endpoint creates a state category grade. Note that state category grades CANNOT be updated, only overwritten. To overwrite
 a grade, create a new grade for the same state and category.
 
-This endpoint requires [authentication](Authentication). It accepts a JSON body with the following format:
+This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |    Name     |  Type   |          Notes          |
 |-------------|---------|-------------------------|
