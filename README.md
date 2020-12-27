@@ -141,6 +141,10 @@ and accepts a JSON body with the following format:
 |-------------------|-----------------------|-------------|
 | innovative_idea   | String                | *Optional*. |
 | honorable_mention | String                | *Optional*. |
+| grade             | Integer               | *Optional*. One of (-1, 0, 1, 2, 3) |
+| category_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3.|
+| links             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., text: ..., url: ..., active: ...}`. See the [Links](#Links) documentation for information on each of these fields.|
+| scores             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., meets_criterion: ...}`. See the [Scores](#Scores) documentation for information on each of these fields.|
 
 Note that it is not possible to update a state's name or code.
 
@@ -184,6 +188,33 @@ parameters in the request body as JSON:
 | title      | String  | *Optional*. |
 | help_text  | String  | *Optional*. |
 | active     | Boolean | *Optional*. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
+| subcategories | Array<Object> | *Optional*. See below for information on formatting this parameter. |
+
+The `subcategories` parameter allows you to create subcategories and criteria along with a category. The `subcategories` parameter must be formatted as an array of objects in the following format:
+
+```
+[
+  {
+    id: ...,
+    title: ...,
+    help_text: ...,
+    active: ...,
+    criteria: [
+      {
+        id: ...,
+        title: ...,
+        recommendation_text: ...,
+        help_text: ...,
+        active: ...
+      },
+      ...
+    ]
+  },
+  ...
+]
+```
+
+You can read more about [Subcategories](#Subcategories) and [Criteria](#Criteria) later in the documentation.
 
 ### Subcategories
 A subcategory represents a group of criteria in the map scorecard. A category has the following fields:
@@ -371,23 +402,3 @@ A **state category grade** represents the grade assigned to a state based on a s
 #### GET /grades/{code}
 
 Returns the state's overall grade, and its grades for each category. If no state with that code exists, it will return a 404 response code.
-
-#### POST /grades/{code} (UPCOMING)
-
-This endpoint creates an overall state grade. Note that state grades CANNOT be updated, only overwritten. To overwrite a grade, create a new grade for the same state.
-
-This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
-
-|    Name    |  Type   |          Notes          |
-|------------|---------|-------------------------|
-| grade      | Integer | *Required*. One of (-1, 0, 1, 2, 3) |
-
-#### POST /grades/{code}/categories/{id} (UPCOMING)
-
-This endpoint creates a state category grade. Note that state category grades CANNOT be updated, only overwritten. To overwrite a grade, create a new grade for the same state and category.
-
-This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
-
-|    Name     |  Type   |          Notes          |
-|-------------|---------|-------------------------|
-| grade       | Integer | *Required*. One of (-1, 0, 1, 2, 3) |
