@@ -46,6 +46,10 @@ class CriterionTestCase(unittest.TestCase):
         self.assertTrue(self.criterion.active)
         self.assertFalse(self.criterion.adverse)
 
+    def test_init_default_adverse_value(self):
+        criterion = Criterion(subcategory_id=self.subcategory.id)
+        self.assertFalse(criterion.adverse)
+
     def test_init_invalid_subcategory(self):
         with self.assertRaises(ValueError) as e:
             Criterion(
