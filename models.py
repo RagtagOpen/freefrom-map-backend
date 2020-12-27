@@ -183,7 +183,7 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
         title=None,
         recommendation_text=None,
         help_text=None,
-        adverse=None,
+        adverse=False,
     ):
         self.subcategory_id = subcategory_id
         self.title = title
