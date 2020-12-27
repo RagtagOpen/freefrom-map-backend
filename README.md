@@ -132,6 +132,18 @@ This endpoint returns information about all 50 states and DC.
 
 This endpoint returns the state corresponding to the state code provided in the request. If no state with that code exists, it will return a 404 response code.
 
+#### PUT /states/{code} (UPCOMING)
+
+This endpoint updates the state corresponding to the state code pvodied in the request. It requires [authentication](Authentication)
+and accepts a JSON body with the following format:
+
+|       Name        |          Type         |    Notes    |
+|-------------------|-----------------------|-------------|
+| innovative_idea   | String                | *Optional*. |
+| honorable_mention | String                | *Optional*. |
+
+Note that it is not possible to update a state's name or code.
+
 ### Categories
 A category represents a group of subcategories in the map scorecard. A category has the following fields:
 
@@ -171,7 +183,7 @@ parameters in the request body as JSON:
 |------------|---------|-------------|
 | title      | String  | *Optional*. |
 | help_text  | String  | *Optional*. |
-| active     | Boolean | *Optional*. Defaults to `true`. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
+| active     | Boolean | *Optional*. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
 
 ### Subcategories
 A subcategory represents a group of criteria in the map scorecard. A category has the following fields:
@@ -199,7 +211,7 @@ Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is pr
 
 #### POST /subcategories
 
-This endpoint creates a subcategory. It accepts a JSON body with the following format:
+This endpoint creates a subcategory. It requires [authentication](Authentication). It accepts a JSON body with the following format:
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
@@ -210,7 +222,7 @@ This endpoint creates a subcategory. It accepts a JSON body with the following f
 
 #### PUT /subcategories/{id}
 
-This endpoint changes a subcategory's details. It accepts a JSON body with the following format:
+This endpoint changes a subcategory's details. It requires [authentication](Authentication). It accepts a JSON body with the following format:
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
@@ -243,7 +255,7 @@ id exists, it will return a 404 response code.
 
 #### POST /criteria
 
-This endpoint creates a criterion. It accepts a JSON body with the following format:
+This endpoint creates a criterion. It requires [authentication](Authentication). It accepts a JSON body with the following format:
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
@@ -256,20 +268,86 @@ This endpoint creates a criterion. It accepts a JSON body with the following for
 
 #### PUT /criteria/{id}
 
-This endpoint changes a criterion's details. It accepts a JSON body with the following format:
+This endpoint changes a criterion's details. It requires [authentication](Authentication). It accepts a JSON body with the following format:
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
-| subcategory_id        | Integer | *Required*. The subcategory ID to which the criterion is related.|
+| subcategory_id        | Integer | *Optional*. The subcategory ID to which the criterion is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | title                 | String  | *Optional*.                                                      |
 | recommendation_text   | String  | *Optional*.                                                      |
 | help_text             | String  | *Optional*.                                                      |
 | adverse               | Boolean | *Optional*. Defaults to `false`.                                 |
-| active                | Boolean | *Optional*. Defaults to `true`. Passing in `false` will deactivate the criterion. Criteria cannot be reactivated once they have been deactivated. |
+| active                | Boolean | *Optional*. Passing in `false` will deactivate the criterion. Criteria cannot be reactivated once they have been deactivated. |
+
+### Links
+
+A link represents a web link to an external resource relating to a state and category.
+
+|         Name        |   Type   |    Notes    |
+|---------------------|----------|-------------|
+| id                  | Integer  | Primary key |
+| category_id         | Integer  | Foreign key |
+| state_code          | String   | Foreign key |
+| text                | String   |             |
+| url                 | String   |             |
+| active              | Boolean  |             |
+
+#### GET /links
+
+This endpoint returns a list of all existing links. It will return an empty array if no links exist.
+
+#### GET /links/{id}
+
+This endpoint returns one link corresponding to the id provided in the request. If no link with that
+id exists, it will return a 404 response code.
+
+#### POST /links
+
+This endpoint creates a link. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+
+|         Name        |   Type   |    Notes    |
+|---------------------|----------|-------------|
+| category_id         | Integer  | *Required*. The id of the category to which the subcategory is related. |
+| state_code          | String   | *Required*. The state to which the subcategory is related. |
+| text                | String   | *Optional*. |
+| url                 | String   | *Optional*. |
+| active              | Boolean  | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
+
+#### PUT /links/{id}
+
+This endpoint changes a link's details. It requires [authentication](Authentication). It accepts a JSON body with the following format:
+
+|         Name        |   Type   |    Notes    |
+|---------------------|----------|-------------|
+| category_id         | Integer  | *Optional*. The id of the category to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| state_code          | String   | *Optional*. The state to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| text                | String   | *Optional*. |
+| url                 | String   | *Optional*. |
+| active              | Boolean  | *Optional*. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
 
 ### Scores
 
-A score
+A score represents whether a state meets a certain criteria.
+
+| Name            | Type    | Notes                   |
+|-----------------|---------|-------------------------|
+| id              | Integer | Primary key             |
+| state_code      | String  | Foreign key             |
+| criterion_id    | Integer | Foreign key             |
+| meets_criterion | Boolean |                         |
+
+#### POST /scores
+
+This endpoint creates a new score. Note that scores CANNOT be updated, only overwritten. To overwrite
+a score, create a new score for the same state and criterion.
+
+This endpoint requires [authentication](Authentication). It accepts a JSON body with the following format:
+
+| Name            | Type    | Notes                                                     |
+|-----------------|---------|-----------------------------------------------------------|
+| state_code      | String  | *Required*. The state code to which the score is related. |
+| criterion_id    | Integer | *Required*. The criterion to which the score is related.  |
+| meets_criterion | Boolean | *Required*. Whether the state meets the criterion.        |
 
 ### Grades
 
@@ -278,7 +356,7 @@ A **state grade** represents the overall grade assigned to a state based on thei
 |    Name    |  Type   |          Notes          |
 |------------|---------|-------------------------|
 | id         | Integer | Primary key             |
-| state_code | String  |                         |
+| state_code | String  | Foreign key             |
 | grade      | Integer | One of (-1, 0, 1, 2, 3) |
 
 A **state category grade** represents the grade assigned to a state based on a specific category.
@@ -286,10 +364,35 @@ A **state category grade** represents the grade assigned to a state based on a s
 |    Name     |  Type   |          Notes          |
 |-------------|---------|-------------------------|
 | id          | Integer | Primary key             |
-| state_code  | String  |                         |
-| category_id | Integer |                         |
+| state_code  | String  | Foreign key             |
+| category_id | Integer | Foreign key             |
 | grade       | Integer | One of (-1, 0, 1, 2, 3) |
 
 #### GET /grades/{code}
 
 Returns the state's overall grade, and its grades for each category. If no state with that code exists, it will return a 404 response code.
+
+#### POST /grades/{code} (UPCOMING)
+
+This endpoint creates an overall state grade. Note that state grades CANNOT be updated, only overwritten. To overwrite
+a grade, create a new grade for the same state.
+
+This endpoint requires [authentication](Authentication). It accepts a JSON body with the following format:
+
+|    Name    |  Type   |          Notes          |
+|------------|---------|-------------------------|
+| state_code | String  | *Required*. The state that this grade is associated with. |
+| grade      | Integer | *Required*. One of (-1, 0, 1, 2, 3) |
+
+#### POST /grades/{code}/categories/{id} (UPCOMING)
+
+This endpoint creates a state category grade. Note that state category grades CANNOT be updated, only overwritten. To overwrite
+a grade, create a new grade for the same state and category.
+
+This endpoint requires [authentication](Authentication). It accepts a JSON body with the following format:
+
+|    Name     |  Type   |          Notes          |
+|-------------|---------|-------------------------|
+| state_code  | String  | *Required*. The state that this grade is associated with. |
+| category_id | Integer | *Required*. The id of the category that this grade is associated with. |
+| grade       | Integer | *Required*. One of (-1, 0, 1, 2, 3) |
