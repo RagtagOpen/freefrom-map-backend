@@ -101,13 +101,21 @@ flake8
 The following section describes the FreeFrom map backend API. All responses will be formatted as JSON, and all
 request bodies should be provided as JSON.
 
+### Authentication
+
+All endpoints that create and update resources require that an authentication token be passed in the request
+header. To acquire an authentication token, you must request one from Auth0 using the FreeFrom Map client id
+and secret. (Please post in the freefrom-map-dev Slack channel if you need access to the Auth0 tenant.)
+To add the authentication token to your API request, add it to the `Authorization` header in the format
+`Bearer <token>`, where "<token>" is replaced with the authentication token.
+
 ### States
 
 A state has the following fields:
 
 |       Name        |          Type         |    Notes    |
 |-------------------|-----------------------|-------------|
-| code              | String                | Primary key |
+| code              | String                | Primary key (e.g. "NY") |
 | name              | String                |             |
 | innovative_idea   | String                |             |
 | honorable_mention | String                |             |
@@ -115,6 +123,10 @@ A state has the following fields:
 | category_grades   | [StateCategoryGrade]  | The most recent grade for each category.  |
 | criterion_scores  | [Score]               | The most recent score for each criterion. |
 | links             | [Link]                |             |
+
+#### GET /states
+
+This endpoint returns information about all 50 states and DC.
 
 #### GET /states/{code}
 
@@ -127,6 +139,7 @@ A category represents a group of subcategories in the map scorecard. A category 
 |--------|---------|-------------|
 | id     | Integer | Primary key |
 | title  | String  |             |
+| help_text  | String  |             |
 | active | Boolean |             |
 
 #### GET /categories
@@ -138,28 +151,51 @@ This endpoint returns a list of all existing categories. It will return an empty
 This endpoint returns one category corresponding to the id provided in the request. If no category with that
 id exists, it will return a 404 response code.
 
+#### POST /categories
+
+This endpoint creates a new category. It requires [authentication](Authentication). It accepts the following
+parameters in the request body as JSON:
+
+|  Name      |   Type  |    Notes    |
+|------------|---------|-------------|
+| title      | String  | *Optional*. |
+| help_text  | String  | *Optional*. |
+| active     | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated category. A category cannot be reactivated once it has been deactivated. |
+
+#### PUT /categories/{id}
+
+This endpoint updates an existing category. It requires [authentication](Authentication). It accepts the following
+parameters in the request body as JSON:
+
+|  Name      |   Type  |    Notes    |
+|------------|---------|-------------|
+| title      | String  | *Optional*. |
+| help_text  | String  | *Optional*. |
+| active     | Boolean | *Optional*. Defaults to `true`. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
+
 ### Subcategories
 A subcategory represents a group of criteria in the map scorecard. A category has the following fields:
 
-|  Name       |   Type  |    Notes    |
-|-------------|---------|-------------|
-| id          | Integer | Primary key |
-| category_id | Integer |             |
-| title       | String  |             |
-| active      | Boolean |             |
+|  Name           |   Type  |    Notes    |
+|-----------------|---------|-------------|
+| id              | Integer | Primary key |
+| category_id     | Integer |             |
+| title           | String  |             |
+| help_text       | String  |             |
+| active          | Boolean |             |
 
 #### GET /subcategories
 
 This endpoint returns a list of all existing subcategories. It will return an empty array if no subcategories exist.
 
-Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategories' criteria in the response body. 
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategories' criteria in the response body.
 
 #### GET /subcategories/{id}
 
 This endpoint returns one subcategory corresponding to the id provided in the request. If no subcategory with that
 id exists, it will return a 404 response code.
 
-Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategory's criteria in the response body. 
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategory's criteria in the response body.
 
 #### POST /subcategories
 
@@ -170,7 +206,7 @@ This endpoint creates a subcategory. It accepts a JSON body with the following f
 | category_id | Integer | *Required*. The category ID to which the subcategory is related. |
 | title       | String  | *Optional*.                                                      |
 | help_text   | String  | *Optional*.                                                      |
-| active      | Boolean | *Optional*. Defaults to `true`.                                  |
+| active      | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a subcategory that is deactivated. Subcategories cannot be reactivated once they have been deactivated. |
 
 #### PUT /subcategories/{id}
 
@@ -193,6 +229,7 @@ A criterion represents one measure in the state scorecard to determine whether a
 | subcategory_id      | Integer  | Foreign key |
 | title               | String   |             |
 | recommendation_text | String   |             |
+| help_text           | String   |             |
 | active              | Boolean  |             |
 
 #### GET /criteria
@@ -203,6 +240,36 @@ This endpoint returns a list of all existing criteria. It will return an empty a
 
 This endpoint returns one criterion corresponding to the id provided in the request. If no criterion with that
 id exists, it will return a 404 response code.
+
+#### POST /criteria
+
+This endpoint creates a criterion. It accepts a JSON body with the following format:
+
+|  Name                 |   Type  |    Notes                                                         |
+|-----------------------|---------|------------------------------------------------------------------|
+| subcategory_id        | Integer | *Required*. The subcategory ID to which the criterion is related.|
+| title                 | String  | *Optional*.                                                      |
+| recommendation_text   | String  | *Optional*.                                                      |
+| help_text             | String  | *Optional*.                                                      |
+| adverse               | Boolean | *Optional*. Defaults to `false`.                                 |
+| active                | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a criterion that is deactivated. Criteria cannot be reactivated once they have been deactivated. |
+
+#### PUT /criteria/{id}
+
+This endpoint changes a criterion's details. It accepts a JSON body with the following format:
+
+|  Name                 |   Type  |    Notes                                                         |
+|-----------------------|---------|------------------------------------------------------------------|
+| subcategory_id        | Integer | *Required*. The subcategory ID to which the criterion is related.|
+| title                 | String  | *Optional*.                                                      |
+| recommendation_text   | String  | *Optional*.                                                      |
+| help_text             | String  | *Optional*.                                                      |
+| adverse               | Boolean | *Optional*. Defaults to `false`.                                 |
+| active                | Boolean | *Optional*. Defaults to `true`. Passing in `false` will deactivate the criterion. Criteria cannot be reactivated once they have been deactivated. |
+
+### Scores
+
+A score
 
 ### Grades
 
