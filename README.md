@@ -134,7 +134,7 @@ This endpoint returns the state corresponding to the state code provided in the 
 
 #### PUT /states/{code} (UPCOMING)
 
-This endpoint updates the state corresponding to the state code pvodied in the request. It requires [authentication](#Authentication)
+This endpoint updates the state corresponding to the state code provided in the request. It requires [authentication](#Authentication)
 and accepts a JSON body with the following format:
 
 |       Name        |          Type         |    Notes    |
@@ -374,25 +374,20 @@ Returns the state's overall grade, and its grades for each category. If no state
 
 #### POST /grades/{code} (UPCOMING)
 
-This endpoint creates an overall state grade. Note that state grades CANNOT be updated, only overwritten. To overwrite
-a grade, create a new grade for the same state.
+This endpoint creates an overall state grade. Note that state grades CANNOT be updated, only overwritten. To overwrite a grade, create a new grade for the same state.
 
 This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |    Name    |  Type   |          Notes          |
 |------------|---------|-------------------------|
-| state_code | String  | *Required*. The state that this grade is associated with. |
 | grade      | Integer | *Required*. One of (-1, 0, 1, 2, 3) |
 
 #### POST /grades/{code}/categories/{id} (UPCOMING)
 
-This endpoint creates a state category grade. Note that state category grades CANNOT be updated, only overwritten. To overwrite
-a grade, create a new grade for the same state and category.
+This endpoint creates a state category grade. Note that state category grades CANNOT be updated, only overwritten. To overwrite a grade, create a new grade for the same state and category.
 
 This endpoint requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |    Name     |  Type   |          Notes          |
 |-------------|---------|-------------------------|
-| state_code  | String  | *Required*. The state that this grade is associated with. |
-| category_id | Integer | *Required*. The id of the category that this grade is associated with. |
 | grade       | Integer | *Required*. One of (-1, 0, 1, 2, 3) |
