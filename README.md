@@ -132,19 +132,19 @@ This endpoint returns information about all 50 states and DC.
 
 This endpoint returns the state corresponding to the state code provided in the request. If no state with that code exists, it will return a 404 response code.
 
-#### PUT /states/{code} (UPCOMING)
+#### PATCH /states/{code} (UPCOMING)
 
-This endpoint updates the state corresponding to the state code provided in the request. It requires [authentication](#Authentication)
+This endpoint updates the state corresponding to the state code provided in the request, as well as any dependent resources. It requires [authentication](#Authentication)
 and accepts a JSON body with the following format:
 
 |       Name        |          Type         |    Notes    |
 |-------------------|-----------------------|-------------|
 | innovative_idea   | String                | *Optional*. |
 | honorable_mention | String                | *Optional*. |
-| grade             | Integer               | *Optional*. One of (-1, 0, 1, 2, 3) |
-| category_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3.|
-| links             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., text: ..., url: ..., active: ...}`. See the [Links](#Links) documentation for information on each of these fields.|
-| scores             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., meets_criterion: ...}`. See the [Scores](#Scores) documentation for information on each of these fields.|
+| grade             | Integer               | *Optional*. One of (-1, 0, 1, 2, 3). This creates a new state grade object. |
+| category_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3. These objects will create new category grades.|
+| links             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{id: ..., category_id: ..., text: ..., url: ..., active: ...}`. See the [Links](#Links) documentation for information on each of these fields. If the `id` field is provided for a certain link, an attempt will be made to find and update that link. Otherwise, a new link will be created.|
+| scores             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., meets_criterion: ...}`. See the [Scores](#Scores) documentation for information on each of these fields. These will create new Score objects.|
 
 Note that it is not possible to update a state's name or code.
 
@@ -188,9 +188,20 @@ parameters in the request body as JSON:
 | title      | String  | *Optional*. |
 | help_text  | String  | *Optional*. |
 | active     | Boolean | *Optional*. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
-| subcategories | Array<Object> | *Optional*. See below for information on formatting this parameter. |
 
-The `subcategories` parameter allows you to create subcategories and criteria along with a category. The `subcategories` parameter must be formatted as an array of objects in the following format:
+#### PATCH /categories/{id} (UPCOMING)
+
+This endpoint updates an existing category and its dependent resources. It requires [authentication](#Authentication). It accepts the following
+parameters in the request body as JSON:
+
+|  Name      |   Type  |    Notes    |
+|------------|---------|-------------|
+| title      | String  | *Optional*. |
+| help_text  | String  | *Optional*. |
+| active     | Boolean | *Optional*. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
+| subcategories | Array<Object> | *Optional*. See below for information on formatting this parameter. This param will either update existing subcategories and criteria OR create new ones. |
+
+The `subcategories` parameter allows you to create and update subcategories and criteria along with a category. The `subcategories` parameter must be formatted as an array of objects in the following format:
 
 ```
 [
@@ -213,6 +224,8 @@ The `subcategories` parameter allows you to create subcategories and criteria al
   ...
 ]
 ```
+
+If `id` is specified, the corresponding subcategory or criterion will be found and updated. Otherwise, new subcategories and criteria will be created with the specified parameters.
 
 You can read more about [Subcategories](#Subcategories) and [Criteria](#Criteria) later in the documentation.
 
