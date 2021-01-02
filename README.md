@@ -66,10 +66,50 @@ pip3 install -r requirements.txt
 # this would not work for me as part of requirements.txt but works fine as a regular install
 pip3 install psutil
 
-# this was not in the original requirements.txt fort some reason so I installed it explicity
+# this was not in the original requirements.txt for some reason so I installed it explicity
 pip3 install wheel
 ```
 
+#### Creating a database of simualted data using docker-compose:
+
+If you're trying to simulate data for a docker containing the database:
+
+```
+# get the postgres image from docker
+docker pull postgres
+```
+
+```
+cd admin
+docker-compose up
+```
+
+In a separate process:
+
+```
+cd admin
+python3 GenerateRandomData.py
+```
+
+Inspect the database:
+
+```
+psql -U freefrom_map_user  -h localhost -d freefrom_map_dev
+```
+
+In the `psql` session:
+
+```
+=> \c freefrom_map_dev 
+```
+
+then
+
+```
+select * from state;
+```
+
+You should see fake text and scores for the entries in the table.
 
 ### Migrate the database
 
