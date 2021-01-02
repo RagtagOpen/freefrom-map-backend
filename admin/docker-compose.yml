@@ -1,0 +1,23 @@
+version: "3"
+services:
+  # Service for the Postgres database
+  db:
+    # Pull the latest 'postgres' image
+    image: "postgres"
+    container_name: "freefrom_postgres_docker"
+
+    # Postgres environment parameters
+    environment:
+      - POSTGRES_USER=freefrom_map_user
+      - POSTGRES_PASSWORD="1234"
+      - POSTGRES_DB=freefrom_map_dev
+
+    # Bind mount the default Postgres port
+    ports:
+      - "54321:5432"
+
+    # Bind mount local volume for Postgres data
+    volumes:
+      - ./pg-data:/var/lib/postgresql/data
+
+      # engine = create_engine('postgresql+psycopg2://freefrom_map_user:"1234"@localhost:54321/freefrom_map_dev')
