@@ -100,11 +100,19 @@ python3 manage.py runserver
 Then, in your browser, navigate to `localhost:5000/`. You should see the message "Hello world!" on your screen.
 
 ### Docker Setup
-1. Download latest docker
-    1. Make sure `docker --version` returns a version
-1. Run `docker-compose up` to build the images.
+1. Set up your local .env with the following `DATABASE_URL="postgresql://freefrom_map_user:password@db/freefrom_map_dev"`
+1. Install docker (verify with `docker --version`)
+1. Run `docker-compose up` in the directory
+1. Pull up http://localhost:5001/categories to view an empty array
+Optional you can insert a record into the endpoint by connecting to the db and inserting a new record into the categories
+   table. To ssh and connect to psql, you'll run:
 
-Then, in your browser, you can navigate to `localhost:5001/categories` and it will return an empty array. 
+```shell
+docker exec -it freefrom_map_db /bin/sh
+psql -U freefrom_map_user -d freefrom_map_dev
+```
+
+Insert new record into categories table, pull it up again via the fetching the endpoint again.
 
 ### Docker Tips
 If you need to shell into a container, either the app or db, you can run: `docker exec -it freefrom_map_app /bin/sh`
