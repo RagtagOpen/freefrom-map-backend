@@ -1,4 +1,5 @@
 #!/bin/sh
+python manage.py db stamp head
 python manage.py db migrate
 python manage.py db upgrade
 
