@@ -1,0 +1,147 @@
+- title: Economic Abuse Definition
+  subcategories:
+    - title: Economic Abuse Definition
+      ideal_criteria:
+        - Includes all or similar language listed
+      adverse_criteria:
+        - Definition that explicitly excludes economic abuse or tactics
+- title: Worker Protections
+  subcategories:
+    - title: Paid and Protected Leave
+      ideal_criteria:
+        - Leave designated to take time off to deal with the consequences of abuse
+        - Guaranteed paid
+        - Guaranteed protected from job loss, discrimination or retaliation for requesting leave
+        - At least 10 days of leave annually
+        - Leave does not deplete accrued time off (i.e., sick leave, vacation)
+        - Available to all employees regardless of employer, sector or employee status (PT/FT)
+        - Exhaustive list of reasons to take time off for work to deal with the consequences of abuse
+        - "Proof requirements must have at least one: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+    - title: Safe Work Environment
+      ideal_criteria:
+        - Prohibits employers from discriminating or retaliating against employees based on their status as a survivor
+        - Protections against discrimination and retaliation are available to all employees regardless of employer type, sector, and employee status (PT/FT)
+        - Requires employers to make reasonable accommodations available for survivors
+        - Reasonable accommodation requirements apply to all employers regardless of employer type, sector, and employee status (PT/FT)
+        - Requires employers to keep employees survivor status confidential
+        - Confidentiality requirements apply to all employers regardless of employer type, sector, and employee status (PT/FT)
+        - "Proof requirements must have at least one: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+    - title: Unemployment Insurance
+      ideal_criteria:
+        - Survivors who must leave or quit work due to GBV remain eligible for benefits
+        - 100% wage replacement for survivors of GBV
+        - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+        - Decisions on exemptions or considerations up to the discretion of case workers
+- title: Civil Remedies and Protections
+  subcategories:
+    - title: Designated Tort
+      ideal_criteria:
+        - Gives survivors the right to sue their harm-doers through a designated tort
+        - Statute of limitations applicable to designated tort is at least 5 years
+        - Statute of limitations applicable to designated tort is at least 20 years in cases of brain injury and / or a disability
+        - Designated tort is a continuing tort
+        - Statute of limitations applicable to GBV (DV, IPV, sexual assault, trafficking) related tort is at least 5 years
+      adverse_criteria:
+        - Excludes any gender identities and sexualities
+    - title: Litigation Abuse
+      ideal_criteria:
+        - Protects survivors from litigation abuse by their harm-doer
+        - Includes a broad definition of litigation to include any kind of legal action or proceeding
+        - Requires harm-doers using litigation abuse tactics to pay all attorney’s fees and costs incurred by a survivor
+        - Requires the dismissal with prejudice of any action in which a harm-doer is founds ot have committed litigation abuse
+        - Requires harm-doers found to have used abusive litigation tactics to meet certain requirements before being allowed to file new cases for at least 4 years
+        - Requires attorneys that participate in bad-faith in litigation abuse to pay attorney’s fees
+      adverse_criteria: []
+- title: VOCA
+  subcategories:
+    - title: VOCA
+      ideal_criteria:
+        - Has an appeal process for an eligibility determination
+        - Has an appeal process for the amount awarded
+        - No deadline to apply to for compensation
+        - No deadline to report the crime to the law enforcement
+        - Available to people who are undocumented
+        - Financial hardship early partial deposit
+        - Covered costs expanded to include attorney’s fees
+        - Covered costs expanded to include coerced and fraudulent debt
+        - No requirement for law enforcement cooperation or exemptions for survivors
+      adverse_criteria:
+        - Require forced involvement with law enforcement in order to receive compensation
+        - Must report within any time frame to law enforcement
+        - Requires submission of a police report as part of the application process
+        - Requires survivor cooperation with law enforcement for the investigation and / or prosecution of the crime)
+        - Requires a criminal record exclusionary clause
+- title: Safety-Net Programs
+  subcategories:
+    - title: SNAP
+      ideal_criteria:
+        - Provides exemptions or deferments from work or job training requirements
+        - Provides expedited enrollment for survivors
+        - Permits survivors to remove harm-doers from listed household members
+        - Survivors are eligible for specific exemptions and special considerations without having to apply through a service provider organization
+        - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+        - Decisions on exemptions or considerations up to the discretion of case workers
+    - title: TANF
+      ideal_criteria:
+        - Provides exemptions or deferments from work or job training requirements
+        - Survivors are eligible for time-limit exemptions or deferrals
+        - Survivors are eligible for specific exemptions and special considerations without having to apply through a service provider organization
+        - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+        - Decisions on exemptions or considerations up to the discretion of case workers
+- title: Rental Protections
+  subcategories:
+    - title: Rental Protections
+      ideal_criteria:
+        - Survivors are eligible to terminate a lease early without penalty including any future rent
+        - Survivors can omit their credit scores on rental applications
+        - Landlords are prohibited from evicting someone based on incidents of GBV
+        - Landlords are prohibited from discriminating against survivors who are rental applicants or tenants
+        - Survivors are not responsible for property damage as a result of GBV
+        - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+- title: Coerced and Fraudulent debt
+  subcategories:
+    - title: Coerced and Fraudulent debt
+      ideal_criteria:
+        - Gives survivors the right to sue their harm-doers for coerced and fraudulent debt through a designated tort
+        - Requires creditors operating within the state to be trained in IPV coerced and fraudulent debt and economic abuse
+        - Creates a cause of action against creditors not trained in IPV coerced and fraudulent debt that has allowed coerced and fraudulent to be incurred
+        - Ensures survivors are no responsible for coerced and fraudulent incurred by their harm doer
+        - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+- title: Safe Banking Protections for Survivors
+  subcategories:
+    - title: Safe Banking Protections for Survivors
+      ideal_criteria:
+        - Requires all financial institutions to be trained specific to IPV and economic abuse
+        - Require all financial institutions to implement enhanced fraud protections on survivors accounts
+        - Provides immunity for civil or administrative action for reporting/flagging suspected financial exploitation of survivors
+        - Requires all financial institutions to designate internal team to handle survivor accounts
+        - Requires all financial institutions to implement procedures and policies that create protections against unintended disclosures of survivors contact information and address.
+      adverse_criteria:
+        - Limits proof to only a protective order or police report
+- title: Reimagining Public Safety Responses to GBV
+  subcategories:
+    - title: Reimagining Public Safety Responses to GBV
+      ideal_criteria:
+        - State has a task force, or similar to study non-carceral responses to IPV
+        - State provides options for non-law enforcement first responders to IPV
+        - States creates alternative sources of funding for IPV programs and services not reliant on criminal justice fines and fees
+        - Survivors have autonomy in criminal proceedings
+      adverse_criteria:
+        - Mandatory arrest requirements for calls related to IPV
+        - Mandatory reporting for suspected IPV
+        - \"No-drop” policies
+        - IPV programs and services are reliant on criminal justice fines and fees
