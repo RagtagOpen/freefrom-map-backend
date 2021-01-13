@@ -18,8 +18,6 @@ class StatesTestCase(unittest.TestCase):
         state = State(
             code='NY',
             name='New York',
-            innovative_idea='Innovative idea',
-            honorable_mention='Honorable mention',
         ).save()
         response = self.client.get(f'/states/{state.code}')
         self.assertEqual(response.status_code, 200)
@@ -36,15 +34,11 @@ class StatesTestCase(unittest.TestCase):
         state_ny = State(
             code='NY',
             name='New York',
-            innovative_idea='Innovative idea',
-            honorable_mention='Honorable mention',
         ).save()
 
         state_ca = State(
             code='CA',
             name='California',
-            innovative_idea='Innovative idea',
-            honorable_mention='Honorable mention',
         ).save()
 
         response = self.client.get('/states')

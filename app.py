@@ -20,7 +20,7 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import Category, Subcategory, Criterion, Link, Score, State  # noqa: E402
+from models import Category, Subcategory, Criterion, Link, CategoryLink, Score, State  # noqa: E402
 
 
 @app.errorhandler(400)

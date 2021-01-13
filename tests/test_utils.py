@@ -2,6 +2,7 @@ import models
 
 
 def clear_database(db):
+    db.session.query(models.CategoryLink).delete()
     db.session.query(models.Link).delete()
     db.session.query(models.Score).delete()
     db.session.query(models.StateCategoryGrade).delete()
