@@ -397,6 +397,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
 
 db.Index('state_subcategory', Link.state, Link.subcategory_id)
 
+
 class CategoryLink(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'category_links'
 
@@ -436,7 +437,7 @@ class CategoryLink(BaseMixin, Deactivatable, db.Model):
 
     @validates('type')
     def validate_type(self, key, value):
-        if not value in ['innovative_policy_idea', 'honorable_mention']:
+        if value not in ['innovative_policy_idea', 'honorable_mention']:
             raise ValueError(strings.invalid_category_link_type)
         return value
 

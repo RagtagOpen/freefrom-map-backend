@@ -102,7 +102,13 @@ class StateTestCase(unittest.TestCase):
             type='honorable_mention'
         )
 
-        CategoryLink.save_all([self.category_link1, self.category_link2, self.category_link3, self.category_link4, self.category_link5])
+        CategoryLink.save_all([
+            self.category_link1,
+            self.category_link2,
+            self.category_link3,
+            self.category_link4,
+            self.category_link5
+        ])
 
         self.maxDiff = None
 

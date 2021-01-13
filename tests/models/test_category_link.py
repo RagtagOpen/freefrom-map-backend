@@ -1,6 +1,5 @@
 import unittest
 import datetime
-from sqlalchemy.exc import IntegrityError
 
 from app import db
 from models import CategoryLink
@@ -19,7 +18,7 @@ class CategoryLinkTestCase(unittest.TestCase):
             type='innovative_policy_idea',
             text='AS 12.61.017',
             url='http://www.akleg.gov/basis/statutes.asp#12.61.017',
-            description='Victims of crimes are granted protections from employer penalization if the victim is subpoenaed or requested by the prosecuting attorney to attend a court proceeding for the purpose of giving testimony, needs to report the crime to law enforcement or participates in an investigation of the offense.'
+            description='Victims of crimes are granted protections from employer...'
         ).save()
 
     def tearDown(self):
@@ -29,8 +28,14 @@ class CategoryLinkTestCase(unittest.TestCase):
         self.assertEqual(self.category_link.category_id, self.category.id)
         self.assertEqual(self.category_link.state, self.state_code)
         self.assertEqual(self.category_link.text, 'AS 12.61.017')
-        self.assertEqual(self.category_link.url, 'http://www.akleg.gov/basis/statutes.asp#12.61.017')
-        self.assertEqual(self.category_link.description, 'Victims of crimes are granted protections from employer penalization if the victim is subpoenaed or requested by the prosecuting attorney to attend a court proceeding for the purpose of giving testimony, needs to report the crime to law enforcement or participates in an investigation of the offense.')
+        self.assertEqual(
+            self.category_link.url,
+            'http://www.akleg.gov/basis/statutes.asp#12.61.017'
+        )
+        self.assertEqual(
+            self.category_link.description,
+            'Victims of crimes are granted protections from employer...'
+        )
         self.assertTrue(self.category_link.active)
 
     def test_init_invalid_category(self):
@@ -69,7 +74,7 @@ class CategoryLinkTestCase(unittest.TestCase):
                 'type': 'innovative_policy_idea',
                 'text': 'AS 12.61.017',
                 'url': 'http://www.akleg.gov/basis/statutes.asp#12.61.017',
-                'description': 'Victims of crimes are granted protections from employer penalization if the victim is subpoenaed or requested by the prosecuting attorney to attend a court proceeding for the purpose of giving testimony, needs to report the crime to law enforcement or participates in an investigation of the offense.',
+                'description': 'Victims of crimes are granted protections from employer...',
                 'active': True,
                 'deactivated_at': None,
             },
