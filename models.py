@@ -42,7 +42,6 @@ class State(BaseMixin, db.Model):
     grades = db.relationship('StateGrade', order_by='desc(StateGrade.created_at)', lazy=True)
     scores = db.relationship('Score', lazy=True)
     links = db.relationship('Link', lazy=True)
-    category_links = db.relationship('CategoryLink', lazy=True)
 
     def __init__(self, code, name=None):
         self.code = code
@@ -57,7 +56,8 @@ class State(BaseMixin, db.Model):
         grade = self.grades[0].serialize() if self.grades else None
         category_grades = []
         criterion_scores = []
-        category_links = []
+        innovative_policy_ideas = []
+        honorable_mentions = []
 
         # Get the most recent grade for each category
         for category in Category.query.all():
@@ -68,23 +68,22 @@ class State(BaseMixin, db.Model):
             if category_grade:
                 category_grades.append(category_grade.serialize())
 
-            innovative_policy_idea = CategoryLink.query.filter_by(
-                state=self.code,
-                category_id=category.id,
-                type='innovative_policy_idea',
-                active=True
-            ).order_by(CategoryLink.created_at.desc()).first()
-            if innovative_policy_idea:
-                category_links.append(innovative_policy_idea.serialize())
+            for subcategory in category.subcategories:
+                innovative_policy_idea = InnovativePolicyIdea.query.filter_by(
+                    state=self.code,
+                    subcategory_id=subcategory.id,
+                    active=True
+                ).order_by(InnovativePolicyIdea.created_at.desc()).first()
+                if innovative_policy_idea:
+                    innovative_policy_ideas.append(innovative_policy_idea.serialize())
 
-            honorable_mention = CategoryLink.query.filter_by(
-                state=self.code,
-                category_id=category.id,
-                type='honorable_mention',
-                active=True
-            ).order_by(CategoryLink.created_at.desc()).first()
-            if honorable_mention:
-                category_links.append(honorable_mention.serialize())
+                honorable_mention = HonorableMention.query.filter_by(
+                    state=self.code,
+                    subcategory_id=subcategory.id,
+                    active=True
+                ).order_by(HonorableMention.created_at.desc()).first()
+                if honorable_mention:
+                    honorable_mentions.append(honorable_mention.serialize())
 
         # Get the most recent score for each criterion
         for criterion in Criterion.query.all():
@@ -101,8 +100,9 @@ class State(BaseMixin, db.Model):
             'grade': grade,
             'category_grades': category_grades,
             'criterion_scores': criterion_scores,
-            'category_links': category_links,
             'links': links,
+            'honorable_mentions': honorable_mentions,
+            'innovative_policy_ideas': innovative_policy_ideas,
         }
 
 
@@ -360,6 +360,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
+    created_at = db.Column(db.DateTime)
 
     def __init__(self, subcategory_id, state, text=None, url=None):
         self.subcategory_id = subcategory_id
@@ -398,67 +399,55 @@ class Link(BaseMixin, Deactivatable, db.Model):
 db.Index('state_subcategory', Link.state, Link.subcategory_id)
 
 
-class CategoryLink(BaseMixin, Deactivatable, db.Model):
-    __tablename__ = 'category_links'
+class HonorableMention(Link):
+    __mapper_args__ = {
+        'polymorphic_identity':'honorable_mention'
+    }
 
-    id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
-    state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
-    type = db.Column(db.String(), nullable=False)
-    text = db.Column(db.String())
-    url = db.Column(db.String())
-    description = db.Column(db.String())
-    created_at = db.Column(db.DateTime)
+    def __init__(self, subcategory_id, state, text=None, url=None, description=None):
+        super().__init__(subcategory_id, state, text, url)
 
-    def __init__(self, category_id, state, type, text=None, url=None, description=None):
-        self.category_id = category_id
-        self.state = state
-        self.type = type
-        self.text = text
-        self.url = url
         self.description = description
-        self.active = True
         self.created_at = datetime.datetime.utcnow()
 
-    def __repr__(self):
-        return '<id {}>'.format(self.id)
+    def serialize(self):
+        base_serialization = super().serialize().copy()
+        base_serialization.update({
+            "description": self.description
+        })
 
-    @validates('category_id')
-    def validate_subcategory(self, key, value):
-        if Category.query.get(value) is None:
-            raise ValueError(strings.category_not_found)
-        return value
+        return base_serialization
 
-    @validates('state')
-    def validate_state(self, key, value):
-        if State.query.get(value) is None:
-            raise ValueError(strings.invalid_state)
-        return value
+db.Index(
+    'honorable_mention_state_subcategory_active',
+    HonorableMention.state,
+    HonorableMention.subcategory_id,
+    HonorableMention.active
+)
 
-    @validates('type')
-    def validate_type(self, key, value):
-        if value not in ['innovative_policy_idea', 'honorable_mention']:
-            raise ValueError(strings.invalid_category_link_type)
-        return value
+
+class InnovativePolicyIdea(Link):
+    __mapper_args__ = {
+        'polymorphic_identity': 'innovative_policy_idea'
+    }
+
+    def __init__(self, subcategory_id, state, text=None, url=None, description=None):
+        super().__init__(subcategory_id, state, text, url)
+        self.description = description
+        self.created_at = datetime.datetime.utcnow()
 
     def serialize(self):
-        return {
-            'id': self.id,
-            'category_id': self.category_id,
-            'state': self.state,
-            'type': self.type,
-            'text': self.text,
-            'url': self.url,
-            'description': self.description,
-            'active': self.active,
-            'deactivated_at': self.deactivated_at,
-        }
+        base_serialization = super().serialize().copy()
+        base_serialization.update({
+            "description": self.description
+        })
+
+        return base_serialization
 
 
 db.Index(
-    'state_category_type_active',
-    CategoryLink.state,
-    CategoryLink.category_id,
-    CategoryLink.type,
-    CategoryLink.active
+    'innovative_idea_state_subcategory_active',
+    InnovativePolicyIdea.state,
+    InnovativePolicyIdea.subcategory_id,
+    InnovativePolicyIdea.active
 )

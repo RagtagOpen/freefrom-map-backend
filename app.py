@@ -25,7 +25,8 @@ from models import (  # noqa: F401, E402
     Subcategory,
     Criterion,
     Link,
-    CategoryLink,
+    HonorableMention,
+    InnovativePolicyIdea,
     Score,
     State
 )

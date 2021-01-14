@@ -2,7 +2,7 @@ import unittest
 from datetime import datetime, timedelta
 
 from app import app, db
-from models import State, Score, CategoryLink
+from models import State, Score, HonorableMention, InnovativePolicyIdea
 from tests.test_utils import (
     clear_database,
     create_state,
@@ -28,6 +28,7 @@ class StateTestCase(unittest.TestCase):
         category1 = create_category()
         category2 = create_category()
         subcategory = create_subcategory(category1.id)
+        subcategory2 = create_subcategory(category1.id)
         criterion1 = create_criterion(subcategory.id)
         criterion2 = create_criterion(subcategory.id)
 
@@ -74,47 +75,44 @@ class StateTestCase(unittest.TestCase):
 
         Score.save_all([self.score1, self.score2, self.score3, self.score4])
 
-        self.category_link1 = CategoryLink(
-            category_id=category1.id,
+        self.innovative_policy_idea1 = InnovativePolicyIdea(
+            subcategory_id=subcategory.id,
             state=self.state.code,
-            type='innovative_policy_idea'
         )
-        self.category_link2 = CategoryLink(
-            category_id=category1.id,
+        self.honorable_mention1 = HonorableMention(
+            subcategory_id=subcategory.id,
             state=self.state.code,
-            type='honorable_mention'
         )
-        self.category_link3 = CategoryLink(
-            category_id=category2.id,
-            state=self.state.code,
-            type='honorable_mention'
-        )
-        self.category_link4 = CategoryLink(
-            category_id=category2.id,
-            state=self.state.code,
-            type='honorable_mention'
-        )
-        # category_link3 was created more recently than category_link4
-        self.category_link4.created_at = datetime.utcnow() - timedelta(5)
-        self.category_link5 = CategoryLink(
-            category_id=category1.id,
-            state=other_state.code,
-            type='honorable_mention'
-        )
-        self.category_link6 = CategoryLink(
-            category_id=category1.id,
-            state=self.state.code,
-            type='honorable_mention'
-        )
-        self.category_link6.deactivate()
+        # self.honorable_mention2 = HonorableMention(
+        #     subcategory_id=subcategory2.id,
+        #     state=self.state.code,
+        # )
+        # self.honorable_mention3 = HonorableMention(
+        #     subcategory_id=subcategory2.id,
+        #     state=self.state.code,
+        # )
+        # honorable_mention2 was created more recently than honorable_mention3
+        # self.honorable_mention3.created_at = datetime.utcnow() - timedelta(5)
+        # self.honorable_mention4 = HonorableMention(
+        #     subcategory_id=subcategory.id,
+        #     state=other_state.code,
+        # )
+        # self.innovative_policy_idea2 = InnovativePolicyIdea(
+        #     subcategory_id=subcategory.id,
+        #     state=self.state.code,
+        # )
+        # self.innovative_policy_idea2.deactivate()
 
-        CategoryLink.save_all([
-            self.category_link1,
-            self.category_link2,
-            self.category_link3,
-            self.category_link4,
-            self.category_link5,
-            self.category_link6,
+        HonorableMention.save_all([
+            self.honorable_mention1,
+            # self.honorable_mention2,
+            # self.honorable_mention3,
+            # self.honorable_mention4,
+        ])
+
+        InnovativePolicyIdea.save_all([
+            self.innovative_policy_idea1,
+            # self.innovative_policy_idea2,
         ])
 
         self.maxDiff = None
@@ -144,11 +142,14 @@ class StateTestCase(unittest.TestCase):
                     self.link1.serialize(),
                     self.link2.serialize(),
                 ],
-                'category_links': [
-                    self.category_link1.serialize(),
-                    self.category_link2.serialize(),
-                    self.category_link3.serialize(),
-                ]
+                'honorable_mentions': [
+                    self.honorable_mention1.serialize(),
+                    # self.honorable_mention2.serialize(),
+                    # self.honorable_mention4.serialize(),
+                ],
+                'innovative_policy_ideas': [
+                    self.innovative_policy_idea1.serialize(),
+                ],
             },
             self.state.serialize()
         )
@@ -163,7 +164,8 @@ class StateTestCase(unittest.TestCase):
                 'category_grades': [],
                 'criterion_scores': [],
                 'links': [],
-                'category_links': []
+                'honorable_mentions': [],
+                'innovative_policy_ideas': [],
             },
             state.serialize()
         )
