@@ -345,6 +345,12 @@ class Link(BaseMixin, Deactivatable, db.Model):
     state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
+    type = db.Column(db.String(20))
+
+    __mapper_args__ = {
+        'polymorphic_on': type,
+        'polymorphic_identity': 'link'
+    }
 
     def __init__(self, subcategory_id, state, text=None, url=None):
         self.subcategory_id = subcategory_id
@@ -378,6 +384,12 @@ class Link(BaseMixin, Deactivatable, db.Model):
             'active': self.active,
             'deactivated_at': self.deactivated_at,
         }
+
+
+class ResourceLink(Link):
+    __mapper_args__ = {
+        'polymorphic_identity': 'resource_link'
+    }
 
 
 db.Index('state_subcategory', Link.state, Link.subcategory_id)
