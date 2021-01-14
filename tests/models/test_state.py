@@ -2,7 +2,7 @@ import unittest
 from datetime import datetime, timedelta
 
 from app import app, db
-from models import State, Score
+from models import State, Score, CategoryLink
 from tests.test_utils import (
     clear_database,
     create_state,
@@ -22,8 +22,6 @@ class StateTestCase(unittest.TestCase):
         self.state = State(
             code='NY',
             name='New York',
-            innovative_idea='Innovative idea',
-            honorable_mention='Honorable mention',
         ).save()
         other_state = create_state(code='AZ')
 
@@ -75,6 +73,50 @@ class StateTestCase(unittest.TestCase):
         )
 
         Score.save_all([self.score1, self.score2, self.score3, self.score4])
+
+        self.category_link1 = CategoryLink(
+            category_id=category1.id,
+            state=self.state.code,
+            type='innovative_policy_idea'
+        )
+        self.category_link2 = CategoryLink(
+            category_id=category1.id,
+            state=self.state.code,
+            type='honorable_mention'
+        )
+        self.category_link3 = CategoryLink(
+            category_id=category2.id,
+            state=self.state.code,
+            type='honorable_mention'
+        )
+        self.category_link4 = CategoryLink(
+            category_id=category2.id,
+            state=self.state.code,
+            type='honorable_mention'
+        )
+        # category_link3 was created more recently than category_link4
+        self.category_link4.created_at = datetime.utcnow() - timedelta(5)
+        self.category_link5 = CategoryLink(
+            category_id=category1.id,
+            state=other_state.code,
+            type='honorable_mention'
+        )
+        self.category_link6 = CategoryLink(
+            category_id=category1.id,
+            state=self.state.code,
+            type='honorable_mention'
+        )
+        self.category_link6.deactivate()
+
+        CategoryLink.save_all([
+            self.category_link1,
+            self.category_link2,
+            self.category_link3,
+            self.category_link4,
+            self.category_link5,
+            self.category_link6,
+        ])
+
         self.maxDiff = None
 
     def tearDown(self):
@@ -83,16 +125,12 @@ class StateTestCase(unittest.TestCase):
     def test_init(self):
         self.assertEqual(self.state.code, 'NY')
         self.assertEqual(self.state.name, 'New York')
-        self.assertEqual(self.state.innovative_idea, 'Innovative idea')
-        self.assertEqual(self.state.honorable_mention, 'Honorable mention')
 
     def test_serialize(self):
         self.assertEqual(
             {
                 'code': 'NY',
                 'name': 'New York',
-                'innovative_idea': 'Innovative idea',
-                'honorable_mention': 'Honorable mention',
                 'grade': self.state_grade1.serialize(),
                 'category_grades': [
                     self.state_category_grade1.serialize(),
@@ -106,6 +144,11 @@ class StateTestCase(unittest.TestCase):
                     self.link1.serialize(),
                     self.link2.serialize(),
                 ],
+                'category_links': [
+                    self.category_link1.serialize(),
+                    self.category_link2.serialize(),
+                    self.category_link3.serialize(),
+                ]
             },
             self.state.serialize()
         )
@@ -116,12 +159,11 @@ class StateTestCase(unittest.TestCase):
             {
                 'code': state.code,
                 'name': state.name,
-                'innovative_idea': state.innovative_idea,
-                'honorable_mention': state.honorable_mention,
                 'grade': None,
                 'category_grades': [],
                 'criterion_scores': [],
                 'links': [],
+                'category_links': []
             },
             state.serialize()
         )
