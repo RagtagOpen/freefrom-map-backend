@@ -101,13 +101,20 @@ class StateTestCase(unittest.TestCase):
             state=other_state.code,
             type='honorable_mention'
         )
+        self.category_link6 = CategoryLink(
+            category_id=category1.id,
+            state=self.state.code,
+            type='honorable_mention'
+        )
+        self.category_link6.deactivate()
 
         CategoryLink.save_all([
             self.category_link1,
             self.category_link2,
             self.category_link3,
             self.category_link4,
-            self.category_link5
+            self.category_link5,
+            self.category_link6,
         ])
 
         self.maxDiff = None

@@ -53,7 +53,6 @@ class State(BaseMixin, db.Model):
 
     def serialize(self):
         links = [link.serialize() for link in self.links]
-        # category_links = [category_link.serialize() for category_link in self.category_links]
 
         grade = self.grades[0].serialize() if self.grades else None
         category_grades = []
@@ -72,7 +71,8 @@ class State(BaseMixin, db.Model):
             innovative_policy_idea = CategoryLink.query.filter_by(
                 state=self.code,
                 category_id=category.id,
-                type='innovative_policy_idea'
+                type='innovative_policy_idea',
+                active=True
             ).order_by(CategoryLink.created_at.desc()).first()
             if innovative_policy_idea:
                 category_links.append(innovative_policy_idea.serialize())
@@ -80,7 +80,8 @@ class State(BaseMixin, db.Model):
             honorable_mention = CategoryLink.query.filter_by(
                 state=self.code,
                 category_id=category.id,
-                type='honorable_mention'
+                type='honorable_mention',
+                active=True
             ).order_by(CategoryLink.created_at.desc()).first()
             if honorable_mention:
                 category_links.append(honorable_mention.serialize())
@@ -455,4 +456,4 @@ class CategoryLink(BaseMixin, Deactivatable, db.Model):
         }
 
 
-db.Index('state_category_type', CategoryLink.state, CategoryLink.category_id, CategoryLink.type)
+db.Index('state_category_type_active', CategoryLink.state, CategoryLink.category_id, CategoryLink.type, CategoryLink.active)
