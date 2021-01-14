@@ -455,4 +455,10 @@ class CategoryLink(BaseMixin, Deactivatable, db.Model):
         }
 
 
-db.Index('state_category_type_active', CategoryLink.state, CategoryLink.category_id, CategoryLink.type, CategoryLink.active)
+db.Index(
+    'state_category_type_active',
+    CategoryLink.state,
+    CategoryLink.category_id,
+    CategoryLink.type,
+    CategoryLink.active
+)
