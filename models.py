@@ -112,7 +112,6 @@ class Category(BaseMixin, Deactivatable, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
     help_text = db.Column(db.String())
-    innovative_policy_idea = db.Column
     subcategories = db.relationship('Subcategory', backref='category', lazy=True)
 
     def __init__(self, title=None, help_text=None):
