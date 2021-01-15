@@ -43,7 +43,7 @@ class State(BaseMixin, db.Model):
     honorable_mention = db.Column(db.String())
     grades = db.relationship('StateGrade', order_by='desc(StateGrade.created_at)', lazy=True)
     scores = db.relationship('Score', lazy=True)
-    links = db.relationship('Link', lazy=True)
+    resource_links = db.relationship('ResourceLink', lazy=True)
 
     def __init__(self, code, name=None, innovative_idea=None, honorable_mention=None):
         self.code = code
@@ -55,7 +55,7 @@ class State(BaseMixin, db.Model):
         return '<id {}>'.format(self.code)
 
     def serialize(self):
-        links = [link.serialize() for link in self.links]
+        resource_links = [resource_link.serialize() for resource_link in self.resource_links]
 
         grade = self.grades[0].serialize() if self.grades else None
         category_grades = []
@@ -87,7 +87,7 @@ class State(BaseMixin, db.Model):
             'grade': grade,
             'category_grades': category_grades,
             'criterion_scores': criterion_scores,
-            'links': links,
+            'resource_links': resource_links,
         }
 
 

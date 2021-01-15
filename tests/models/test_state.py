@@ -11,7 +11,7 @@ from tests.test_utils import (
     create_criterion,
     create_state_grade,
     create_state_category_grade,
-    create_link,
+    create_resource_link,
 )
 
 
@@ -33,8 +33,8 @@ class StateTestCase(unittest.TestCase):
         criterion1 = create_criterion(subcategory.id)
         criterion2 = create_criterion(subcategory.id)
 
-        self.link1 = create_link(subcategory.id, self.state.code)
-        self.link2 = create_link(subcategory.id, self.state.code)
+        self.link1 = create_resource_link(subcategory.id, self.state.code)
+        self.link2 = create_resource_link(subcategory.id, self.state.code)
 
         self.state_grade1 = create_state_grade(self.state.code)
         self.state_grade2 = create_state_grade(self.state.code)
@@ -102,7 +102,7 @@ class StateTestCase(unittest.TestCase):
                     self.score1.serialize(),
                     self.score2.serialize(),
                 ],
-                'links': [
+                'resource_links': [
                     self.link1.serialize(),
                     self.link2.serialize(),
                 ],
@@ -121,7 +121,7 @@ class StateTestCase(unittest.TestCase):
                 'grade': None,
                 'category_grades': [],
                 'criterion_scores': [],
-                'links': [],
+                'resource_links': [],
             },
             state.serialize()
         )
