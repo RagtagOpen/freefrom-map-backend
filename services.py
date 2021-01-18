@@ -120,4 +120,9 @@ def submit_form_to_google(form, data):
     if form not in forms:
         raise ValueError(strings.form_not_found)
     data['form'] = form
-    return post_google(data)
+    response = post_google(data)
+
+    if response.get('result') == 'error':
+        raise Exception
+
+    return response

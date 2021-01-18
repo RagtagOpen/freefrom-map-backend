@@ -6,7 +6,14 @@ import os
 from providers import post_google
 
 
+def require_google_secrets():
+    return unittest.skipIf(
+        not os.environ.get('GOOGLE_DEPLOYMENT_ID'),
+        'Cannot run test without GOOGLE_DEPLOYMENT_ID Environment variable',
+    )
+
 class ProvidersTestCase(unittest.TestCase):
+    @require_google_secrets()
     @patch('requests.post')
     def test_post_google(self, mock_post):
         google_id = os.environ.get('GOOGLE_DEPLOYMENT_ID')
