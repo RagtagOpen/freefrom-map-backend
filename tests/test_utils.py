@@ -67,5 +67,9 @@ def create_link(subcategory_id, state):
     return models.Link(subcategory_id=subcategory_id, state=state).save()
 
 
+def create_resource_link(subcategory_id, state):
+    return models.ResourceLink(subcategory_id=subcategory_id, state=state).save()
+
+
 def auth_headers():
     return {'Authorization': 'Bearer fake token'}
