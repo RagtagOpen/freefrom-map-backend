@@ -413,7 +413,7 @@ db.Index('state_subcategory', Link.state, Link.subcategory_id)
 
 class HonorableMention(Link):
     __mapper_args__ = {
-        'polymorphic_identity':'honorable_mention'
+        'polymorphic_identity': 'honorable_mention'
     }
 
     def __init__(self, subcategory_id, state, text=None, url=None, description=None):
@@ -425,10 +425,11 @@ class HonorableMention(Link):
     def serialize(self):
         base_serialization = super().serialize().copy()
         base_serialization.update({
-            "description": self.description
+            'description': self.description
         })
 
         return base_serialization
+
 
 db.Index(
     'honorable_mention_state_subcategory_active',
@@ -440,7 +441,7 @@ db.Index(
 
 class InnovativePolicyIdea(Link):
     __mapper_args__ = {
-        'polymorphic_identity': 'innovative_policy_idea'
+        'polymorphic_identity': 'innovative_policy'
     }
 
     def __init__(self, subcategory_id, state, text=None, url=None, description=None):
@@ -451,7 +452,7 @@ class InnovativePolicyIdea(Link):
     def serialize(self):
         base_serialization = super().serialize().copy()
         base_serialization.update({
-            "description": self.description
+            'description': self.description
         })
 
         return base_serialization

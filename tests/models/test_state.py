@@ -83,36 +83,36 @@ class StateTestCase(unittest.TestCase):
             subcategory_id=subcategory.id,
             state=self.state.code,
         )
-        # self.honorable_mention2 = HonorableMention(
-        #     subcategory_id=subcategory2.id,
-        #     state=self.state.code,
-        # )
-        # self.honorable_mention3 = HonorableMention(
-        #     subcategory_id=subcategory2.id,
-        #     state=self.state.code,
-        # )
+        self.honorable_mention2 = HonorableMention(
+            subcategory_id=subcategory2.id,
+            state=self.state.code,
+        )
+        self.honorable_mention3 = HonorableMention(
+            subcategory_id=subcategory2.id,
+            state=self.state.code,
+        )
         # honorable_mention2 was created more recently than honorable_mention3
-        # self.honorable_mention3.created_at = datetime.utcnow() - timedelta(5)
-        # self.honorable_mention4 = HonorableMention(
-        #     subcategory_id=subcategory.id,
-        #     state=other_state.code,
-        # )
-        # self.innovative_policy_idea2 = InnovativePolicyIdea(
-        #     subcategory_id=subcategory.id,
-        #     state=self.state.code,
-        # )
-        # self.innovative_policy_idea2.deactivate()
+        self.honorable_mention3.created_at = datetime.utcnow() - timedelta(5)
+        self.honorable_mention4 = HonorableMention(
+            subcategory_id=subcategory.id,
+            state=other_state.code,
+        )
+        self.innovative_policy_idea2 = InnovativePolicyIdea(
+            subcategory_id=subcategory.id,
+            state=self.state.code,
+        )
+        self.innovative_policy_idea2.deactivate()
 
         HonorableMention.save_all([
             self.honorable_mention1,
-            # self.honorable_mention2,
-            # self.honorable_mention3,
-            # self.honorable_mention4,
+            self.honorable_mention2,
+            self.honorable_mention3,
+            self.honorable_mention4,
         ])
 
         InnovativePolicyIdea.save_all([
             self.innovative_policy_idea1,
-            # self.innovative_policy_idea2,
+            self.innovative_policy_idea2,
         ])
 
         self.maxDiff = None
@@ -144,8 +144,7 @@ class StateTestCase(unittest.TestCase):
                 ],
                 'honorable_mentions': [
                     self.honorable_mention1.serialize(),
-                    # self.honorable_mention2.serialize(),
-                    # self.honorable_mention4.serialize(),
+                    self.honorable_mention2.serialize(),
                 ],
                 'innovative_policy_ideas': [
                     self.innovative_policy_idea1.serialize(),

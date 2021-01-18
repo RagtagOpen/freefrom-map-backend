@@ -3,7 +3,7 @@ import datetime
 
 from app import db
 from models import HonorableMention
-from strings import subcategory_not_found, invalid_state, invalid_category_link_type
+from strings import subcategory_not_found, invalid_state
 from tests.test_utils import clear_database, create_state, create_category, create_subcategory
 
 
