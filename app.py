@@ -20,12 +20,11 @@ from services import (  # noqa: E402
     update_or_create_criterion,
     update_or_create_link,
 )
-from models import (  # noqa: E402, F401
+from models import (  # noqa: E402
     Category,
     Subcategory,
     Criterion,
     Link,
-    ResourceLink,
     Score,
     State
 )
