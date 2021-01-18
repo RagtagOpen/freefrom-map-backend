@@ -29,7 +29,7 @@ class ProvidersTestCase(unittest.TestCase):
             'suggestions': '',
         }
         mock_post.return_value = Mock(
-            status_code=201,
+            status_code=200,
             text=json.dumps(data),
         )
 
