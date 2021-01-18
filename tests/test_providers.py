@@ -12,6 +12,7 @@ def require_google_secrets():
         'Cannot run test without GOOGLE_DEPLOYMENT_ID Environment variable',
     )
 
+
 class ProvidersTestCase(unittest.TestCase):
     @require_google_secrets()
     @patch('requests.post')
