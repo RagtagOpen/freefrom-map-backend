@@ -54,36 +54,35 @@ class State(BaseMixin, db.Model):
         resource_links = [resource_link.serialize() for resource_link in self.resource_links]
 
         grade = self.grades[0].serialize() if self.grades else None
-        category_grades = []
+        subcategory_grades = []
         criterion_scores = []
         innovative_policy_ideas = []
         honorable_mentions = []
 
         # Get the most recent grade for each category
-        for category in Category.query.all():
-            category_grade = StateCategoryGrade.query.filter_by(
+        for subcategory in Subcategory.query.all():
+            subcategory_grade = StateSubcategoryGrade.query.filter_by(
                 state_code=self.code,
-                category_id=category.id,
-            ).order_by(StateCategoryGrade.created_at.desc()).first()
-            if category_grade:
-                category_grades.append(category_grade.serialize())
+                subcategory_id=subcategory.id,
+            ).order_by(StateSubcategoryGrade.created_at.desc()).first()
+            if subcategory_grade:
+                subcategory_grades.append(subcategory_grade.serialize())
 
-            for subcategory in category.subcategories:
-                innovative_policy_idea = InnovativePolicyIdea.query.filter_by(
-                    state=self.code,
-                    subcategory_id=subcategory.id,
-                    active=True
-                ).order_by(InnovativePolicyIdea.created_at.desc()).first()
-                if innovative_policy_idea:
-                    innovative_policy_ideas.append(innovative_policy_idea.serialize())
+            innovative_policy_idea = InnovativePolicyIdea.query.filter_by(
+                state=self.code,
+                subcategory_id=subcategory.id,
+                active=True
+            ).order_by(InnovativePolicyIdea.created_at.desc()).first()
+            if innovative_policy_idea:
+                innovative_policy_ideas.append(innovative_policy_idea.serialize())
 
-                honorable_mention = HonorableMention.query.filter_by(
-                    state=self.code,
-                    subcategory_id=subcategory.id,
-                    active=True
-                ).order_by(HonorableMention.created_at.desc()).first()
-                if honorable_mention:
-                    honorable_mentions.append(honorable_mention.serialize())
+            honorable_mention = HonorableMention.query.filter_by(
+                state=self.code,
+                subcategory_id=subcategory.id,
+                active=True
+            ).order_by(HonorableMention.created_at.desc()).first()
+            if honorable_mention:
+                honorable_mentions.append(honorable_mention.serialize())
 
         # Get the most recent score for each criterion
         for criterion in Criterion.query.all():
@@ -98,7 +97,7 @@ class State(BaseMixin, db.Model):
             'code': self.code,
             'name': self.name,
             'grade': grade,
-            'category_grades': category_grades,
+            'subcategory_grades': subcategory_grades,
             'criterion_scores': criterion_scores,
             'honorable_mentions': honorable_mentions,
             'innovative_policy_ideas': innovative_policy_ideas,
@@ -265,19 +264,19 @@ class StateGrade(BaseMixin, db.Model):
         }
 
 
-class StateCategoryGrade(BaseMixin, db.Model):
-    __tablename__ = 'state_category_grades'
+class StateSubcategoryGrade(BaseMixin, db.Model):
+    __tablename__ = 'state_subcategory_grades'
 
     id = db.Column(db.Integer, primary_key=True)
     state_code = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
+    subcategory_id = db.Column(db.Integer, db.ForeignKey('subcategories.id'), nullable=False)
     grade = db.Column(db.Integer())
     created_at = db.Column(db.DateTime)
 
-    def __init__(self, state_code, category_id, grade):
+    def __init__(self, state_code, subcategory_id, grade):
         self.state_code = state_code
         self.grade = grade
-        self.category_id = category_id
+        self.subcategory_id = subcategory_id
         self.created_at = datetime.datetime.utcnow()
 
     def __repr__(self):
@@ -289,10 +288,10 @@ class StateCategoryGrade(BaseMixin, db.Model):
             raise ValueError(strings.invalid_state)
         return value
 
-    @validates('category_id')
-    def validate_category(self, key, value):
-        if Category.query.get(value) is None:
-            raise ValueError(strings.category_not_found)
+    @validates('subcategory_id')
+    def validate_subcategory(self, key, value):
+        if Subcategory.query.get(value) is None:
+            raise ValueError(strings.subcategory_not_found)
         return value
 
     @validates('grade')
@@ -305,7 +304,7 @@ class StateCategoryGrade(BaseMixin, db.Model):
         return {
             'id': self.id,
             'state_code': self.state_code,
-            'category_id': self.category_id,
+            'subcategory_id': self.subcategory_id,
             'grade': self.grade,
         }
 
