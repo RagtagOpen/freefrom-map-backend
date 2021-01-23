@@ -1,7 +1,131 @@
 code: AK
 name: Alaska
-innovative_policy_ideas:
-  -
-honorable_mentions:
-  - subcategory: Paid and Protected Leave
-  - text: 
+grade:
+subcategories:
+  - title: Economic Abuse Definition
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: AS § 47.17.035
+        url: http://www.akleg.gov/basis/statutes.asp#47.17.035
+    criteria_met: []
+  - title: Paid and Protected Leave
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      text: AS § 12.61.017
+      url: http://www.akleg.gov/basis/statutes.asp#12.61.017
+      description: Victims of crimes are granted protections from employer penalization if the victim is subpoenaed or requested by the prosecuting attorney to attend a court proceeding for the purpose of giving testimony, needs to report the crime to law enforcement or participates in an investigation of the offense.
+    resource_links: []
+    criteria_met:
+      - Leave designated to take time off to deal with the consequences of abuse
+      - Guaranteed protected from job loss, discrimination or retaliation for requesting leave
+  - title: Safe Work Environment
+    grade: 0
+    resource_links: []
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: Unemployment Insurance
+    grade: 2
+    resource_links:
+      - text: AS 23.20.379
+        url: http://www.akleg.gov/basis/statutes.asp#23.20.379
+      - text: 8 AAC 85.095(c)
+        url: http://www.akleg.gov/basis/aac.asp#8.85.095
+      - text: AS Dept of Labor Unemployment Handbook
+        url: https://labor.alaska.gov/unemployment/documents/uihandbook.pdf
+      - text: AS Voluntary Leaving
+        url: https://labor.alaska.gov/unemployment/bpm/Voluntary_Leaving.pdf
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met:
+      - Survivors who must leave or quit work due to GBV remain eligible for benefits
+      - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+  - title: Designated Tort
+    grade: 0
+    resource_links: []
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: Litigation Abuse
+    grade: -1
+    resource_links: []
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: VOCA
+    grade: 0
+    resource_links:
+      - text: AK 18.67.020
+        url: http://www.akleg.gov/basis/statutes.asp#18.67.020
+      - text: AK 18.67.130
+        url: http://www.akleg.gov/basis/statutes.asp#18.67.130
+      - text: AK ST § 18.67.040
+        url: http://www.akleg.gov/basis/statutes.asp#18.67.040
+      - text: AK VVCB
+        url: https://aws.state.ak.us/VccbOnline/Default.aspx
+      - text: VOCA Application Instructions
+        url: http://doa.alaska.gov/vccb/pdf/ApplicationInstructions.pdf
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met:
+      - Must report within any time frame to law enforcement
+      - Requires survivor cooperation with law enforcement for the investigation and / or prosecution of the crime)
+  - title: SNAP
+    grade: 3
+    resource_links:
+      - text: 7 AAC 46.021
+        url: http://www.akleg.gov/basis/aac.asp#7.46.021
+      - text: AK Division of Public Assistance, SNAP
+        url: http://dhss.alaska.gov/dpa/Pages/SNAP/default.aspx
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: TANF
+    grade: 0
+    resource_links:
+      - text: 7 AAC 45
+        url: http://www.akleg.gov/basis/aac.asp#7.45
+      - text: 7 AAC 45.261(a)(2)
+        url: http://www.akleg.gov/basis/aac.asp#7.45.261
+      - text: 7 AAC 45.600
+        url: http://www.akleg.gov/basis/aac.asp#7.45.600
+      - text: 7 AAB 45.610 (d)
+        url: http://www.akleg.gov/basis/aac.asp#7.45.610
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met:
+      - Provides exemptions or deferments from work or job training requirements
+      - Survivors are eligible for time-limit exemptions or deferrals
+      - Survivors are eligible for specific exemptions and special considerations without having to apply through a service provider organization
+      - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+  - title: Rental Protections
+    grade: 0
+    resource_links:
+      - text: "AK Statues: Title 34: Property"
+        url: http://www.akleg.gov/basis/statutes.asp#34
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt
+    grade: 0
+    resource_links: []
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: Safe Banking Protections for Survivors
+    grade: 0
+    resource_links: []
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
+  - title: Reimagining Public Safety Responses to GBV
+    grade: 0
+    resource_links:
+      - text: AS § 18.65.530
+        url: http://www.akleg.gov/basis/statutes.asp#18.65.530
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    criteria_met: []
