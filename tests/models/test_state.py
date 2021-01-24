@@ -10,7 +10,7 @@ from tests.test_utils import (
     create_subcategory,
     create_criterion,
     create_state_grade,
-    create_state_category_grade,
+    create_state_subcategory_grade,
     create_resource_link,
 )
 
@@ -26,7 +26,6 @@ class StateTestCase(unittest.TestCase):
         other_state = create_state(code='AZ')
 
         category1 = create_category()
-        category2 = create_category()
         subcategory = create_subcategory(category1.id)
         subcategory2 = create_subcategory(category1.id)
         criterion1 = create_criterion(subcategory.id)
@@ -42,13 +41,22 @@ class StateTestCase(unittest.TestCase):
         self.state_grade1.created_at = datetime.utcnow()
         self.state_grade2.created_at = datetime.utcnow() - timedelta(5)
 
-        self.state_category_grade1 = create_state_category_grade(self.state.code, category1.id)
-        self.state_category_grade2 = create_state_category_grade(self.state.code, category1.id)
-        self.state_category_grade3 = create_state_category_grade(self.state.code, category2.id)
+        self.state_subcategory_grade1 = create_state_subcategory_grade(
+            self.state.code,
+            subcategory.id
+        )
+        self.state_subcategory_grade2 = create_state_subcategory_grade(
+            self.state.code,
+            subcategory.id
+        )
+        self.state_subcategory_grade3 = create_state_subcategory_grade(
+            self.state.code,
+            subcategory2.id
+        )
 
-        # state_category_grade1 is more recent than state_category_grade2
-        self.state_category_grade1.created_at = datetime.utcnow()
-        self.state_category_grade2.created_at = datetime.utcnow() - timedelta(5)
+        # state_subcategory_grade1 is more recent than state_subcategory_grade2
+        self.state_subcategory_grade1.created_at = datetime.utcnow()
+        self.state_subcategory_grade2.created_at = datetime.utcnow() - timedelta(5)
 
         self.score1 = Score(
             criterion_id=criterion1.id,
@@ -130,9 +138,9 @@ class StateTestCase(unittest.TestCase):
                 'code': 'NY',
                 'name': 'New York',
                 'grade': self.state_grade1.serialize(),
-                'category_grades': [
-                    self.state_category_grade1.serialize(),
-                    self.state_category_grade3.serialize(),
+                'subcategory_grades': [
+                    self.state_subcategory_grade1.serialize(),
+                    self.state_subcategory_grade3.serialize(),
                 ],
                 'criterion_scores': [
                     self.score1.serialize(),
@@ -160,7 +168,7 @@ class StateTestCase(unittest.TestCase):
                 'code': state.code,
                 'name': state.name,
                 'grade': None,
-                'category_grades': [],
+                'subcategory_grades': [],
                 'criterion_scores': [],
                 'honorable_mentions': [],
                 'innovative_policy_ideas': [],
