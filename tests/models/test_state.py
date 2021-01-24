@@ -26,7 +26,6 @@ class StateTestCase(unittest.TestCase):
         other_state = create_state(code='AZ')
 
         category1 = create_category()
-        category2 = create_category()
         subcategory = create_subcategory(category1.id)
         subcategory2 = create_subcategory(category1.id)
         criterion1 = create_criterion(subcategory.id)
@@ -42,9 +41,18 @@ class StateTestCase(unittest.TestCase):
         self.state_grade1.created_at = datetime.utcnow()
         self.state_grade2.created_at = datetime.utcnow() - timedelta(5)
 
-        self.state_subcategory_grade1 = create_state_subcategory_grade(self.state.code, subcategory.id)
-        self.state_subcategory_grade2 = create_state_subcategory_grade(self.state.code, subcategory.id)
-        self.state_subcategory_grade3 = create_state_subcategory_grade(self.state.code, subcategory2.id)
+        self.state_subcategory_grade1 = create_state_subcategory_grade(
+            self.state.code,
+            subcategory.id
+        )
+        self.state_subcategory_grade2 = create_state_subcategory_grade(
+            self.state.code,
+            subcategory.id
+        )
+        self.state_subcategory_grade3 = create_state_subcategory_grade(
+            self.state.code,
+            subcategory2.id
+        )
 
         # state_subcategory_grade1 is more recent than state_subcategory_grade2
         self.state_subcategory_grade1.created_at = datetime.utcnow()
