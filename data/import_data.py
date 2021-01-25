@@ -17,6 +17,17 @@ from models import (
 SCRIPT_DIR = os.path.dirname(__file__)
 
 
+def import_data():
+    print('Importing categories')
+    import_categories()
+
+    for filename in os.listdir(absolute_file_path('states')):
+        state = filename.split('/')[-1].split('.yaml')[0]
+        print(f'Importing state: {state}')
+
+        import_state(filename)
+
+
 def absolute_file_path(file_name):
     return os.path.join(SCRIPT_DIR, file_name)
 

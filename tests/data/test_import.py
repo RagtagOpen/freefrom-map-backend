@@ -2,7 +2,7 @@ import unittest
 
 from app import db
 from tests.test_utils import clear_database
-from data.imports import import_categories, import_state, absolute_file_path
+from data.import_data import import_categories, import_state, absolute_file_path
 from models import (
     Category,
     Criterion,
