@@ -359,6 +359,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
+    description = db.Column(db.String())
     created_at = db.Column(db.DateTime)
     type = db.Column(db.String(25))
 
