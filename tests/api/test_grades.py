@@ -7,8 +7,9 @@ from tests.test_utils import (
     clear_database,
     create_state,
     create_category,
+    create_subcategory,
     create_state_grade,
-    create_state_category_grade,
+    create_state_subcategory_grade,
 )
 
 
@@ -18,10 +19,11 @@ class GradesTestCase(unittest.TestCase):
 
         self.state = create_state()
         category = create_category()
+        subcategory = create_subcategory(category.id)
         create_state_grade(self.state.code)
         create_state_grade(self.state.code)
-        create_state_category_grade(self.state.code, category.id)
-        create_state_category_grade(self.state.code, category.id)
+        create_state_subcategory_grade(self.state.code, subcategory.id)
+        create_state_subcategory_grade(self.state.code, subcategory.id)
 
     def tearDown(self):
         clear_database(db)
@@ -29,7 +31,7 @@ class GradesTestCase(unittest.TestCase):
     def test_get_state_grades(self):
         expected_result = {
             'grade': self.state.serialize()['grade'],
-            'category_grades': self.state.serialize()['category_grades'],
+            'subcategory_grades': self.state.serialize()['subcategory_grades'],
         }
         response = self.client.get(f'/grades/{self.state.code}')
         self.assertEqual(response.status_code, 200)
