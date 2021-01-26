@@ -1,6 +1,7 @@
 import yaml
 import os
 
+from app import db  # noqa: F401
 from models import (
     Category,
     Criterion,
@@ -13,19 +14,23 @@ from models import (
     Subcategory,
     ResourceLink
 )
+from tests.test_utils import clear_database
 
 SCRIPT_DIR = os.path.dirname(__file__)
 
 
 def import_data():
+    print('Clearing database')
+    clear_database(db)
+
     print('Importing categories')
     import_categories()
 
     for filename in os.listdir(absolute_file_path('states')):
-        state = filename.split('/')[-1].split('.yaml')[0]
+        state = filename.split('.yaml')[0]
         print(f'Importing state: {state}')
 
-        import_state(filename)
+        import_state(absolute_file_path(f'states/{filename}'))
 
 
 def absolute_file_path(file_name):
