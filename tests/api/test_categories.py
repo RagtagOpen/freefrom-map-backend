@@ -2,8 +2,6 @@ import unittest
 from unittest.mock import patch
 import json
 import datetime
-import warnings
-from sqlalchemy.exc import SAWarning
 
 from app import app, db
 from models import Category

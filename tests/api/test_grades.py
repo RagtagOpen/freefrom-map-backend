@@ -7,7 +7,6 @@ from tests.test_utils import (
     clear_database,
     create_state,
     create_category,
-    create_category,
     create_state_grade,
     create_state_category_grade,
 )
