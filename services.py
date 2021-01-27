@@ -1,4 +1,5 @@
 from models import Category, Subcategory, Criterion, Link
+from providers import post_google
 import strings
 
 
@@ -104,3 +105,24 @@ def update_or_create_criterion(data, criterion=None):
         criterion.deactivate()
 
     return criterion.save()
+
+
+forms = [
+    'feedback',
+    'report_missing_info',
+    'partner_with_freefrom',
+    'build_collective_survivor_power',
+    'policy_ideas',
+]
+
+
+def submit_form_to_google(form, data):
+    if form not in forms:
+        raise ValueError(strings.form_not_found)
+    data['form'] = form
+    response = post_google(data)
+
+    if response.get('result') == 'error':
+        raise Exception
+
+    return response
