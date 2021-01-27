@@ -54,23 +54,23 @@ class State(BaseMixin, db.Model):
         resource_links = [resource_link.serialize() for resource_link in self.resource_links]
 
         grade = self.grades[0].serialize() if self.grades else None
-        subcategory_grades = []
+        category_grades = []
         criterion_scores = []
         innovative_policy_ideas = []
         honorable_mentions = []
 
         # Get the most recent grade for each category
-        for subcategory in Subcategory.query.all():
-            subcategory_grade = StateSubcategoryGrade.query.filter_by(
+        for category in Category.query.all():
+            category_grade = StateCategoryGrade.query.filter_by(
                 state_code=self.code,
-                subcategory_id=subcategory.id,
-            ).order_by(StateSubcategoryGrade.created_at.desc()).first()
-            if subcategory_grade:
-                subcategory_grades.append(subcategory_grade.serialize())
+                category_id=category.id,
+            ).order_by(StateCategoryGrade.created_at.desc()).first()
+            if category_grade:
+                category_grades.append(category_grade.serialize())
 
             innovative_policy_idea = InnovativePolicyIdea.query.filter_by(
                 state=self.code,
-                subcategory_id=subcategory.id,
+                category_id=category.id,
                 active=True
             ).order_by(InnovativePolicyIdea.created_at.desc()).first()
             if innovative_policy_idea:
@@ -78,7 +78,7 @@ class State(BaseMixin, db.Model):
 
             honorable_mention = HonorableMention.query.filter_by(
                 state=self.code,
-                subcategory_id=subcategory.id,
+                category_id=category.id,
                 active=True
             ).order_by(HonorableMention.created_at.desc()).first()
             if honorable_mention:
@@ -97,7 +97,7 @@ class State(BaseMixin, db.Model):
             'code': self.code,
             'name': self.name,
             'grade': grade,
-            'subcategory_grades': subcategory_grades,
+            'category_grades': category_grades,
             'criterion_scores': criterion_scores,
             'honorable_mentions': honorable_mentions,
             'innovative_policy_ideas': innovative_policy_ideas,
@@ -111,59 +111,19 @@ class Category(BaseMixin, Deactivatable, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
     help_text = db.Column(db.String())
-    subcategories = db.relationship('Subcategory', backref='category', lazy=True)
+    criteria = db.relationship('Criterion', backref='category', lazy=True)
 
     def __init__(self, title=None, help_text=None):
         self.title = title
-        self.active = True
-        self.help_text = help_text
-
-    def __repr__(self):
-        return '<id {}>'.format(self.id)
-
-    def serialize(self, with_subcategories=False):
-        data = {
-            'id': self.id,
-            'title': self.title,
-            'help_text': self.help_text,
-            'active': self.active,
-            'deactivated_at': self.deactivated_at,
-        }
-
-        if with_subcategories:
-            data['subcategories'] = [subcategory.serialize() for subcategory in self.subcategories]
-
-        return data
-
-
-class Subcategory(BaseMixin, Deactivatable, db.Model):
-    __tablename__ = 'subcategories'
-
-    id = db.Column(db.Integer, primary_key=True)
-    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False, index=True)
-    title = db.Column(db.String())
-    help_text = db.Column(db.String())
-    criteria = db.relationship('Criterion', backref='category', lazy=True)
-
-    def __init__(self, category_id, title=None, help_text=None):
-        self.category_id = category_id
-        self.title = title
         self.help_text = help_text
         self.active = True
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
-
-    @validates('category_id')
-    def validate_category(self, key, value):
-        if Category.query.get(value) is None:
-            raise ValueError(strings.category_not_found)
-        return value
 
     def serialize(self, with_criteria=False):
         data = {
             'id': self.id,
-            'category_id': self.category_id,
             'title': self.title,
             'help_text': self.help_text,
             'active': self.active,
@@ -180,9 +140,9 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'criteria'
 
     id = db.Column(db.Integer, primary_key=True)
-    subcategory_id = db.Column(
+    category_id = db.Column(
         db.Integer,
-        db.ForeignKey('subcategories.id'),
+        db.ForeignKey('categories.id'),
         nullable=False,
         index=True,
     )
@@ -193,13 +153,13 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
 
     def __init__(
         self,
-        subcategory_id,
+        category_id,
         title=None,
         recommendation_text=None,
         help_text=None,
         adverse=False,
     ):
-        self.subcategory_id = subcategory_id
+        self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
         self.help_text = help_text
@@ -209,16 +169,16 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    @validates('subcategory_id')
-    def validate_subcategory(self, key, value):
-        if Subcategory.query.get(value) is None:
-            raise ValueError(strings.subcategory_not_found)
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
         return value
 
     def serialize(self):
         return {
             'id': self.id,
-            'subcategory_id': self.subcategory_id,
+            'category_id': self.category_id,
             'title': self.title,
             'recommendation_text': self.recommendation_text,
             'help_text': self.help_text,
@@ -264,19 +224,19 @@ class StateGrade(BaseMixin, db.Model):
         }
 
 
-class StateSubcategoryGrade(BaseMixin, db.Model):
-    __tablename__ = 'state_subcategory_grades'
+class StateCategoryGrade(BaseMixin, db.Model):
+    __tablename__ = 'state_category_grades'
 
     id = db.Column(db.Integer, primary_key=True)
     state_code = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
-    subcategory_id = db.Column(db.Integer, db.ForeignKey('subcategories.id'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     grade = db.Column(db.Integer())
     created_at = db.Column(db.DateTime)
 
-    def __init__(self, state_code, subcategory_id, grade):
+    def __init__(self, state_code, category_id, grade):
         self.state_code = state_code
         self.grade = grade
-        self.subcategory_id = subcategory_id
+        self.category_id = category_id
         self.created_at = datetime.datetime.utcnow()
 
     def __repr__(self):
@@ -288,10 +248,10 @@ class StateSubcategoryGrade(BaseMixin, db.Model):
             raise ValueError(strings.invalid_state)
         return value
 
-    @validates('subcategory_id')
-    def validate_subcategory(self, key, value):
-        if Subcategory.query.get(value) is None:
-            raise ValueError(strings.subcategory_not_found)
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
         return value
 
     @validates('grade')
@@ -304,7 +264,7 @@ class StateSubcategoryGrade(BaseMixin, db.Model):
         return {
             'id': self.id,
             'state_code': self.state_code,
-            'subcategory_id': self.subcategory_id,
+            'category_id': self.category_id,
             'grade': self.grade,
         }
 
@@ -355,7 +315,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     __tablename__ = 'links'
 
     id = db.Column(db.Integer, primary_key=True)
-    subcategory_id = db.Column(db.Integer, db.ForeignKey('subcategories.id'), nullable=False)
+    category_id = db.Column(db.Integer, db.ForeignKey('categories.id'), nullable=False)
     state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
     text = db.Column(db.String())
     url = db.Column(db.String())
@@ -367,8 +327,8 @@ class Link(BaseMixin, Deactivatable, db.Model):
         'polymorphic_identity': 'link'
     }
 
-    def __init__(self, subcategory_id, state, text=None, url=None):
-        self.subcategory_id = subcategory_id
+    def __init__(self, category_id, state, text=None, url=None):
+        self.category_id = category_id
         self.state = state
         self.text = text
         self.url = url
@@ -377,10 +337,10 @@ class Link(BaseMixin, Deactivatable, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-    @validates('subcategory_id')
-    def validate_subcategory(self, key, value):
-        if Subcategory.query.get(value) is None:
-            raise ValueError(strings.subcategory_not_found)
+    @validates('category_id')
+    def validate_category(self, key, value):
+        if Category.query.get(value) is None:
+            raise ValueError(strings.category_not_found)
         return value
 
     @validates('state')
@@ -392,7 +352,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     def serialize(self):
         return {
             'id': self.id,
-            'subcategory_id': self.subcategory_id,
+            'category_id': self.category_id,
             'state': self.state,
             'text': self.text,
             'url': self.url,
@@ -407,7 +367,7 @@ class ResourceLink(Link):
     }
 
 
-db.Index('state_subcategory', Link.state, Link.subcategory_id)
+db.Index('state_category', Link.state, Link.category_id)
 
 
 class HonorableMention(Link):
@@ -415,8 +375,8 @@ class HonorableMention(Link):
         'polymorphic_identity': 'honorable_mention'
     }
 
-    def __init__(self, subcategory_id, state, text=None, url=None, description=None):
-        super().__init__(subcategory_id, state, text, url)
+    def __init__(self, category_id, state, text=None, url=None, description=None):
+        super().__init__(category_id, state, text, url)
 
         self.description = description
         self.created_at = datetime.datetime.utcnow()
@@ -431,9 +391,9 @@ class HonorableMention(Link):
 
 
 db.Index(
-    'honorable_mention_state_subcategory_active',
+    'honorable_mention_state_category_active',
     HonorableMention.state,
-    HonorableMention.subcategory_id,
+    HonorableMention.category_id,
     HonorableMention.active
 )
 
@@ -443,8 +403,8 @@ class InnovativePolicyIdea(Link):
         'polymorphic_identity': 'innovative_policy'
     }
 
-    def __init__(self, subcategory_id, state, text=None, url=None, description=None):
-        super().__init__(subcategory_id, state, text, url)
+    def __init__(self, category_id, state, text=None, url=None, description=None):
+        super().__init__(category_id, state, text, url)
         self.description = description
         self.created_at = datetime.datetime.utcnow()
 
@@ -458,8 +418,8 @@ class InnovativePolicyIdea(Link):
 
 
 db.Index(
-    'innovative_idea_state_subcategory_active',
+    'innovative_idea_state_category_active',
     InnovativePolicyIdea.state,
-    InnovativePolicyIdea.subcategory_id,
+    InnovativePolicyIdea.category_id,
     InnovativePolicyIdea.active
 )

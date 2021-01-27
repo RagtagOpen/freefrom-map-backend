@@ -2,13 +2,20 @@ import unittest
 from unittest.mock import patch
 import json
 import datetime
+import warnings
+from sqlalchemy.exc import SAWarning
 
 from app import app, db
 from models import Category
-from tests.test_utils import clear_database, create_category, create_subcategory, auth_headers
+import strings
+from tests.test_utils import (
+    clear_database,
+    create_category,
+    auth_headers,
+)
 
 
-class CategoriesTestCase(unittest.TestCase):
+class CategoryTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
 
@@ -16,68 +23,29 @@ class CategoriesTestCase(unittest.TestCase):
         clear_database(db)
 
     def test_get_categories(self):
-        category1 = Category(
-            title='Definition of Domestic Violence',
-            help_text="This is how a state legally defines the term 'domestic violence'",
-        )
-        category2 = Category(
-            title='Worker Protections',
-            help_text=(
-                'This category defines whether the state protects the jobs of victims of '
-                'domestic violence'
-            ),
-        )
-        category2.deactivate()
-        Category.save_all([category1, category2])
+        category1 = create_category()
+        category2 = create_category()
 
         response = self.client.get('/categories')
-        self.assertEqual(response.status_code, 200)
-
-        json_response = json.loads(response.data.decode('utf-8'))
-        self.assertEqual(len(json_response), 2)
-
-        self.assertEqual(json_response[0], {
-            'id': category1.id,
-            'title': 'Definition of Domestic Violence',
-            'help_text': "This is how a state legally defines the term 'domestic violence'",
-            'active': True,
-            'deactivated_at': None,
-        })
-
-        category_2_expected = {
-            'id': category2.id,
-            'title': 'Worker Protections',
-            'help_text':
-                'This category defines whether the state protects the jobs of victims of '
-                'domestic violence',
-            'active': False,
-        }
-
-        # Assert that the expected results are a subset of the actual results
-        self.assertTrue(category_2_expected.items() <= json_response[1].items())
-        self.assertTrue(isinstance(json_response[1]['deactivated_at'], str))
-
-    def test_get_categories_with_subcategories(self):
-        category = create_category()
-        create_subcategory(category.id)
-        expected_response = [category.serialize(with_subcategories=True)]
-
-        response = self.client.get('/categories?withSubcategories=true')
         self.assertEqual(response.status_code, 200)
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response, expected_response)
+        self.assertEqual(json_response, [
+            category1.serialize(),
+            category2.serialize(),
+        ])
 
-    def test_get_categories_empty(self):
-        response = self.client.get('/categories')
+    def test_get_categories_with_criteria(self):
+        category = create_category()
+
+        response = self.client.get('/categories?withCriteria=true')
         self.assertEqual(response.status_code, 200)
-        json_response = json.loads(response.data.decode('utf-8'))
 
-        self.assertEqual(json_response, [])
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response, [category.serialize(with_criteria=True)])
 
     def test_get_category(self):
         category = create_category()
-        create_subcategory(category.id)
 
         response = self.client.get(f'/categories/{category.id}')
         self.assertEqual(response.status_code, 200)
@@ -85,53 +53,43 @@ class CategoriesTestCase(unittest.TestCase):
         json_response = json.loads(response.data)
         self.assertEqual(json_response, category.serialize())
 
-    def test_get_category_with_subcategories(self):
+    def test_get_category_with_criteria(self):
         category = create_category()
-        create_subcategory(category.id)
-        expected_response = category.serialize(with_subcategories=True)
 
-        response = self.client.get(f'/categories/{category.id}?withSubcategories=true')
+        response = self.client.get(f'/categories/{category.id}?withCriteria=true')
         self.assertEqual(response.status_code, 200)
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response, expected_response)
+        self.assertEqual(json_response, category.serialize(with_criteria=True))
 
     def test_get_category_doesnt_exist(self):
         response = self.client.get('/categories/1')
         self.assertEqual(response.status_code, 404)
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['description'], 'Category does not exist')
+        self.assertEqual(json_response['description'], strings.category_not_found)
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_category(self, mock_auth):
         data = {
-            'title': 'Definition of Domestic Violence',
-            'help_text': "This is how a state legally defines the term 'domestic violence'",
+            'title': 'Safe Work Environment',
+            'help_text': 'Some help text',
         }
 
         response = self.client.post('/categories', json=data, headers=auth_headers())
         self.assertEqual(response.status_code, 201)
         mock_auth.assert_called_once()
 
-        new_category = Category.query.first()
-        self.assertEqual(new_category.title, 'Definition of Domestic Violence')
-        self.assertEqual(
-            new_category.help_text,
-            "This is how a state legally defines the term 'domestic violence'",
-        )
+        category = Category.query.one()
+        self.assertEqual(category.title, 'Safe Work Environment')
+        self.assertEqual(category.help_text, 'Some help text')
+        self.assertTrue(category.active)
+        self.assertIsNone(category.deactivated_at)
 
-        json_response = json.loads(response.data.decode('utf-8'))
-
-        self.assertEqual(json_response, {
-            'id': new_category.id,
-            'title': 'Definition of Domestic Violence',
-            'help_text': "This is how a state legally defines the term 'domestic violence'",
-            'active': True,
-            'deactivated_at': None,
-        })
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response, category.serialize())
 
     def test_post_category_no_auth(self):
-        response = self.client.post('/categories', json={}, headers={})
+        response = self.client.post('/categories', data={}, headers={})
         self.assertEqual(response.status_code, 401)
 
     @patch('auth.is_token_valid', return_value=True)
@@ -144,28 +102,21 @@ class CategoriesTestCase(unittest.TestCase):
         }
 
         response = self.client.put(
-            '/categories/%i' % category.id,
+            f'/categories/{category.id}',
             json=data,
             headers=auth_headers(),
         )
         self.assertEqual(response.status_code, 200)
         mock_auth.assert_called_once()
 
-        # Refresh category object
-        category = Category.query.first()
-
+        category = Category.query.get(category.id)
         self.assertEqual(category.title, 'A New Title')
         self.assertEqual(category.help_text, 'Some new help text')
+        self.assertTrue(category.active)
+        self.assertIsNone(category.deactivated_at)
 
-        json_response = json.loads(response.data.decode('utf-8'))
-
-        self.assertEqual(json_response, {
-            'id': category.id,
-            'title': 'A New Title',
-            'help_text': 'Some new help text',
-            'active': True,
-            'deactivated_at': None,
-        })
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response, category.serialize())
 
     def test_put_category_no_auth(self):
         response = self.client.put('/categories/1', json={}, headers={})
@@ -175,36 +126,25 @@ class CategoriesTestCase(unittest.TestCase):
     def test_put_category_deactivate(self, mock_auth):
         category = create_category()
 
-        data = {
-            'active': False,
-        }
-
+        data = {'active': False}
         response = self.client.put(
-            '/categories/%i' % category.id,
+            f'/categories/{category.id}',
             json=data,
             headers=auth_headers(),
         )
         self.assertEqual(response.status_code, 200)
         mock_auth.assert_called_once()
 
-        # Refresh category object
         category = Category.query.first()
-
         self.assertFalse(category.active)
         self.assertTrue(isinstance(category.deactivated_at, datetime.datetime))
 
-        json_response = json.loads(response.data.decode('utf-8'))
-
-        self.assertTrue(isinstance(json_response['deactivated_at'], str))
-
         # Category cannot be reactivated
         deactivated_at = category.deactivated_at
-        data = {
-            'active': True,
-        }
 
+        data = {'active': True}
         response = self.client.put(
-            '/categories/%i' % category.id,
+            f'/categories/{category.id}',
             json=data,
             headers=auth_headers(),
         )
