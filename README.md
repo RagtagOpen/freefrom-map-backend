@@ -165,7 +165,7 @@ A state has the following fields:
 | innovative_idea   | String                |             |
 | honorable_mention | String                |             |
 | grade             | StateGrade            | The most recent grade for the state.      |
-| subcategory_grades   | [StateSubcategoryGrade]  | The most recent grade for each category.  |
+| category_grades   | [StateCategoryGrade]  | The most recent grade for each category.  |
 | criterion_scores  | [Score]               | The most recent score for each criterion. |
 | links             | [Link]                |             |
 
@@ -187,125 +187,54 @@ and accepts a JSON body with the following format:
 | innovative_idea   | String                | *Optional*. |
 | honorable_mention | String                | *Optional*. |
 | grade             | Integer               | *Optional*. One of (-1, 0, 1, 2, 3) |
-| subcategory_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3.|
+| category_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3.|
 | links             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., text: ..., url: ..., active: ...}`. See the [Links](#Links) documentation for information on each of these fields.|
 | scores             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., meets_criterion: ...}`. See the [Scores](#Scores) documentation for information on each of these fields.|
 
 Note that it is not possible to update a state's name or code.
 
 ### Categories
-A category represents a group of subcategories in the map scorecard. A category has the following fields:
+A category represents a group of criteria in the map scorecard. A category has the following fields:
 
-|  Name  |   Type  |    Notes    |
-|--------|---------|-------------|
-| id     | Integer | Primary key |
-| title  | String  |             |
-| help_text  | String  |             |
-| active | Boolean |             |
+|  Name           |   Type  |    Notes    |
+|-----------------|---------|-------------|
+| id              | Integer | Primary key |
+| title           | String  |             |
+| help_text       | String  |             |
+| active          | Boolean |             |
 
 #### GET /categories
 
 This endpoint returns a list of all existing categories. It will return an empty array if no categories exist.
+
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the categories' criteria in the response body.
 
 #### GET /categories/{id}
 
 This endpoint returns one category corresponding to the id provided in the request. If no category with that
 id exists, it will return a 404 response code.
 
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the category's criteria in the response body.
+
 #### POST /categories
 
-This endpoint creates a new category. It requires [authentication](#Authentication). It accepts the following
-parameters in the request body as JSON:
+This endpoint creates a category. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
-|  Name      |   Type  |    Notes    |
-|------------|---------|-------------|
-| title      | String  | *Optional*. |
-| help_text  | String  | *Optional*. |
-| active     | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated category. A category cannot be reactivated once it has been deactivated. |
+|  Name       |   Type  |    Notes                                                         |
+|-------------|---------|------------------------------------------------------------------|
+| title       | String  | *Optional*.                                                      |
+| help_text   | String  | *Optional*.                                                      |
+| active      | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a category that is deactivated. Subcategories cannot be reactivated once they have been deactivated. |
 
 #### PUT /categories/{id}
 
-This endpoint updates an existing category. It requires [authentication](#Authentication). It accepts the following
-parameters in the request body as JSON:
-
-|  Name      |   Type  |    Notes    |
-|------------|---------|-------------|
-| title      | String  | *Optional*. |
-| help_text  | String  | *Optional*. |
-| active     | Boolean | *Optional*. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
-| subcategories | Array<Object> | *Optional*. See below for information on formatting this parameter. |
-
-The `subcategories` parameter allows you to create subcategories and criteria along with a category. The `subcategories` parameter must be formatted as an array of objects in the following format:
-
-```
-[
-  {
-    id: ...,
-    title: ...,
-    help_text: ...,
-    active: ...,
-    criteria: [
-      {
-        id: ...,
-        title: ...,
-        recommendation_text: ...,
-        help_text: ...,
-        active: ...
-      },
-      ...
-    ]
-  },
-  ...
-]
-```
-
-You can read more about [Subcategories](#Subcategories) and [Criteria](#Criteria) later in the documentation.
-
-### Subcategories
-A subcategory represents a group of criteria in the map scorecard. A category has the following fields:
-
-|  Name           |   Type  |    Notes    |
-|-----------------|---------|-------------|
-| id              | Integer | Primary key |
-| category_id     | Integer |             |
-| title           | String  |             |
-| help_text       | String  |             |
-| active          | Boolean |             |
-
-#### GET /subcategories
-
-This endpoint returns a list of all existing subcategories. It will return an empty array if no subcategories exist.
-
-Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategories' criteria in the response body.
-
-#### GET /subcategories/{id}
-
-This endpoint returns one subcategory corresponding to the id provided in the request. If no subcategory with that
-id exists, it will return a 404 response code.
-
-Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategory's criteria in the response body.
-
-#### POST /subcategories
-
-This endpoint creates a subcategory. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
+This endpoint changes a category's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
-| category_id | Integer | *Required*. The category ID to which the subcategory is related. |
 | title       | String  | *Optional*.                                                      |
 | help_text   | String  | *Optional*.                                                      |
-| active      | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a subcategory that is deactivated. Subcategories cannot be reactivated once they have been deactivated. |
-
-#### PUT /subcategories/{id}
-
-This endpoint changes a subcategory's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
-
-|  Name       |   Type  |    Notes                                                         |
-|-------------|---------|------------------------------------------------------------------|
-| category_id | Integer | *Optional*. The category ID to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
-| title       | String  | *Optional*.                                                      |
-| help_text   | String  | *Optional*.                                                      |
-| active      | Boolean | *Optional*. Once a subcategory is deactivated, it cannot be reactivated. |
+| active      | Boolean | *Optional*. Once a category is deactivated, it cannot be reactivated. |
 
 ### Criteria
 
@@ -314,7 +243,7 @@ A criterion represents one measure in the state scorecard to determine whether a
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
 | id                  | Integer  | Primary key |
-| subcategory_id      | Integer  | Foreign key |
+| category_id      | Integer  | Foreign key |
 | title               | String   |             |
 | recommendation_text | String   |             |
 | help_text           | String   |             |
@@ -335,7 +264,7 @@ This endpoint creates a criterion. It requires [authentication](#Authentication)
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
-| subcategory_id        | Integer | *Required*. The subcategory ID to which the criterion is related.|
+| category_id        | Integer | *Required*. The category ID to which the criterion is related.|
 | title                 | String  | *Optional*.                                                      |
 | recommendation_text   | String  | *Optional*.                                                      |
 | help_text             | String  | *Optional*.                                                      |
@@ -348,7 +277,7 @@ This endpoint changes a criterion's details. It requires [authentication](#Authe
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
-| subcategory_id        | Integer | *Optional*. The subcategory ID to which the criterion is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| category_id        | Integer | *Optional*. The category ID to which the criterion is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | title                 | String  | *Optional*.                                                      |
 | recommendation_text   | String  | *Optional*.                                                      |
 | help_text             | String  | *Optional*.                                                      |
@@ -383,8 +312,8 @@ This endpoint creates a link. It requires [authentication](#Authentication). It 
 
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
-| category_id         | Integer  | *Required*. The id of the category to which the subcategory is related. |
-| state_code          | String   | *Required*. The state to which the subcategory is related. |
+| category_id         | Integer  | *Required*. The id of the category to which the category is related. |
+| state_code          | String   | *Required*. The state to which the category is related. |
 | text                | String   | *Optional*. |
 | url                 | String   | *Optional*. |
 | active              | Boolean  | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
@@ -395,8 +324,8 @@ This endpoint changes a link's details. It requires [authentication](#Authentica
 
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
-| category_id         | Integer  | *Optional*. The id of the category to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
-| state_code          | String   | *Optional*. The state to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| category_id         | Integer  | *Optional*. The id of the category to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| state_code          | String   | *Optional*. The state to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | text                | String   | *Optional*. |
 | url                 | String   | *Optional*. |
 | active              | Boolean  | *Optional*. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |

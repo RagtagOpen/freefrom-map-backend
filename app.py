@@ -15,9 +15,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 import services  # noqa: E402
+
 from models import (  # noqa: E402
     Category,
-    Subcategory,
     Criterion,
     Link,
     Score,
@@ -57,10 +57,10 @@ def handle_server_error(e):
 
 @app.route('/categories', methods=['GET'])
 def get_categories():
-    with_subcategories = request.args.get('withSubcategories') == 'true'
+    with_criteria = request.args.get('withCriteria') == 'true'
 
     categories = Category.query.all()
-    return jsonify([category.serialize(with_subcategories) for category in categories])
+    return jsonify([category.serialize(with_criteria) for category in categories])
 
 
 @app.route('/categories', methods=['POST'])
@@ -79,8 +79,8 @@ def get_category(id_):
     if category is None:
         abort(404, strings.category_not_found)
 
-    with_subcategories = request.args.get('withSubcategories') == 'true'
-    return jsonify(category.serialize(with_subcategories))
+    with_criteria = request.args.get('withCriteria') == 'true'
+    return jsonify(category.serialize(with_criteria))
 
 
 @app.route('/categories/<id_>', methods=['PUT'])
@@ -95,48 +95,6 @@ def update_category(id_):
 
     category = services.update_or_create_category(data, category=category)
     return jsonify(category.serialize())
-
-
-@app.route('/subcategories', methods=['GET'])
-def get_subcategories():
-    with_criteria = request.args.get('withCriteria') == 'true'
-
-    subcategories = Subcategory.query.all()
-    return jsonify([subcategory.serialize(with_criteria) for subcategory in subcategories])
-
-
-@app.route('/subcategories', methods=['POST'])
-@cross_origin(headers=['Content-Type', 'Authorization'])
-@requires_auth
-def create_subcategory():
-    data = request.get_json()
-    subcategory = services.update_or_create_subcategory(data=data)
-    return jsonify(subcategory.serialize()), 201
-
-
-@app.route('/subcategories/<id_>', methods=['GET'])
-def get_subcategory(id_):
-    subcategory = Subcategory.query.get(id_)
-
-    if subcategory is None:
-        abort(404, strings.subcategory_not_found)
-
-    with_criteria = request.args.get('withCriteria') == 'true'
-    return jsonify(subcategory.serialize(with_criteria))
-
-
-@app.route('/subcategories/<id_>', methods=['PUT'])
-@cross_origin(headers=['Content-Type', 'Authorization'])
-@requires_auth
-def update_subcategory(id_):
-    subcategory = Subcategory.query.get(id_)
-    data = request.get_json()
-
-    if subcategory is None:
-        abort(404, strings.subcategory_not_found)
-
-    subcategory = services.update_or_create_subcategory(data, subcategory=subcategory)
-    return jsonify(subcategory.serialize())
 
 
 @app.route('/criteria', methods=['GET'])
@@ -228,7 +186,7 @@ def get_state_grades(code_):
     state_data = state.serialize()
     return jsonify(
         grade=state_data['grade'],
-        subcategory_grades=state_data['subcategory_grades'],
+        category_grades=state_data['category_grades'],
     ), 200
 
 
