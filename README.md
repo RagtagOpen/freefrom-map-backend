@@ -193,13 +193,12 @@ and accepts a JSON body with the following format:
 
 Note that it is not possible to update a state's name or code.
 
-### Subcategories
+### Categories
 A category represents a group of criteria in the map scorecard. A category has the following fields:
 
 |  Name           |   Type  |    Notes    |
 |-----------------|---------|-------------|
 | id              | Integer | Primary key |
-| category_id     | Integer |             |
 | title           | String  |             |
 | help_text       | String  |             |
 | active          | Boolean |             |
@@ -223,7 +222,6 @@ This endpoint creates a category. It requires [authentication](#Authentication).
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
-| category_id | Integer | *Required*. The category ID to which the category is related. |
 | title       | String  | *Optional*.                                                      |
 | help_text   | String  | *Optional*.                                                      |
 | active      | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a category that is deactivated. Subcategories cannot be reactivated once they have been deactivated. |
@@ -234,7 +232,6 @@ This endpoint changes a category's details. It requires [authentication](#Authen
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
-| category_id | Integer | *Optional*. The category ID to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | title       | String  | *Optional*.                                                      |
 | help_text   | String  | *Optional*.                                                      |
 | active      | Boolean | *Optional*. Once a category is deactivated, it cannot be reactivated. |
