@@ -376,3 +376,184 @@ A **state category grade** represents the grade assigned to a state based on a s
 #### GET /grades/{code}
 
 Returns the state's overall grade, and its grades for each category. If no state with that code exists, it will return a 404 response code.
+
+### Forms
+
+A **form** represents any one of the forms found on the FreeFrom Map frontend. The forms include:
+
+* Give Feedback
+* Report Missing or Outdated Information
+* Partner with FreeFrom
+* Build Collective Survivor Power
+* Share your Policy Ideas
+
+These endpoints don't require authentication. Note that form submissions cannot be updated or overwritten.
+
+#### POST /forms/feedback
+
+This endpoint writes to the 'Give Feedback' sheet, and sends an email notification to the FreeFrom staff.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name        | Type     | Question                | Notes       |
+|-------------|----------|-------------------------|-------------|
+| useful      | String   | "Was this tool useful?" | *Optional*. |
+| useful_desc | String   | "Can you tell us more about how the tool was or was not useful for you?" | *Optional*. |
+| learned     | String   | "Did you learn anything about policies related to survivor wealth from the tool?" | *Optional*. |
+| usage_plan  | [String] | "How do you plan to use this tool?" | *Optional*. |
+| suggestions | String   | "What can be improved or changed?" | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string. Note that `usage_plan` will be returned as a string instead of an array.
+
+```js
+{
+    "form": "feedback",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "useful": "Yes",
+    "useful_desc": "Nice visuals!",
+    "learned": "I learned about my state's policies.",
+    // CSV string of input array
+    "usage_plan": "As an advocacy tool, Self-educating",
+    "suggestions": "Keep it up!"
+}
+```
+
+#### POST /forms/report_missing_info
+
+This endpoint writes to the 'Report Missing or Outdated Information' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name        | Type     | Question                | Notes       |
+|-------------|----------|-------------------------|-------------|
+| information | String   | "What information is missing our outdated?" | *Optional*. |
+| email       | String   | "Your email" | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string.
+
+```js
+{
+    "form": "report_missing_info",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "information": "Policy X was updated last month",
+    "email": "example@email.com"
+}
+```
+
+#### POST /forms/partner_with_freefrom
+
+This endpoint writes to the 'Partner with FreeFrom' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name          | Type     | Question                                       | Notes       |
+|---------------|----------|------------------------------------------------|-------------|
+| name          | String   | "Your name"                                    | *Optional*. |
+| email         | String   | "Your email"                                   | *Optional*. |
+| pronouns      | String   | "Your pronouns"                                | *Optional*. |
+| organization  | String   | "Your organization"                            | *Optional*. |
+| title         | String   | "Your title"                                   | *Optional*. |
+| state         | String   | "State"                                        | *Optional*. |
+| goals         | [String] | "How would you like to partner with FreeFrom?" | *Optional*. |
+| process_phase | [String] | "What phase of the process are you in?"        | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string. Note that `goals` and `process_phase` will be returned as a string instead of an array.
+
+```js
+{
+    "form": "partner_with_freefrom",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "name": "",
+    "email": "",
+    "pronouns": "",
+    "organization": "",
+    "title": "",
+    "state": "",
+    // CSV string of input array
+    "goals": "Request a policy innovation sprint, Help with drafting legislation",
+    // CSV string of input array
+    "process_phase": "I need help getting a bill to the finish line"
+}
+```
+
+#### POST /forms/build_collective_survivor_power
+
+This endpoint writes to the 'Build Collective Survivor Power' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name               | Type     | Question                                        | Notes       |
+|--------------------|----------|-------------------------------------------------|-------------|
+| name               | String   | "Your name"                                     | *Optional*. |
+| pronouns           | String   | "Your pronouns"                                 | *Optional*. |
+| interests          | [String] | "Which of the following are you interested in?" | *Optional*. |
+| contact_preference | String   | "The safest way to contact you is..."           | *Optional*. |
+| phone              | String   | "Your phone number"                             | *Optional*. |
+| email              | String   | "Your email"                                    | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string.
+
+```js
+{
+    "form": "partner_with_freefrom",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "name": "",
+    "pronouns": "",
+    // CSV string of input array
+    "interests": "Learning how to be a policy advocate in my state, Connecting with other sruvivors in my state",
+    "contact_preference": "",
+    "phone": "",
+    "email": "",
+}
+```
+
+#### POST /forms/policy_ideas
+
+This endpoint writes to the 'Share your Policy Ideas' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name                | Type   | Question                                        | Notes       |
+|---------------------|--------|-------------------------------------------------|-------------|
+| prioritize_policies | String | "What policies and issues should FreeFrom prioritize?" | *Optional*. |
+| missing_policies    | String | "What policies and issues are important to you but are not included on the map?" | *Optional*. |
+| state               | String | "Your state"                                           | *Optional*. |
+| name                | String | "Your name"                                            | *Optional*. |
+| pronouns            | String | "Your pronouns"                                        | *Optional*. |
+| email               | String | "Your email"                                           | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string.
+
+
+```js
+{
+    "form": "policy_ideas",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "prioritize_policies": "",
+    "missing_policies": "",
+    "state": "",
+    "name": "",
+    "pronouns": "",
+    "email": ""
+}
+```

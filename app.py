@@ -14,11 +14,8 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from services import (  # noqa: E402
-    update_or_create_category,
-    update_or_create_criterion,
-    update_or_create_link,
-)
+import services  # noqa: E402
+
 from models import (  # noqa: E402
     Category,
     Criterion,
@@ -71,7 +68,7 @@ def get_categories():
 @requires_auth
 def create_category():
     data = request.get_json()
-    category = update_or_create_category(data=data)
+    category = services.update_or_create_category(data=data)
     return jsonify(category.serialize()), 201
 
 
@@ -96,7 +93,7 @@ def update_category(id_):
     if category is None:
         abort(404, strings.category_not_found)
 
-    category = update_or_create_category(data, category=category)
+    category = services.update_or_create_category(data, category=category)
     return jsonify(category.serialize())
 
 
@@ -111,7 +108,7 @@ def get_criteria():
 @requires_auth
 def create_criterion():
     data = request.get_json()
-    criterion = update_or_create_criterion(data=data)
+    criterion = services.update_or_create_criterion(data=data)
     return jsonify(criterion.serialize()), 201
 
 
@@ -135,7 +132,7 @@ def update_criterion(id_):
         abort(404, strings.criterion_not_found)
 
     data = request.get_json()
-    update_or_create_criterion(data, criterion)
+    services.update_or_create_criterion(data, criterion)
     return jsonify(criterion.serialize())
 
 
@@ -151,7 +148,7 @@ def get_links():
 @requires_auth
 def create_link():
     data = request.get_json()
-    link = update_or_create_link(data=data)
+    link = services.update_or_create_link(data=data)
     return jsonify(link.serialize()), 201
 
 
@@ -175,7 +172,7 @@ def update_link(id_):
     if link is None:
         abort(404, strings.link_not_found)
 
-    link = update_or_create_link(data, link=link)
+    link = services.update_or_create_link(data, link=link)
     return jsonify(link.serialize())
 
 
@@ -221,6 +218,13 @@ def get_state(code_):
 def get_states():
     states = State.query.all()
     return jsonify([state.serialize() for state in states]), 200
+
+
+@app.route('/forms/<name_>', methods=['POST'])
+def submit_form(name_):
+    data = request.get_json()
+    form = services.submit_form_to_google(name_, data)
+    return form, 201
 
 
 # This doesn't need authentication
