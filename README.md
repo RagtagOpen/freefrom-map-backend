@@ -202,118 +202,47 @@ and accepts a JSON body with the following format:
 Note that it is not possible to update a state's name or code.
 
 ### Categories
-A category represents a group of subcategories in the map scorecard. A category has the following fields:
+A category represents a group of criteria in the map scorecard. A category has the following fields:
 
-|  Name  |   Type  |    Notes    |
-|--------|---------|-------------|
-| id     | Integer | Primary key |
-| title  | String  |             |
-| help_text  | String  |             |
-| active | Boolean |             |
+|  Name           |   Type  |    Notes    |
+|-----------------|---------|-------------|
+| id              | Integer | Primary key |
+| title           | String  |             |
+| help_text       | String  |             |
+| active          | Boolean |             |
 
 #### GET /categories
 
 This endpoint returns a list of all existing categories. It will return an empty array if no categories exist.
+
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the categories' criteria in the response body.
 
 #### GET /categories/{id}
 
 This endpoint returns one category corresponding to the id provided in the request. If no category with that
 id exists, it will return a 404 response code.
 
+Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the category's criteria in the response body.
+
 #### POST /categories
 
-This endpoint creates a new category. It requires [authentication](#Authentication). It accepts the following
-parameters in the request body as JSON:
+This endpoint creates a category. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
-|  Name      |   Type  |    Notes    |
-|------------|---------|-------------|
-| title      | String  | *Optional*. |
-| help_text  | String  | *Optional*. |
-| active     | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated category. A category cannot be reactivated once it has been deactivated. |
+|  Name       |   Type  |    Notes                                                         |
+|-------------|---------|------------------------------------------------------------------|
+| title       | String  | *Optional*.                                                      |
+| help_text   | String  | *Optional*.                                                      |
+| active      | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a category that is deactivated. Subcategories cannot be reactivated once they have been deactivated. |
 
 #### PUT /categories/{id}
 
-This endpoint updates an existing category. It requires [authentication](#Authentication). It accepts the following
-parameters in the request body as JSON:
-
-|  Name      |   Type  |    Notes    |
-|------------|---------|-------------|
-| title      | String  | *Optional*. |
-| help_text  | String  | *Optional*. |
-| active     | Boolean | *Optional*. Passing in `false` will deactivate the category. A category cannot be reactivated once it has been deactivated. |
-| subcategories | Array<Object> | *Optional*. See below for information on formatting this parameter. |
-
-The `subcategories` parameter allows you to create subcategories and criteria along with a category. The `subcategories` parameter must be formatted as an array of objects in the following format:
-
-```
-[
-  {
-    id: ...,
-    title: ...,
-    help_text: ...,
-    active: ...,
-    criteria: [
-      {
-        id: ...,
-        title: ...,
-        recommendation_text: ...,
-        help_text: ...,
-        active: ...
-      },
-      ...
-    ]
-  },
-  ...
-]
-```
-
-You can read more about [Subcategories](#Subcategories) and [Criteria](#Criteria) later in the documentation.
-
-### Subcategories
-A subcategory represents a group of criteria in the map scorecard. A category has the following fields:
-
-|  Name           |   Type  |    Notes    |
-|-----------------|---------|-------------|
-| id              | Integer | Primary key |
-| category_id     | Integer |             |
-| title           | String  |             |
-| help_text       | String  |             |
-| active          | Boolean |             |
-
-#### GET /subcategories
-
-This endpoint returns a list of all existing subcategories. It will return an empty array if no subcategories exist.
-
-Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategories' criteria in the response body.
-
-#### GET /subcategories/{id}
-
-This endpoint returns one subcategory corresponding to the id provided in the request. If no subcategory with that
-id exists, it will return a 404 response code.
-
-Accepts an optional query paramater `withCriteria`. If `withCriteria=true` is provided, this will return an array of the subcategory's criteria in the response body.
-
-#### POST /subcategories
-
-This endpoint creates a subcategory. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
+This endpoint changes a category's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
 
 |  Name       |   Type  |    Notes                                                         |
 |-------------|---------|------------------------------------------------------------------|
-| category_id | Integer | *Required*. The category ID to which the subcategory is related. |
 | title       | String  | *Optional*.                                                      |
 | help_text   | String  | *Optional*.                                                      |
-| active      | Boolean | *Optional*. Defaults to `true`. Passing in `false` will create a subcategory that is deactivated. Subcategories cannot be reactivated once they have been deactivated. |
-
-#### PUT /subcategories/{id}
-
-This endpoint changes a subcategory's details. It requires [authentication](#Authentication). It accepts a JSON body with the following format:
-
-|  Name       |   Type  |    Notes                                                         |
-|-------------|---------|------------------------------------------------------------------|
-| category_id | Integer | *Optional*. The category ID to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
-| title       | String  | *Optional*.                                                      |
-| help_text   | String  | *Optional*.                                                      |
-| active      | Boolean | *Optional*. Once a subcategory is deactivated, it cannot be reactivated. |
+| active      | Boolean | *Optional*. Once a category is deactivated, it cannot be reactivated. |
 
 ### Criteria
 
@@ -322,7 +251,7 @@ A criterion represents one measure in the state scorecard to determine whether a
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
 | id                  | Integer  | Primary key |
-| subcategory_id      | Integer  | Foreign key |
+| category_id      | Integer  | Foreign key |
 | title               | String   |             |
 | recommendation_text | String   |             |
 | help_text           | String   |             |
@@ -343,7 +272,7 @@ This endpoint creates a criterion. It requires [authentication](#Authentication)
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
-| subcategory_id        | Integer | *Required*. The subcategory ID to which the criterion is related.|
+| category_id        | Integer | *Required*. The category ID to which the criterion is related.|
 | title                 | String  | *Optional*.                                                      |
 | recommendation_text   | String  | *Optional*.                                                      |
 | help_text             | String  | *Optional*.                                                      |
@@ -356,7 +285,7 @@ This endpoint changes a criterion's details. It requires [authentication](#Authe
 
 |  Name                 |   Type  |    Notes                                                         |
 |-----------------------|---------|------------------------------------------------------------------|
-| subcategory_id        | Integer | *Optional*. The subcategory ID to which the criterion is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| category_id        | Integer | *Optional*. The category ID to which the criterion is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | title                 | String  | *Optional*.                                                      |
 | recommendation_text   | String  | *Optional*.                                                      |
 | help_text             | String  | *Optional*.                                                      |
@@ -391,8 +320,8 @@ This endpoint creates a link. It requires [authentication](#Authentication). It 
 
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
-| category_id         | Integer  | *Required*. The id of the category to which the subcategory is related. |
-| state_code          | String   | *Required*. The state to which the subcategory is related. |
+| category_id         | Integer  | *Required*. The id of the category to which the category is related. |
+| state_code          | String   | *Required*. The state to which the category is related. |
 | text                | String   | *Optional*. |
 | url                 | String   | *Optional*. |
 | active              | Boolean  | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
@@ -403,8 +332,8 @@ This endpoint changes a link's details. It requires [authentication](#Authentica
 
 |         Name        |   Type   |    Notes    |
 |---------------------|----------|-------------|
-| category_id         | Integer  | *Optional*. The id of the category to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
-| state_code          | String   | *Optional*. The state to which the subcategory is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| category_id         | Integer  | *Optional*. The id of the category to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| state_code          | String   | *Optional*. The state to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | text                | String   | *Optional*. |
 | url                 | String   | *Optional*. |
 | active              | Boolean  | *Optional*. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
@@ -455,3 +384,184 @@ A **state category grade** represents the grade assigned to a state based on a s
 #### GET /grades/{code}
 
 Returns the state's overall grade, and its grades for each category. If no state with that code exists, it will return a 404 response code.
+
+### Forms
+
+A **form** represents any one of the forms found on the FreeFrom Map frontend. The forms include:
+
+* Give Feedback
+* Report Missing or Outdated Information
+* Partner with FreeFrom
+* Build Collective Survivor Power
+* Share your Policy Ideas
+
+These endpoints don't require authentication. Note that form submissions cannot be updated or overwritten.
+
+#### POST /forms/feedback
+
+This endpoint writes to the 'Give Feedback' sheet, and sends an email notification to the FreeFrom staff.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name        | Type     | Question                | Notes       |
+|-------------|----------|-------------------------|-------------|
+| useful      | String   | "Was this tool useful?" | *Optional*. |
+| useful_desc | String   | "Can you tell us more about how the tool was or was not useful for you?" | *Optional*. |
+| learned     | String   | "Did you learn anything about policies related to survivor wealth from the tool?" | *Optional*. |
+| usage_plan  | [String] | "How do you plan to use this tool?" | *Optional*. |
+| suggestions | String   | "What can be improved or changed?" | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string. Note that `usage_plan` will be returned as a string instead of an array.
+
+```js
+{
+    "form": "feedback",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "useful": "Yes",
+    "useful_desc": "Nice visuals!",
+    "learned": "I learned about my state's policies.",
+    // CSV string of input array
+    "usage_plan": "As an advocacy tool, Self-educating",
+    "suggestions": "Keep it up!"
+}
+```
+
+#### POST /forms/report_missing_info
+
+This endpoint writes to the 'Report Missing or Outdated Information' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name        | Type     | Question                | Notes       |
+|-------------|----------|-------------------------|-------------|
+| information | String   | "What information is missing our outdated?" | *Optional*. |
+| email       | String   | "Your email" | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string.
+
+```js
+{
+    "form": "report_missing_info",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "information": "Policy X was updated last month",
+    "email": "example@email.com"
+}
+```
+
+#### POST /forms/partner_with_freefrom
+
+This endpoint writes to the 'Partner with FreeFrom' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name          | Type     | Question                                       | Notes       |
+|---------------|----------|------------------------------------------------|-------------|
+| name          | String   | "Your name"                                    | *Optional*. |
+| email         | String   | "Your email"                                   | *Optional*. |
+| pronouns      | String   | "Your pronouns"                                | *Optional*. |
+| organization  | String   | "Your organization"                            | *Optional*. |
+| title         | String   | "Your title"                                   | *Optional*. |
+| state         | String   | "State"                                        | *Optional*. |
+| goals         | [String] | "How would you like to partner with FreeFrom?" | *Optional*. |
+| process_phase | [String] | "What phase of the process are you in?"        | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string. Note that `goals` and `process_phase` will be returned as a string instead of an array.
+
+```js
+{
+    "form": "partner_with_freefrom",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "name": "",
+    "email": "",
+    "pronouns": "",
+    "organization": "",
+    "title": "",
+    "state": "",
+    // CSV string of input array
+    "goals": "Request a policy innovation sprint, Help with drafting legislation",
+    // CSV string of input array
+    "process_phase": "I need help getting a bill to the finish line"
+}
+```
+
+#### POST /forms/build_collective_survivor_power
+
+This endpoint writes to the 'Build Collective Survivor Power' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name               | Type     | Question                                        | Notes       |
+|--------------------|----------|-------------------------------------------------|-------------|
+| name               | String   | "Your name"                                     | *Optional*. |
+| pronouns           | String   | "Your pronouns"                                 | *Optional*. |
+| interests          | [String] | "Which of the following are you interested in?" | *Optional*. |
+| contact_preference | String   | "The safest way to contact you is..."           | *Optional*. |
+| phone              | String   | "Your phone number"                             | *Optional*. |
+| email              | String   | "Your email"                                    | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string.
+
+```js
+{
+    "form": "partner_with_freefrom",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "name": "",
+    "pronouns": "",
+    // CSV string of input array
+    "interests": "Learning how to be a policy advocate in my state, Connecting with other sruvivors in my state",
+    "contact_preference": "",
+    "phone": "",
+    "email": "",
+}
+```
+
+#### POST /forms/policy_ideas
+
+This endpoint writes to the 'Share your Policy Ideas' sheet.
+
+All fields are optional, and values will be written to the sheet as plain text.
+
+**Request**
+
+| Name                | Type   | Question                                        | Notes       |
+|---------------------|--------|-------------------------------------------------|-------------|
+| prioritize_policies | String | "What policies and issues should FreeFrom prioritize?" | *Optional*. |
+| missing_policies    | String | "What policies and issues are important to you but are not included on the map?" | *Optional*. |
+| state               | String | "Your state"                                           | *Optional*. |
+| name                | String | "Your name"                                            | *Optional*. |
+| pronouns            | String | "Your pronouns"                                        | *Optional*. |
+| email               | String | "Your email"                                           | *Optional*. |
+
+**Response**
+
+Returns a JSON object representing the data that was written to the Google Sheet. If a field was not provided, its value will be an empty string.
+
+
+```js
+{
+    "form": "policy_ideas",
+    "timestamp": "2021-01-18T03:40:56.438Z",
+    "prioritize_policies": "",
+    "missing_policies": "",
+    "state": "",
+    "name": "",
+    "pronouns": "",
+    "email": ""
+}
+```

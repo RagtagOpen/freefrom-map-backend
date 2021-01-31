@@ -14,15 +14,10 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-from services import (  # noqa: E402
-    update_or_create_category,
-    update_or_create_subcategory,
-    update_or_create_criterion,
-    update_or_create_link,
-)
+import services  # noqa: E402
+
 from models import (  # noqa: E402
     Category,
-    Subcategory,
     Criterion,
     Link,
     Score,
@@ -62,10 +57,10 @@ def handle_server_error(e):
 
 @app.route('/categories', methods=['GET'])
 def get_categories():
-    with_subcategories = request.args.get('withSubcategories') == 'true'
+    with_criteria = request.args.get('withCriteria') == 'true'
 
     categories = Category.query.all()
-    return jsonify([category.serialize(with_subcategories) for category in categories])
+    return jsonify([category.serialize(with_criteria) for category in categories])
 
 
 @app.route('/categories', methods=['POST'])
@@ -73,7 +68,7 @@ def get_categories():
 @requires_auth
 def create_category():
     data = request.get_json()
-    category = update_or_create_category(data=data)
+    category = services.update_or_create_category(data=data)
     return jsonify(category.serialize()), 201
 
 
@@ -84,8 +79,8 @@ def get_category(id_):
     if category is None:
         abort(404, strings.category_not_found)
 
-    with_subcategories = request.args.get('withSubcategories') == 'true'
-    return jsonify(category.serialize(with_subcategories))
+    with_criteria = request.args.get('withCriteria') == 'true'
+    return jsonify(category.serialize(with_criteria))
 
 
 @app.route('/categories/<id_>', methods=['PUT'])
@@ -98,50 +93,8 @@ def update_category(id_):
     if category is None:
         abort(404, strings.category_not_found)
 
-    category = update_or_create_category(data, category=category)
+    category = services.update_or_create_category(data, category=category)
     return jsonify(category.serialize())
-
-
-@app.route('/subcategories', methods=['GET'])
-def get_subcategories():
-    with_criteria = request.args.get('withCriteria') == 'true'
-
-    subcategories = Subcategory.query.all()
-    return jsonify([subcategory.serialize(with_criteria) for subcategory in subcategories])
-
-
-@app.route('/subcategories', methods=['POST'])
-@cross_origin(headers=['Content-Type', 'Authorization'])
-@requires_auth
-def create_subcategory():
-    data = request.get_json()
-    subcategory = update_or_create_subcategory(data=data)
-    return jsonify(subcategory.serialize()), 201
-
-
-@app.route('/subcategories/<id_>', methods=['GET'])
-def get_subcategory(id_):
-    subcategory = Subcategory.query.get(id_)
-
-    if subcategory is None:
-        abort(404, strings.subcategory_not_found)
-
-    with_criteria = request.args.get('withCriteria') == 'true'
-    return jsonify(subcategory.serialize(with_criteria))
-
-
-@app.route('/subcategories/<id_>', methods=['PUT'])
-@cross_origin(headers=['Content-Type', 'Authorization'])
-@requires_auth
-def update_subcategory(id_):
-    subcategory = Subcategory.query.get(id_)
-    data = request.get_json()
-
-    if subcategory is None:
-        abort(404, strings.subcategory_not_found)
-
-    subcategory = update_or_create_subcategory(data, subcategory=subcategory)
-    return jsonify(subcategory.serialize())
 
 
 @app.route('/criteria', methods=['GET'])
@@ -155,7 +108,7 @@ def get_criteria():
 @requires_auth
 def create_criterion():
     data = request.get_json()
-    criterion = update_or_create_criterion(data=data)
+    criterion = services.update_or_create_criterion(data=data)
     return jsonify(criterion.serialize()), 201
 
 
@@ -179,7 +132,7 @@ def update_criterion(id_):
         abort(404, strings.criterion_not_found)
 
     data = request.get_json()
-    update_or_create_criterion(data, criterion)
+    services.update_or_create_criterion(data, criterion)
     return jsonify(criterion.serialize())
 
 
@@ -195,7 +148,7 @@ def get_links():
 @requires_auth
 def create_link():
     data = request.get_json()
-    link = update_or_create_link(data=data)
+    link = services.update_or_create_link(data=data)
     return jsonify(link.serialize()), 201
 
 
@@ -219,7 +172,7 @@ def update_link(id_):
     if link is None:
         abort(404, strings.link_not_found)
 
-    link = update_or_create_link(data, link=link)
+    link = services.update_or_create_link(data, link=link)
     return jsonify(link.serialize())
 
 
@@ -265,6 +218,13 @@ def get_state(code_):
 def get_states():
     states = State.query.all()
     return jsonify([state.serialize() for state in states]), 200
+
+
+@app.route('/forms/<name_>', methods=['POST'])
+def submit_form(name_):
+    data = request.get_json()
+    form = services.submit_form_to_google(name_, data)
+    return form, 201
 
 
 # This doesn't need authentication

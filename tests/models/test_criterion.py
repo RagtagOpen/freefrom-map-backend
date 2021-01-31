@@ -3,8 +3,8 @@ import datetime
 
 from app import app, db
 from models import Criterion
-from strings import subcategory_not_found
-from tests.test_utils import clear_database, create_category, create_subcategory
+from strings import category_not_found
+from tests.test_utils import clear_database, create_category
 
 
 class CriterionTestCase(unittest.TestCase):
@@ -12,9 +12,8 @@ class CriterionTestCase(unittest.TestCase):
         self.client = app.test_client()
 
         self.category = create_category()
-        self.subcategory = create_subcategory(self.category.id)
         self.criterion = Criterion(
-            subcategory_id=self.subcategory.id,
+            category_id=self.category.id,
             title='Includes economic abuse framework',
             recommendation_text=(
                 "The state's definition of domestic violence should include a framework of "
@@ -31,7 +30,7 @@ class CriterionTestCase(unittest.TestCase):
         clear_database(db)
 
     def test_init(self):
-        self.assertEqual(self.criterion.subcategory_id, self.subcategory.id)
+        self.assertEqual(self.criterion.category_id, self.category.id)
         self.assertEqual(self.criterion.title, 'Includes economic abuse framework')
         self.assertEqual(
             self.criterion.recommendation_text,
@@ -47,13 +46,13 @@ class CriterionTestCase(unittest.TestCase):
         self.assertFalse(self.criterion.adverse)
 
     def test_init_default_adverse_value(self):
-        criterion = Criterion(subcategory_id=self.subcategory.id)
+        criterion = Criterion(category_id=self.category.id)
         self.assertFalse(criterion.adverse)
 
-    def test_init_invalid_subcategory(self):
+    def test_init_invalid_category(self):
         with self.assertRaises(ValueError) as e:
             Criterion(
-                subcategory_id=0,
+                category_id=0,
                 title='Includes economic abuse framework',
                 recommendation_text=(
                     "The state's definition of domestic violence should include a framework of "
@@ -65,13 +64,13 @@ class CriterionTestCase(unittest.TestCase):
                 ),
                 adverse=False,
             )
-        self.assertEqual(str(e.exception), subcategory_not_found)
+        self.assertEqual(str(e.exception), category_not_found)
 
     def test_serialize(self):
         self.assertEqual(
             {
                 'id': self.criterion.id,
-                'subcategory_id': self.subcategory.id,
+                'category_id': self.category.id,
                 'title': 'Includes economic abuse framework',
                 'recommendation_text':
                     "The state's definition of domestic violence should include a framework of "
