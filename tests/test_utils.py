@@ -4,7 +4,7 @@ import models
 def clear_database(db):
     db.session.query(models.Link).delete()
     db.session.query(models.Score).delete()
-    db.session.query(models.StateSubcategoryGrade).delete()
+    db.session.query(models.StateCategoryGrade).delete()
     db.session.query(models.StateGrade).delete()
     db.session.query(models.Criterion).delete()
     db.session.query(models.Category).delete()
@@ -46,10 +46,10 @@ def create_state_grade(state_code):
     ).save()
 
 
-def create_state_subcategory_grade(state_code, subcategory_id):
-    return models.StateSubcategoryGrade(
+def create_state_category_grade(state_code, category_id):
+    return models.StateCategoryGrade(
         state_code=state_code,
-        subcategory_id=subcategory_id,
+        category_id=category_id,
         grade=1,
     ).save()
 

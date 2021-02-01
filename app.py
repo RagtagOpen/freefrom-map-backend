@@ -186,7 +186,7 @@ def get_state_grades(code_):
     state_data = state.serialize()
     return jsonify(
         grade=state_data['grade'],
-        subcategory_grades=state_data['subcategory_grades'],
+        category_grades=state_data['category_grades'],
     ), 200
 
 

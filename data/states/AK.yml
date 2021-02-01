@@ -1,90 +1,98 @@
 code: AK
 name: Alaska
-grade: 1
-subcategories:
-  - title: Economic Abuse Definition
+grade: -1
+categories:
+  - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: AS § 47.17.035
+      - text: AS 47.17.035
         url: http://www.akleg.gov/basis/statutes.asp#47.17.035
     criteria_met: []
-  - title: Paid and Protected Leave
+  - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention:
-      text: AS § 12.61.017
-      url: http://www.akleg.gov/basis/statutes.asp#12.61.017
       description: Victims of crimes are granted protections from employer penalization if the victim is subpoenaed or requested by the prosecuting attorney to attend a court proceeding for the purpose of giving testimony, needs to report the crime to law enforcement or participates in an investigation of the offense.
-    resource_links: []
-    criteria_met:
-      - Leave designated to take time off to deal with the consequences of abuse
-      - Guaranteed protected from job loss, discrimination or retaliation for requesting leave
-  - title: Safe Work Environment
+      text: AS 12.61.017
+      url: http://www.akleg.gov/basis/statutes.asp#12.61.017
+    resource_links:
+      - text: AS 12.61.017
+        url: http://www.akleg.gov/basis/statutes.asp#12.61.017
+    criteria_met: []
+  - title: Safe Workplaces
     grade: 0
-    resource_links: []
     innovative_policy_idea: ~
     honorable_mention: ~
+    resource_links: []
     criteria_met: []
-  - title: Unemployment Insurance
+  - title: Unemployment Insurance (UI) Accessibility
     grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
     resource_links:
       - text: AS 23.20.379
         url: http://www.akleg.gov/basis/statutes.asp#23.20.379
-      - text: 8 AAC 85.095(c)
+      - text: 8 AAC 85.095(c)(6)
         url: http://www.akleg.gov/basis/aac.asp#8.85.095
       - text: AS Dept of Labor Unemployment Handbook
         url: https://labor.alaska.gov/unemployment/documents/uihandbook.pdf
-      - text: AS Voluntary Leaving
+      - text: "AS Benefit Policy Manual: Voluntary Leaving (2010) (VL 155.05-1)"
         url: https://labor.alaska.gov/unemployment/bpm/Voluntary_Leaving.pdf
-    innovative_policy_idea: ~
-    honorable_mention: ~
     criteria_met:
-      - Survivors who must leave or quit work due to GBV remain eligible for benefits
-      - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
-  - title: Designated Tort
+      - 20
+      - 22
+  - title: Litigation Abuse Protections
     grade: 0
-    resource_links: []
     innovative_policy_idea: ~
     honorable_mention: ~
+    resource_links: []
     criteria_met: []
-  - title: Litigation Abuse
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Victims of Crime Compensation Accessibility
     grade: -1
-    resource_links: []
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met: []
-  - title: VOCA
-    grade: 0
     resource_links:
-      - text: AK 18.67.020
+      - text: AS 18.67.020
         url: http://www.akleg.gov/basis/statutes.asp#18.67.020
-      - text: AK 18.67.130
+      - text: AS 18.67.130
         url: http://www.akleg.gov/basis/statutes.asp#18.67.130
-      - text: AK ST § 18.67.040
+      - text: AS 18.67.040
         url: http://www.akleg.gov/basis/statutes.asp#18.67.040
+      - text: AS 18.67.05
+        url: http://www.akleg.gov/basis/statutes.asp#18.67.050
       - text: AK VVCB
         url: https://aws.state.ak.us/VccbOnline/Default.aspx
       - text: VOCA Application Instructions
         url: http://doa.alaska.gov/vccb/pdf/ApplicationInstructions.pdf
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 40
+      - 44
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met:
-      - Must report within any time frame to law enforcement
-      - Requires survivor cooperation with law enforcement for the investigation and / or prosecution of the crime)
-  - title: SNAP
-    grade: 3
     resource_links:
       - text: 7 AAC 46.021
         url: http://www.akleg.gov/basis/aac.asp#7.46.021
-      - text: AK Division of Public Assistance, SNAP
+      - text: AS Division of Public Assistance, SNAP
         url: http://dhss.alaska.gov/dpa/Pages/SNAP/default.aspx
+    criteria_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met: []
-  - title: TANF
-    grade: 0
     resource_links:
       - text: 7 AAC 45
         url: http://www.akleg.gov/basis/aac.asp#7.45
@@ -92,40 +100,37 @@ subcategories:
         url: http://www.akleg.gov/basis/aac.asp#7.45.261
       - text: 7 AAC 45.600
         url: http://www.akleg.gov/basis/aac.asp#7.45.600
-      - text: 7 AAB 45.610 (d)
+      - text: 7 AAC 45.610 (d)
         url: http://www.akleg.gov/basis/aac.asp#7.45.610
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met:
-      - Provides exemptions or deferments from work or job training requirements
-      - Survivors are eligible for time-limit exemptions or deferrals
-      - Survivors are eligible for specific exemptions and special considerations without having to apply through a service provider organization
-      - "Proof requirements: No proof needed, sworn statement from the survivor or a qualified third party"
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
   - title: Rental Protections
     grade: 0
-    resource_links:
-      - text: "AK Statues: Title 34: Property"
-        url: http://www.akleg.gov/basis/statutes.asp#34
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met: []
-  - title: Coerced and Fraudulent Debt
-    grade: 0
     resource_links: []
+    criteria_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met: []
-  - title: Safe Banking Protections for Survivors
-    grade: 0
-    resource_links: []
-    innovative_policy_idea: ~
-    honorable_mention: ~
-    criteria_met: []
-  - title: Reimagining Public Safety Responses to GBV
-    grade: 0
     resource_links:
-      - text: AS § 18.65.530
+      - text: AS 18.65.530
         url: http://www.akleg.gov/basis/statutes.asp#18.65.530
-    innovative_policy_idea: ~
-    honorable_mention: ~
-    criteria_met: []
+    criteria_met:
+      - 80

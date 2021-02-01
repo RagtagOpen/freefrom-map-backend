@@ -10,8 +10,7 @@ from models import (
     Score,
     State,
     StateGrade,
-    StateSubcategoryGrade,
-    Subcategory,
+    StateCategoryGrade,
     ResourceLink
 )
 from tests.test_utils import clear_database
@@ -48,31 +47,31 @@ def import_state(path):
         grade = state_data['grade']
         StateGrade(state_code=code, grade=grade).save()
 
-        subcategories_data = state_data['subcategories']
+        categories_data = state_data['categories']
 
-        for subcategory_data in subcategories_data:
-            subcategory = Subcategory.query.filter_by(title=subcategory_data['title']).first()
+        for category_data in categories_data:
+            category = Category.query.filter_by(title=category_data['title']).first()
 
-            StateSubcategoryGrade(
+            StateCategoryGrade(
                 state_code=code,
-                subcategory_id=subcategory.id,
-                grade=subcategory_data['grade']
+                category_id=category.id,
+                grade=category_data['grade']
             ).save()
 
-            innovative_policy_idea = subcategory_data['innovative_policy_idea']
+            innovative_policy_idea = category_data['innovative_policy_idea']
             if innovative_policy_idea:
                 InnovativePolicyIdea(
-                    subcategory_id=subcategory.id,
+                    category_id=category.id,
                     state=code,
                     text=innovative_policy_idea['text'],
                     url=innovative_policy_idea['url'],
                     description=innovative_policy_idea['description'],
                 ).save()
 
-            honorable_mention = subcategory_data['honorable_mention']
+            honorable_mention = category_data['honorable_mention']
             if honorable_mention:
                 HonorableMention(
-                    subcategory_id=subcategory.id,
+                    category_id=category.id,
                     state=code,
                     text=honorable_mention['text'],
                     url=honorable_mention['url'],
@@ -80,10 +79,10 @@ def import_state(path):
                 ).save()
 
             resource_links = []
-            for resource_link in subcategory_data['resource_links']:
+            for resource_link in category_data['resource_links']:
                 resource_links.append(
                     ResourceLink(
-                        subcategory_id=subcategory.id,
+                        category_id=category.id,
                         state=code,
                         text=resource_link['text'],
                         url=resource_link['url']
@@ -93,8 +92,8 @@ def import_state(path):
             ResourceLink.save_all(resource_links)
 
             scores = []
-            for criterion in Criterion.query.filter_by(subcategory_id=subcategory.id).all():
-                meets_criterion = criterion.title in subcategory_data['criteria_met']
+            for criterion in Criterion.query.filter_by(category_id=category.id).all():
+                meets_criterion = criterion.id in category_data['criteria_met']
 
                 scores.append(
                     Score(
@@ -109,27 +108,23 @@ def import_state(path):
 
 def import_categories():
     full_path = absolute_file_path('categories.yml')
+
     with open(full_path) as file:
         categories_data = yaml.load(file, Loader=yaml.FullLoader)
         for category_data in categories_data:
             category = Category(title=category_data['title']).save()
 
-            for subcategory_data in category_data['subcategories']:
-                subcategory = Subcategory(
-                    category_id=category.id,
-                    title=subcategory_data['title']
-                ).save()
+            criteria = []
+            for criterion_data in category_data['ideal_criteria']:
+                criteria.append(
+                    Criterion(id=criterion_data['id'],
+                              category_id=category.id, title=criterion_data['text'])
+                )
 
-                criteria = []
-                for criterion_data in subcategory_data['ideal_criteria']:
-                    criteria.append(
-                        Criterion(subcategory_id=subcategory.id, title=criterion_data)
-                    )
+            for criterion_data in category_data['adverse_criteria']:
+                criteria.append(
+                    Criterion(id=criterion_data['id'], category_id=category.id,
+                              title=criterion_data['text'], adverse=True)
+                )
 
-                for criterion_data in subcategory_data['adverse_criteria']:
-                    criteria.append(
-                        Criterion(subcategory_id=subcategory.id,
-                                  title=criterion_data, adverse=True)
-                    )
-
-                Criterion.save_all(criteria)
+            Criterion.save_all(criteria)

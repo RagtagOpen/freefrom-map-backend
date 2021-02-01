@@ -1,82 +1,96 @@
+# State grade title to number mapping:
+#   Model state => 3
+#   Survivor wealth friendly => 2
+#   Taking steps => 1
+#   Some accountability => 0
+#   Little accountability => -1
+
+# Category grade title to number mapping:
+#   Model policy => 3
+#   Strong policy => 2
+#   Promising policy => 1
+#   No policy => 0
+#   Adverse policy => -1
+
 code:
 name:
-grade:
-subcategories:
-  - title: Economic Abuse Definition
-    grade: ~
+grade: 0
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: Paid and Protected Leave
-    grade: ~
+  - title: Paid and Protective Leave
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: Safe Work Environment
-    grade: ~
+  - title: Safe Workplaces
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: Unemployment Insurance
-    grade: ~
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: Designated Tort
-    grade: ~
+  - title: Litigation Abuse Protections
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: Litigation Abuse
-     grade: ~
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: VOCA
-    grade: ~
+  - title: Victims of Crime Compensation Accessibility
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: SNAP
-    grade: ~
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: TANF
-     grade: ~
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
   - title: Rental Protections
-    grade: ~
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
-  - title: Coerced and Fraudulent Debt
-    grade: ~
-    resource_links: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    criteria_met: []
-  - title: Safe Banking Protections for Survivors
-    grade: ~
     resource_links: []
-    innovative_policy_idea: ~
-    honorable_mention: ~
-    criteria_met: []
-  - title: Reimagining Public Safety Responses to GBV
-    grade: ~
-    resource_links: []
-    innovative_policy_idea: ~
-    honorable_mention: ~
     criteria_met: []

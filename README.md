@@ -89,14 +89,6 @@ python3 manage.py db upgrade
 
 If you receive a "Target database is not up to date." error, try `python3 manage.py db stamp head`
 
-#### Generate seed data
-
-The following script will clear the database of any existing data and import seed data:
-
-```
-python import_script.py
-```
-
 #### Running the application
 
 Run the application with the following command:
@@ -173,7 +165,7 @@ A state has the following fields:
 | innovative_idea   | String                |             |
 | honorable_mention | String                |             |
 | grade             | StateGrade            | The most recent grade for the state.      |
-| subcategory_grades   | [StateSubcategoryGrade]  | The most recent grade for each category.  |
+| category_grades   | [StateCategoryGrade]  | The most recent grade for each category.  |
 | criterion_scores  | [Score]               | The most recent score for each criterion. |
 | links             | [Link]                |             |
 
@@ -195,7 +187,7 @@ and accepts a JSON body with the following format:
 | innovative_idea   | String                | *Optional*. |
 | honorable_mention | String                | *Optional*. |
 | grade             | Integer               | *Optional*. One of (-1, 0, 1, 2, 3) |
-| subcategory_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3.|
+| category_grades   | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., grade:...}`. Every `category_id` must be the id of an active category. Every `grade` must be an integer between -1 and 3.|
 | links             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., text: ..., url: ..., active: ...}`. See the [Links](#Links) documentation for information on each of these fields.|
 | scores             | Array<Object>         | *Optional*. An array whose elements are objects in the format `{category_id: ..., meets_criterion: ...}`. See the [Scores](#Scores) documentation for information on each of these fields.|
 

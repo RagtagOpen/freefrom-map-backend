@@ -113,7 +113,10 @@ class Category(BaseMixin, Deactivatable, db.Model):
     help_text = db.Column(db.String())
     criteria = db.relationship('Criterion', backref='category', lazy=True)
 
-    def __init__(self, title=None, help_text=None):
+    def __init__(self, title=None, help_text=None, id=None):
+        if id:
+            self.id = id
+
         self.title = title
         self.help_text = help_text
         self.active = True
@@ -158,7 +161,11 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
         recommendation_text=None,
         help_text=None,
         adverse=False,
+        id=None,
     ):
+        if id:
+            self.id = id
+
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
@@ -321,6 +328,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     url = db.Column(db.String())
     created_at = db.Column(db.DateTime)
     type = db.Column(db.String(25))
+    description = db.Column(db.String())
 
     __mapper_args__ = {
         'polymorphic_on': type,
