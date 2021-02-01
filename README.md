@@ -89,6 +89,14 @@ python3 manage.py db upgrade
 
 If you receive a "Target database is not up to date." error, try `python3 manage.py db stamp head`
 
+#### Import seed data
+
+Run the following script to clear your database and re-import all seed data:
+
+```
+python import_script.py
+```
+
 #### Running the application
 
 Run the application with the following command:
