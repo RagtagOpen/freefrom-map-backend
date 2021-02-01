@@ -112,6 +112,14 @@ class TestImport(unittest.TestCase):
         category1 = Category.query.filter_by(
             title='Alternatives to Law Enforcement Responses'
         ).first()
+        self.assertEqual(
+            category1.help_text,
+            'Survivor experiences and research shows that involving law enforcement ' +
+            'in responses to intimate partner violence can cause more harm to ' +
+            'survivors and their families. Survivors should be able to decide when ' +
+            'and how they want to involve law enforcement. See our recent statement ' +
+            'for more information on this topic.'
+        )
         self.assertEqual(criterion1.category_id, category1.id)
         self.assertTrue(criterion1.adverse)
 

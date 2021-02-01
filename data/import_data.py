@@ -112,7 +112,8 @@ def import_categories():
     with open(full_path) as file:
         categories_data = yaml.load(file, Loader=yaml.FullLoader)
         for category_data in categories_data:
-            category = Category(title=category_data['title']).save()
+            category = Category(title=category_data['title'],
+                                help_text=category_data['help_text']).save()
 
             criteria = []
             for criterion_data in category_data['ideal_criteria']:
