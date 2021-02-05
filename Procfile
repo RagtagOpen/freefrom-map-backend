@@ -1,2 +1,2 @@
-release: ./release-tasks.sh
+release: pwd && ls
 web: gunicorn app:app
