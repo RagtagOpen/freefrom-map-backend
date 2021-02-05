@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 python manage.py db stamp head
 python manage.py db migrate
