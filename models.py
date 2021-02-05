@@ -158,7 +158,11 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
         recommendation_text=None,
         help_text=None,
         adverse=False,
+        id=None,
     ):
+        if id:
+            self.id = id
+
         self.category_id = category_id
         self.title = title
         self.recommendation_text = recommendation_text
@@ -321,6 +325,7 @@ class Link(BaseMixin, Deactivatable, db.Model):
     url = db.Column(db.String())
     created_at = db.Column(db.DateTime)
     type = db.Column(db.String(25))
+    description = db.Column(db.String())
 
     __mapper_args__ = {
         'polymorphic_on': type,
