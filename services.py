@@ -1,4 +1,10 @@
-from models import Category, Criterion, Link
+from models import (
+    Category,
+    Criterion,
+    HonorableMention,
+    InnovativePolicyIdea,
+    ResourceLink
+)
 from providers import post_google
 import strings
 
@@ -23,6 +29,21 @@ def update_or_create_category(data, category=Category()):
     return category.save()
 
 
+def get_subclass_from_link_type(link_type: str):
+    subclasses_by_type = {
+        strings.resource_link: ResourceLink,
+        strings.honorable_mention: HonorableMention,
+        strings.innovative_policy_idea: InnovativePolicyIdea,
+    }
+
+    subclass = subclasses_by_type.get(link_type)
+
+    if link_type is not None and subclass is None:
+        raise ValueError(strings.invalid_link_type)
+
+    return subclass
+
+
 def update_or_create_link(data, link=None):
     '''
     Takes a dict of data where the keys are fields of the link model.
@@ -33,12 +54,19 @@ def update_or_create_link(data, link=None):
     '''
     category_id = data.get('category_id')
     state = data.get('state')
+    link_type = data.get('type')
+    subclass = get_subclass_from_link_type(link_type)
+
     if link is None:
-        link = Link(category_id=category_id, state=state)
+        if subclass is None:
+            raise ValueError(strings.require_type)
+        link = subclass(category_id=category_id, state=state)
     elif category_id is not None and category_id != link.category_id:
         raise ValueError(strings.cannot_change_category)
     elif state is not None and state != link.state:
         raise ValueError(strings.cannot_change_state)
+    elif link_type is not None and not isinstance(link, subclass):
+        raise ValueError(strings.cannot_change_type)
 
     if 'text' in data.keys():
         link.text = data['text']
