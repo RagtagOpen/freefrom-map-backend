@@ -1,0 +1,122 @@
+# Category grade title to number mapping:
+#   Model policy => 3
+#   Strong policy => 2
+#   Promising policy => 1
+#   No policy => 0
+#   Adverse policy => -1
+
+code: WV
+name: West Virginia
+grade: -1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: W. Va. Code § 48-27-202
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=48&art=27&section=202#
+    criteria_met: []
+  - title: Paid and Protective Leave
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: W. Va. Code § 21A-6-1
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=21A&art=6&section=1#6
+    criteria_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: W. Va. Code §14-2A-3
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=3#2A
+      - text: W. Va. Code §14-2A-4
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=10#2A
+      - text: W. Va. Code § 14-2A-10
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=4#2A
+      - text: W. Va. Code § 14-2A-14(d)
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=14#2A
+      - text: W. Va. Code § 14-2A-15
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=15#2A
+      - text: W. Va. Code § 14-2A-19
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=19#2A
+      - text: West Virginia Crime Victims Compensation Fund, Eligibility Website
+        url: http://www.wvlegislature.gov/Joint/Victims/eligibility.cfm
+      - text: West Virginia Crime Victims Compensation Fund, Rules of Practice and Procedure
+        url: http://www.legis.state.wv.us/Joint/Victims/rules.cfm
+    criteria_met:
+      - 34
+      - 35
+      - 37
+      - 40
+      - 44
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: W. Va. Income Maintenance Manual
+        url: https://dhhr.wv.gov/bcf/services/familyassistance/Documents/Binder4.pdf
+    criteria_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: W. Va. Income Maintenance Manual, Ch. 7
+        url: http://dhhr.wv.gov/bcf/Services/familyassistance/Documents/252/252_ch13_8.pdf
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Rental Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
