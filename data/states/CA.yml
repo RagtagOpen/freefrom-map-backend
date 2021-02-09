@@ -1,0 +1,184 @@
+code: CA
+name: California
+grade: 2
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: Protective orders can be issued against a harm-doer for ‘disturbing the peace’ which includes, “Controlling, regulating, or monitoring the other party’s movements, communications, daily behavior, finances, economic resources, or access to services”.
+      text: Cal. Fam. Code §6203(c)
+      url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=6320.#:~:text=The%20court%20may%20order%20the,otherwise%20disposing%20of%20the%20animal
+    resource_links:
+      - text: Cal. Fam. Code §6203(c)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=FAM&division=10.&title=&part=1.&chapter=&article=
+    criteria_met: []
+  - title: Paid and Protective Leave
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Cal. Lab. Code §230.1(a)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.1.
+      - text: Cal. Lab. Code §230.2(b)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=230.2.&lawCode=LAB
+      - text: Cal. Lab. Code §230.2(f)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=230.2.&lawCode=LAB
+      - text: Cal. Lab. Code §230(d)(2)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.
+    criteria_met:
+      - 3
+      - 5
+      - 9
+      - 10
+  - title: Safe Workplaces
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Cal. Lab. Code  §230(c)
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.&article=1
+      - text: Cal. Lab. Code  §230.1(a)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.1.
+      - text: Cal. Lab. Code  §230(e)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.
+      - text: Cal. Lab. Code §230(f)(1)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.
+      - text: Cal. Lab. Code §230 (f)(8)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=230.
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Cal. Unemp. Ins. Code §1256
+        url:  https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=UIC&sectionNum=1256.
+      - text: CA Employment Development Department, Voluntary Quit VQ 155 (D)(6)
+        url: https://edd.ca.gov/UIBDG/Voluntary_Quit_VQ_155.htm
+    criteria_met:
+      - 20
+      - 22
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Cal. Civ. Code §1708.6(a)
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1708.6
+      - text: Cal Civ. Proc. Code § 340.15
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=340.15.
+      - text: Cal Civ. Proc. Code § 340.16
+        url: http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=340.16.
+    criteria_met:
+      - 29
+      - 32
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: How survivors act at scene won’t work against their “cooperation”
+      text: Cal. Gov’t Code § 13956 (b)(1)
+      url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=13956
+    resource_links:
+      - text: Cal. Gov’t Code § 13955
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=13955.
+      - text: Cal. Gov’t Code § 13956 - Survivor’s application will still be considered without having to file a police report
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=13956
+      - text: Cal. Gov’t Code § 13953
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=13953
+      - text: Cal. Gov’t Code § 13956
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=13956.&lawCode=GOV
+      - text: Cal. Gov’t Code § 13957
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=13957
+      - text: Cal. Gov’t Code §§ 13959 and 13960
+        url: https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=GOV&division=3.&title=2.&part=4.&chapter=5.&article=5.
+      - text: CalVCB website
+        url: https://victims.ca.gov/victims/
+    criteria_met:
+      - 34
+      - 35
+      - 37
+      - 38
+      - 39
+      - 40
+      - 44
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: CA ACL 17-30, (2017)
+        url: https://www.cdss.ca.gov/Portals/9/ACL/2017/17-30.pdf?ver=2017-04-18-102800-387
+      - text: Cal. Welf. & Inst. Code § 18904.25
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=18904.25
+      - text: Cal. Welf. & Inst. Code § 18926.5
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=18926.5
+      - text: Cal. Welf. & Inst. Code § 18914.5
+        url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=WIC&sectionNum=18914.5
+    criteria_met:
+      - 46
+      - 47
+      - 48
+      - 49
+      - 51
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: CA DSS Manual-EAS Section 42-715.5121 (2006)
+        url: https://www.cdss.ca.gov/ord/entres/getinfo/pdf/7EAS.pdf
+      - text: Cal. Welf. & Inst. Code § 11495 - 11495.40
+        url: https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?lawCode=WIC&division=9.&title=&part=3.&chapter=2.&article=7.5
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Rental Protections
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Cal. Civ. Code §1946.7(a)
+        url:  https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1946.7
+      - text: Cal. Civ. Proc. Code § 1161.3
+        url:  http://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CCP&sectionNum=1161.3
+    criteria_met:
+      - 69
+      - 70
+      - 72
+      - 73
+      - 75
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
