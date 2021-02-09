@@ -1,0 +1,131 @@
+code: AZ
+name: Arizona
+grade: 0
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: A.R.S. § 13-3601
+        url: https://www.azleg.gov/ars/13/03601.htm#:~:text=In%20cases%20of%20domestic%20violence,officer%20has%20probable%20cause%20to
+    criteria_met: []
+  - title: Paid and Protective Leave
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: A.R.S. § 23-373
+        url: https://www.azleg.gov/viewdocument/?docName=http://www.azleg.gov/ars/23/00373.htm
+      - text: A.R.S. § 13-4439
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/04439.htm
+      - text: Proposition 206, The Fair Wages and Healthy Families Act (the “Act”) FAQs
+        url: https://www.azica.gov/sites/default/files/Public%20FREQUENTLY%20ASKED%20QUESTIONS_MasterwTOC.pdf
+    criteria_met:
+      - 3
+      - 4
+      - 5
+      - 8
+      - 9
+      - 10
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: A.R.S. § 23-771(D)
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/23/00771.htm
+    criteria_met:
+      - 20
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: AZ 41-2407
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/41/02407.htm
+      - text: Arizona Criminal Justice Commission Crime Victim Compensation Program Eligibility Requirements
+        url: https://www.maricopacountyattorney.org/DocumentCenter/View/119/Victim-Compensation-Program-Eligibility-Requirements-PDF?bidId=
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 43
+      - 44
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: AZ Dept of Economic Security
+        url: https://des.az.gov/services/basic-needs/food/able-bodied-adult-without-dependents-overview
+    criteria_met:
+      - 46
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: A.R.S. § 46-244
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/46/00244.htm
+      - text: Arizona Department of Economic Security, “Temporary Assistance for Needy Families (TANF) Jobs Program,” at 66–69
+        url: https://des.az.gov/sites/default/files/media/Jobs-Program-Policy-Manual.pdf?time=1594742139868
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Rental Protections
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: A.R.S. § 33-1318
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/33/01318.htm
+    criteria_met:
+      - 69
+      - 70
+      - 74
+      - 76
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: A.R.S. § 13-3601(B)
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/03601.htm
+      - text: A.R.S. § 13-3806
+        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/03806.htm
+    criteria_met:
+      - 80

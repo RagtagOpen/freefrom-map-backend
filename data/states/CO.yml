@@ -1,0 +1,139 @@
+code: CO
+name: Colorado
+grade: 1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. § 13-14-101
+        url: https://codes.findlaw.com/co/title-13-courts-and-court-procedure/co-rev-st-sect-13-14-101.html
+      - text: C.R.S. § 18-6-800.3
+        url: https://codes.findlaw.com/co/title-18-criminal-code/co-rev-st-sect-18-6-800-3.html
+    criteria_met: []
+  - title: Paid and Protective Leave
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. § 8-13-401 et. seq.
+        url: https://www.sos.state.co.us/pubs/elections/Initiatives/titleBoard/filings/2019-2020/283Final.pdf
+    criteria_met:
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. § 8-73-108
+        url:  https://codes.findlaw.com/co/title-8-labor-and-industry/co-rev-st-sect-8-73-108.html
+    criteria_met:
+      - 20
+      - 22
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. § 13-80-103.6
+        url: https://codes.findlaw.com/co/title-13-courts-and-court-procedure/co-rev-st-sect-13-80-103-6.html
+      - text: C.R.S. § 13-80-103.7
+        url: https://codes.findlaw.com/co/title-13-courts-and-court-procedure/co-rev-st-sect-13-80-103-7.html
+    criteria_met:
+      - 30
+      - 31
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: CO VOCA website
+        url: https://dcj.colorado.gov/crime-victim-compensation
+      - text: C.R.S. §24-4.1-108
+        url: https://casetext.com/statute/colorado-revised-statutes/title-24-government-state/administration/article-41-crime-victim-compensation-and-victim-and-witness-rights/part-1-crime-victim-compensation-act/section-24-41-108-awarding-compensation
+      - text: C.R.S. § 24-4.1-112
+        url: https://casetext.com/statute/colorado-revised-statutes/title-24-government-state/administration/article-41-crime-victim-compensation-and-victim-and-witness-rights/part-1-crime-victim-compensation-act/section-24-41-112-emergency-awards
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 43
+      - 44
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. § 26-2-301
+        url: https://codes.findlaw.com/co/title-26-human-services-code/co-rev-st-sect-26-2-301.html
+    criteria_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S.§ 26-2-708
+        url: https://codes.findlaw.com/co/title-26-human-services-code/co-rev-st-sect-26-2-708.html
+      - text: C.R.S. §  26-2-716
+        url: https://codes.findlaw.com/co/title-26-human-services-code/co-rev-st-sect-26-2-716.html
+    criteria_met:
+      - 53
+      - 54
+      - 55
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Rental Protections
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. § 38-12-402
+        url: https://codes.findlaw.com/co/title-38-property-real-and-personal/co-rev-st-sect-38-12-402.html
+      - text: C.R.S. § 38-12-507(1)(e)(VII)
+        url: https://codes.findlaw.com/co/title-38-property-real-and-personal/co-rev-st-sect-38-12-507.html
+    criteria_met:
+      - 69
+      - 74
+      - 75
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: C.R.S. §18-6-803.6
+        url: https://codes.findlaw.com/co/title-18-criminal-code/co-rev-st-sect-18-6-803-6.html
+      - text: C.R.S. §12-240-139
+        url: https://casetext.com/statute/colorado-revised-statutes/title-12-professions-and-occupations/health-care-professions-and-occupations/article-240-medical-practice/section-12-240-139-injuries-to-be-reported-penalty-for-failure-to-report-immunity-from-liability-definitions
+    criteria_met:
+      - 80
