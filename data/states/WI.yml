@@ -1,0 +1,129 @@
+code: WI
+name: Wisconsin
+grade: -1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. § 813.12
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/813/12
+      - text: Wis. Stat. § 968.075
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/968/075/1/a
+    criteria_met: []
+  - title: Paid and Protective Leave
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. § 103.10
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/103/10/1m/c/3/c
+    criteria_met: []
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. § 108.04 (7)(s)(2)(b)
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/108/04/7/s/2/b
+    criteria_met:
+      - 20
+      - 22
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. § 949.06
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/949/i/06
+      - text: Wis. Stat. § 949.08
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/949/i/07
+      - text: Wis. Stat. § 949.11
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/949/i/11
+      - text: Wis. Stat. § 949.14
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/949/i/14
+      - text: Wis. Stat. § 227.46(2m)
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/227/iii/46
+      - text: Wisconsin DOJ Office of Crime Victim Services
+        url: https://www.doj.state.wi.us/sites/default/files/ocvs/compensation/CVC%20Brochure%20English%20for%20web.pdf
+    criteria_met:
+      - 34
+      - 35
+      - 40
+      - 44
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. § 49.79
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/49/v/79
+    criteria_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Admin. Code DCF § 101.20
+        url: https://docs.legis.wisconsin.gov/code/admin_code/dcf/101_199/101/20
+      - text: Wis. Admin. Code DCF § 2.10.6.2
+        url: https://dcf.wisconsin.gov/manuals/w-2-manual/Production/default.htm
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+  - title: Rental Protections
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. §   704.16
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/704/16
+      - text: Wis. Stat. §  160.50
+        url: https://docs.legis.wisconsin.gov/statutes/statutes/106/III/50/1
+    criteria_met:
+      - 69
+      - 70
+      - 73
+      - 76
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Wis. Stat. § 968.075(2)(1), (2)
+        url: http://docs.legis.wisconsin.gov/statutes/statutes/968/075
+    criteria_met:
+      - 80
