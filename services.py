@@ -59,7 +59,7 @@ def update_or_create_link(data, link=None):
 
     if link is None:
         if subclass is None:
-            raise ValueError(strings.require_type)
+            raise ValueError(strings.require_link_type)
         link = subclass(category_id=category_id, state=state)
     elif category_id is not None and category_id != link.category_id:
         raise ValueError(strings.cannot_change_category)

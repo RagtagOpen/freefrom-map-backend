@@ -159,7 +159,7 @@ class ResourceLinksTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
 
         json_response = json.loads(response.data)
-        self.assertEqual(json_response['description'], strings.require_type)
+        self.assertEqual(json_response['description'], strings.require_link_type)
 
     @patch('auth.is_token_valid', return_value=True)
     def test_post_link_invalid_type(self, mock_auth):
