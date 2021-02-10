@@ -6,25 +6,53 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code § 16-1001(6)-(9)
+        url: https://code.dccouncil.us/dc/council/code/sections/16-1001.html
+      - text: D.C. Code § 4-551(1)
+        url: https://code.dccouncil.us/dc/council/code/sections/4-551.html
+      - text: D.C. Code § 51-131
+        url: https://code.dccouncil.us/dc/council/code/sections/51-131.html
+      - text: D.C. Code § 4-751.01
+        url: https://code.dccouncil.us/dc/council/code/sections/4-751.01.html
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code § 32-531.01(b)(4)
+        url: https://code.dccouncil.us/dc/council/code/sections/32-531.01.html
+      - text: D.C. Code § 32-531.02(a)
+        url: https://code.dccouncil.us/dc/council/code/sections/32-531.02.html
+      - text: D.C. Code § 32-531.02(g)
+        url: https://code.dccouncil.us/dc/council/code/sections/32-531.02.html
+      - text: D.C. Code § 32-531.04(a)(2)
+        url: https://code.dccouncil.us/dc/council/code/sections/32-531.04.html
+      - text: D.C. Code § 32–531.08
+        url: https://code.dccouncil.us/dc/council/code/sections/32-531.08.html
     criteria_met: []
   - title: Safe Workplaces
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code § 2-1402.11(a)
+        url: https://code.dccouncil.us/dc/council/code/sections/2-1402.11.html
+      - text: D.C.Code § 2-1402.11(c-1)(2)
+        url: https://code.dccouncil.us/dc/council/code/sections/2-1402.11.html
+      - text: D.C. Code § 2-1402.11(c-1)(3)(A-B)
+        url: https://code.dccouncil.us/dc/council/code/sections/2-1402.11.html
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code § 51-131
+        url: https://code.dccouncil.us/dc/council/code/sections/51-131.html
+      - text: D.C. Code § 51-132
+        url: https://code.dccouncil.us/dc/council/code/sections/51-132.html
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -36,13 +64,25 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code § 22-3704(a)
+        url: https://code.dccouncil.us/dc/council/code/sections/22-3704.html
+      - text: D.C. Code § 12-301(11)-(12)
+        url: https://code.dccouncil.us/dc/council/code/sections/12-301.html
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Crime Victims Compensation Program Application
+        url: https://www.dccourts.gov/sites/default/files/CVCPApplicationJune2020.pdf
+      - text: Crime Victims Compensation Program Appeal Process
+        url: https://www.dccourts.gov/services/crime-victims-compensation-matters/procedures
+      - text: Eligibility
+        url: https://www.dccourts.gov/sites/default/files/matters-docs/CVCP-Application-and-Reimbursement-checklist.pdf
+      - text: Brochure
+        url: https://www.dccourts.gov/sites/default/files/CVCP_Brochure.pdf
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +94,15 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Mun. Regs. § 29-5823.1
+        url: https://casetext.com/regulation/distric-of-columbia-administrative-code/title-29-public-welfare/chapter-29-58-temporary-assistance-for-needy-families/rule-29-5823-work-participation-requirement-and-child-support-cooperation-waiver-determination
+      - text: D.C. Mun. Regs. 29-5810.3(h)
+        url: https://casetext.com/regulation/district-of-columbia-administrative-code/title-29-public-welfare/chapter-29-58-temporary-assistance-for-needy-families/rule-29-5810-good-cause-circumstances-work-related-activities
+      - text: D.C. Mun. Regs. § 29-5824.1
+        url: https://casetext.com/regulation/distric-of-columbia-administrative-code/title-29-public-welfare/chapter-29-58-temporary-assistance-for-needy-families/rule-29-5824-work-participation-requirement-and-standards-for-accepting-claims-of-domestic-violence
+      - text: D.C. Mun. Regs. § 29-5825.2
+        url: https://casetext.com/regulation/district-of-columbia-administrative-code/title-29-public-welfare/chapter-29-58-temporary-assistance-for-needy-families/rule-29-825-duration-of-waivers
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +120,23 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code § 42-3505.07(b), (c)
+        url: https://code.dccouncil.us/dc/council/code/sections/42-3505.07.html
+      - text: D.C. Code § 42-3505.07(d)
+        url: https://code.dccouncil.us/dc/council/code/sections/42-3505.07.html
+      - text: D.C. Code § 2-1402.21(f)(3)(B)
+        url: https://code.dccouncil.us/dc/council/code/sections/2-1402.21.html
+      - text: D.C. Code § 42-3505.07(f)
+        url: https://code.dccouncil.us/dc/council/code/sections/42-3505.07.html
+      - text: D.C. Code § 42-3505.07
+        url: https://code.dccouncil.us/dc/council/code/sections/42-3505.07.html
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: D.C. Code §16-1031
+        url: https://code.dccouncil.us/dc/council/code/sections/16-1031.html
     criteria_met: []

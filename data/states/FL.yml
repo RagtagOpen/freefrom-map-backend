@@ -6,13 +6,17 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann. § 741.28
+        url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann. § 741.313 seq.
+        url: http://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.313.html
     criteria_met: []
   - title: Safe Workplaces
     grade: 0
@@ -24,7 +28,11 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann. § 443.101(2)(c)
+        url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0443/Sections/0443.101.html
+      - text: Fla. Stat. Ann. § 443.101(2)(c)(II)
+        url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0443/Sections/0443.101.html
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -36,13 +44,19 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann § 768.35(1)
+        url: http://www.leg.state.fl.us/statutes/index.cfm?mode=View%20Statutes&SubMenu=1&App_mode=Display_Statute&Search_String=768.35&URL=0700-0799/0768/Sections/0768.35.html
+      - text: Fla. Stat. Ann  § 768.35(3)
+        url: http://www.leg.state.fl.us/statutes/index.cfm?mode=View%20Statutes&SubMenu=1&App_mode=Display_Statute&Search_String=768.35&URL=0700-0799/0768/Sections/0768.35.html
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann  §960.05-199
+        url: https://www.flsenate.gov/Laws/Statutes/2018/Chapter960
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +68,11 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann § 414.065(4)(b)
+        url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0414/Sections/0414.065.html
+      - text: Fla. Stat. Ann § 414.105(2)
+        url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0400-0499/0414/Sections/0414.105.html
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +96,7 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Fla. Stat. Ann § 741.2901
+        url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0700-0799/0741/Sections/0741.2901.html
     criteria_met: []

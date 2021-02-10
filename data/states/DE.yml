@@ -6,7 +6,11 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 10 Del. C. §1041
+        url: https://delcode.delaware.gov/title10/c009/sc03/index.shtml#1041
+      - text: 13 Del. C. § 703A
+        url: https://delcode.delaware.gov/title13/c007a/sc01/index.shtml
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -18,13 +22,19 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 19 Del. C. § 711
+        url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#711
+      - text: 19 Del. C. § 712
+        url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#712
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 19 Del. C. § 3314
+        url: https://delcode.delaware.gov/title19/c033/sc02/index.shtml#3314
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +52,27 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: DE Victim’s Compensation Assistance Program Website
+        url: https://attorneygeneral.delaware.gov/vcap/compensation/
+      - text: 11 Del. C. § 9001 et seq.
+        url: https://delcode.delaware.gov/title11/c090/index.shtml
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 31 Del. C. §  601 et seq.
+        url: https://delcode.delaware.gov/title31/c006/sc01/index.shtml
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 31 Del. C. § 1501 et seq.
+        url: https://delcode.delaware.gov/title31/c015/index.shtml
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +90,23 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 25 DE Chapter 53, §5314
+        url: https://delcode.delaware.gov/title25/c053/index.shtml#5314
+      - text: 25 Del. C. §  §5316
+        url: https://delcode.delaware.gov/title25/c053/index.shtml#5316
+      - text: 25 DE Chapter 53, §5307
+        url: https://delcode.delaware.gov/title25/c053/index.shtml#5307
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 11 Del. C. § 1904
+        url: https://delcode.delaware.gov/title11/c019/sc01/index.shtml
+      - text: 10 DE Code § 1046
+        url: https://delcode.delaware.gov/title10/c009/sc03/index.shtml
+      - text: 11 DEl Code ch94
+        url: https://delcode.delaware.gov/title11/c094/sc01/index.shtml
     criteria_met: []

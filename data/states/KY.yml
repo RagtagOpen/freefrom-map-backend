@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 403.720
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=49348
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,11 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 341.350
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47969
+      - text: Ky. Rev. Stat. Ann. § 341.360
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=49131
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +48,33 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 49.290
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46181
+      - text: Ky. Rev. Stat. Ann. § 49.330
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46189
+      - text: Ky. Rev. Stat. Ann. § 49.340
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46191
+      - text: Ky. Rev. Stat. Ann. § 49.360
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46195
+      - text: Ky. Rev. Stat. Ann. § 49.370
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=50283
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Division of Family Support Operational Manual, Supplemental Nutrition Assistance Program, Volume II (2019) Section 2500-2599 and 6450
+        url: https://chfs.ky.gov/agencies/dcbs/dfs/Documents/OMVOLII.pdf
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Division of Family  Support Operational Manual, Kentucky  Transitional  Assistance Program, Volume III (2019) Section 2003(B)
+        url: https://chfs.ky.gov/agencies/dcbs/dfs/Documents/OMVOLIII.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,7 +92,9 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 383.300 (West 2017)
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47052#:~:text=Page%201-,383.300%20Protections%20for%20person%20with%20rental%20or%20lease%20agreement%20who,order%20or%20interpersonal%20protective%20order.&text=Interpersonal%20protective%20order%20issued%20pursuant,2
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0

@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: O.C.G.A. § 19-13-1
+        url: https://codes.findlaw.com/ga/title-19-domestic-relations/ga-code-sect-19-13-1.html
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,11 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: O.C.G.A. § 34-8-194
+        url: https://codes.findlaw.com/ga/title-34-labor-and-industrial-relations/ga-code-sect-34-8-194.html
+      - text: GA. Comp. R. & Regs. 300-2-9-.10 (proof requirements)
+        url: https://casetext.com/regulation/georgia-administrative-code/department-300-rules-of-georgia-department-of-labor/chapter-300-2-employment-security-law/subject-300-2-9-qualifications-and-penalties-for-unemployment-insurance-benefits-claims/rule-300-2-9-10-quit-due-to-family-violence-forms-of-evidence-to-prove
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,7 +48,15 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: O.C.G.A. § 17-15-4
+        url: https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-15-4.html
+      - text: O.C.G.A. § 17-15-5
+        url: https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-15-5.html
+      - text: O.C.G.A. § 17-15-7
+        url: https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-15-7.html
+      - text: O.C.G.A. § 17-15-8
+        url: https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-15-8.html
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +68,15 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: O.C.G.A. § 49-4-191
+        url: https://codes.findlaw.com/ga/title-49-social-services/ga-code-sect-49-4-191.html
+      - text: DFCS TANF Website
+        url: https://dfcs.georgia.gov/tanf-eligibility-requirements
+      - text: DCFS TANF Policies (download)
+        url: https://odis.dhs.ga.gov/General/Home/DownloadDoc/4005036
+      - text: DFCS TANF Manual (download)
+        url: https://odis.dhs.ga.gov/General/Home/DownloadDoc/4002878
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +94,17 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: O.C.G.A. § 44-7-23
+        url: https://codes.findlaw.com/ga/title-44-property/ga-code-sect-44-7-23.html
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: O.C.G.A. § 31-7-9 (mandatory reporting)
+        url: https://codes.findlaw.com/ga/title-31-health/ga-code-sect-31-7-9.html#:~:text=having%20cause%20to%20believe%20that,accordance%20with%20this%20Code%20section
+      - text: Model Prosecutorial Protocol (no-drop)
+        url: https://gcfv.georgia.gov/sites/gcfv.georgia.gov/files/related_files/site_page/Prosecutorial%20Protocol%20for%20Family%20Violence.pdf
     criteria_met: []

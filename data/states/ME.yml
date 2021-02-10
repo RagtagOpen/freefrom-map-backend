@@ -6,25 +6,35 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 19-A, §4002 (3-B)
+        url: https://www.mainelegislature.org/legis/statutes/19-A/title19-Asec4002.html
+      - text: Me. Stat. tit. 17-A , §207(A)
+        url: https://www.mainelegislature.org/legis/statutes/17-A/title17-Asec207-A.html
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 26.7, §850
+        url: https://www.mainelegislature.org/legis/statutes/26/title26sec850.html
     criteria_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 5, § 4572
+        url: https://www.mainelegislature.org/legis/statutes/5/title5sec4572.html
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 26, §1193
+        url: http://www.mainelegislature.org/legis/statutes/26/title26sec1193.html
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +52,33 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 5, §3360-B
+        url: http://www.mainelegislature.org/legis/statutes/5/title5sec3360-B.html
+      - text: Me. Stat. tit. 5, §3360-C
+        url: http://www.mainelegislature.org/legis/statutes/5/title5sec3360-C.html
+      - text: Me. Stat. tit. 5, §3360-D
+        url: http://www.mainelegislature.org/legis/statutes/5/title5sec3360-D.html
+      - text: Me. Stat. tit. 5 §3360-G
+        url: http://www.mainelegislature.org/legis/statutes/5/title5sec3360-G.html
+      - text: Office of the Maine Attorney General: Victims Compensation Fund
+        url: https://www.maine.gov/ag/crime/victims_compensation/index.shtml
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 22, § 3104
+        url: http://www.mainelegislature.org/legis/statutes/22/title22sec3104.html
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 22, § 3762 (10), (18),
+        url: http://www.mainelegislature.org/legis/statutes/22/title22sec3762.html
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -66,17 +90,29 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 10, § 1310-H (2-A)
+        url: https://www.mainelegislature.org/legis/statutes/10/title10sec1310-H.html
+      - text: Me. Stat. tit. 10, § 1310-H (3) (in conflict)
+        url: https://www.mainelegislature.org/legis/statutes/10/title10sec1310-H.html
+      - text: Me. Stat. tit. 19-A, § 40007 (K)
+        url: https://www.mainelegislature.org/legis/statutes/19-A/title19-Asec4007.html
+      - text: Me. Stat. tit. 14, §6001(6)(H)
+        url: https://www.mainelegislature.org/legis/statutes/14/title14sec6001.html
     criteria_met: []
   - title: Rental Protections
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 14, § 60001 (6)
+        url: http://www.mainelegislature.org/legis/statutes/14/title14sec6001.html
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Me. Stat. tit. 19-A, § 4012(5)
+        url: https://legislature.maine.gov/legis/statutes/19-A/title19-Asec4012.html
     criteria_met: []

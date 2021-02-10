@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. Child. Code. Ann. art.1565 (2018)
+        url: https://law.justia.com/codes/louisiana/2018/code-childrenscode/chc-1565/
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. Stat. Ann. § 23:1601 (2018)
+        url: https://codes.findlaw.com/la/revised-statutes/la-rev-stat-tit-23-sect-1601.html
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +46,37 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. Rev. Stat. Ann. § 46:1806
+        url: http://legis.la.gov/legis/Law.aspx?d=100419
+      - text: La. Rev. Stat. Ann. § 46:1809
+        url: http://legis.la.gov/legis/Law.aspx?d=100422
+      - text: La. Rev. Stat. Ann. § 46:1813
+        url: http://legis.la.gov/legis/Law.aspx?d=100427
+      - text: La. Rev. Stat. Ann. § 46:1820
+        url: http://legis.la.gov/legis/Law.aspx?d=100434
+      - text: La. Crime Victim Reparations website
+        url: http://www.lcle.state.la.us/programs/cvr.asp
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. Admin. Code tit. 67, §1907
+        url: https://www.doa.la.gov/pages/osr/lac/books.aspx
+      - text: La. Department of Children and Family Services FAQs for SNAP Recipients
+        url: http://www.dcfs.la.gov/page/abawd-faqs
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. Stat. Ann. § 46:460.9 (2018)
+        url: https://law.justia.com/codes/louisiana/2018/code-revisedstatutes/title-46/rs-46-460.9/
+      - text: La. Admin. Code tit. 67, § 1213
+        url: https://www.doa.la.gov/pages/osr/lac/books.aspx
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +94,17 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. Stat. Ann. § 9:3261.1
+        url: https://codes.findlaw.com/la/revised-statutes/la-rev-stat-tit-9-sect-3261-1.html
+      - text: La. Stat. Ann. §  40:506 (2018)
+        url: https://law.justia.com/codes/louisiana/2018/code-revisedstatutes/title-40/rs-40-506/
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: La. R.S. § 46:2140(B) (2012) (Lexis)
+        url: http://legis.la.gov/legis/Law.aspx?d=100565
     criteria_met: []
