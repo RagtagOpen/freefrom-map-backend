@@ -301,6 +301,7 @@ A link represents a web link to an external resource relating to a state and cat
 | id                  | Integer  | Primary key |
 | category_id         | Integer  | Foreign key |
 | state_code          | String   | Foreign key |
+| type                | String   |             |
 | text                | String   |             |
 | url                 | String   |             |
 | active              | Boolean  |             |
@@ -322,6 +323,7 @@ This endpoint creates a link. It requires [authentication](#Authentication). It 
 |---------------------|----------|-------------|
 | category_id         | Integer  | *Required*. The id of the category to which the category is related. |
 | state_code          | String   | *Required*. The state to which the category is related. |
+| type                | String   | *Required*. One of ("resource_link", "honorable_mention", "innovative_policy_idea"). |
 | text                | String   | *Optional*. |
 | url                 | String   | *Optional*. |
 | active              | Boolean  | *Optional*. Defaults to `true`. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
@@ -334,6 +336,7 @@ This endpoint changes a link's details. It requires [authentication](#Authentica
 |---------------------|----------|-------------|
 | category_id         | Integer  | *Optional*. The id of the category to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
 | state_code          | String   | *Optional*. The state to which the category is related. This cannot be changed, and will return a 400 if it differs from the existing value. |
+| type                | String   | *Optional*. One of ("resource_link", "honorable_mention", "innovative_policy_idea"). This cannot be changed, and will return a 400 if it differs from the existing value. |
 | text                | String   | *Optional*. |
 | url                 | String   | *Optional*. |
 | active              | Boolean  | *Optional*. Passing in `false` will create a deactivated link. Links cannot be reactivated once they have been deactivated. |
