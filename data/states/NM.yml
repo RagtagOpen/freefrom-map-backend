@@ -9,19 +9,19 @@ categories:
     resource_links: []
     criteria_met: []
   - title: Paid and Protective Leave
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
   - title: Safe Workplaces
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
@@ -39,7 +39,7 @@ categories:
     resource_links: []
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
@@ -51,7 +51,7 @@ categories:
     resource_links: []
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
