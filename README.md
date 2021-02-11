@@ -347,7 +347,7 @@ A score represents whether a state meets a certain criteria.
 | id              | Integer | Primary key             |
 | state_code      | String  | Foreign key             |
 | criterion_id    | Integer | Foreign key             |
-| meets_criterion | Boolean |                         |
+| meets_criterion | String  | One of ('yes', 'no', 'maybe') |
 
 #### POST /scores
 
@@ -360,7 +360,7 @@ This endpoint requires [authentication](#Authentication). It accepts a JSON body
 |-----------------|---------|-----------------------------------------------------------|
 | state_code      | String  | *Required*. The state code to which the score is related. |
 | criterion_id    | Integer | *Required*. The criterion to which the score is related.  |
-| meets_criterion | Boolean | *Required*. Whether the state meets the criterion.        |
+| meets_criterion | String  | *Required*. Whether the state meets the criterion. One of 'yes', 'no', 'maybe'. |
 
 ### Grades
 

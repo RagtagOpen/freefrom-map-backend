@@ -34,7 +34,7 @@ class ScoresTestCase(unittest.TestCase):
         data = {
             'criterion_id': criterion_id,
             'state': state_code,
-            'meets_criterion': True,
+            'meets_criterion': 'yes',
         }
 
         response = self.client.post('/scores', json=data, headers=auth_headers())
@@ -44,7 +44,7 @@ class ScoresTestCase(unittest.TestCase):
         score = Score.query.one()
         self.assertEqual(score.criterion_id, criterion_id)
         self.assertEqual(score.state, state_code)
-        self.assertTrue(score.meets_criterion)
+        self.assertEqual(score.meets_criterion, 'yes')
         self.assertTrue(isinstance(score.created_at, datetime.datetime))
 
         json_response = json.loads(response.data)
@@ -52,7 +52,7 @@ class ScoresTestCase(unittest.TestCase):
             'id': score.id,
             'criterion_id': criterion_id,
             'state': state_code,
-            'meets_criterion': True,
+            'meets_criterion': 'yes',
         })
 
     @patch('auth.is_token_valid', return_value=True)
