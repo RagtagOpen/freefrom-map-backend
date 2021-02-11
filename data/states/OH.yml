@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ohio Rev. Code § 3113.31(A)(1)
+        url: http://codes.ohio.gov/orc/3113.31v1
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ohio Rev. Code § 4141.01
+        url: http://codes.ohio.gov/orc/4141
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,7 +46,25 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ohio Rev. Code § 2743.51
+        url: http://codes.ohio.gov/orc/2743.51
+      - text: Ohio Rev. Code § 2743.20
+        url: http://codes.ohio.gov/orc/2743.20v1
+      - text: Ohio Rev. Code § 2743.53
+        url: http://codes.ohio.gov/orc/2743.53v1
+      - text: Ohio Rev. Code § 2743.56(A)(1)
+        url: http://codes.ohio.gov/orc/2743.56v1
+      - text: Ohio Rev. Code § 2743.60(C)
+        url: http://codes.ohio.gov/orc/2743
+      - text: Ohio Rev. Code § 2743.61
+        url: http://codes.ohio.gov/orc/2743.61v1
+      - text: Ohio Rev. Code § 2743.65
+        url: http://codes.ohio.gov/orc/2743.65v1
+      - text: Ohio Rev. Code § 2743.67
+        url: http://codes.ohio.gov/orc/2743.67v1
+      - text: Crime Victims Compensation Guidelines
+        url: https://www.ohioattorneygeneral.gov/Individuals-and-Families/Victims/Apply-for-Victims-Compensation/Crime-Victims-Compensation-Guidelines
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +76,13 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ohio Revised Code §5107.714
+        url: http://codes.ohio.gov/orc/5107.714v1
+      - text: Ohio Revised Code §5107.18 (B)
+        url: http://codes.ohio.gov/orc/5107.18v1
+      - text: Ohio Revised Code §5107.711
+        url: http://codes.ohio.gov/orc/5107.711v1
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +106,7 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Ohio Revised Code § 2935.032
+        url: http://codes.ohio.gov/orc/2935.032#:~:text=The%20report%20shall%20document%20the,other%20significant%20facts%20or%20circumstances
     criteria_met: []

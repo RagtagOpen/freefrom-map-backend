@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Fam. Code § 71.004
+        url: https://statutes.capitol.texas.gov/Docs/FA/htm/FA.71.htm
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Labor Code § 204.022(a)(11)
+        url: https://statutes.capitol.texas.gov/Docs/LA/htm/LA.204.htm#:~:text=204.022.,EXCLUSIONS%20FROM%20CHARGEBACKS.&text=(B)%20does%20not%20constitute%20good,to%20voluntarily%20leave%20the%20employment.&text=(2)%20the%20employee%20worked%20for,for%20less%20than%20four%20weeks
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +46,29 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Crim. Proc. Code §56B.05, § 56B.052, § 56B.102, § 56B.107, § 56B.108, § 56B.301
+        url: https://statutes.capitol.texas.gov/Docs/CR/htm/CR.56B.htm
+      - text: Eligibilty for Crime Victims’ Compensation
+        url: https://www.texasattorneygeneral.gov/crime-victims/crime-victims-compensation-program/eligibility-crime-victims-compensation-program
+      - text: Appeals Process
+        url: https://www.texasattorneygeneral.gov/crime-victims/crime-victims-compensation-program/appeals-process
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Hum. Rec. Code § 33.0005 seq
+        url: https://statutes.capitol.texas.gov/Docs/HR/htm/HR.33.htm
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Hum. Res. Code § 31.0322(a)
+        url: https://statutes.capitol.texas.gov/Docs/HR/htm/HR.31.htm
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +86,17 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Prop. Code § 92.016 seq.
+        url: https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm#92.016
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Tex. Crim. Proc. Code § 14.03
+        url: https://statutes.capitol.texas.gov/Docs/CR/htm/CR.14.htm#14.03
+      - text: Tex. Fam. Code § 91.003
+        url: https://statutes.capitol.texas.gov/Docs/FA/htm/FA.91.htm#91.003
     criteria_met: []

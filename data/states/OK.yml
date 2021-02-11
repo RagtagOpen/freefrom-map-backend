@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Okla. Stat. Ann. Tit. 22, §60.1
+        url: https://law.justia.com/codes/oklahoma/2014/title-22/section-22-60.1/
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Okla. Stat. Ann. Tit. 40, §2-210(4)(d)
+        url: https://law.justia.com/codes/oklahoma/2015/title-40/section-40-2-210/
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -36,13 +40,25 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Okla. Stat. Ann. Tit. 12, §12.95
+        url: https://law.justia.com/codes/oklahoma/2019/title-12/section-12-95/
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Okla. Stat. Ann. Tit. 21, §21-142.10
+        url: https://law.justia.com/codes/oklahoma/2019/title-21/section-21-142-10/
+      - text: Okla. Stat. Ann. Tit. 21, §21-142.13
+        url: https://law.justia.com/codes/oklahoma/2019/title-21/section-21-142-13/
+      - text: Okla. Stat. Ann. Tit. 21, §21-142.14
+        url: https://law.justia.com/codes/oklahoma/2019/title-21/section-21-142-14/
+      - text: Oklahoma Victims of Crime Compensation - Application Form and Instructions
+        url: https://www.okvictimscomp.com/wp-content/uploads/2019-Official-Claim-Form-EN_1.pdf
+      - text: Oklahoma Crime Victims Compensation Program Information
+        url: https://www.ok.gov/dac/Victims/Victims_Compensation_Program/index.html#eligibleexpenses
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -78,5 +94,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Okla. Stat. Ann. Tit. 22, §196(6)
+        url: https://law.justia.com/codes/oklahoma/2019/title-22/section-22-196/
+      - text: Okla. Stat. Ann. Tit.22, §22-60.16
+        url: https://law.justia.com/codes/oklahoma/2019/title-22/section-22-60-16/
     criteria_met: []

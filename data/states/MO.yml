@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mo. Rev. Stat. § 455.010(5)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=455.010&bid=25526&hl=
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,11 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mo. Rev. Stat. § 288.501(2)(c)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=288.501&bid=15289&hl=
+      - text: Mo. Rev. Stat. § 288.040
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=288.040#:~:text=A%20claimant%20shall%20be%20ineligible,shall%20be%20treated%20as%20discharges
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,7 +48,13 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mo. Rev. Stat. § 595.015
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=595.015&bid=35679&hl=
+      - text: Mo. Rev. Stat. § 595.025
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=595.025&bid=35681&hl=
+      - text: Mo. Rev. Stat. § 595.036
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=595.036&bid=30369&hl=
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +66,9 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mo. Rev. Stat. § 208.040(5)(5)(a)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=208.040
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +86,17 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mo. Rev. Stat. §  441.920
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=441.920&bid=47695&hl=
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mo. Rev. Stat. § 455.080
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=455.080&bid=25545&hl=
+      - text: Mo. Rev. Stat. §  455.085(1)-(2)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=455.085&bid=25547&hl=
     criteria_met: []

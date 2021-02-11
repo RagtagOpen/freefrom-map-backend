@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Neb. Rev. Stat. § 42-903
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=42-903
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Neb. Rev. Stat. Ann. § 48-628.13
+        url: https://nebraskalegislature.gov/laws/statutes.php?statute=48-628.13
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +46,41 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Neb. Rev. Stat. Ann. § 81-1812
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1812
+      - text: Neb. Rev. Stat. Ann. § 81-1819
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1819
+      - text: Neb. Rev. Stat. Ann. § 81-1820
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1820
+      - text: Neb. Rev. Stat. Ann. § 81-1821
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1821
+      - text: Neb. Rev. Stat. Ann. § 81-1832
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1832
+      - text: Neb. Rev. Stat. Ann. § 81-1839
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1839
+      - text: Crime Victims Reparations website
+        url: https://ncc.nebraska.gov/crime-victim-reparations
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 475 Neb. Admin. Code, ch. 2, § 004.05 (A)
+        url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-475/Chapter-2.pdf
+      - text: 475 Neb. Admin. Code, ch. 3, § 001.04(F)(iii)
+        url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-475/Chapter-3.pdf
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 468 Nebraska Administrative Code 2-020.02 (8)
+        url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-468/Chapter-2.pdf
+      - text: 468 Nebraska Administrative Code 2-020.10A
+        url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-468/Chapter-2.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +104,7 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Neb. Rev. Stat. Ann. § 29-404.02
+        url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=29-404.02
     criteria_met: []

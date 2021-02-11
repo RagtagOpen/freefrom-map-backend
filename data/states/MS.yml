@@ -6,7 +6,11 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Miss. Code Ann. § 93-21-3
+        url: https://advance.lexis.com/api/permalink/346430d1-bec7-4c07-b4b2-49e53298e6db/?context=1000516
+      - text: Miss. Code Ann. § 97-3-7
+        url: https://advance.lexis.com/api/permalink/f1a500e8-cb84-43d5-ac53-88bd02703eb8/?context=1000516
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +28,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Miss. Code Ann. § 71-5-511
+        url: https://advance.lexis.com/api/permalink/75ad6608-4b2f-4798-b558-c136c4c63348/?context=1000516
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +48,31 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Miss. Code Ann. § 99-41-5
+        url: https://advance.lexis.com/api/permalink/f6257ba1-6952-4576-904a-ae50ef02bf4e/?context=1000516
+      - text: Miss. Code Ann. § 99-41-13
+        url: https://advance.lexis.com/api/permalink/0c07df40-e39f-4488-83a1-5d13c194c527/?context=1000516
+      - text: Miss. Code Ann. § 99-41-17
+        url: https://advance.lexis.com/api/permalink/a4cb5940-c1cd-4dea-89e3-60733bf80fa6/?context=1000516
+      - text: Miss. Code Ann. § 99-41-25
+        url: https://advance.lexis.com/api/permalink/44ce32e7-deb0-4a13-bd1f-ebc52de316b0/?context=1000516
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: SNAP Policy Manual (2011)l, p 3002, 3003,7750, 7751, 8014
+        url: https://sos.ms.gov/ACProposed/00021848b.pdf
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: TANF Policy Manual (2011) p. 3001, 3907
+        url: https://www.sos.ms.gov/ACCode/00000330c.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +96,7 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Miss. Code Ann. § 99-3-7(3)(a)-(e)
+        url: https://advance.lexis.com/api/permalink/f4cb5c1e-90cd-45d8-9313-99a27ec7adb1/?context=1000516
     criteria_met: []

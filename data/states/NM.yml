@@ -6,25 +6,39 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.M. Stat. Ann. §40-13-2
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4375/index.do#!b/40-13-2
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.M. Stat. Ann § 50-4A-3
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-3
+      - text: N.M. Stat. Ann § 50-4A-2
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-2
+      - text: N.M. Stat. Ann § 50-4A-4
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-4
+      - text: N.M. Stat. Ann § 50-4A-5
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-5
     criteria_met: []
   - title: Safe Workplaces
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.M. Stat. Ann § 50-4A-6
+        url: https://law.justia.com/codes/new-mexico/2019/chapter-50/article-4a/section-50-4a-6/
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.M. Stat. Ann. § 51-1-7(A)(1)(b)
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4425/index.do#!b/51-1-7
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,7 +56,15 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.M. Stat. Ann. § 31-22-6
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4379/index.do#!b/31-22-6
+      - text: N.M. Stat. Ann. § 31-22-7
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4379/index.do#!b/31-22-7
+      - text: N.M. Stat. Ann. § 31-22-14
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4379/index.do#!b/31-22-14
+      - text: New Mexico Compensation FAQ
+        url: https://www.cvrc.state.nm.us/cvrc-application/
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +76,11 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 8.102.461.15 NMAC. 8.102.420.11(A)(8) NMAC
+        url: http://164.64.110.134/parts/title08/08.102.0420.pdf
+      - text: 8.102.410.17 (E)(1)(c) NMAC
+        url: http://164.64.110.134/parts/title08/08.102.0410.html
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +104,7 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.M. Stat. Ann. § 40-13-7
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4375/index.do#!b/40-13-7
     criteria_met: []

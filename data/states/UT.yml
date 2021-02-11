@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Utah Code § 77-36-1
+        url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S1.html?v=C77-36-S1_2015051220150512
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -42,19 +44,37 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Utah Code § 63M-7-509
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S509.html
+      - text: Utah Code § 63M-7-511
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S511.html
+      - text: Utah Code § 63M-7-522
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S522.html
+      - text: Utah Code § 63M-7-524
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S524.html
+      - text: Utah Admin. Code r. 270-2-4
+        url: https://rules.utah.gov/publicat/code/r270/r270-002.htm#E4
+      - text: Application
+        url: https://justice.utah.gov/wp-content/uploads/CVRApplication_English.pdf
+      - text: Brochure
+        url: https://justice.utah.gov/wp-content/uploads/CrimeVictimBrochure_2011.pdf
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Utah Admin. Code r. 986-900-902 (p)(viii)
+        url: https://rules.utah.gov/publicat/code/r986/r986-900.htm#E2
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Utah Admin. Code r. R986-200-218(2)
+        url: https://rules.utah.gov/publicat/code/r986/r986-200.htm#T18
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +92,15 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Utah Code § 57-22-5.1
+        url: https://le.utah.gov/xcode/Title57/Chapter22/57-22-S5.1.html
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Utah Code § 77-36-2.2
+        url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S2.2.html?v=C77-36-S2.2_1800010118000101
     criteria_met: []

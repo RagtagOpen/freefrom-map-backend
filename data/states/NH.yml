@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.H. Rev. Stat. Ann. § 631:2-b
+        url: https://www.gencourt.state.nh.us/rsa/html/LXII/631/631-2-b.htm
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -18,13 +20,17 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.H. Rev. Stat. Ann. § 275:71
+        url: http://www.gencourt.state.nh.us/rsa/html/XXIII/275/275-71.htm
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.H. Rev. Stat. Ann. § 282-A:32 (a)(3)
+        url: http://www.gencourt.state.nh.us/rsa/html/xxiii/282-A/282-A-32.htm
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,7 +48,11 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.H. Code Admin. R. Jus 605.02 and 606.7
+        url: http://www.gencourt.state.nh.us/rules/state_agencies/jus600.htm
+      - text: New Hampshire Victim’s Compensation Program, What I must do to be eligible
+        url: https://www.doj.nh.gov/grants-management/victims-compensation-program/documents/brochure.pdf
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +64,9 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: TANF State Plan, p 23-24
+        url: https://www.dhhs.nh.gov/dfa/documents/tanf-state-plan.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +90,7 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: N.H. Rev. Stat. Ann. § 173-B:9
+        url: https://www.gencourt.state.nh.us/rsa/html/XII/173-B/173-B-9.htm#:~:text=The%20law%20enforcement%20agency%20shall,II
     criteria_met: []

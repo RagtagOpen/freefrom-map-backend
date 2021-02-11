@@ -6,19 +6,25 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Vt. Stat. Ann. tit. 15, § 1101(1)
+        url: https://legislature.vermont.gov/statutes/section/15/021/01101
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Vt. Stat. Ann. tit. 21, § 483 (a)(4), (c)(2)
+        url: https://legislature.vermont.gov/statutes/section/21/005/00483
     criteria_met: []
   - title: Safe Workplaces
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 21 V.S.A. § 495 (a)
+        url: https://legislature.vermont.gov/statutes/section/21/005/00495
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
@@ -42,7 +48,13 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 13 V.S.A. § 5353
+        url: https://legislature.vermont.gov/statutes/section/13/167/05353
+      - text: 13 V.S.A. § 5355
+        url: https://legislature.vermont.gov/statutes/section/13/167/05355
+      - text: Center for Crime Victim Services
+        url: http://www.ccvs.vermont.gov/support-for-victims/victims-compensation-program/eligibility
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +66,11 @@ categories:
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: CVR 13-170-230 § 2363.1
+        url: https://advance.lexis.com/api/permalink/d237cf6b-4dc2-4fc6-beae-43539c91e1cc/?context=1000516
+      - text: CVR 13-170-220 § 2238(B)(2)
+        url: https://advance.lexis.com/api/permalink/9d86542d-b57a-4d93-9ab8-abe7076f5f35/?context=1000516
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +88,15 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 9 V.S.A. § 4472
+        url: https://legislature.vermont.gov/statutes/section/09/137/04472
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: V.R.Cr.P. Rule 3
+        url: https://advance.lexis.com/api/permalink/f9225236-7f53-44be-a74e-831f6f82940f/?context=1000516
     criteria_met: []

@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 23 Pa. Cons. Stat. § 6102
+        url: https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=23&div=0&chpt=61&sctn=2&subsctn=0
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 4 Pa. Code §402
+        url: https://www.legis.state.pa.us/cfdocs/legis/LI/uconsCheck.cfm?txtType=HTM&yr=1936&sessInd=2&smthLwInd=2&act=001&chpt=4
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,7 +46,11 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Manual for Compensation Assistance by Victims Compensation Assistance Program Pennsylvania Commission on Crime and Delinquency Office of Victims’ Services
+        url: https://www.pccd.pa.gov/Victim-Services/Documents/2018%20VCAP%20Manual.pdf
+      - text: 37 Pa. Code §411.18, §411.31 & §411.32
+        url: https://www.pccd.pa.gov/Victim-Services/Documents/APPEALS%20PROCESS.pdf
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +62,9 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: PA Compass Family Safety Information
+        url: https://www.compass.state.pa.us/compass.web/menuitems/DomesticViolenceInfo.aspx?Language=EN
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +88,7 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: 18 Pa. Cons. Stat. § 2711
+        url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.027.011.000..HTM
     criteria_met: []

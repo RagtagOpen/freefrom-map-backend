@@ -6,25 +6,37 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 33.018
+        url: https://www.leg.state.nv.us/nrs/nrs-033.html#NRS033Sec018
+      - text: Nev. Rev. Stat. §  207.190(1)
+        url: https://www.leg.state.nv.us/nrs/nrs-207.html#NRS207Sec190
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. §  608.0198
+        url: https://www.leg.state.nv.us/nrs/nrs-608.html#NRS608Sec0198
     criteria_met: []
   - title: Safe Workplaces
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 613.223(a) and (b).
+        url: https://www.leg.state.nv.us/nrs/nrs-613.html#NRS613Sec223
+      - text: Nev. Rev. Stat. § 613.222(1).
+        url: https://www.leg.state.nv.us/nrs/nrs-613.html#NRS613Sec222
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 612.3755(1)
+        url: https://www.leg.state.nv.us/nrs/nrs-612.html#NRS612Sec3755
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -36,13 +48,33 @@ categories:
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 41.134
+        url: https://www.leg.state.nv.us/NRS/NRS-041.html#NRS041Sec134
+      - text: Nev. Rev. Stat. § 11.190(4)(e)
+        url: https://www.leg.state.nv.us/NRS/NRS-011.html#NRS011Sec190
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 217.100
+        url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec100
+      - text: Nev. Rev. Stat. § 217.102
+        url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec102
+      - text: Nev. Rev. Stat. §  217.110
+        url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec110
+      - text: Nev. Rev. Stat. § 217.112 (1),(2)
+        url: https://www.leg.state.nv.us/nrs/NRS-217.html#NRS217Sec112
+      - text: Nev. Rev. Stat. §  217.117
+        url: leg.state.nv.us/NRS/NRS-217.html#NRS217Sec117
+      - text: Nev. Rev. Stat. § 217.140
+        url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec140
+      - text: Nev. Rev. Stat. § 217.200
+        url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec200
+      - text: Nev. Rev. Stat. § 217.220(1)(b)-(e)
+        url: https://www.leg.state.nv.us/nrs/NRS-217.html#NRS217Sec220
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -54,7 +86,13 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 422A.600. https://www.leg.state.nv.us/nrs/NRS-422A.html#NRS422ASec600
+        url: Nevada
+      - text: TANF State Plan, p 23
+        url: https://dwss.nv.gov/uploadedFiles/dwssnvgov/content/TANF/Revised%202019%20Final%20Draft%20TANF%20State%20Plan%20in%20color%20signed%203.26.20.pdf
+      - text: Nevada TANF Eligibility—Domestic Violence, p 3
+        url: https://dwss.nv.gov/uploadedFiles/dwssnvgov/content/Home/Features/Eligibility_and_Payments/Chapter_A-2200.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -72,11 +110,23 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 118A.345
+        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec345
+      - text: Nev. Rev. Stat. § 118A.345(2)
+        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec345
+      - text: Nev. Rev. Stat. § 118A.345(5)
+        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec347
+      - text: Nev. Rev. Stat. § 118A.510(h)
+        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec51
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Nev. Rev. Stat. § 171.137
+        url: https://www.leg.state.nv.us/NRS/NRS-171.HTML#NRS171Sec137
+      - text: Nev. Rev. Stat. § 200.485(10)
+        url: https://www.leg.state.nv.us/nrs/nrs-200.html#NRS200Sec485
     criteria_met: []

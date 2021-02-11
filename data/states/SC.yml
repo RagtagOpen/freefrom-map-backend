@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: S.C. Code Ann. § 20-4-10
+        url: https://www.scstatehouse.gov/code/t20c004.php
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: S.C. Code Ann. § 41-35-125
+        url: https://www.scstatehouse.gov/code/t41c035.php
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +46,31 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: S.C. Code Ann. §  16-3-1140, § 16-3-1150, § 16-3-1170 (4), § 16-3-1210, § 16-3-1210, § 16-3-1340
+        url: https://www.scstatehouse.gov/code/t16c003.php
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: S.C. Code Regs. 114–1300 - 114–1395
+        url: https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf
+      - text: SNAP Policy Manual (2017), p 160
+        url: https://dss.sc.gov/media/1468/snap-manual-vol-33.pdf
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: S.C. Code Regs. 114–1160(3)
+        url: https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf
+      - text: S.C. Code Ann. § 43-5-1125, § 43-5-1170
+        url: https://www.scstatehouse.gov/code/t43c005.php
+      - text: TANF State Plan (2018-2021) 3.1.7
+        url: https://dss.sc.gov/media/1871/sc-tanf-state-plan-2018-2021.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +94,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: S.C. Code Ann. §  16-25-70
+        url: https://www.scstatehouse.gov/code/t16c025.php
+      - text: S.C. Code Ann. § 16-3-1072
+        url: https://www.scstatehouse.gov/code/t16c003.php
     criteria_met: []

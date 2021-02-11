@@ -6,7 +6,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mont. Code Ann. §  45-5-206
+        url: https://leg.mt.gov/bills/mca/title_0450/chapter_0050/part_0020/section_0060/0450-0050-0020-0060.html
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -24,7 +26,9 @@ categories:
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mont. Code Ann. § 39-51-2111(1)(a)
+        url: https://leg.mt.gov/bills/mca/title_0390/chapter_0510/part_0210/section_0110/0390-0510-0210-0110.html
     criteria_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -42,19 +46,37 @@ categories:
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mont. Code Ann. § 53-9-106
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0060/0530-0090-0010-0060.html
+      - text: Mont. Code Ann. § 53-9-125
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0250/0530-0090-0010-0250.html
+      - text: Mont. Code Ann. § 53-9-126
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0260/0530-0090-0010-0260.html
+      - text: Mont. Code Ann. § 53-9-128
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0280/0530-0090-0010-0280.html
+      - text: Mont. Code Ann. § 53-9-131
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0310/0530-0090-0010-0310.html
+      - text: Montana Department of Justice Crime Victim Compensation
+        url: https://dojmt.gov/victims/crime-victim-compensation/
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mont. Admin. R. 37.76.121
+        url: http://mtrules.org/gateway/ruleno.asp?RN=37%2E76%2E121
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mont. Admin. R. 37.78.202 (2)(D)
+        url: http://www.mtrules.org/gateway/ruleno.asp?RN=37%2E78%2E202
+      - text: Mont. Admin. R.  37.78.508 (4)(j)
+        url: http://mtrules.org/gateway/ruleno.asp?RN=37%2E78%2E508
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +100,7 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Mont. Code Ann. § 46-6-601
+        url: https://leg.mt.gov/bills/mca/title_0460/chapter_0060/part_0060/section_0010/0460-0060-0060-0010.html
     criteria_met: []
