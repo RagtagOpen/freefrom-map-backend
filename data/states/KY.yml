@@ -13,7 +13,10 @@ categories:
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Survivors are able to take leave if they need to serve as a witness or assist in prosecuting a case
+      text: Ky. Rev. Stat. Ann. § 421.500(8)
+      url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=50503
     resource_links: []
     criteria_met: []
   - title: Safe Workplaces

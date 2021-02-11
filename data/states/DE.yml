@@ -15,7 +15,10 @@ categories:
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Reasonable accommodation include ability use accrued time off
+      text: Del C. §711(a)(3)(h)(2)
+      url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#710
     resource_links: []
     criteria_met: []
   - title: Safe Workplaces

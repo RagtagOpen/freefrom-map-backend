@@ -5,7 +5,10 @@ categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Economic abuse is included in the definition of intimate partner violence but only applies to the parenting act
+      text: Neb. Rev. Stat. §43-2922 (8), (9)
+      url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=43-2922
     resource_links:
       - text: Neb. Rev. Stat. § 42-903
         url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=42-903

@@ -5,7 +5,10 @@ categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Domestic Violence Awareness, Michigan State Police recognize economic abuse as a form of domestic violence
+      text: MSP Domestic Violence Awareness
+      url: https://www.michigan.gov/msp/0,4643,7-123-1878_1711-10257--,00.html
     resource_links:
       - text: Mich. Comp. Laws § 400.1501
         url: http://www.legislature.mi.gov/(S(ifgw4qaq3enmstfjwi1qkibs))/mileg.aspx?page=getobject&objectname=mcl-400-1501

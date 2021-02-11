@@ -57,7 +57,10 @@ categories:
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Protective Orders to pay for attorney fee and costs
+      text: D.C. Code § 16-1005(c)(8)
+      url: https://code.dccouncil.us/dc/council/code/sections/16-1005.html
     resource_links: []
     criteria_met: []
   - title: Designated Tort for Intimate Partner Violence

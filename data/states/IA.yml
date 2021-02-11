@@ -39,7 +39,10 @@ categories:
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Although the state of Iowa does not have a designated domestic violence tort, it allows for the victim to file a petition with the office of Clerk of Court at the local county courthouse to ask for a civil protective order, legally requiring the abuser to stay away from the victim
+      text: Iowa Code § 236.3 (2020)
+      url: https://www.legis.iowa.gov/docs/ico/chapter/236.pdf
     resource_links: []
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
@@ -91,7 +94,10 @@ categories:
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Survivors are allowed to terminate a lease if there is “clear and present danger”
+      text: Iowa Code § 562B.25A
+      url: https://www.legis.iowa.gov/docs/code/562B.25A.pdf
     resource_links: []
     criteria_met: []
   - title: Alternatives to Law Enforcement Responses

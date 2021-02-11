@@ -13,7 +13,10 @@ categories:
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Protected leave is available for survivors who are state employees
+      text: N.D. Cen. Code §54-06-14.6 (2019)
+      url: https://www.legis.nd.gov/cencode/t54c06.pdf
     resource_links: []
     criteria_met: []
   - title: Safe Workplaces

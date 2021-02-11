@@ -13,7 +13,10 @@ categories:
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Unpaid and protected leave available for employees in Philadelphia
+      text: Ordinance, Bill No. 090660-A
+      url: https://www.phila.gov/HumanRelations/PDF/DomesticOrSexualViolenceOrdinance.pdf
     resource_links: []
     criteria_met: []
   - title: Safe Workplaces
@@ -87,7 +90,10 @@ categories:
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Professionals may not report without the consent of the survivor with certain exemptions
+      text: 18 Pa. Cons. Stat. § 5106
+      url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.051..HTM#:~:text=%C2%A7%205106.,by%20firearm%20or%20criminal%20act.&text=(2)%20upon%20whom%20injuries%20have,penal%20law%20of%20this%20Commonwealth%3B&text=The%20report%20shall%20state%20the,extent%20of%20the%20person's%20injuries
     resource_links:
       - text: 18 Pa. Cons. Stat. § 2711
         url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.027.011.000..HTM

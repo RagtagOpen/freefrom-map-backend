@@ -19,7 +19,10 @@ categories:
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: An employer may not terminate an employee for filing for a protective order
+      text: I.C. § 22-5-7
+      url: http://184.175.130.101/legislative/laws/2019/ic/titles/022#22-5-7
     resource_links: []
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility

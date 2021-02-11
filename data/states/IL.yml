@@ -39,7 +39,10 @@ categories:
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Survivors of sexual assault are able to file a “no civil contact order” against their harm-doer
+      text: 740 Ill. Comp. Stat. Ann. 22/201
+      url: https://ilga.gov/legislation/ilcs/documents/074000220K201.htm
     resource_links: []
     criteria_met: []
   - title: Designated Tort for Intimate Partner Violence

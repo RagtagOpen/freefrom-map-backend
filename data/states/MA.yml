@@ -29,7 +29,10 @@ categories:
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Individuals who are fired are also eligible for benefits if they can show that the firing was due to circumstances resulting from domestic violence, including the individual’s need to address the physical, psychological, or legal effects of domestic violence
+      text: G.L. c. 151A, § 25(e)
+      url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter151a/Section25
     resource_links:
       - text: Mass. Gen. Laws ch. 151A, § 25
         url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter151a/Section25
@@ -43,7 +46,10 @@ categories:
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Massachusetts does have a civil rights statute (M.G.L.A. 12 § 11H, I, J (2014)) under which civil actions for gender violence may be brought
+      text: M.G.L.A. 12 § 11H, I, J (2014)
+      url: https://scholarship.law.uc.edu/cgi/viewcontent.cgi?article=1257&context=uclr
     resource_links: []
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility

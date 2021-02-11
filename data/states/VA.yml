@@ -13,7 +13,10 @@ categories:
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: An individual who left employment voluntarily with good cause due to a personal bona fide medical reason caused by a non-job-related injury or medical condition
+      text: VA 60.2-528(3)(C)(6)
+      url: https://law.lis.virginia.gov/vacodefull/title60.2/
     resource_links: []
     criteria_met: []
   - title: Safe Workplaces

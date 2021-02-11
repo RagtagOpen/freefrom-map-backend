@@ -79,7 +79,10 @@ categories:
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Texas criminalizes coerced and fraudulent debt and provides an option for restitution for the loss of income and other expenses related to the offense
+      text: Tex. Penal Code § 32.51(b)
+      url: https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm#32.51
     resource_links: []
     criteria_met: []
   - title: Rental Protections
