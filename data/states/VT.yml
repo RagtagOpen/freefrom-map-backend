@@ -30,12 +30,9 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention:
-      description: Vermont provides a Domestic and Sexual Violence Survivors’ Transitional Employment Program to provide temporary, partial wage replacement to individuals who must leave employment, without good cause attributable to the employer, because of circumstances directly resulting from domestic violence, sexual assault, or stalking
-      text: 21 V.S.A. § 1251
-      url: https://legislature.vermont.gov/statutes/section/21/016A/01251
-      # description: An individual shall be eligible for up to 26 weekly payments when the Commissioner determines that the individual voluntarily left work due to circumstances directly resulting from domestic sexual violence
-      # text: 21 V.S.A. § 1253
-      # url: https://legislature.vermont.gov/statutes/section/21/016A/01253
+      description: Vermont provides a Domestic and Sexual Violence Survivors’ Transitional Employment Program to provide temporary, partial wage replacement to those who must leave their job due to experiencing domestic violence, sexual assault, or stalking
+      text: 21 V.S.A. § 1251 - 1255
+      url: https://legislature.vermont.gov/statutes/chapter/21/016A
     resource_links: []
     criteria_met: []
   - title: Litigation Abuse Protections
