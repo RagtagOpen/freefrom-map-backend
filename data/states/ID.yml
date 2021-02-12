@@ -5,8 +5,13 @@ categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
-    resource_links: []
+    honorable_mention:
+      description: Idaho Council on Domestic Violence and Victim Assistance Grant Funding includes the “financial abuse” in definition of Domestic Violence
+      text: IDAPA 16.05.04
+      url: https://adminrules.idaho.gov/rules/current/16/160504.pdf
+    resource_links:
+      - text: I.C. § 39-6303
+        url: https://legislature.idaho.gov/statutesrules/idstat/title39/t39ch63/sect39-6303/
     criteria_met: []
   - title: Paid and Protective Leave
     grade: 0
@@ -18,7 +23,10 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - description: Idaho sets forth Domestic Violence policies for public employees under the state’s executive branch agency policy
+        text: Executive Branch Agency Policy – relevant sections include: 8C. Confidentiality, 8E. Safety and 8I. Retaliation
+        url: https://dhr.idaho.gov/wp-content/uploads/Section8DomesticViolence.pdf
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
@@ -39,22 +47,38 @@ categories:
     resource_links: []
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Idaho Crime Victim Compensation Program FAQs
+        url: https://crimevictimcomp.idaho.gov/frequently-asked-questions/
+      - text: I.C. § 72-1021
+        url: https://legislature.idaho.gov/statutesrules/idstat/Title72/T72CH10/SECT72-1021/
+      - text: I.C. § 72-1017
+        url: https://legislature.idaho.gov/statutesrules/idstat/Title72/T72CH10/SECT72-1017/
+      - text: I.C.  § 72-1006
+        url: https://legislature.idaho.gov/statutesrules/idstat/Title72/T72CH10/SECT72-1006/
+      - text: I.C.  § 72-1003
+        url: https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch10/sect72-1003/
+      - text: I.C. §72-1016 (3), (4), (6), (7)
+        url: https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch10/sect72-1016/
     criteria_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Idaho Admin. Code r. 16.03.04.156 and 16.03.04.796
+        url: https://adminrules.idaho.gov/rules/current/16/160304.pdf
     criteria_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: IDAPA 16.03.08
+        url: https://adminrules.idaho.gov/rules/current/16/160308.pdf
     criteria_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -78,5 +102,7 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: I.C. § 19-603
+        url: https://legislature.idaho.gov/statutesrules/idstat/title19/t19ch6/sect19-603/#:~:text=19%2D603.,a%20warrant%2C%20arrest%20a%20person%3A&text=When%20a%20felony%20has%20in,arrested%20to%20have%20committed%20it
     criteria_met: []
