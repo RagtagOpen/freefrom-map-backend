@@ -13,12 +13,14 @@ categories:
       - text: I.C. § 39-6303
         url: https://legislature.idaho.gov/statutesrules/idstat/title39/t39ch63/sect39-6303/
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -28,24 +30,28 @@ categories:
         text: Executive Branch Agency Policy – relevant sections include: 8C. Confidentiality, 8E. Safety and 8I. Retaliation
         url: https://dhr.idaho.gov/wp-content/uploads/Section8DomesticViolence.pdf
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -69,6 +75,7 @@ categories:
       - 38
       - 39
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -80,6 +87,7 @@ categories:
       - 47
       - 49
       - 51
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -88,24 +96,28 @@ categories:
       - text: IDAPA 16.03.08
         url: https://adminrules.idaho.gov/rules/current/16/160308.pdf
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -114,3 +126,4 @@ categories:
       - text: I.C. § 19-603
         url: https://legislature.idaho.gov/statutesrules/idstat/title19/t19ch6/sect19-603/#:~:text=19%2D603.,a%20warrant%2C%20arrest%20a%20person%3A&text=When%20a%20felony%20has%20in,arrested%20to%20have%20committed%20it
     criteria_met: []
+    criteria_maybe_met: []

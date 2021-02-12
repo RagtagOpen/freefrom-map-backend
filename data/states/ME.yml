@@ -12,6 +12,7 @@ categories:
       - text: Me. Stat. tit. 17-A , §207(A)
         url: https://www.mainelegislature.org/legis/statutes/17-A/title17-Asec207-A.html
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 2
     innovative_policy_idea: ~
@@ -25,6 +26,7 @@ categories:
       - 8
       - 9
       - 10
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -33,6 +35,7 @@ categories:
       - text: Me. Stat. tit. 5, § 4572
         url: https://www.mainelegislature.org/legis/statutes/5/title5sec4572.html
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -42,18 +45,22 @@ categories:
         url: http://www.mainelegislature.org/legis/statutes/26/title26sec1193.html
     criteria_met:
       - 20
+    criteria_maybe_met:
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -73,6 +80,7 @@ categories:
       - 34
       - 35
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -81,6 +89,7 @@ categories:
       - text: Me. Stat. tit. 22, § 3104
         url: http://www.mainelegislature.org/legis/statutes/22/title22sec3104.html
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -91,12 +100,14 @@ categories:
     criteria_met:
       - 54
       - 55
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 2
     innovative_policy_idea: ~
@@ -114,6 +125,7 @@ categories:
       - 65
       - 66
       - 67
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 3
     innovative_policy_idea: ~
@@ -128,6 +140,7 @@ categories:
       - 73
       - 74
       - 75
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -137,3 +150,4 @@ categories:
         url: https://legislature.maine.gov/legis/statutes/19-A/title19-Asec4012.html
     criteria_met:
       - 80
+    criteria_maybe_met: []

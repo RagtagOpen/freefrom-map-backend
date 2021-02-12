@@ -10,12 +10,14 @@ categories:
       - text: I.C. § 31-9-2-42
         url: http://184.175.130.101/legislative/laws/2019/ic/titles/031/articles/037/#31-9-2-42
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -25,6 +27,7 @@ categories:
       url: http://184.175.130.101/legislative/laws/2019/ic/titles/022#22-5-7
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -35,18 +38,21 @@ categories:
     criteria_met:
       - 20
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -74,6 +80,7 @@ categories:
       - 38
       - 39
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -86,6 +93,7 @@ categories:
       - text: I.C § 12-14-29-2
         url: http://iga.in.gov/legislative/laws/2020/ic/titles/012/#12-14-29-2
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -102,18 +110,23 @@ categories:
     criteria_met:
       - 53
       - 54
+    criteria_maybe_met:
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: -1
     innovative_policy_idea: ~
@@ -126,6 +139,7 @@ categories:
       - 70
       - 73
       - 76
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -138,3 +152,4 @@ categories:
       - text: I.C. 35-33-1-1.5
         url: http://iga.in.gov/legislative/laws/2020/ic/titles/035#35-33-1-1.5
     criteria_met: []
+    criteria_maybe_met: []

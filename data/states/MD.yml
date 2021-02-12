@@ -15,6 +15,7 @@ categories:
       - 3
       - 5
       - 8
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 1
     innovative_policy_idea: ~
@@ -25,12 +26,15 @@ categories:
       - text: Md. Code, Labor and Employment, § 3-1309(c)
         url: https://law.justia.com/codes/maryland/2018/labor-and-employment/title-3/subtitle-13/section-3-1309/
     criteria_met: []
+    criteria_maybe_met:
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -41,18 +45,21 @@ categories:
     criteria_met:
       - 20
       - 23
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -73,6 +80,7 @@ categories:
       - 35
       - 39
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -91,6 +99,7 @@ categories:
       - 48
       - 49
       - 51
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -107,18 +116,21 @@ categories:
       - 54
       - 55
       - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: -1
     innovative_policy_idea: ~
@@ -137,6 +149,7 @@ categories:
       - 70
       - 72
       - 76
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -145,3 +158,4 @@ categories:
       - text: Md. Code, Criminal Procedure § 2-204
         url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=2-204&enactments=False&archived=False
     criteria_met: []
+    criteria_maybe_met: []

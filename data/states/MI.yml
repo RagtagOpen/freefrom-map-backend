@@ -13,6 +13,7 @@ categories:
       - text: Mich. Comp. Laws § 400.1501
         url: http://www.legislature.mi.gov/(S(ifgw4qaq3enmstfjwi1qkibs))/mileg.aspx?page=getobject&objectname=mcl-400-1501
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 1
     innovative_policy_idea: ~
@@ -29,12 +30,14 @@ categories:
       - 5
       - 9
       - 10
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -43,12 +46,14 @@ categories:
       - text: Mich. Admin. Code r. 421.210
         url: https://casetext.com/regulation/michigan-administrative-code/department-talent-and-economic-development/employment-security/part-3-claims/section-r-421210-unemployment-insurance-benefit-filing-requirements-definitions
     criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 1
     innovative_policy_idea: ~
@@ -58,6 +63,7 @@ categories:
         url: http://legislature.mi.gov/doc.aspx?mcl-600-5805
     criteria_met:
       - 30
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -78,6 +84,8 @@ categories:
       - 38
       - 39
       - 44
+    criteria_maybe_met:
+      - 35
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -89,6 +97,7 @@ categories:
       - 46
       - 50
       - 51
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -99,18 +108,22 @@ categories:
     criteria_met:
       - 53
       - 55
+    criteria_maybe_met:
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 1
     innovative_policy_idea: ~
@@ -122,6 +135,7 @@ categories:
       - 69
       - 70
       - 75
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -130,3 +144,4 @@ categories:
       - text: Mich. Comp. Laws § 776.22
         url: http://legislature.mi.gov/doc.aspx?mcl-776-22
     criteria_met: []
+    criteria_maybe_met: []
