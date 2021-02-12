@@ -5,27 +5,49 @@ categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
-    resource_links: []
+    honorable_mention:
+      description: New Jersey includes “criminal coercion” as a form of domestic violence that includes harming another person’s “financial condition”
+      text: NJ Rev Stat § 2C:13-5
+      url: https://law.justia.com/codes/new-jersey/2013/title-2c/section-2c-13-5/#:~:text=Criminal%20coercion%20is%20a%20crime,L
+    resource_links:
+      - text: N.J. Stat. Ann. § 2C:25-19
+        url: https://njlaw.rutgers.edu/collections/njstats/showsect.php?title=2c&chapter=25&section=19&actn=getsect
     criteria_met: []
   - title: Paid and Protective Leave
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: N.J. Stat. Ann. § 34:11C-3
+        url: https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu
+      - text: N.J. Stat. Ann. § 34:11C-4
+        url: https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu
+    criteria_met:
+      - 3
+      - 5
+      - 6
+      - 7
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: NJ public employers are required to keep employees survivor status confidential
+      text: N.J. Rev. Stat. §11A:2-6a
+      url: https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu
     resource_links: []
     criteria_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: N.J. Stat. Ann. § 43:21-5 (j)
+        url: https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -39,23 +61,59 @@ categories:
     resource_links: []
     criteria_met: []
   - title: Victims of Crime Compensation Accessibility
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: N.J. Admin. Code § 13:75-1.5
+        url: https://advance.lexis.com/api/permalink/81605b0e-ab99-4bd0-a919-26fd3f80bca1/?context=1000516
+      - text: N.J. Admin. Code § 13:75-2.1
+        url: https://advance.lexis.com/api/permalink/bb04b44a-9601-448b-8d61-6e7fb3b785bc/?context=1000516
+      - text: N.J. Admin. Code § 13:75-3.1
+        url: https://advance.lexis.com/api/permalink/7f5d2b75-d4c4-4cb5-b75b-ffea9db585bc/?context=1000516
+      - text: N.J. Admin. Code § 13:75-4.10
+        url: https://advance.lexis.com/api/permalink/bde976e1-0b2b-431f-9299-04382436f15f/?context=1000516
+      - text: N.J. Admin. Code § 13:75-5.1
+        url: https://advance.lexis.com/api/permalink/02c277b9-4dac-4e28-9c69-e23af625954f/?context=1000516
+      - text: N.J. Admin. Code § 13:75-7.1
+        url: https://advance.lexis.com/api/permalink/392d6363-311c-4a82-bc19-578648565723/?context=1000516
+      - text: Claim Information and Application Instructions
+        url: https://www.nj.gov/oag/njvictims/pdfs/VCCO-Application-Instructions.pdf
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 40
+      - 41
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: N.J. Admin. Code § 10:87-2.4(a)(4)
+        url: https://advance.lexis.com/api/permalink/5297653c-a46a-4dfb-9676-fb41194b1a5f/?context=1000516
+      - text: N.J. Admin. Code § 10:87-2.29 (e)
+        url: https://advance.lexis.com/api/permalink/a7740a9a-824c-4bcb-8064-6ceebf57781a/?context=1000516
+    criteria_met:
+      - 47
+      - 48
+      - 51
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 0
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: .J. Admin. Code § 10:90-20.1
+        url: https://advance.lexis.com/api/permalink/bbf7ce78-9eae-4a48-83a0-d0f6a985f1d1/?context=1000516
+      - text: N.J. Admin. Code § 10:90-20.4
+        url: https://advance.lexis.com/api/permalink/3ca29955-f27c-43c1-a1d6-c7c98c76aedb/?context=1000516
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -69,14 +127,24 @@ categories:
     resource_links: []
     criteria_met: []
   - title: Rental Protections
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: NJ Rev Stat § 46:8-9.6
+        url: https://njlaw.rutgers.edu/cgi-bin/njstats/showsect.cgi?section=46%3A8-9.6&actn=getsect
+    criteria_met:
+      - 69
+      - 70
+      - 75
   - title: Alternatives to Law Enforcement Responses
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: N.J. Stat. Ann. § 2C:25-21a(1)
+        url: https://njlaw.rutgers.edu/cgi-bin/njstats/showsect.cgi?section=2C%3A25-21&actn=getsect
+      - text: Legal Services of New Jersey Handbook for Domestic Violence Survivors
+        url: https://www.lsnjlaw.org/Publications/Pages/Manuals/DomesticViolence.pdf
+    criteria_met:
+      - 80
