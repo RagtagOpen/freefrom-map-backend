@@ -17,7 +17,12 @@ categories:
     resource_links:
       - text: Kan. Stat. Ann. § 41-1132
         url: http://www.kslegislature.org/li/b2019_20/statute/044_000_0000_chapter/044_011_0000_article/044_011_0032_section/044_011_0032_k/
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 8
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -31,7 +36,9 @@ categories:
     resource_links:
       - text: Kan. Stat. Ann. § 44-706(12)(A)(i-v), (12)(B)(i-vi)
         url: http://kslegislature.org/li_2012/b2011_12/statute/044_000_0000_chapter/044_007_0000_article/044_007_0006_section/044_007_0006_k/
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -61,7 +68,10 @@ categories:
         url: http://www.kslegislature.org/li/b2019_20/statute/074_000_0000_chapter/074_073_0000_article/074_073_0015_section/074_073_0015_k/
       - text: Application
         url: https://ag.ks.gov/docs/default-source/forms/application-for-crime-victim-compensation.pdf?sfvrsn=d7d985f0_14
-    criteria_met: []
+    criteria_met:
+      - 39
+      - 41
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -79,7 +89,9 @@ categories:
         url: http://www.kslegislature.org/li/b2019_20/statute/039_000_0000_chapter/039_007_0000_article/039_007_0002_section/039_007_0002_k/
       - text: K.S.A. § 39-709 (b)(1)(C)
         url: http://www.kslegislature.org/li/b2019_20/statute/039_000_0000_chapter/039_007_0000_article/039_007_0009_section/039_007_0009_k/
-    criteria_met: []
+    criteria_met:
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -99,7 +111,9 @@ categories:
     resource_links:
       - text: Kan. Stat. Ann. § 58-25,137
         url: http://www.kslegislature.org/li/b2019_20/statute/058_000_0000_chapter/058_025_0000_article/058_025_0137_section/058_025_0137_k/
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -111,4 +125,6 @@ categories:
         url: http://www.kslegislature.org/li/b2019_20/statute/039_000_0000_chapter/039_014_0000_article/039_014_0031_section/039_014_0031_k/
       - text: Kan. Att’y Gen. Op. No. 2002-5 (Jan. 8, 2002)
         url: http://ksag.washburnlaw.edu/opinions/2002/2002-005.htm
-    criteria_met: []
+    criteria_met:
+      - 80
+      - 81

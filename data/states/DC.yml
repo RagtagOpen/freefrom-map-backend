@@ -31,7 +31,13 @@ categories:
         url: https://code.dccouncil.us/dc/council/code/sections/32-531.04.html
       - text: D.C. Code § 32–531.08
         url: https://code.dccouncil.us/dc/council/code/sections/32-531.08.html
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 4
+      - 5
+      - 8
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 3
     innovative_policy_idea: ~
@@ -43,7 +49,14 @@ categories:
         url: https://code.dccouncil.us/dc/council/code/sections/2-1402.11.html
       - text: D.C. Code § 2-1402.11(c-1)(3)(A-B)
         url: https://code.dccouncil.us/dc/council/code/sections/2-1402.11.html
-    criteria_met: []
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -53,7 +66,9 @@ categories:
         url: https://code.dccouncil.us/dc/council/code/sections/51-131.html
       - text: D.C. Code § 51-132
         url: https://code.dccouncil.us/dc/council/code/sections/51-132.html
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -72,7 +87,8 @@ categories:
         url: https://code.dccouncil.us/dc/council/code/sections/22-3704.html
       - text: D.C. Code § 12-301(11)-(12)
         url: https://code.dccouncil.us/dc/council/code/sections/12-301.html
-    criteria_met: []
+    criteria_met:
+      - 29
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -86,7 +102,14 @@ categories:
         url: https://www.dccourts.gov/sites/default/files/matters-docs/CVCP-Application-and-Reimbursement-checklist.pdf
       - text: Brochure
         url: https://www.dccourts.gov/sites/default/files/CVCP_Brochure.pdf
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 37
+      - 38
+      - 39
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -106,7 +129,11 @@ categories:
         url: https://casetext.com/regulation/distric-of-columbia-administrative-code/title-29-public-welfare/chapter-29-58-temporary-assistance-for-needy-families/rule-29-5824-work-participation-requirement-and-standards-for-accepting-claims-of-domestic-violence
       - text: D.C. Mun. Regs. § 29-5825.2
         url: https://casetext.com/regulation/district-of-columbia-administrative-code/title-29-public-welfare/chapter-29-58-temporary-assistance-for-needy-families/rule-29-825-duration-of-waivers
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -134,7 +161,10 @@ categories:
         url: https://code.dccouncil.us/dc/council/code/sections/42-3505.07.html
       - text: D.C. Code § 42-3505.07
         url: https://code.dccouncil.us/dc/council/code/sections/42-3505.07.html
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 73
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -142,4 +172,5 @@ categories:
     resource_links:
       - text: D.C. Code §16-1031
         url: https://code.dccouncil.us/dc/council/code/sections/16-1031.html
-    criteria_met: []
+    criteria_met:
+      - 80

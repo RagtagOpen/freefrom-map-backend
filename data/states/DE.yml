@@ -30,7 +30,14 @@ categories:
         url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#711
       - text: 19 Del. C. § 712
         url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#712
-    criteria_met: []
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -38,7 +45,9 @@ categories:
     resource_links:
       - text: 19 Del. C. § 3314
         url: https://delcode.delaware.gov/title19/c033/sc02/index.shtml#3314
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -60,7 +69,13 @@ categories:
         url: https://attorneygeneral.delaware.gov/vcap/compensation/
       - text: 11 Del. C. § 9001 et seq.
         url: https://delcode.delaware.gov/title11/c090/index.shtml
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -100,7 +115,12 @@ categories:
         url: https://delcode.delaware.gov/title25/c053/index.shtml#5316
       - text: 25 DE Chapter 53, §5307
         url: https://delcode.delaware.gov/title25/c053/index.shtml#5307
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 72
+      - 73
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -112,4 +132,5 @@ categories:
         url: https://delcode.delaware.gov/title10/c009/sc03/index.shtml
       - text: 11 DEl Code ch94
         url: https://delcode.delaware.gov/title11/c094/sc01/index.shtml
-    criteria_met: []
+    criteria_met:
+      - 80

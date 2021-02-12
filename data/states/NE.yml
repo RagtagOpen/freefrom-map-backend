@@ -32,7 +32,8 @@ categories:
     resource_links:
       - text: Neb. Rev. Stat. Ann. § 48-628.13
         url: https://nebraskalegislature.gov/laws/statutes.php?statute=48-628.13
-    criteria_met: []
+    criteria_met:
+      - 20
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -64,7 +65,13 @@ categories:
         url: https://www.nebraskalegislature.gov/laws/statutes.php?statute=81-1839
       - text: Crime Victims Reparations website
         url: https://ncc.nebraska.gov/crime-victim-reparations
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 40
+      - 41
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -74,7 +81,9 @@ categories:
         url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-475/Chapter-2.pdf
       - text: 475 Neb. Admin. Code, ch. 3, § 001.04(F)(iii)
         url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-475/Chapter-3.pdf
-    criteria_met: []
+    criteria_met:
+      - 48
+      - 49
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -84,7 +93,11 @@ categories:
         url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-468/Chapter-2.pdf
       - text: 468 Nebraska Administrative Code 2-020.10A
         url: https://www.nebraska.gov/rules-and-regs/regsearch/Rules/Health_and_Human_Services_System/Title-468/Chapter-2.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~

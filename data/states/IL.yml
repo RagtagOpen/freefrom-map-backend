@@ -19,7 +19,14 @@ categories:
     resource_links:
       - text: 820 ILCS 180/20 seq.
         url: https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=082001800K20
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 2
     innovative_policy_idea: ~
@@ -27,7 +34,12 @@ categories:
     resource_links:
       - text: 820 ILCS 180/30
         url: https://www.ilga.gov/legislation/ilcs/documents/082001800K30.htm
-    criteria_met: []
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 18
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -35,7 +47,9 @@ categories:
     resource_links:
       - text: 820 ILCS 405/601
         url: https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=082004050K601
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -52,7 +66,10 @@ categories:
     resource_links:
       - text: 740 ILCS 82
         url: https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2494&ChapterID=57
-    criteria_met: []
+    criteria_met:
+      - 29
+      - 30
+      - 32
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -62,7 +79,12 @@ categories:
         url: https://ag.state.il.us/victims/cvc.html
       - text: 740 ILCS 45, 740 ILCS 45/2 (h), 740 ILCS 45/6.1 (c), 740 ILCS 45/10.2 (a), 740 ILCS 45/16
         url: https://www.ilga.gov/legislation/ilcs/ilcs3.asp?ActID=2028&ChapterID=57
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -76,7 +98,10 @@ categories:
         url: https://www.ilga.gov/commission/jcar/admincode/089/089001210A00070R.html
       - text: 89 Ill Admin. Code 121.130
         url: https://www.ilga.gov/commission/jcar/admincode/089/089001210F01300R.html
-    criteria_met: []
+    criteria_met:
+      - 46
+      - 47
+      - 48
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -88,7 +113,11 @@ categories:
         url: https://www.ilga.gov/commission/jcar/admincode/089/089001120A00060R.html
       - text: IL DHS TANF Brochure
         url: https://www.dhs.state.il.us/OneNetLibrary/27897/documents/Brochures/586.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -108,7 +137,10 @@ categories:
     resource_links:
       - text: 765 ILCS 750
         url: https://www.ilga.gov/legislation/ilcs/ilcs3.asp?actid=2817&chapact=765%C2%A0ilcs%C2%A0750/&chapterid=62&chaptername=property&actname=safe%20homes%20act
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~

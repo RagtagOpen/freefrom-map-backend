@@ -29,7 +29,9 @@ categories:
     resource_links:
       - text: Wyo. Stat. Ann. § 27-3-311 (a)(i)(C)
         url: https://advance.lexis.com/api/permalink/fccceeee-b467-446d-a9eb-f25161d910dc/?context=1000516
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -59,7 +61,12 @@ categories:
         url: https://drive.google.com/file/d/0Bx6poawfal01ZUdEY3l0V29ISFk/view
       - text: Crime Victim  Compensation Program Application
         url: https://drive.google.com/file/d/0Bx6poawfal01TWlyTDIxcEJ4Uk0/view
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 37
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -73,7 +80,10 @@ categories:
     resource_links:
       - text: Wyo. Stat. Ann. § 42-2-103
         url: https://advance.lexis.com/api/permalink/43cb455f-2457-4992-86cb-118568b2a756/?context=1000516
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -93,7 +103,10 @@ categories:
     resource_links:
       - text: Wyo. Stat. Ann. § 1-21-1303
         url: https://advance.lexis.com/api/permalink/5fb9c319-ab3b-4e7d-a9ac-4ea5df2c4c9e/?context=1000516
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 72
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~

@@ -29,7 +29,8 @@ categories:
     resource_links:
       - text: Okla. Stat. Ann. Tit. 40, §2-210(4)(d)
         url: https://law.justia.com/codes/oklahoma/2015/title-40/section-40-2-210/
-    criteria_met: []
+    criteria_met:
+      - 20
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -59,7 +60,11 @@ categories:
         url: https://www.okvictimscomp.com/wp-content/uploads/2019-Official-Claim-Form-EN_1.pdf
       - text: Oklahoma Crime Victims Compensation Program Information
         url: https://www.ok.gov/dac/Victims/Victims_Compensation_Program/index.html#eligibleexpenses
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~

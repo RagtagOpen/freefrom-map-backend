@@ -54,7 +54,10 @@ categories:
         url: https://law.lis.virginia.gov/vacode/title19.2/chapter21.1/section19.2-368.1/#:~:text=Findings%3B%20legislative%20intent.,or%20attempting%20to%20commit%20crimes
       - text: Va. Code Ann. §19.2-368.2 - §19.2-368.11
         url: https://law.lis.virginia.gov/vacode/title19.2/chapter21.1/
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -88,7 +91,10 @@ categories:
     resource_links:
       - text: Va. Code Ann. § 55.1-1236
         url: https://law.lis.virginia.gov/vacode/title55.1/chapter12/section55.1-1236/
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 76
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -100,4 +106,6 @@ categories:
         url: https://law.lis.virginia.gov/vacode/54.1-2967/
       - text: VA Code Ann. §16.1-69.48
         url: https://law.lis.virginia.gov/vacode/16.1-69.48:1/
-    criteria_met: []
+    criteria_met:
+      - 80
+      - 81

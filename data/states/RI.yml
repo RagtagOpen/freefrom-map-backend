@@ -29,7 +29,12 @@ categories:
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-6.HTM
       - text: 28 R.I.  Gen. Laws § 28-57-5
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-5.HTM
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 4
+      - 5
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 2
     innovative_policy_idea: ~
@@ -39,7 +44,11 @@ categories:
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-28/12-28-10.HTM
       - text: 28 R.I.  Gen. Laws  § 28-57-11
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-11.HTM
-    criteria_met: []
+    criteria_met:
+      - 12
+      - 13
+      - 17
+      - 18
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -47,7 +56,9 @@ categories:
     resource_links:
       - text: 28 R.I. Gen. Laws § 28-44-17.1
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-44/28-44-17.1.HTM
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -75,7 +86,11 @@ categories:
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-25/12-25-25.HTM
       - text: Rules and Regulations Pertaining to the Crime Victim Compensation Program
         url: https://d10k7k7mywg42z.cloudfront.net/assets/5ab3ad5323f81205e648b4ed/120_RICR_00_00_2.pdf
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -95,7 +110,11 @@ categories:
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE40/40-5.2/40-5.2-10.HTM
       - text: 40 R.I.Gen. Laws § 40-5.2-34
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE40/40-5.2/40-5.2-34.HTM
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -115,7 +134,8 @@ categories:
     resource_links:
       - text: 34 R.I. Gen. Laws § 34-37-4
         url: http://webserver.rilin.state.ri.us/Statutes/title34/34-37/34-37-4.HTM
-    criteria_met: []
+    criteria_met:
+      - 73
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -125,4 +145,6 @@ categories:
         url: http://webserver.rilin.state.ri.us/statutes/title12/12-29/12-29-3.HTM
       - text: 12 R.I. Gen. Laws Ann. § 12-29-9
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-29/12-29-9.HTM
-    criteria_met: []
+    criteria_met:
+      - 80
+      - 81

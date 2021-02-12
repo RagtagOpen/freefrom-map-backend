@@ -63,7 +63,12 @@ categories:
         url: https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch10/sect72-1003/
       - text: I.C. §72-1016 (3), (4), (6), (7)
         url: https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch10/sect72-1016/
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -71,7 +76,10 @@ categories:
     resource_links:
       - text: Idaho Admin. Code r. 16.03.04.156 and 16.03.04.796
         url: https://adminrules.idaho.gov/rules/current/16/160304.pdf
-    criteria_met: []
+    criteria_met:
+      - 47
+      - 49
+      - 51
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 0
     innovative_policy_idea: ~

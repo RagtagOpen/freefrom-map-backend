@@ -19,7 +19,12 @@ categories:
         url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/ByChapter/Chapter_50B.html
       - text: N.C. Gen. Stat. Ann. § 95-241(a)(5)
         url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_95/GS_95-241.html
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 7
+      - 8
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -33,7 +38,9 @@ categories:
     resource_links:
       - text: N.C. Gen. Stat. § 96-14.8
         url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_96/GS_96-14.8.html
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -59,7 +66,10 @@ categories:
         url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_15B/GS_15B-11.html
       - text: Victim Compensation Services FAQ
         url: https://www.ncdps.gov/DPS-Services/Victim-Services/Crime-Victim-Compensation/FAQ
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -73,7 +83,10 @@ categories:
     resource_links:
       - text: North Carolina’s Temporary Assistance For Needy Families State Plan (2019-2022) p 41
         url: https://files.nc.gov/ncdhhs/documents/files/2019-2022%20TANF%20STATE%20PLAN%20DRAFT.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -93,7 +106,9 @@ categories:
     resource_links:
       - text: N.C. Gen. Stat. § 42-45.1
         url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_42/GS_42-45.1.html
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -101,4 +116,5 @@ categories:
     resource_links:
       - text: N.C. Gen Stat. Ann. § 50B-4.1(b)
         url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_50B/GS_50B-4.1.html
-    criteria_met: []
+    criteria_met:
+      - 80

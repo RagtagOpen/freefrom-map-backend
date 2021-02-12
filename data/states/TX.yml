@@ -29,7 +29,9 @@ categories:
     resource_links:
       - text: Tex. Labor Code § 204.022(a)(11)
         url: https://statutes.capitol.texas.gov/Docs/LA/htm/LA.204.htm#:~:text=204.022.,EXCLUSIONS%20FROM%20CHARGEBACKS.&text=(B)%20does%20not%20constitute%20good,to%20voluntarily%20leave%20the%20employment.&text=(2)%20the%20employee%20worked%20for,for%20less%20than%20four%20weeks
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -53,7 +55,12 @@ categories:
         url: https://www.texasattorneygeneral.gov/crime-victims/crime-victims-compensation-program/eligibility-crime-victims-compensation-program
       - text: Appeals Process
         url: https://www.texasattorneygeneral.gov/crime-victims/crime-victims-compensation-program/appeals-process
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -69,7 +76,10 @@ categories:
     resource_links:
       - text: Tex. Hum. Res. Code § 31.0322(a)
         url: https://statutes.capitol.texas.gov/Docs/HR/htm/HR.31.htm
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -92,7 +102,10 @@ categories:
     resource_links:
       - text: Tex. Prop. Code § 92.016 seq.
         url: https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm#92.016
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~

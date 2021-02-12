@@ -19,7 +19,12 @@ categories:
     resource_links:
       - text: Me. Stat. tit. 26.7, §850
         url: https://www.mainelegislature.org/legis/statutes/26/title26sec850.html
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 8
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -35,7 +40,8 @@ categories:
     resource_links:
       - text: Me. Stat. tit. 26, §1193
         url: http://www.mainelegislature.org/legis/statutes/26/title26sec1193.html
-    criteria_met: []
+    criteria_met:
+      - 20
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -63,7 +69,10 @@ categories:
         url: http://www.mainelegislature.org/legis/statutes/5/title5sec3360-G.html
       - text: Office of the Maine Attorney General: Victims Compensation Fund
         url: https://www.maine.gov/ag/crime/victims_compensation/index.shtml
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -79,7 +88,9 @@ categories:
     resource_links:
       - text: Me. Stat. tit. 22, § 3762 (10), (18),
         url: http://www.mainelegislature.org/legis/statutes/22/title22sec3762.html
-    criteria_met: []
+    criteria_met:
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -99,7 +110,10 @@ categories:
         url: https://www.mainelegislature.org/legis/statutes/19-A/title19-Asec4007.html
       - text: Me. Stat. tit. 14, §6001(6)(H)
         url: https://www.mainelegislature.org/legis/statutes/14/title14sec6001.html
-    criteria_met: []
+    criteria_met:
+      - 65
+      - 66
+      - 67
   - title: Rental Protections
     grade: 3
     innovative_policy_idea: ~
@@ -107,7 +121,13 @@ categories:
     resource_links:
       - text: Me. Stat. tit. 14, § 60001 (6)
         url: http://www.mainelegislature.org/legis/statutes/14/title14sec6001.html
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 72
+      - 73
+      - 74
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -115,4 +135,5 @@ categories:
     resource_links:
       - text: Me. Stat. tit. 19-A, § 4012(5)
         url: https://legislature.maine.gov/legis/statutes/19-A/title19-Asec4012.html
-    criteria_met: []
+    criteria_met:
+      - 80

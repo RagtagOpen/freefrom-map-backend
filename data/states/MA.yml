@@ -19,7 +19,12 @@ categories:
     resource_links:
       - text: Mass. Gen. Laws ch. 149, §52E
         url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section52e
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 6
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -36,7 +41,8 @@ categories:
     resource_links:
       - text: Mass. Gen. Laws ch. 151A, § 25
         url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter151a/Section25
-    criteria_met: []
+    criteria_met:
+      - 20
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -69,7 +75,13 @@ categories:
         url: https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter258C/Section8
       - text: Massachusetts Victims of Violent Crime Compensation
         url: https://www.mass.gov/service-details/applying-for-victims-of-violent-crime-assistance
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -79,7 +91,12 @@ categories:
         url: https://www.mass.gov/doc/106-cmr-365-supplemental-nutrition-assistance-program-special-situation-households/download
       - text: 106 Mass. Code Regs. 362.330
         url: https://www.mass.gov/doc/106-cmr-362-supplemental-nutrition-assistance-program-nonfinancial-eligibility-standards/download
-    criteria_met: []
+    criteria_met:
+      - 46
+      - 47
+      - 48
+      - 49
+      - 51
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -91,7 +108,11 @@ categories:
         url: https://www.sec.state.ma.us/reg_pub/pdf/100/106203.pdf
       - text: 106 Mass. Code Regs. 703.110
         url: https://www.mass.gov/doc/106-cmr-703-transitional-cash-assistance-program-nonfinancial-eligibility/download
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -113,7 +134,11 @@ categories:
         url: https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section24
       - text: Mass. Gen. Laws Ch. 186, § 25
         url: https://www.nhlp.org/wp-content/uploads/2018/07/2017-DV-State-and-Local-Housing-Laws-Compendium.pdf
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 73
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -121,4 +146,5 @@ categories:
     resource_links:
       - text: Mass. Gen. Laws Ch. 209A, §6
         url: https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter209A/Section6
-    criteria_met: []
+    criteria_met:
+      - 80

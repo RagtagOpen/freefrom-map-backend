@@ -29,7 +29,9 @@ categories:
     resource_links:
       - text: S.D. Codified Laws § 61-6-9.1 (6)
         url: https://sdlegislature.gov/Statutes/Codified_Laws/2078018
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 23
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -57,7 +59,11 @@ categories:
         url: https://sdlegislature.gov/Statutes/Codified_Laws/2048957
       - text: Crime Victims Compensation, Eligibility
         url: https://dps.sd.gov/victims-services/crime-victims-compensation/eligibility-and-apply-cvc
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -77,7 +83,11 @@ categories:
         url: https://sdlegislature.gov/rules/DisplayRule.aspx?Rule=67:10:01:16.01
       - text: S.D. Admin. R.  67:10:06:08
         url: https://sdlegislature.gov/Rules/Administrative/22395
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -97,7 +107,10 @@ categories:
     resource_links:
       - text: S.D. Codified Laws § 43-32-19.1
         url: https://sdlegislature.gov/Statutes/Codified_Laws/DisplayStatute.aspx?Type=Statute&Statute=43-32-19.1
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -105,4 +118,5 @@ categories:
     resource_links:
       - text: S.D. Codified Laws §23A-3-2.1
         url: https://sdlegislature.gov/Statutes/Codified_Laws/2048350
-    criteria_met: []
+    criteria_met:
+      - 80

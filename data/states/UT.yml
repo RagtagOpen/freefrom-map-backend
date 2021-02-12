@@ -59,7 +59,13 @@ categories:
         url: https://justice.utah.gov/wp-content/uploads/CVRApplication_English.pdf
       - text: Brochure
         url: https://justice.utah.gov/wp-content/uploads/CrimeVictimBrochure_2011.pdf
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 36
+      - 37
+      - 38
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -67,7 +73,9 @@ categories:
     resource_links:
       - text: Utah Admin. Code r. 986-900-902 (p)(viii)
         url: https://rules.utah.gov/publicat/code/r986/r986-900.htm#E2
-    criteria_met: []
+    criteria_met:
+      - 46
+      - 50
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -75,7 +83,10 @@ categories:
     resource_links:
       - text: Utah Admin. Code r. R986-200-218(2)
         url: https://rules.utah.gov/publicat/code/r986/r986-200.htm#T18
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -95,7 +106,9 @@ categories:
     resource_links:
       - text: Utah Code § 57-22-5.1
         url: https://le.utah.gov/xcode/Title57/Chapter22/57-22-S5.1.html
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 76
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -103,4 +116,5 @@ categories:
     resource_links:
       - text: Utah Code § 77-36-2.2
         url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S2.2.html?v=C77-36-S2.2_1800010118000101
-    criteria_met: []
+    criteria_met:
+      - 80

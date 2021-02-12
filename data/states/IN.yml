@@ -32,7 +32,9 @@ categories:
     resource_links:
       - text: I.C. § 22-4-15-1(1)(c)(8)
         url: http://184.175.130.101/legislative/laws/2019/ic/titles/022#22-4-15
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -66,7 +68,12 @@ categories:
         url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-31
       - text: IC 5-2-6.1-36
         url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-36
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -92,7 +99,9 @@ categories:
         url: https://www.in.gov/fssa/dfr/files/2500.pdf
       - text: 2018 TANF State Plan
         url: https://www.in.gov/fssa/dfr/files/TANF_Indiana_State_Plan_amendment.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -112,7 +121,11 @@ categories:
     resource_links:
       - text: I.C. § 32-31-9
         url: http://iga.in.gov/legislative/laws/2020/ic/titles/032#32-31-9
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 73
+      - 76
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~

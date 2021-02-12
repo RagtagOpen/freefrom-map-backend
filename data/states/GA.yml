@@ -31,7 +31,9 @@ categories:
         url: https://codes.findlaw.com/ga/title-34-labor-and-industrial-relations/ga-code-sect-34-8-194.html
       - text: GA. Comp. R. & Regs. 300-2-9-.10 (proof requirements)
         url: https://casetext.com/regulation/georgia-administrative-code/department-300-rules-of-georgia-department-of-labor/chapter-300-2-employment-security-law/subject-300-2-9-qualifications-and-penalties-for-unemployment-insurance-benefits-claims/rule-300-2-9-10-quit-due-to-family-violence-forms-of-evidence-to-prove
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -57,7 +59,13 @@ categories:
         url: https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-15-7.html
       - text: O.C.G.A. § 17-15-8
         url: https://codes.findlaw.com/ga/title-17-criminal-procedure/ga-code-sect-17-15-8.html
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 43
+      - 44
+      - 45
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -77,7 +85,11 @@ categories:
         url: https://odis.dhs.ga.gov/General/Home/DownloadDoc/4005036
       - text: DFCS TANF Manual (download)
         url: https://odis.dhs.ga.gov/General/Home/DownloadDoc/4002878
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -97,7 +109,10 @@ categories:
     resource_links:
       - text: O.C.G.A. § 44-7-23
         url: https://codes.findlaw.com/ga/title-44-property/ga-code-sect-44-7-23.html
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 76
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -107,4 +122,6 @@ categories:
         url: https://codes.findlaw.com/ga/title-31-health/ga-code-sect-31-7-9.html#:~:text=having%20cause%20to%20believe%20that,accordance%20with%20this%20Code%20section
       - text: Model Prosecutorial Protocol (no-drop)
         url: https://gcfv.georgia.gov/sites/gcfv.georgia.gov/files/related_files/site_page/Prosecutorial%20Protocol%20for%20Family%20Violence.pdf
-    criteria_met: []
+    criteria_met:
+      - 81
+      - 82

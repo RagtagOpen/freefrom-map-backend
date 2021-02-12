@@ -29,7 +29,9 @@ categories:
     resource_links:
       - text: Mont. Code Ann. § 39-51-2111(1)(a)
         url: https://leg.mt.gov/bills/mca/title_0390/chapter_0510/part_0210/section_0110/0390-0510-0210-0110.html
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -59,7 +61,12 @@ categories:
         url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0310/0530-0090-0010-0310.html
       - text: Montana Department of Justice Crime Victim Compensation
         url: https://dojmt.gov/victims/crime-victim-compensation/
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -77,7 +84,11 @@ categories:
         url: http://www.mtrules.org/gateway/ruleno.asp?RN=37%2E78%2E202
       - text: Mont. Admin. R.  37.78.508 (4)(j)
         url: http://mtrules.org/gateway/ruleno.asp?RN=37%2E78%2E508
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~

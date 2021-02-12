@@ -54,7 +54,11 @@ categories:
         url: https://www.pccd.pa.gov/Victim-Services/Documents/2018%20VCAP%20Manual.pdf
       - text: 37 Pa. Code §411.18, §411.31 & §411.32
         url: https://www.pccd.pa.gov/Victim-Services/Documents/APPEALS%20PROCESS.pdf
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -68,7 +72,9 @@ categories:
     resource_links:
       - text: PA Compass Family Safety Information
         url: https://www.compass.state.pa.us/compass.web/menuitems/DomesticViolenceInfo.aspx?Language=EN
-    criteria_met: []
+    criteria_met:
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -97,4 +103,5 @@ categories:
     resource_links:
       - text: 18 Pa. Cons. Stat. § 2711
         url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.027.011.000..HTM
-    criteria_met: []
+    criteria_met:
+      - 80

@@ -24,7 +24,11 @@ categories:
         url: http://www.legislature.mi.gov/(S(z3gphp34esk5sry4i1ld0ttz))/mileg.aspx?page=getObject&objectName=mcl-408-962
       - text: Mich. Comp. Laws § 408.964
         url: http://www.legislature.mi.gov/(S(5c3fwo5qdv5n5dj4t0mwvb33))/mileg.aspx?page=GetObject&objectname=mcl-408-964
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 9
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
@@ -52,7 +56,8 @@ categories:
     resource_links:
       - text: Mich. Comp. Laws § 600.5805(4)-(5)
         url: http://legislature.mi.gov/doc.aspx?mcl-600-5805
-    criteria_met: []
+    criteria_met:
+      - 30
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -68,7 +73,11 @@ categories:
         url: http://legislature.mi.gov/doc.aspx?mcl-18-359
       - text: Mich. Comp. Laws § 18.361
         url: http://legislature.mi.gov/doc.aspx?mcl-18-361
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 38
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -76,7 +85,10 @@ categories:
     resource_links:
       - text: MDHHS Bridges Eligibility Manual (2020) BPB 2020-035 (p 4)
         url: https://dhhs.michigan.gov/OLMWEB/EX/BP/Public/BEM/620.pdf
-    criteria_met: []
+    criteria_met:
+      - 46
+      - 50
+      - 51
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -84,7 +96,9 @@ categories:
     resource_links:
       - text: MDHHS-Pub-1010 (Rev. 10-20) (p 21)
         url: https://www.michigan.gov/documents/dhs/DHS-PUB-1010_243538_7.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -104,7 +118,10 @@ categories:
     resource_links:
       - text: Mich. Comp. Laws § 554.601b seq
         url: http://legislature.mi.gov/doc.aspx?mcl-554-601b
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~

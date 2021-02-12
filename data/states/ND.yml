@@ -34,7 +34,9 @@ categories:
         url: https://www.legis.nd.gov/cencode/t52c06.pdf
       - text: N.D. Cen. Code §52-06-02 (j)(2, 4-5) (2019)
         url: https://www.legis.nd.gov/cencode/t52c06.pdf
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -58,7 +60,10 @@ categories:
         url: https://www.legis.nd.gov/information/acdata/pdf/94-03-04.pdf
       - text: North Dakota Crime Victims Compensation
         url: https://docr.nd.gov/crime-victims-compensation
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -72,7 +77,10 @@ categories:
     resource_links:
       - text: N.D. Admin. Code 75-02-01.2-35.1 (3)(c) and 75-02-01.2-52 (2)(j)
         url: https://www.legis.nd.gov/information/acdata/pdf/75-02-01.2.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -94,7 +102,9 @@ categories:
         url: https://www.legis.nd.gov/cencode/t47c16.pdf#nameddest=47-16-1
       - text: N.D. Cen. Code §47-16-17.1(2) (2019)
         url: https://www.legis.nd.gov/cencode/t47c16.pdf#nameddest=47-16-17
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 76
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -104,4 +114,5 @@ categories:
         url: https://www.legis.nd.gov/cencode/t14c07-1.pdf#nameddest=14-07p1-11
       - text: N.D. Model Law Enforcement Domestic Violence Policy, Third Edition (June 2012)
         url: https://www.cawsnorthdakota.org/wp-content/uploads/2014/09/NDModel2012DomesticViolencePolicy.pdf
-    criteria_met: []
+    criteria_met:
+      - 80

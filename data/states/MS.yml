@@ -57,7 +57,11 @@ categories:
         url: https://advance.lexis.com/api/permalink/a4cb5940-c1cd-4dea-89e3-60733bf80fa6/?context=1000516
       - text: Miss. Code Ann. § 99-41-25
         url: https://advance.lexis.com/api/permalink/44ce32e7-deb0-4a13-bd1f-ebc52de316b0/?context=1000516
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -65,7 +69,9 @@ categories:
     resource_links:
       - text: SNAP Policy Manual (2011)l, p 3002, 3003,7750, 7751, 8014
         url: https://sos.ms.gov/ACProposed/00021848b.pdf
-    criteria_met: []
+    criteria_met:
+      - 47
+      - 48
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -73,7 +79,11 @@ categories:
     resource_links:
       - text: TANF Policy Manual (2011) p. 3001, 3907
         url: https://www.sos.ms.gov/ACCode/00000330c.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 57
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -99,4 +109,5 @@ categories:
     resource_links:
       - text: Miss. Code Ann. § 99-3-7(3)(a)-(e)
         url: https://advance.lexis.com/api/permalink/f4cb5c1e-90cd-45d8-9313-99a27ec7adb1/?context=1000516
-    criteria_met: []
+    criteria_met:
+      - 80

@@ -65,7 +65,11 @@ categories:
         url: http://codes.ohio.gov/orc/2743.67v1
       - text: Crime Victims Compensation Guidelines
         url: https://www.ohioattorneygeneral.gov/Individuals-and-Families/Victims/Apply-for-Victims-Compensation/Crime-Victims-Compensation-Guidelines
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -83,7 +87,11 @@ categories:
         url: http://codes.ohio.gov/orc/5107.18v1
       - text: Ohio Revised Code §5107.711
         url: http://codes.ohio.gov/orc/5107.711v1
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -109,4 +117,5 @@ categories:
     resource_links:
       - text: Ohio Revised Code § 2935.032
         url: http://codes.ohio.gov/orc/2935.032#:~:text=The%20report%20shall%20document%20the,other%20significant%20facts%20or%20circumstances
-    criteria_met: []
+    criteria_met:
+      - 80

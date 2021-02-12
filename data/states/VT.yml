@@ -17,7 +17,9 @@ categories:
     resource_links:
       - text: Vt. Stat. Ann. tit. 21, § 483 (a)(4), (c)(2)
         url: https://legislature.vermont.gov/statutes/section/21/005/00483
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 9
   - title: Safe Workplaces
     grade: 1
     innovative_policy_idea: ~
@@ -25,7 +27,9 @@ categories:
     resource_links:
       - text: 21 V.S.A. § 495 (a)
         url: https://legislature.vermont.gov/statutes/section/21/005/00495
-    criteria_met: []
+    criteria_met:
+      - 12
+      - 13
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -58,7 +62,11 @@ categories:
         url: https://legislature.vermont.gov/statutes/section/13/167/05355
       - text: Center for Crime Victim Services
         url: http://www.ccvs.vermont.gov/support-for-victims/victims-compensation-program/eligibility
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 36
+      - 37
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -74,7 +82,11 @@ categories:
         url: https://advance.lexis.com/api/permalink/d237cf6b-4dc2-4fc6-beae-43539c91e1cc/?context=1000516
       - text: CVR 13-170-220 § 2238(B)(2)
         url: https://advance.lexis.com/api/permalink/9d86542d-b57a-4d93-9ab8-abe7076f5f35/?context=1000516
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -94,7 +106,10 @@ categories:
     resource_links:
       - text: 9 V.S.A. § 4472
         url: https://legislature.vermont.gov/statutes/section/09/137/04472
-    criteria_met: []
+    criteria_met:
+      - 69
+      - 70
+      - 75
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~

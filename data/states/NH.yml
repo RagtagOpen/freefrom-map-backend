@@ -23,7 +23,9 @@ categories:
     resource_links:
       - text: N.H. Rev. Stat. Ann. § 275:71
         url: http://www.gencourt.state.nh.us/rsa/html/XXIII/275/275-71.htm
-    criteria_met: []
+    criteria_met:
+      - 12
+      - 13
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -31,7 +33,8 @@ categories:
     resource_links:
       - text: N.H. Rev. Stat. Ann. § 282-A:32 (a)(3)
         url: http://www.gencourt.state.nh.us/rsa/html/xxiii/282-A/282-A-32.htm
-    criteria_met: []
+    criteria_met:
+      - 20
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -53,7 +56,10 @@ categories:
         url: http://www.gencourt.state.nh.us/rules/state_agencies/jus600.htm
       - text: New Hampshire Victim’s Compensation Program, What I must do to be eligible
         url: https://www.doj.nh.gov/grants-management/victims-compensation-program/documents/brochure.pdf
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -67,7 +73,11 @@ categories:
     resource_links:
       - text: TANF State Plan, p 23-24
         url: https://www.dhhs.nh.gov/dfa/documents/tanf-state-plan.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -93,4 +103,5 @@ categories:
     resource_links:
       - text: N.H. Rev. Stat. Ann. § 173-B:9
         url: https://www.gencourt.state.nh.us/rsa/html/XII/173-B/173-B-9.htm#:~:text=The%20law%20enforcement%20agency%20shall,II
-    criteria_met: []
+    criteria_met:
+      - 80

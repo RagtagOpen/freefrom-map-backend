@@ -29,7 +29,9 @@ categories:
     resource_links:
       - text: S.C. Code Ann. § 41-35-125
         url: https://www.scstatehouse.gov/code/t41c035.php
-    criteria_met: []
+    criteria_met:
+      - 20
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -49,7 +51,13 @@ categories:
     resource_links:
       - text: S.C. Code Ann. §  16-3-1140, § 16-3-1150, § 16-3-1170 (4), § 16-3-1210, § 16-3-1210, § 16-3-1340
         url: https://www.scstatehouse.gov/code/t16c003.php
-    criteria_met: []
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 40
+      - 44
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -59,7 +67,9 @@ categories:
         url: https://www.scstatehouse.gov/coderegs/Chapter%20114.pdf
       - text: SNAP Policy Manual (2017), p 160
         url: https://dss.sc.gov/media/1468/snap-manual-vol-33.pdf
-    criteria_met: []
+    criteria_met:
+      - 48
+      - 49
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -71,7 +81,11 @@ categories:
         url: https://www.scstatehouse.gov/code/t43c005.php
       - text: TANF State Plan (2018-2021) 3.1.7
         url: https://dss.sc.gov/media/1871/sc-tanf-state-plan-2018-2021.pdf
-    criteria_met: []
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
