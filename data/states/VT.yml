@@ -10,6 +10,7 @@ categories:
       - text: Vt. Stat. Ann. tit. 15, § 1101(1)
         url: https://legislature.vermont.gov/statutes/section/15/021/01101
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 1
     innovative_policy_idea: ~
@@ -20,6 +21,7 @@ categories:
     criteria_met:
       - 3
       - 9
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 1
     innovative_policy_idea: ~
@@ -30,6 +32,7 @@ categories:
     criteria_met:
       - 12
       - 13
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -39,18 +42,21 @@ categories:
       url: https://legislature.vermont.gov/statutes/chapter/21/016A
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -67,12 +73,14 @@ categories:
       - 35
       - 36
       - 37
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -87,18 +95,21 @@ categories:
       - 54
       - 55
       - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 1
     innovative_policy_idea: ~
@@ -110,6 +121,7 @@ categories:
       - 69
       - 70
       - 75
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -118,3 +130,4 @@ categories:
       - text: V.R.Cr.P. Rule 3
         url: https://advance.lexis.com/api/permalink/f9225236-7f53-44be-a74e-831f6f82940f/?context=1000516
     criteria_met: []
+    criteria_maybe_met: []

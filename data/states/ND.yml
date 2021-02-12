@@ -10,6 +10,7 @@ categories:
       - text: N.D. Cen. Code §14-07.1-01 (2019)
         url: https://www.legis.nd.gov/cencode/t14c07-1.pdf#nameddest=14-07p1-01
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
@@ -19,12 +20,14 @@ categories:
       url: https://www.legis.nd.gov/cencode/t54c06.pdf
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -37,18 +40,21 @@ categories:
     criteria_met:
       - 20
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -64,12 +70,14 @@ categories:
       - 34
       - 35
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -81,18 +89,21 @@ categories:
       - 53
       - 54
       - 55
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: -1
     innovative_policy_idea: ~
@@ -105,6 +116,7 @@ categories:
     criteria_met:
       - 69
       - 76
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -116,3 +128,4 @@ categories:
         url: https://www.cawsnorthdakota.org/wp-content/uploads/2014/09/NDModel2012DomesticViolencePolicy.pdf
     criteria_met:
       - 80
+    criteria_maybe_met: []

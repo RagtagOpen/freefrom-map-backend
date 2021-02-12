@@ -12,6 +12,7 @@ categories:
       - text: Nev. Rev. Stat. §  207.190(1)
         url: https://www.leg.state.nv.us/nrs/nrs-207.html#NRS207Sec190
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 2
     innovative_policy_idea: ~
@@ -27,6 +28,7 @@ categories:
       - 8
       - 9
       - 10
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 2
     innovative_policy_idea: ~
@@ -42,6 +44,8 @@ categories:
       - 14
       - 15
       - 17
+    criteria_maybe_met:
+      - 18
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -51,12 +55,15 @@ categories:
         url: https://www.leg.state.nv.us/nrs/nrs-612.html#NRS612Sec3755
     criteria_met:
       - 20
+    criteria_maybe_met:
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 1
     innovative_policy_idea: ~
@@ -68,6 +75,7 @@ categories:
         url: https://www.leg.state.nv.us/NRS/NRS-011.html#NRS011Sec190
     criteria_met:
       - 29
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -94,12 +102,14 @@ categories:
       - 35
       - 38
       - 41
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -115,18 +125,21 @@ categories:
       - 53
       - 55
       - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 2
     innovative_policy_idea: ~
@@ -145,6 +158,7 @@ categories:
       - 70
       - 73
       - 75
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -157,3 +171,4 @@ categories:
     criteria_met:
       - 80
       - 82
+    criteria_maybe_met: []

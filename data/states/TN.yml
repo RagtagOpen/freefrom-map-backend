@@ -10,24 +10,28 @@ categories:
       - text: Tenn. Code Ann. § 36-3-601
         url: https://advance.lexis.com/api/permalink/0b0eb3de-4ed4-4524-b891-10010b9a085f/?context=1000516
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 2
     innovative_policy_idea: ~
@@ -43,12 +47,14 @@ categories:
       - 24
       - 25
       - 27
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -74,6 +80,7 @@ categories:
       - 37
       - 39
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -86,6 +93,7 @@ categories:
       - 48
       - 49
       - 51
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -99,18 +107,21 @@ categories:
       - 53
       - 54
       - 55
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 1
     innovative_policy_idea: ~
@@ -120,6 +131,7 @@ categories:
         url: https://advance.lexis.com/api/permalink/2ca96163-9f10-4105-b855-8880cd4fba10/?context=1000516
     criteria_met:
       - 72
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -130,3 +142,4 @@ categories:
       - text: Tenn. Code Ann. § 38-1-101(e)(1)(C)
         url: https://advance.lexis.com/api/permalink/58740042-af45-4546-b708-3a13e806ee0a/?context=1000516
     criteria_met: []
+    criteria_maybe_met: []

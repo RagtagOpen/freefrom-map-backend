@@ -10,18 +10,21 @@ categories:
       - text: Okla. Stat. Ann. Tit. 22, §60.1
         url: https://law.justia.com/codes/oklahoma/2014/title-22/section-22-60.1/
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -31,12 +34,15 @@ categories:
         url: https://law.justia.com/codes/oklahoma/2015/title-40/section-40-2-210/
     criteria_met:
       - 20
+    criteria_maybe_met:
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
@@ -45,6 +51,7 @@ categories:
       - text: Okla. Stat. Ann. Tit. 12, §12.95
         url: https://law.justia.com/codes/oklahoma/2019/title-12/section-12-95/
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -65,36 +72,42 @@ categories:
       - 35
       - 39
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -105,3 +118,4 @@ categories:
       - text: Okla. Stat. Ann. Tit.22, §22-60.16
         url: https://law.justia.com/codes/oklahoma/2019/title-22/section-22-60-16/
     criteria_met: []
+    criteria_maybe_met: []

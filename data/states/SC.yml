@@ -10,18 +10,21 @@ categories:
       - text: S.C. Code Ann. § 20-4-10
         url: https://www.scstatehouse.gov/code/t20c004.php
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -32,18 +35,21 @@ categories:
     criteria_met:
       - 20
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -58,6 +64,7 @@ categories:
       - 39
       - 40
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -70,6 +77,7 @@ categories:
     criteria_met:
       - 48
       - 49
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 3
     innovative_policy_idea: ~
@@ -86,24 +94,28 @@ categories:
       - 54
       - 55
       - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -114,3 +126,4 @@ categories:
       - text: S.C. Code Ann. § 16-3-1072
         url: https://www.scstatehouse.gov/code/t16c003.php
     criteria_met: []
+    criteria_maybe_met: []

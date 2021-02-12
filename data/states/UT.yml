@@ -10,36 +10,42 @@ categories:
       - text: Utah Code § 77-36-1
         url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S1.html?v=C77-36-S1_2015051220150512
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -66,6 +72,7 @@ categories:
       - 37
       - 38
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -76,6 +83,7 @@ categories:
     criteria_met:
       - 46
       - 50
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -87,18 +95,21 @@ categories:
       - 53
       - 54
       - 55
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: -1
     innovative_policy_idea: ~
@@ -109,6 +120,7 @@ categories:
     criteria_met:
       - 69
       - 76
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -118,3 +130,4 @@ categories:
         url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S2.2.html?v=C77-36-S2.2_1800010118000101
     criteria_met:
       - 80
+    criteria_maybe_met: []

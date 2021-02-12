@@ -10,6 +10,7 @@ categories:
       - text: 23 Pa. Cons. Stat. § 6102
         url: https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=23&div=0&chpt=61&sctn=2&subsctn=0
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
@@ -19,12 +20,14 @@ categories:
       url: https://www.phila.gov/HumanRelations/PDF/DomesticOrSexualViolenceOrdinance.pdf
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 0
     innovative_policy_idea: ~
@@ -33,18 +36,21 @@ categories:
       - text: 4 Pa. Code §402
         url: https://www.legis.state.pa.us/cfdocs/legis/LI/uconsCheck.cfm?txtType=HTM&yr=1936&sessInd=2&smthLwInd=2&act=001&chpt=4
     criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -59,12 +65,14 @@ categories:
       - 35
       - 38
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -75,24 +83,28 @@ categories:
     criteria_met:
       - 54
       - 55
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -105,3 +117,4 @@ categories:
         url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.027.011.000..HTM
     criteria_met:
       - 80
+    criteria_maybe_met: []

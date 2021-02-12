@@ -10,18 +10,21 @@ categories:
       - text: Mo. Rev. Stat. § 455.010(5)
         url: https://revisor.mo.gov/main/OneSection.aspx?section=455.010&bid=25526&hl=
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -33,18 +36,22 @@ categories:
         url: https://revisor.mo.gov/main/OneSection.aspx?section=288.040#:~:text=A%20claimant%20shall%20be%20ineligible,shall%20be%20treated%20as%20discharges
     criteria_met:
       - 20
+    criteria_maybe_met:
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -60,12 +67,14 @@ categories:
       - 34
       - 35
       - 44
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -76,18 +85,21 @@ categories:
     criteria_met:
       - 54
       - 55
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 2
     innovative_policy_idea: ~
@@ -100,6 +112,7 @@ categories:
       - 70
       - 73
       - 75
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: 0
     innovative_policy_idea: ~
@@ -110,3 +123,4 @@ categories:
       - text: Mo. Rev. Stat. §  455.085(1)-(2)
         url: https://revisor.mo.gov/main/OneSection.aspx?section=455.085&bid=25547&hl=
     criteria_met: []
+    criteria_maybe_met: []
