@@ -10,6 +10,7 @@ categories:
       - text: Fla. Stat. Ann. § 741.28
         url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0700-0799/0741/Sections/0741.28.html
     criteria_met: []
+    criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 1
     innovative_policy_idea: ~
@@ -21,12 +22,15 @@ categories:
       - 3
       - 5
       - 9
+    criteria_maybe_met:
+      - 10
   - title: Safe Workplaces
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
     grade: 1
     innovative_policy_idea: ~
@@ -38,12 +42,15 @@ categories:
         url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0443/Sections/0443.101.html
     criteria_met:
       - 20
+    criteria_maybe_met:
+      - 22
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 1
     innovative_policy_idea: ~
@@ -56,6 +63,7 @@ categories:
     criteria_met:
       - 29
       - 32
+    criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
     grade: -1
     innovative_policy_idea: ~
@@ -71,12 +79,14 @@ categories:
       - 43
       - 44
       - 45
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
@@ -90,24 +100,29 @@ categories:
       - 53
       - 54
       - 55
+    criteria_maybe_met:
+      - 56
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links: []
     criteria_met: []
+    criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
@@ -117,3 +132,4 @@ categories:
         url: http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&Search_String=&URL=0700-0799/0741/Sections/0741.2901.html
     criteria_met:
       - 82
+    criteria_maybe_met: []
