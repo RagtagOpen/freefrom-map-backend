@@ -59,24 +59,24 @@ class StateTestCase(unittest.TestCase):
         self.score1 = Score(
             criterion_id=criterion1.id,
             state=self.state.code,
-            meets_criterion=True,
+            meets_criterion='yes',
         )
         self.score2 = Score(
             criterion_id=criterion2.id,
             state=self.state.code,
-            meets_criterion=False,
+            meets_criterion='no',
         )
         self.score3 = Score(
             criterion_id=criterion2.id,
             state=self.state.code,
-            meets_criterion=True,
+            meets_criterion='yes',
         )
         # score2 is more recent than score3
         self.score3.created_at = datetime.utcnow() - timedelta(5)
         self.score4 = Score(
             criterion_id=criterion2.id,
             state=other_state.code,
-            meets_criterion=True,
+            meets_criterion='maybe',
         )
 
         Score.save_all([self.score1, self.score2, self.score3, self.score4])

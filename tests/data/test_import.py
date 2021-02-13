@@ -73,8 +73,8 @@ class TestImport(unittest.TestCase):
         )
         self.assertEqual(resource_links[0].category_id, category2.id)
 
-        criteria_met = Score.query.filter_by(state='AK', meets_criterion=True).all()
-        criteria_not_met = Score.query.filter_by(state='AK', meets_criterion=False).all()
+        criteria_met = Score.query.filter_by(state='AK', meets_criterion='yes').all()
+        criteria_not_met = Score.query.filter_by(state='AK', meets_criterion='no').all()
         self.assertEqual(len(criteria_met), 13)
         self.assertEqual(len(criteria_not_met), 69)
 

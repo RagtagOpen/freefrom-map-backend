@@ -93,13 +93,22 @@ def import_state(path):
 
             scores = []
             for criterion in Criterion.query.filter_by(category_id=category.id).all():
-                meets_criterion = criterion.id in category_data['criteria_met']
+                criteria_met_ids = category_data['criteria_met']
+                criteria_maybe_met_ids = category_data['criteria_maybe_met']
+                meets_criterion = criterion.id in criteria_met_ids
+                maybe_meets_criterion = criterion.id in criteria_maybe_met_ids
+
+                meets_criterion_string = 'no'
+                if meets_criterion:
+                    meets_criterion_string = 'yes'
+                elif maybe_meets_criterion:
+                    meets_criterion_string = 'maybe'
 
                 scores.append(
                     Score(
                         state=code,
                         criterion_id=criterion.id,
-                        meets_criterion=meets_criterion
+                        meets_criterion=meets_criterion_string
                     )
                 )
 

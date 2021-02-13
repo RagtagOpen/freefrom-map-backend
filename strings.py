@@ -10,6 +10,7 @@ invalid_link_type = 'type must be one of ("resource_link", "honorable_mention", 
 invalid_grade = 'Grades must be one of (-1, 0, 1, 2, or 3)'
 form_not_found = 'Form does not exist'
 internal_server_error = 'Internal server error'
+invalid_meets_criterion = 'meets_criterion must be one of ("yes", "no", or "maybe")'
 resource_link = 'resource_link'
 honorable_mention = 'honorable_mention'
 innovative_policy_idea = 'innovative_policy_idea'
