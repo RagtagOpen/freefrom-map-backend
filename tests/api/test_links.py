@@ -6,7 +6,7 @@ import warnings
 from sqlalchemy.exc import SAWarning
 
 from app import app, db
-from models import Category, Link
+from models import Category, ResourceLink
 import strings
 from tests.test_utils import (
     clear_database,
@@ -16,7 +16,7 @@ from tests.test_utils import (
 )
 
 
-class LinksTestCase(unittest.TestCase):
+class ResourceLinksTestCase(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
         self.category = create_category()
@@ -29,14 +29,14 @@ class LinksTestCase(unittest.TestCase):
         clear_database(db)
 
     def test_get_links(self):
-        link1 = Link(
+        link1 = ResourceLink(
             category_id=self.category.id,
             state=self.state1_code,
             text='Section 20 of Statute 39-B',
             url='ny.gov/link/to/statute',
         )
 
-        link2 = Link(
+        link2 = ResourceLink(
             category_id=self.category.id,
             state=self.state2_code,
             text='Statute 20 of Policy ABC',
@@ -45,7 +45,7 @@ class LinksTestCase(unittest.TestCase):
 
         link2.deactivate()
 
-        Link.save_all([link1, link2])
+        ResourceLink.save_all([link1, link2])
 
         response = self.client.get('/links')
         self.assertEqual(response.status_code, 200)
@@ -83,7 +83,7 @@ class LinksTestCase(unittest.TestCase):
         self.assertEqual(json_response, [])
 
     def test_get_link(self):
-        link = Link(
+        link = ResourceLink(
             category_id=self.category.id,
             state=self.state1_code,
             text='Section 20 of Statute 39-B',
@@ -117,13 +117,14 @@ class LinksTestCase(unittest.TestCase):
             'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
             'url': 'ny.gov/link/to/statute',
+            'type': strings.resource_link,
         }
 
         response = self.client.post('/links', json=data, headers=auth_headers())
         self.assertEqual(response.status_code, 201)
         mock_auth.assert_called_once()
 
-        new_link = Link.query.first()
+        new_link = ResourceLink.query.first()
         category = Category.query.first()
 
         self.assertEqual(new_link.category_id, category.id)
@@ -144,10 +145,46 @@ class LinksTestCase(unittest.TestCase):
         })
 
     @patch('auth.is_token_valid', return_value=True)
+    def test_post_link_no_type(self, mock_auth):
+        data = {
+            'category_id': self.category.id,
+            'state': self.state1_code,
+            'text': 'Section 20 of Statute 39-B',
+            'url': 'ny.gov/link/to/statute',
+        }
+
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/links', json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.require_link_type)
+
+    @patch('auth.is_token_valid', return_value=True)
+    def test_post_link_invalid_type(self, mock_auth):
+        data = {
+            'category_id': self.category.id,
+            'state': self.state1_code,
+            'text': 'Section 20 of Statute 39-B',
+            'url': 'ny.gov/link/to/statute',
+            'type': '',
+        }
+
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', category=SAWarning)
+            response = self.client.post('/links', json=data, headers=auth_headers())
+        self.assertEqual(response.status_code, 400)
+
+        json_response = json.loads(response.data)
+        self.assertEqual(json_response['description'], strings.invalid_link_type)
+
+    @patch('auth.is_token_valid', return_value=True)
     def test_post_link_no_category(self, mock_auth):
         data = {
             'state': self.state1_code,
             'text': 'Section 20 of Statute 39-B',
+            'type': strings.resource_link,
             'url': 'ny.gov/link/to/statute',
         }
 
@@ -164,6 +201,7 @@ class LinksTestCase(unittest.TestCase):
         data = {
             'category_id': self.category.id,
             'text': 'Section 20 of Statute 39-B',
+            'type': strings.resource_link,
             'url': 'ny.gov/link/to/statute',
         }
 
@@ -181,10 +219,11 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link(self, mock_auth):
-        link = Link(state=self.state1_code, category_id=self.category.id).save()
+        link = ResourceLink(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'text': 'Section 20 of Statute 39-B',
+            'type': strings.resource_link,
             'url': 'ny.gov/link/to/statute',
         }
 
@@ -193,7 +232,7 @@ class LinksTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         # Refresh link object
-        link = Link.query.first()
+        link = ResourceLink.query.first()
         category = Category.query.first()
 
         self.assertEqual(link.text, 'Section 20 of Statute 39-B')
@@ -213,7 +252,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_cannot_change_category(self, mock_auth):
-        link = Link(state=self.state1_code, category_id=self.category.id).save()
+        link = ResourceLink(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'category_id': 1,
@@ -227,7 +266,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_cannot_change_state(self, mock_auth):
-        link = Link(state=self.state1_code, category_id=self.category.id).save()
+        link = ResourceLink(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'state': self.state2_code,
@@ -245,7 +284,7 @@ class LinksTestCase(unittest.TestCase):
 
     @patch('auth.is_token_valid', return_value=True)
     def test_put_link_deactivate(self, mock_auth):
-        link = Link(state=self.state1_code, category_id=self.category.id).save()
+        link = ResourceLink(state=self.state1_code, category_id=self.category.id).save()
 
         data = {
             'active': False,
@@ -256,7 +295,7 @@ class LinksTestCase(unittest.TestCase):
         mock_auth.assert_called_once()
 
         # Refresh link object
-        link = Link.query.first()
+        link = ResourceLink.query.first()
 
         self.assertFalse(link.active)
         self.assertTrue(isinstance(link.deactivated_at, datetime.datetime))

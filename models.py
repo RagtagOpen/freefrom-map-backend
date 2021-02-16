@@ -279,7 +279,7 @@ class Score(BaseMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     criterion_id = db.Column(db.Integer, db.ForeignKey('criteria.id'), nullable=False)
     state = db.Column(db.String(2), db.ForeignKey('states.code'), nullable=False)
-    meets_criterion = db.Column(db.Boolean())
+    meets_criterion = db.Column(db.String(5))
     created_at = db.Column(db.DateTime)
 
     def __init__(self, criterion_id, state, meets_criterion):
@@ -301,6 +301,12 @@ class Score(BaseMixin, db.Model):
     def validate_state(self, key, value):
         if State.query.get(value) is None:
             raise ValueError(strings.invalid_state)
+        return value
+
+    @validates('meets_criterion')
+    def validate_meets_criterion(self, key, value):
+        if value not in ['yes', 'no', 'maybe']:
+            raise ValueError(strings.invalid_meets_criterion)
         return value
 
     def serialize(self):
