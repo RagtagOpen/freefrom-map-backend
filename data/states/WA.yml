@@ -6,36 +6,85 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: Wash. Rev. Code §26.50.010
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=26.50.010
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
-    honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    honorable_mention:
+      description: Employees are allowed to take reasonable leave, meaning leave that is reasonable in duration. The reasonableness of duration of leave is determined on a case by case basis considering the reasons for taking leave under RCW 49.76.030 and WAC 296-135-020.
+      text: WAC 296-135-050
+      url: https://app.leg.wa.gov/wac/default.aspx?cite=296-135-050
+    resource_links:
+      - text: Wash. Rev. Code § 49.76.030
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=49.76.030
+      - text: Wash. Rev. Code § 49.76.040
+        url: https://apps.leg.wa.gov/rcw/default.aspx?cite=49.76.040
+      - text: Wash. Rev. Code § 296.135.050
+        url: https://app.leg.wa.gov/wac/default.aspx?cite=296-135-050
+      - text: Wash. Rev. Code § 296.135.060
+        url: https://app.leg.wa.gov/wac/default.aspx?cite=296-135-060
+      - text: Wash. Rev. Code § 296.135.070
+        url: https://app.leg.wa.gov/wac/default.aspx?cite=296-135-070
+      - text: Wash. Rev. Code § 296.135.100
+        url: https://app.leg.wa.gov/wac/default.aspx?cite=296-135-100
+      - text: Wash. Rev. Code § 49.76.120
+        url: https://app.leg.wa.gov/rcw/default.aspx?cite=49.76.120
+    criteria_met:
+      - 3
+      - 5
+      - 8
+      - 9
+      - 10
     criteria_maybe_met: []
   - title: Safe Workplaces
-    grade: 0
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: Wash. Rev. Code § 49.76.115(3)
+        url: https://app.leg.wa.gov/rcw/default.aspx?cite=49.76.115
+      - text: Wash. Rev. Code § 49.76.040
+        url: https://apps.leg.wa.gov/rcw/default.aspx?cite=49.76.040
+      - text: Wash. Rev. Code § 49.76.120
+        url: https://app.leg.wa.gov/rcw/default.aspx?cite=49.76.120
+      - text: Wash. Rev. Code § 296.135.090
+        url: https://app.leg.wa.gov/wac/default.aspx?cite=296-135-090
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
-    criteria_maybe_met: []
+    resource_links:
+      - text: Wash. Rev. Code § 50.20.050 (b)(iv)
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=50.20.050
+    criteria_met:
+      - 20
+    criteria_maybe_met:
+      - 22
   - title: Litigation Abuse Protections
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: Wash. Rev. Code § 26.51.010 - 901
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=26.51&full=true#26.51.010
+    criteria_met:
+      - 24
+      - 25
+      - 26
+      - 27
     criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
@@ -45,11 +94,27 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: Wash. Rev. Code § 7.68.060(3), (4)
+        url: https://app.leg.wa.gov/rcw/default.aspx?cite=7.68&full=true#7.68.060
+      - text: Wash. Rev. Code § 7.68.077
+        url: https://app.leg.wa.gov/rcw/default.aspx?cite=7.68&full=true#7.68.077
+      - text: Wash. Rev. Code § 7.68.080
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=7.68.080
+      - text: Wash. Rev. Code § 7.68.110
+        url: https://app.leg.wa.gov/rcw/default.aspx?cite=7.68&full=true#7.68.110
+      - text: Wash. Rev. Code § 7.68.130
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=7.68.130
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 40
+      - 44
+      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
@@ -80,16 +145,26 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: Wash. Rev. Code § 59.18.575
+        url: https://apps.leg.wa.gov/RCW/default.aspx?cite=59.18.575
+    criteria_met:
+      - 69
+      - 75
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: Wash. Rev. Code §10.31.100(2)(a)
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=10.31.100
+      - text: Wash. Rev. Code § 10.99.060
+        url: https://app.leg.wa.gov/RCW/default.aspx?cite=10.99.060
+    criteria_met:
+      - 80
+      - 82
     criteria_maybe_met: []

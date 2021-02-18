@@ -6,15 +6,24 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: H.R.S. § 586-1
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0586/HRS_0586-0001.htm
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: H.R.S. § 378-72
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0378/HRS_0378-0072.htm
+    criteria_met:
+      - 3
+      - 5
+      - 6
+      - 9
+      - 10
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
@@ -24,11 +33,15 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 0
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: H.R.S. § 383-7.6
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0383/HRS_0383-0007_0006.htm
+    criteria_met:
+      - 20
+      - 22
     criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
@@ -45,25 +58,57 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Victims of Crime Compensation Accessibility
-    grade: 0
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
-    criteria_maybe_met: []
+    resource_links:
+      - text: H.R.S. § 351-16
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0351/HRS_0351-0016.htm
+      - text: H.R.S. § 351-17
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0351/HRS_0351-0017.htm
+      - text: H.R.S. § 351-31
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0351/HRS_0351-0031.htm
+      - text: H.R.S. § 351-51
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0351/HRS_0351-0051.htm
+      - text: H.R.S. § 351-62
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol07_Ch0346-0398/HRS0351/HRS_0351-0062.htm
+      - text: HI Crime Victim Compensation Commission website
+        url: http://dps.hawaii.gov/cvcc/apply-for-compensation/
+      - text: HI Crime Victim Compensation Application Form
+        url: https://dps.hawaii.gov/cvcc/files/2013/01/APPLICATION-ONLY.pdf
+    criteria_met:
+      - 34
+      - 35
+      - 37
+    criteria_maybe_met:
+      - 38
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - text: H.A.R. §17-610 seq
+        url: https://humanservices.hawaii.gov/wp-content/uploads/2018/09/610.pdf
+      - text: H.A.R. §17-684.1 seq.
+        url: https://humanservices.hawaii.gov/wp-content/uploads/2018/09/684.1.pdf
+      - text: HI Financial and SNAP Benefits Rights and Responsibilities (2013)
+        url: https://humanservices.hawaii.gov/bessd/files/2013/03/benefits-rights-responsibilities.pdf
     criteria_met: []
     criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 0
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: H.A.R. § 17-656.1-3
+        url: https://humanservices.hawaii.gov/wp-content/uploads/2018/09/656.1.pdf
+      - text: HI TANF Brochure (2015)
+        url: https://humanservices.hawaii.gov/bessd/files/2015/01/TANF-Brochure-2015.pdf
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
     criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -80,16 +125,28 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: H.R.S. § 521-80
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0521/HRS_0521-0080.htm
+    criteria_met:
+      - 69
+      - 70
+      - 74
+      - 75
+      - 76
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
-    criteria_met: []
+    resource_links:
+      - text: H.R.S. § 709-906
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0709/HRS_0709-0906.htm
+      - text: H.R.S. § 453-14
+        url: https://www.capitol.hawaii.gov/hrscurrent/Vol10_Ch0436-0474/HRS0453/HRS_0453-0014.htm
+    criteria_met:
+      - 80
     criteria_maybe_met: []
