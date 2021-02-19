@@ -1,5 +1,5 @@
-code: AR
-name: Arkansas
+code: MS
+name: Mississippi
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,8 +7,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Miss. Code Ann. § 93-21-3
+        url: https://advance.lexis.com/api/permalink/346430d1-bec7-4c07-b4b2-49e53298e6db/?context=1000516
+      - text: Miss. Code Ann. § 97-3-7
+        url: https://advance.lexis.com/api/permalink/f1a500e8-cb84-43d5-ac53-88bd02703eb8/?context=1000516
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -26,16 +28,14 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
-    criteria_met:
-      - 20
-    criteria_maybe_met:
-      - 22
+      - text: Miss. Code Ann. § 71-5-511
+        url: https://advance.lexis.com/api/permalink/75ad6608-4b2f-4798-b558-c136c4c63348/?context=1000516
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +55,45 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Miss. Code Ann. § 99-41-5
+        url: https://advance.lexis.com/api/permalink/f6257ba1-6952-4576-904a-ae50ef02bf4e/?context=1000516
+      - text: Miss. Code Ann. § 99-41-13
+        url: https://advance.lexis.com/api/permalink/0c07df40-e39f-4488-83a1-5d13c194c527/?context=1000516
+      - text: Miss. Code Ann. § 99-41-17
+        url: https://advance.lexis.com/api/permalink/a4cb5940-c1cd-4dea-89e3-60733bf80fa6/?context=1000516
+      - text: Miss. Code Ann. § 99-41-25
+        url: https://advance.lexis.com/api/permalink/44ce32e7-deb0-4a13-bd1f-ebc52de316b0/?context=1000516
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
+      - 39
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
+      - text: SNAP Policy Manual (2011)l, p 3002, 3003,7750, 7751, 8014
+        url: https://sos.ms.gov/ACProposed/00021848b.pdf
     criteria_met:
-      - 46
+      - 47
+      - 48
     criteria_maybe_met:
       - 51
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
+      - text: TANF Policy Manual (2011) p. 3001, 3907
+        url: https://www.sos.ms.gov/ACCode/00000330c.pdf
     criteria_met:
       - 53
       - 54
       - 55
-    criteria_maybe_met:
-      - 56
+      - 57
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -114,24 +109,19 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
-    criteria_met:
-      - 72
-      - 73
-      - 76
+    resource_links: []
+    criteria_met: []
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
+      - text: Miss. Code Ann. § 99-3-7(3)(a)-(e)
+        url: https://advance.lexis.com/api/permalink/f4cb5c1e-90cd-45d8-9313-99a27ec7adb1/?context=1000516
     criteria_met:
       - 80
     criteria_maybe_met: []

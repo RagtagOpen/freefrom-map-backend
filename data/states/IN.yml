@@ -1,0 +1,155 @@
+code: IN
+name: Indiana
+grade: -1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: I.C. § 31-9-2-42
+        url: http://184.175.130.101/legislative/laws/2019/ic/titles/031/articles/037/#31-9-2-42
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: An employer may not terminate an employee for filing for a protective order
+      text: I.C. § 22-5-7
+      url: http://184.175.130.101/legislative/laws/2019/ic/titles/022#22-5-7
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: I.C. § 22-4-15-1(1)(c)(8)
+        url: http://184.175.130.101/legislative/laws/2019/ic/titles/022#22-4-15
+    criteria_met:
+      - 20
+      - 22
+    criteria_maybe_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: IC 5-2-6.1-12
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-12
+      - text: IC 5-2-6.1-16
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-16
+      - text: IC 5-2-6.1-17
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-17
+      - text: IC 5-2-6.1-18
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-18
+      - text: IC 5-2-6.1-21
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-21
+      - text: IC 5-2-6.1-29
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-29
+      - text: IC 5-2-6.1-31
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-31
+      - text: IC 5-2-6.1-36
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/005#5-2-6.1-36
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: SNAP/TANF Program Policy Manual
+        url: https://www.in.gov/fssa/dfr/files/2500.pdf
+      - text: I.C. § 12-14-30-1
+        url: http://iga.in.gov/legislative/laws/2017/ic/titles/012#12-14-30
+      - text: I.C § 12-14-29-2
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/012/#12-14-29-2
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: IC 12-14-2-5.1
+        url: http://184.175.130.101/legislative/laws/2020/ic/titles/012#12-14-2-5.1
+      - text: IC 12-14-1-1
+        url: http://184.175.130.101/legislative/laws/2020/ic/titles/012#12-14-1-1
+      - text: SNAP/TANF Program Policy Manual Section 2545.10.00
+        url: https://www.in.gov/fssa/dfr/files/2500.pdf
+      - text: 2018 TANF State Plan
+        url: https://www.in.gov/fssa/dfr/files/TANF_Indiana_State_Plan_amendment.pdf
+    criteria_met:
+      - 53
+      - 54
+    criteria_maybe_met:
+      - 55
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: I.C. § 32-31-9
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/032#32-31-9
+    criteria_met:
+      - 69
+      - 70
+      - 73
+      - 76
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: I.C. § 35-33-1-1(5)(B)
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/035#35-33-1-1
+      - text: I.C. § 35-47-7-1
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/035#35-47
+      - text: I.C. 35-33-1-1.5
+        url: http://iga.in.gov/legislative/laws/2020/ic/titles/035#35-33-1-1.5
+    criteria_met: []
+    criteria_maybe_met: []

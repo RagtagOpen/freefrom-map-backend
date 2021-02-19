@@ -1,0 +1,164 @@
+name: Massachusetts
+code: MA
+grade: 1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mass. Gen. Laws ch. 186, § 23
+        url: https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section23
+      - text: Mass. Gen. Laws ch. 209A, § 1
+        url: https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter209a/Section1
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mass. Gen. Laws ch. 149, §52E
+        url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter149/Section52e
+    criteria_met:
+      - 3
+      - 5
+      - 6
+      - 9
+      - 10
+    criteria_maybe_met: []
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: Individuals who are fired are also eligible for benefits if they can show that the firing was due to circumstances resulting from domestic violence, including the individual’s need to address the physical, psychological, or legal effects of domestic violence
+      text: G.L. c. 151A, § 25(e)
+      url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter151a/Section25
+    resource_links:
+      - text: Mass. Gen. Laws ch. 151A, § 25
+        url: https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXXI/Chapter151a/Section25
+    criteria_met:
+      - 20
+    criteria_maybe_met:
+      - 22
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: Massachusetts does have a civil rights statute (M.G.L.A. 12 § 11H, I, J (2014)) under which civil actions for gender violence may be brought
+      text: M.G.L.A. 12 § 11H, I, J (2014)
+      url: https://scholarship.law.uc.edu/cgi/viewcontent.cgi?article=1257&context=uclr
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mass. Gen. Laws ch. 258C, § 2(c), (g)
+        url: https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter258C/Section2
+      - text: Mass. Gen. Laws ch. 258C, § 3
+        url: https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter258C/Section3
+      - text: Mass. Gen. Laws ch. 258C, § 5
+        url: https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter258C/Section5
+      - text: Mass. Gen. Laws ch. 258C, § 8
+        url: https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter258C/Section8
+      - text: MASS. GEN. LAWS ch. 258C, § 8(a)
+        url: https://malegislature.gov/Laws/GeneralLaws/PartIII/TitleIV/Chapter258C/Section8
+      - text: Massachusetts Victims of Violent Crime Compensation
+        url: https://www.mass.gov/service-details/applying-for-victims-of-violent-crime-assistance
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 40
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 106 Mass. Code Regs. 365.550
+        url: https://www.mass.gov/doc/106-cmr-365-supplemental-nutrition-assistance-program-special-situation-households/download
+      - text: 106 Mass. Code Regs. 362.330
+        url: https://www.mass.gov/doc/106-cmr-362-supplemental-nutrition-assistance-program-nonfinancial-eligibility-standards/download
+    criteria_met:
+      - 46
+      - 47
+      - 48
+      - 49
+      - 51
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 106 Mass. Code Regs. 702.125 (G)(5)
+        url: https://www.mass.gov/files/documents/2017/09/12/106cmr702.pdf
+      - text: 106 Mass. Code Regs. 203.110
+        url: https://www.sec.state.ma.us/reg_pub/pdf/100/106203.pdf
+      - text: 106 Mass. Code Regs. 703.110
+        url: https://www.mass.gov/doc/106-cmr-703-transitional-cash-assistance-program-nonfinancial-eligibility/download
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+    criteria_maybe_met: []
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mass. Gen. Laws. Ch 186, § 24
+        url: https://malegislature.gov/Laws/GeneralLaws/PartII/TitleI/Chapter186/Section24
+      - text: Mass. Gen. Laws Ch. 186, § 25
+        url: https://www.nhlp.org/wp-content/uploads/2018/07/2017-DV-State-and-Local-Housing-Laws-Compendium.pdf
+    criteria_met:
+      - 69
+      - 70
+      - 73
+      - 75
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mass. Gen. Laws Ch. 209A, §6
+        url: https://malegislature.gov/Laws/GeneralLaws/PartII/TitleIII/Chapter209A/Section6
+    criteria_met:
+      - 80
+    criteria_maybe_met: []

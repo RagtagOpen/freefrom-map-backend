@@ -1,0 +1,162 @@
+code: NY
+name: New York
+grade: 1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met:
+      - text: NY S.O.S. §459-a
+        url: https://www.nysenate.gov/legislation/laws/SOS/459-A
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY E.X.C. §296(c)(1), (2)(i--v), (5)(i-iv)
+        url: https://www.nysenate.gov/legislation/laws/EXC/296
+    criteria_met:
+      - 3
+      - 5
+      - 7
+      - 9
+      - 10
+    criteria_maybe_met:
+      - 6
+  - title: Safe Workplaces
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY Exec §296(1)(a) & §296(22)(a), (22(c)(6)(d)
+        url: https://www.nysenate.gov/legislation/laws/EXC/296
+    criteria_met:
+      - 12
+      - 13
+      - 16
+      - 17
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY Lab. Law § 593(1)(b)(i)
+        url: https://www.nysenate.gov/legislation/laws/LAB/593#:~:text=(a)%20No%
+    criteria_met:
+      - 20
+      - 22
+    criteria_maybe_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: N.Y. Comp. Codes R. & Regs. tit. 8, §901-7)
+        url: https://nycadmincode.readthedocs.io/t08/c09/index.html
+      - text: NY C.P.L.R. § 215 (9)
+        url: https://www.nysenate.gov/legislation/laws/CVP/215
+    criteria_met:
+      - 29
+      - 30
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY E.X.C. §625
+        url: https://www.nysenate.gov/legislation/laws/EXC/625
+      - text: NY E.X.C. §625-A
+        url: https://www.nysenate.gov/legislation/laws/EXC/625-A
+      - text: NY E.X.C. §627
+        url: https://www.nysenate.gov/legislation/laws/EXC/627
+      - text: NY E.X.C. §628
+        url: https://www.nysenate.gov/legislation/laws/EXC/629
+      - text: NY E.X.C. §630
+        url: https://www.nysenate.gov/legislation/laws/EXC/630
+      - text: Application and Instructions https://ovs.ny.gov/sites/default/files/general-form/2013ovsclaimapplication.pdf
+        url: New York State Office of Victim Services FAQ https://ovs.ny.gov/faq
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 40
+      - 43
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: In New York, expedited enrollment is available for those with little to no money or who need help right away
+      text: NY SNAP website
+      url: https://www.ny.gov/services/apply-snap
+    resource_links:
+      - text: NY SNAP Policy Source book (2011)
+        url: https://otda.ny.gov/programs/snap/SNAPSB.pdf
+    criteria_met:
+      - 48
+      - 49
+      - 51
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY S.O.S § 349
+        url: https://www.nysenate.gov/legislation/laws/SOS/349
+      - text: NY TANF State Plan
+        url: https://otda.ny.gov/policy/tanf/TANF-State-Plan-2021-2023.pdf
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+    criteria_maybe_met: []
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY Real Property Law § 227-C
+        url: https://www.nysenate.gov/legislation/laws/RPP/227-C
+    criteria_met:
+      - 69
+      - 70
+      - 75
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: NY Office for the Prevention of Domestic Violence
+        url: https://opdv.ny.gov/help/fss/part22.html
+    criteria_met:
+      - 80
+    criteria_maybe_met: []

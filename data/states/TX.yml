@@ -1,14 +1,14 @@
-code: AR
-name: Arkansas
-grade: -1
+code: TX
+name: Texas
+grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Tex. Fam. Code § 71.004
+        url: https://statutes.capitol.texas.gov/Docs/FA/htm/FA.71.htm
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -26,16 +26,16 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
+      - text: Tex. Labor Code § 204.022(a)(11)
+        url: https://statutes.capitol.texas.gov/Docs/LA/htm/LA.204.htm#:~:text=204.022.,EXCLUSIONS%20FROM%20CHARGEBACKS.&text=(B)%20does%20not%20constitute%20good,to%20voluntarily%20leave%20the%20employment.&text=(2)%20the%20employee%20worked%20for,for%20less%20than%20four%20weeks
     criteria_met:
       - 20
-    criteria_maybe_met:
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,44 +55,35 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Tex. Crim. Proc. Code §56B.05, § 56B.052, § 56B.102, § 56B.107, § 56B.108, § 56B.301
+        url: https://statutes.capitol.texas.gov/Docs/CR/htm/CR.56B.htm
+      - text: Eligibilty for Crime Victims’ Compensation
+        url: https://www.texasattorneygeneral.gov/crime-victims/crime-victims-compensation-program/eligibility-crime-victims-compensation-program
+      - text: Appeals Process
+        url: https://www.texasattorneygeneral.gov/crime-victims/crime-victims-compensation-program/appeals-process
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
+      - 39
+      - 40
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+      - text: Tex. Hum. Rec. Code § 33.0005 seq
+        url: https://statutes.capitol.texas.gov/Docs/HR/htm/HR.33.htm
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
+      - text: Tex. Hum. Res. Code § 31.0322(a)
+        url: https://statutes.capitol.texas.gov/Docs/HR/htm/HR.31.htm
     criteria_met:
       - 53
       - 54
@@ -109,29 +100,33 @@ categories:
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Texas criminalizes coerced and fraudulent debt and provides an option for restitution for the loss of income and other expenses related to the offense
+      text: Tex. Penal Code § 32.51(b)
+      url: https://statutes.capitol.texas.gov/Docs/PE/htm/PE.32.htm#32.51
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
+      - text: Tex. Prop. Code § 92.016 seq.
+        url: https://statutes.capitol.texas.gov/Docs/PR/htm/PR.92.htm#92.016
     criteria_met:
-      - 72
-      - 73
-      - 76
+      - 69
+      - 70
+      - 75
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
-    criteria_met:
-      - 80
+      - text: Tex. Crim. Proc. Code § 14.03
+        url: https://statutes.capitol.texas.gov/Docs/CR/htm/CR.14.htm#14.03
+      - text: Tex. Fam. Code § 91.003
+        url: https://statutes.capitol.texas.gov/Docs/FA/htm/FA.91.htm#91.003
+    criteria_met: []
     criteria_maybe_met: []

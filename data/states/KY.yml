@@ -1,0 +1,140 @@
+code: KY
+name: Kentucky
+grade: 0
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 403.720
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=49348
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: Survivors are able to take leave if they need to serve as a witness or assist in prosecuting a case
+      text: Ky. Rev. Stat. Ann. § 421.500(8)
+      url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=50503
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 341.350
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47969
+      - text: Ky. Rev. Stat. Ann. § 341.360
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=49131
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 49.290
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46181
+      - text: Ky. Rev. Stat. Ann. § 49.330
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46189
+      - text: Ky. Rev. Stat. Ann. § 49.340
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46191
+      - text: Ky. Rev. Stat. Ann. § 49.360
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=46195
+      - text: Ky. Rev. Stat. Ann. § 49.370
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=50283
+    criteria_met:
+      - 34
+      - 35
+      - 38
+      - 39
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Division of Family Support Operational Manual, Supplemental Nutrition Assistance Program, Volume II (2019) Section 2500-2599 and 6450
+        url: https://chfs.ky.gov/agencies/dcbs/dfs/Documents/OMVOLII.pdf
+    criteria_met:
+      - 47
+      - 48
+      - 49
+      - 51
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Division of Family  Support Operational Manual, Kentucky  Transitional  Assistance Program, Volume III (2019) Section 2003(B)
+        url: https://chfs.ky.gov/agencies/dcbs/dfs/Documents/OMVOLIII.pdf
+    criteria_met:
+      - 54
+      - 55
+      - 56
+    criteria_maybe_met:
+      - 53
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Ky. Rev. Stat. Ann. § 383.300 (West 2017)
+        url: https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=47052#:~:text=Page%201-,383.300%20Protections%20for%20person%20with%20rental%20or%20lease%20agreement%20who,order%20or%20interpersonal%20protective%20order.&text=Interpersonal%20protective%20order%20issued%20pursuant,2
+    criteria_met:
+      - 69
+      - 70
+      - 72
+      - 73
+      - 74
+      - 76
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met:
+      - 79

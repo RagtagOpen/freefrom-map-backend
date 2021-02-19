@@ -1,14 +1,14 @@
-code: AR
-name: Arkansas
-grade: -1
+code: MT
+name: Montana
+grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Mont. Code Ann. §  45-5-206
+        url: https://leg.mt.gov/bills/mca/title_0450/chapter_0050/part_0020/section_0060/0450-0050-0020-0060.html
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -26,16 +26,16 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
+      - text: Mont. Code Ann. § 39-51-2111(1)(a)
+        url: https://leg.mt.gov/bills/mca/title_0390/chapter_0510/part_0210/section_0110/0390-0510-0210-0110.html
     criteria_met:
       - 20
-    criteria_maybe_met:
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +55,49 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Mont. Code Ann. § 53-9-106
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0060/0530-0090-0010-0060.html
+      - text: Mont. Code Ann. § 53-9-125
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0250/0530-0090-0010-0250.html
+      - text: Mont. Code Ann. § 53-9-126
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0260/0530-0090-0010-0260.html
+      - text: Mont. Code Ann. § 53-9-128
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0280/0530-0090-0010-0280.html
+      - text: Mont. Code Ann. § 53-9-131
+        url: https://leg.mt.gov/bills/mca/title_0530/chapter_0090/part_0010/section_0310/0530-0090-0010-0310.html
+      - text: Montana Department of Justice Crime Victim Compensation
+        url: https://dojmt.gov/victims/crime-victim-compensation/
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
+      - 39
+      - 40
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+      - text: Mont. Admin. R. 37.76.121
+        url: http://mtrules.org/gateway/ruleno.asp?RN=37%2E76%2E121
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
+      - text: Mont. Admin. R. 37.78.202 (2)(D)
+        url: http://www.mtrules.org/gateway/ruleno.asp?RN=37%2E78%2E202
+      - text: Mont. Admin. R.  37.78.508 (4)(j)
+        url: http://mtrules.org/gateway/ruleno.asp?RN=37%2E78%2E508
     criteria_met:
       - 53
       - 54
       - 55
-    criteria_maybe_met:
       - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -114,24 +113,18 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
-    criteria_met:
-      - 72
-      - 73
-      - 76
+    resource_links: []
+    criteria_met: []
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
-    criteria_met:
-      - 80
+      - text: Mont. Code Ann. § 46-6-601
+        url: https://leg.mt.gov/bills/mca/title_0460/chapter_0060/part_0060/section_0010/0460-0060-0060-0010.html
+    criteria_met: []
     criteria_maybe_met: []

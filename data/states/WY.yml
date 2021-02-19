@@ -1,14 +1,14 @@
-code: AR
-name: Arkansas
-grade: -1
+code: WY
+name: Wyoming
+grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Wyo. Stat. Ann. § 35-21-102
+        url: https://advance.lexis.com/api/permalink/678252a9-40c5-472b-b68e-a665b6dfce82/?context=1000516
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -26,16 +26,16 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
+      - text: Wyo. Stat. Ann. § 27-3-311 (a)(i)(C)
+        url: https://advance.lexis.com/api/permalink/fccceeee-b467-446d-a9eb-f25161d910dc/?context=1000516
     criteria_met:
       - 20
-    criteria_maybe_met:
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,44 +55,39 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Wyo. Stat. § 1-40-102
+        url: https://advance.lexis.com/api/permalink/31e1b453-a162-4e7f-843f-e620363f1876/?context=1000516
+      - text: Wyo. Stat. § 1-40-106
+        url: https://advance.lexis.com/api/permalink/5d1e7d47-7936-4fb4-91de-5aa9de5cae37/?context=1000516
+      - text: Wyo. Stat. § 1-40-110
+        url: https://advance.lexis.com/api/permalink/4cdfb3ef-305b-47c9-8377-190f8bc89364/?context=1000516
+      - text: Wyo. Stat. § 1-40-111
+        url: https://advance.lexis.com/api/permalink/bd0a2ce0-7195-4d6f-b9ea-02fca504f149/?context=1000516
+      - text: WY Crime Victim  Compensation FAQ
+        url: https://drive.google.com/file/d/0Bx6poawfal01ZUdEY3l0V29ISFk/view
+      - text: Crime Victim  Compensation Program Application
+        url: https://drive.google.com/file/d/0Bx6poawfal01TWlyTDIxcEJ4Uk0/view
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
+      - 37
+      - 39
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
+      - text: Wyo. Stat. Ann. § 42-2-103
+        url: https://advance.lexis.com/api/permalink/43cb455f-2457-4992-86cb-118568b2a756/?context=1000516
     criteria_met:
       - 53
       - 54
@@ -114,24 +109,23 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
+      - text: Wyo. Stat. Ann. § 1-21-1303
+        url: https://advance.lexis.com/api/permalink/5fb9c319-ab3b-4e7d-a9ac-4ea5df2c4c9e/?context=1000516
     criteria_met:
+      - 69
+      - 70
       - 72
-      - 73
-      - 76
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
-    criteria_met:
-      - 80
+      - text: Wyo. Stat. Ann. § 7-20-102
+        url: https://advance.lexis.com/api/permalink/c2d7ac69-bfb9-46ab-9330-ab93910ea10e/?context=1000516
+    criteria_met: []
     criteria_maybe_met: []

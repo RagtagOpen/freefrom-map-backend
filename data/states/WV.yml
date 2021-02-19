@@ -1,10 +1,3 @@
-# Category grade title to number mapping:
-#   Model policy => 3
-#   Strong policy => 2
-#   Promising policy => 1
-#   No policy => 0
-#   Adverse policy => -1
-
 code: WV
 name: West Virginia
 grade: -1

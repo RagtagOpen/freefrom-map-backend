@@ -1,16 +1,17 @@
-code: AL
-name: Alabama
+code: ID
+name: Idaho
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Idaho Council on Domestic Violence and Victim Assistance Grant Funding includes the “financial abuse” in definition of Domestic Violence
+      text: IDAPA 16.05.04
+      url: https://adminrules.idaho.gov/rules/current/16/160504.pdf
     resource_links:
-      - text: Ala. Code § 30-5-2
-        url: https://codes.findlaw.com/al/title-30-marital-and-domestic-relations/al-code-sect-30-5-2.html
-      - text: Ala. Code § 13A-6-139
-        url: http://alisondb.legislature.state.al.us/alison/codeofalabama/1975/coatoc.htm
+      - text: I.C. § 39-6303
+        url: https://legislature.idaho.gov/statutesrules/idstat/title39/t39ch63/sect39-6303/
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -24,7 +25,10 @@ categories:
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links: []
+    resource_links:
+      - description: Idaho sets forth Domestic Violence policies for public employees under the state’s executive branch agency policy
+        text: "Executive Branch Agency Policy – relevant sections include: 8C. Confidentiality, 8E. Safety and 8I. Retaliation"
+        url: https://dhr.idaho.gov/wp-content/uploads/Section8DomesticViolence.pdf
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
@@ -53,48 +57,46 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ala. Code § 15-23-1, et seq.
-        url: https://casetext.com/statute/code-of-alabama/title-15-criminal-procedure/chapter-23-alabama-crime-victims/article-1-crime-victims-compensation
-      - text: AL Crime Victims’ Compensation Commission
-        url: https://acvcc.alabama.gov
-      - text: Administrative Rules Update
-        url: https://acvcc.alabama.gov/ruleupdate.htm
-      - text: Alabama Victim’s Programs
-        url: https://adeca.alabama.gov/Divisions/lets/Pages/VictimsPrograms.aspx
+      - text: Idaho Crime Victim Compensation Program FAQs
+        url: https://crimevictimcomp.idaho.gov/frequently-asked-questions/
+      - text: I.C. § 72-1021
+        url: https://legislature.idaho.gov/statutesrules/idstat/Title72/T72CH10/SECT72-1021/
+      - text: I.C. § 72-1017
+        url: https://legislature.idaho.gov/statutesrules/idstat/Title72/T72CH10/SECT72-1017/
+      - text: I.C.  § 72-1006
+        url: https://legislature.idaho.gov/statutesrules/idstat/Title72/T72CH10/SECT72-1006/
+      - text: I.C.  § 72-1003
+        url: https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch10/sect72-1003/
+      - text: I.C. §72-1016 (3), (4), (6), (7)
+        url: https://legislature.idaho.gov/statutesrules/idstat/title72/t72ch10/sect72-1016/
     criteria_met:
       - 34
       - 35
       - 38
       - 39
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Food Assistance Program in Alabama, POE Manual, Chapter 11 and See Chapter 7
-        url: https://apps.dhr.alabama.gov/POE/POEhome
+      - text: Idaho Admin. Code r. 16.03.04.156 and 16.03.04.796
+        url: https://adminrules.idaho.gov/rules/current/16/160304.pdf
     criteria_met:
-      - 48
-    criteria_maybe_met:
+      - 47
+      - 49
       - 51
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ala. Admin Code, Rule 660-2-2
-        url: http://www.alabamaadministrativecode.state.al.us/docs/hres/660-2-2.pdf
-      - text: DHR TANF State Plan 2019
-        url: https://dhr.alabama.gov/wp-content/uploads/2020/02/2019StatePlan.pdf
-    criteria_met:
-      - 53
-      - 54
-      - 55
-    criteria_maybe_met:
-      - 56
+      - text: IDAPA 16.03.08
+        url: https://adminrules.idaho.gov/rules/current/16/160308.pdf
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -121,9 +123,7 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ala. Code § 15-10-3
-        url: https://codes.findlaw.com/al/title-15-criminal-procedure/al-code-sect-15-10-3.html
-      - text: Ala. Code § 13A-6-134
-        url: https://codes.findlaw.com/al/title-13a-criminal-code/al-code-sect-13a-6-134.html
+      - text: I.C. § 19-603
+        url: https://legislature.idaho.gov/statutesrules/idstat/title19/t19ch6/sect19-603/#:~:text=19%2D603.,a%20warrant%2C%20arrest%20a%20person%3A&text=When%20a%20felony%20has%20in,arrested%20to%20have%20committed%20it
     criteria_met: []
     criteria_maybe_met: []

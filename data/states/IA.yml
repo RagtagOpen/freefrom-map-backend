@@ -1,5 +1,5 @@
-code: AL
-name: Alabama
+code: IA
+name: Iowa
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,10 +7,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ala. Code § 30-5-2
-        url: https://codes.findlaw.com/al/title-30-marital-and-domestic-relations/al-code-sect-30-5-2.html
-      - text: Ala. Code § 13A-6-139
-        url: http://alisondb.legislature.state.al.us/alison/codeofalabama/1975/coatoc.htm
+      - text: Iowa Code § 236.2.2
+        url: https://www.legis.iowa.gov/docs/code/236.2.pdf
+      - text: Iowa Code § 708.1
+        url: https://www.legis.iowa.gov/docs/code/708.1.pdf
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -44,7 +44,10 @@ categories:
   - title: Designated Tort for Intimate Partner Violence
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Although the state of Iowa does not have a designated domestic violence tort, it allows for the victim to file a petition with the office of Clerk of Court at the local county courthouse to ask for a civil protective order, legally requiring the abuser to stay away from the victim
+      text: Iowa Code § 236.3 (2020)
+      url: https://www.legis.iowa.gov/docs/ico/chapter/236.pdf
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
@@ -53,48 +56,43 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ala. Code § 15-23-1, et seq.
-        url: https://casetext.com/statute/code-of-alabama/title-15-criminal-procedure/chapter-23-alabama-crime-victims/article-1-crime-victims-compensation
-      - text: AL Crime Victims’ Compensation Commission
-        url: https://acvcc.alabama.gov
-      - text: Administrative Rules Update
-        url: https://acvcc.alabama.gov/ruleupdate.htm
-      - text: Alabama Victim’s Programs
-        url: https://adeca.alabama.gov/Divisions/lets/Pages/VictimsPrograms.aspx
+      - text: Iowa Code § 915.84 seq.
+        url: https://www.legis.iowa.gov/docs/code/915.84.pdf
+      - text: Iowa Code § 915.87(2)
+        url: https://www.legis.iowa.gov/docs/ico/section/915.87.pdf
+      - text: Iowa Code § 915.91
+        url: https://www.legis.iowa.gov/docs/code/915.91.pdf
+      - text: Iowa Admin. Code r. § 61-9.28
+        url: https://www.legis.iowa.gov/docs/iac/rule/07-31-2019.61.9.28.pdf
+      - text: Iowa Admin. Code r. § 61-9.29
+        url: https://www.legis.iowa.gov/docs/iac/rule/07-31-2019.61.9.29.pdf
+      - text: Iowa Admin. Code r. § 61-9.30
+        url: https://www.legis.iowa.gov/docs/iac/rule/07-31-2019.61.9.30.pdf
+      - text: Iowa Admin. Code r. § 61-9.35
+        url: https://www.legis.iowa.gov/docs/iac/rule/07-31-2019.61.9.35.pdf
+      - text: Iowa Admin. Code r. §61-9.36
+        url: https://www.legis.iowa.gov/docs/iac/rule/01-19-2005.61.9.36.pdf
     criteria_met:
       - 34
       - 35
       - 38
       - 39
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: Food Assistance Program in Alabama, POE Manual, Chapter 11 and See Chapter 7
-        url: https://apps.dhr.alabama.gov/POE/POEhome
-    criteria_met:
-      - 48
-    criteria_maybe_met:
-      - 51
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: Ala. Admin Code, Rule 660-2-2
-        url: http://www.alabamaadministrativecode.state.al.us/docs/hres/660-2-2.pdf
-      - text: DHR TANF State Plan 2019
-        url: https://dhr.alabama.gov/wp-content/uploads/2020/02/2019StatePlan.pdf
-    criteria_met:
-      - 53
-      - 54
-      - 55
-    criteria_maybe_met:
-      - 56
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -112,18 +110,20 @@ categories:
   - title: Rental Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Survivors are allowed to terminate a lease if there is “clear and present danger”
+      text: Iowa Code § 562B.25A
+      url: https://www.legis.iowa.gov/docs/code/562B.25A.pdf
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: 0
+    grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ala. Code § 15-10-3
-        url: https://codes.findlaw.com/al/title-15-criminal-procedure/al-code-sect-15-10-3.html
-      - text: Ala. Code § 13A-6-134
-        url: https://codes.findlaw.com/al/title-13a-criminal-code/al-code-sect-13a-6-134.html
-    criteria_met: []
+      - text: IOWA CODE § 236.12(2)(3)
+        url: https://www.legis.iowa.gov/docs/ico/chapter/236.pdf
+    criteria_met:
+      - 80
     criteria_maybe_met: []

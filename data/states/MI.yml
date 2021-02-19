@@ -1,0 +1,147 @@
+code: MI
+name: Michigan
+grade: 0
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: Domestic Violence Awareness, Michigan State Police recognize economic abuse as a form of domestic violence
+      text: MSP Domestic Violence Awareness
+      url: https://www.michigan.gov/msp/0,4643,7-123-1878_1711-10257--,00.html
+    resource_links:
+      - text: Mich. Comp. Laws § 400.1501
+        url: http://www.legislature.mi.gov/(S(ifgw4qaq3enmstfjwi1qkibs))/mileg.aspx?page=getobject&objectname=mcl-400-1501
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mich. Comp. Laws § 408.963
+        url: http://www.legislature.mi.gov/(S(kr25uizbk12odmkwy43gozck))/mileg.aspx?page=getObject&objectName=mcl-408-963
+      - text: Mich. Comp. Laws §  408.962
+        url: http://www.legislature.mi.gov/(S(z3gphp34esk5sry4i1ld0ttz))/mileg.aspx?page=getObject&objectName=mcl-408-962
+      - text: Mich. Comp. Laws § 408.964
+        url: http://www.legislature.mi.gov/(S(5c3fwo5qdv5n5dj4t0mwvb33))/mileg.aspx?page=GetObject&objectname=mcl-408-964
+    criteria_met:
+      - 3
+      - 5
+      - 9
+      - 10
+    criteria_maybe_met: []
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mich. Admin. Code r. 421.210
+        url: https://casetext.com/regulation/michigan-administrative-code/department-talent-and-economic-development/employment-security/part-3-claims/section-r-421210-unemployment-insurance-benefit-filing-requirements-definitions
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mich. Comp. Laws § 600.5805(4)-(5)
+        url: http://legislature.mi.gov/doc.aspx?mcl-600-5805
+    criteria_met:
+      - 30
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mich. Comp. Laws § 18.355
+        url: http://legislature.mi.gov/doc.aspx?mcl-18-355
+      - text: Mich. Comp. Laws §  18.356 (2)
+        url: http://legislature.mi.gov/doc.aspx?mcl-18-356
+      - text: Mich. Comp. Laws § 18.358
+        url: http://legislature.mi.gov/doc.aspx?mcl-18-358
+      - text: Mich. Comp. Laws § 18.359
+        url: http://legislature.mi.gov/doc.aspx?mcl-18-359
+      - text: Mich. Comp. Laws § 18.361
+        url: http://legislature.mi.gov/doc.aspx?mcl-18-361
+    criteria_met:
+      - 34
+      - 38
+      - 39
+      - 44
+    criteria_maybe_met:
+      - 35
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: MDHHS Bridges Eligibility Manual (2020) BPB 2020-035 (p 4)
+        url: https://dhhs.michigan.gov/OLMWEB/EX/BP/Public/BEM/620.pdf
+    criteria_met:
+      - 46
+      - 50
+      - 51
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: MDHHS-Pub-1010 (Rev. 10-20) (p 21)
+        url: https://www.michigan.gov/documents/dhs/DHS-PUB-1010_243538_7.pdf
+    criteria_met:
+      - 53
+      - 55
+    criteria_maybe_met:
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mich. Comp. Laws § 554.601b seq
+        url: http://legislature.mi.gov/doc.aspx?mcl-554-601b
+    criteria_met:
+      - 69
+      - 70
+      - 75
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Mich. Comp. Laws § 776.22
+        url: http://legislature.mi.gov/doc.aspx?mcl-776-22
+    criteria_met: []
+    criteria_maybe_met: []

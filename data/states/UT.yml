@@ -1,5 +1,5 @@
-code: AZ
-name: Arizona
+code: UT
+name: Utah
 grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,28 +7,16 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 13-3601
-        url: https://www.azleg.gov/ars/13/03601.htm#:~:text=In%20cases%20of%20domestic%20violence,officer%20has%20probable%20cause%20to
+      - text: Utah Code § 77-36-1
+        url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S1.html?v=C77-36-S1_2015051220150512
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
-    grade: 2
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.R.S. § 23-373
-        url: https://www.azleg.gov/viewdocument/?docName=http://www.azleg.gov/ars/23/00373.htm
-      - text: A.R.S. § 13-4439
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/04439.htm
-      - text: Proposition 206, The Fair Wages and Healthy Families Act (the “Act”) FAQs
-        url: https://www.azica.gov/sites/default/files/Public%20FREQUENTLY%20ASKED%20QUESTIONS_MasterwTOC.pdf
-    criteria_met:
-      - 3
-      - 4
-      - 5
-      - 8
-      - 9
-      - 10
+    resource_links: []
+    criteria_met: []
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
@@ -38,16 +26,12 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.R.S. § 23-771(D)
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/23/00771.htm
-    criteria_met:
-      - 20
-    criteria_maybe_met:
-      - 22
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -67,16 +51,26 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: AZ 41-2407
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/41/02407.htm
-      - text: Arizona Criminal Justice Commission Crime Victim Compensation Program Eligibility Requirements
-        url: https://www.maricopacountyattorney.org/DocumentCenter/View/119/Victim-Compensation-Program-Eligibility-Requirements-PDF?bidId=
+      - text: Utah Code § 63M-7-509
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S509.html
+      - text: Utah Code § 63M-7-511
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S511.html
+      - text: Utah Code § 63M-7-522
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S522.html
+      - text: Utah Code § 63M-7-524
+        url: https://le.utah.gov/xcode/Title63M/Chapter7/63M-7-S524.html
+      - text: Utah Admin. Code r. 270-2-4
+        url: https://rules.utah.gov/publicat/code/r270/r270-002.htm#E4
+      - text: Application
+        url: https://justice.utah.gov/wp-content/uploads/CVRApplication_English.pdf
+      - text: Brochure
+        url: https://justice.utah.gov/wp-content/uploads/CrimeVictimBrochure_2011.pdf
     criteria_met:
       - 34
       - 35
+      - 36
+      - 37
       - 38
-      - 39
-      - 43
       - 44
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
@@ -84,26 +78,23 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: AZ Dept of Economic Security
-        url: https://des.az.gov/services/basic-needs/food/able-bodied-adult-without-dependents-overview
+      - text: Utah Admin. Code r. 986-900-902 (p)(viii)
+        url: https://rules.utah.gov/publicat/code/r986/r986-900.htm#E2
     criteria_met:
       - 46
-    criteria_maybe_met:
-      - 51
+      - 50
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 3
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 46-244
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/46/00244.htm
-      - text: Arizona Department of Economic Security, “Temporary Assistance for Needy Families (TANF) Jobs Program,” at 66–69
-        url: https://des.az.gov/sites/default/files/media/Jobs-Program-Policy-Manual.pdf?time=1594742139868
+      - text: Utah Admin. Code r. R986-200-218(2)
+        url: https://rules.utah.gov/publicat/code/r986/r986-200.htm#T18
     criteria_met:
       - 53
       - 54
       - 55
-      - 56
     criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
@@ -124,12 +115,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 33-1318
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/33/01318.htm
+      - text: Utah Code § 57-22-5.1
+        url: https://le.utah.gov/xcode/Title57/Chapter22/57-22-S5.1.html
     criteria_met:
       - 69
-      - 70
-      - 74
       - 76
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
@@ -137,10 +126,8 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 13-3601(B)
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/03601.htm
-      - text: A.R.S. § 13-3806
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/03806.htm
+      - text: Utah Code § 77-36-2.2
+        url: https://le.utah.gov/xcode/Title77/Chapter36/77-36-S2.2.html?v=C77-36-S2.2_1800010118000101
     criteria_met:
       - 80
     criteria_maybe_met: []

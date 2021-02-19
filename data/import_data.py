@@ -25,9 +25,11 @@ def import_data():
     print('Importing categories')
     import_categories()
 
+    count = 0
     for filename in os.listdir(absolute_file_path('states')):
+        count += 1
         state = filename.split('.yaml')[0]
-        print(f'Importing state: {state}')
+        print(f'Importing state #{count}: {state}')
 
         import_state(absolute_file_path(f'states/{filename}'))
 

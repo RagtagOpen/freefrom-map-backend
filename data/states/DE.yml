@@ -1,41 +1,57 @@
-code: AR
-name: Arkansas
-grade: -1
+code: DE
+name: Delaware
+grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: 10 Del. C. §1041
+        url: https://delcode.delaware.gov/title10/c009/sc03/index.shtml#1041
+      - text: 13 Del. C. § 703A
+        url: https://delcode.delaware.gov/title13/c007a/sc01/index.shtml
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Reasonable accommodation include ability use accrued time off
+      text: Del C. §711(a)(3)(h)(2)
+      url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#710
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
   - title: Safe Workplaces
-    grade: 0
-    innovative_policy_idea: ~
-    honorable_mention: ~
-    resource_links: []
-    criteria_met: []
-    criteria_maybe_met: []
-  - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
+      - text: 19 Del. C. § 711
+        url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#711
+      - text: 19 Del. C. § 712
+        url: https://delcode.delaware.gov/title19/c007/sc02/index.shtml#712
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 19 Del. C. § 3314
+        url: https://delcode.delaware.gov/title19/c033/sc02/index.shtml#3314
     criteria_met:
       - 20
-    criteria_maybe_met:
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +71,36 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: DE Victim’s Compensation Assistance Program Website
+        url: https://attorneygeneral.delaware.gov/vcap/compensation/
+      - text: 11 Del. C. § 9001 et seq.
+        url: https://delcode.delaware.gov/title11/c090/index.shtml
     criteria_met:
       - 34
       - 35
       - 38
-      - 43
+      - 39
+      - 40
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+      - text: 31 Del. C. §  601 et seq.
+        url: https://delcode.delaware.gov/title31/c006/sc01/index.shtml
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
-    criteria_met:
-      - 53
-      - 54
-      - 55
-    criteria_maybe_met:
-      - 56
+      - text: 31 Del. C. § 1501 et seq.
+        url: https://delcode.delaware.gov/title31/c015/index.shtml
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -114,24 +116,34 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
+      - text: 25 DE Chapter 53, §5314
+        url: https://delcode.delaware.gov/title25/c053/index.shtml#5314
+      - text: 25 Del. C. §  §5316
+        url: https://delcode.delaware.gov/title25/c053/index.shtml#5316
+      - text: 25 DE Chapter 53, §5307
+        url: https://delcode.delaware.gov/title25/c053/index.shtml#5307
     criteria_met:
+      - 69
+      - 70
       - 72
       - 73
-      - 76
+      - 75
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
+      - text: 11 Del. C. § 1904
+        url: https://delcode.delaware.gov/title11/c019/sc01/index.shtml
+      - text: 10 DE Code § 1046
+        url: https://delcode.delaware.gov/title10/c009/sc03/index.shtml
+      - text: 11 DEl Code ch94
+        url: https://delcode.delaware.gov/title11/c094/sc01/index.shtml
     criteria_met:
       - 80
     criteria_maybe_met: []

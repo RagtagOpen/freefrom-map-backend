@@ -1,5 +1,5 @@
-code: AR
-name: Arkansas
+code: VA
+name: Virginia
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,14 +7,17 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Va. Code Ann. § 16.1-228
+        url: https://law.lis.virginia.gov/vacode/title16.1/chapter11/section16.1-228/
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: An individual who left employment voluntarily with good cause due to a personal bona fide medical reason caused by a non-job-related injury or medical condition
+      text: VA 60.2-528(3)(C)(6)
+      url: https://law.lis.virginia.gov/vacodefull/title60.2/
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
@@ -26,16 +29,14 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
-    criteria_met:
-      - 20
-    criteria_maybe_met:
-      - 22
+      - text: Va. Code Ann. § 60.2-100
+        url: https://law.lis.virginia.gov/vacodefull/title60.2/
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +56,31 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Va. Code Ann. §19.2-368.1
+        url: https://law.lis.virginia.gov/vacode/title19.2/chapter21.1/section19.2-368.1/#:~:text=Findings%3B%20legislative%20intent.,or%20attempting%20to%20commit%20crimes
+      - text: Va. Code Ann. §19.2-368.2 - §19.2-368.11
+        url: https://law.lis.virginia.gov/vacode/title19.2/chapter21.1/
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
-    criteria_met:
-      - 53
-      - 54
-      - 55
-    criteria_maybe_met:
-      - 56
+      - text: Va. Code Ann. § 63.2-600
+        url: https://law.lis.virginia.gov/vacodefull/title63.2/chapter6/
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -118,11 +100,11 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
+      - text: Va. Code Ann. § 55.1-1236
+        url: https://law.lis.virginia.gov/vacode/title55.1/chapter12/section55.1-1236/
     criteria_met:
-      - 72
-      - 73
+      - 69
+      - 70
       - 76
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
@@ -130,8 +112,13 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
+      - text: VA. Code Ann. § 19.2-81.3
+        url: https://law.lis.virginia.gov/vacode/title19.2/chapter7/section19.2-81.3/
+      - text: VA. Code Ann. § 54.1-2967
+        url: https://law.lis.virginia.gov/vacode/54.1-2967/
+      - text: VA Code Ann. §16.1-69.48
+        url: https://law.lis.virginia.gov/vacode/16.1-69.48:1/
     criteria_met:
       - 80
+      - 81
     criteria_maybe_met: []

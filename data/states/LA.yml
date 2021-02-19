@@ -1,5 +1,5 @@
-code: AZ
-name: Arizona
+code: LA
+name: Louisiana
 grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,28 +7,16 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 13-3601
-        url: https://www.azleg.gov/ars/13/03601.htm#:~:text=In%20cases%20of%20domestic%20violence,officer%20has%20probable%20cause%20to
+      - text: La. Child. Code. Ann. art.1565 (2018)
+        url: https://law.justia.com/codes/louisiana/2018/code-childrenscode/chc-1565/
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
-    grade: 2
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.R.S. § 23-373
-        url: https://www.azleg.gov/viewdocument/?docName=http://www.azleg.gov/ars/23/00373.htm
-      - text: A.R.S. § 13-4439
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/04439.htm
-      - text: Proposition 206, The Fair Wages and Healthy Families Act (the “Act”) FAQs
-        url: https://www.azica.gov/sites/default/files/Public%20FREQUENTLY%20ASKED%20QUESTIONS_MasterwTOC.pdf
-    criteria_met:
-      - 3
-      - 4
-      - 5
-      - 8
-      - 9
-      - 10
+    resource_links: []
+    criteria_met: []
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
@@ -38,16 +26,14 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 23-771(D)
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/23/00771.htm
-    criteria_met:
-      - 20
-    criteria_maybe_met:
-      - 22
+      - text: La. Stat. Ann. § 23:1601 (2018)
+        url: https://codes.findlaw.com/la/revised-statutes/la-rev-stat-tit-23-sect-1601.html
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -67,15 +53,22 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: AZ 41-2407
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/41/02407.htm
-      - text: Arizona Criminal Justice Commission Crime Victim Compensation Program Eligibility Requirements
-        url: https://www.maricopacountyattorney.org/DocumentCenter/View/119/Victim-Compensation-Program-Eligibility-Requirements-PDF?bidId=
+      - text: La. Rev. Stat. Ann. § 46:1806
+        url: http://legis.la.gov/legis/Law.aspx?d=100419
+      - text: La. Rev. Stat. Ann. § 46:1809
+        url: http://legis.la.gov/legis/Law.aspx?d=100422
+      - text: La. Rev. Stat. Ann. § 46:1813
+        url: http://legis.la.gov/legis/Law.aspx?d=100427
+      - text: La. Rev. Stat. Ann. § 46:1820
+        url: http://legis.la.gov/legis/Law.aspx?d=100434
+      - text: La. Crime Victim Reparations website
+        url: http://www.lcle.state.la.us/programs/cvr.asp
     criteria_met:
       - 34
       - 35
       - 38
       - 39
+      - 40
       - 43
       - 44
     criteria_maybe_met: []
@@ -84,10 +77,13 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: AZ Dept of Economic Security
-        url: https://des.az.gov/services/basic-needs/food/able-bodied-adult-without-dependents-overview
+      - text: La. Admin. Code tit. 67, §1907
+        url: https://www.doa.la.gov/pages/osr/lac/books.aspx
+      - text: La. Department of Children and Family Services FAQs for SNAP Recipients
+        url: http://www.dcfs.la.gov/page/abawd-faqs
     criteria_met:
       - 46
+      - 50
     criteria_maybe_met:
       - 51
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
@@ -95,10 +91,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 46-244
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/46/00244.htm
-      - text: Arizona Department of Economic Security, “Temporary Assistance for Needy Families (TANF) Jobs Program,” at 66–69
-        url: https://des.az.gov/sites/default/files/media/Jobs-Program-Policy-Manual.pdf?time=1594742139868
+      - text: La. Stat. Ann. § 46:460.9 (2018)
+        url: https://law.justia.com/codes/louisiana/2018/code-revisedstatutes/title-46/rs-46-460.9/
+      - text: La. Admin. Code tit. 67, § 1213
+        url: https://www.doa.la.gov/pages/osr/lac/books.aspx
     criteria_met:
       - 53
       - 54
@@ -120,15 +116,19 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 33-1318
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/33/01318.htm
+      - text: La. Stat. Ann. § 9:3261.1
+        url: https://codes.findlaw.com/la/revised-statutes/la-rev-stat-tit-9-sect-3261-1.html
+      - text: La. Stat. Ann. §  40:506 (2018)
+        url: https://law.justia.com/codes/louisiana/2018/code-revisedstatutes/title-40/rs-40-506/
     criteria_met:
       - 69
       - 70
+      - 72
+      - 73
       - 74
       - 76
     criteria_maybe_met: []
@@ -137,10 +137,8 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.R.S. § 13-3601(B)
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/03601.htm
-      - text: A.R.S. § 13-3806
-        url: https://www.azleg.gov/viewdocument/?docName=https://www.azleg.gov/ars/13/03806.htm
+      - text: La. R.S. § 46:2140(B) (2012) (Lexis)
+        url: http://legis.la.gov/legis/Law.aspx?d=100565
     criteria_met:
       - 80
     criteria_maybe_met: []

@@ -1,14 +1,14 @@
-code: AR
-name: Arkansas
-grade: -1
+code: MO
+name: Missouri
+grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Mo. Rev. Stat. § 455.010(5)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=455.010&bid=25526&hl=
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -30,8 +30,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
+      - text: Mo. Rev. Stat. § 288.501(2)(c)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=288.501&bid=15289&hl=
+      - text: Mo. Rev. Stat. § 288.040
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=288.040#:~:text=A%20claimant%20shall%20be%20ineligible,shall%20be%20treated%20as%20discharges
     criteria_met:
       - 20
     criteria_maybe_met:
@@ -55,50 +57,35 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Mo. Rev. Stat. § 595.015
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=595.015&bid=35679&hl=
+      - text: Mo. Rev. Stat. § 595.025
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=595.025&bid=35681&hl=
+      - text: Mo. Rev. Stat. § 595.036
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=595.036&bid=30369&hl=
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
+      - text: Mo. Rev. Stat. § 208.040(5)(5)(a)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=208.040
     criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
-  - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
-    innovative_policy_idea: ~
-    honorable_mention: ~
-    resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
-    criteria_met:
-      - 53
       - 54
       - 55
-    criteria_maybe_met:
-      - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -114,24 +101,26 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
+      - text: Mo. Rev. Stat. §  441.920
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=441.920&bid=47695&hl=
     criteria_met:
-      - 72
+      - 69
+      - 70
       - 73
-      - 76
+      - 75
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
-    criteria_met:
-      - 80
+      - text: Mo. Rev. Stat. § 455.080
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=455.080&bid=25545&hl=
+      - text: Mo. Rev. Stat. §  455.085(1)-(2)
+        url: https://revisor.mo.gov/main/OneSection.aspx?section=455.085&bid=25547&hl=
+    criteria_met: []
     criteria_maybe_met: []

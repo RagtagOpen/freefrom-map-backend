@@ -1,0 +1,161 @@
+name: Maryland
+code: MD
+grade: 0
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code, Fam. Law, § 4-701
+        url: https://codes.findlaw.com/md/family-law/md-code-fam-law-sect-4-701.html
+      - text: Md. Code, Fam. Law, § 4-501
+        url: https://codes.findlaw.com/md/family-law/md-code-fam-law-sect-4-501.html
+    criteria_met:
+      - 3
+      - 5
+      - 8
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code, Labor and Employment, § 3-1305
+        url: https://law.justia.com/codes/maryland/2018/labor-and-employment/title-3/subtitle-13/section-3-1305/
+      - text: Md. Code, Labor and Employment, § 3-1309(c)
+        url: https://law.justia.com/codes/maryland/2018/labor-and-employment/title-3/subtitle-13/section-3-1309/
+    criteria_met: []
+    criteria_maybe_met:
+      - 10
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code, Labor and Employment, § 8–1001(b)(3)
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=8-1001
+    criteria_met:
+      - 20
+      - 23
+    criteria_maybe_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code, Criminal Procedure, § 11-809
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=11-809&enactments=false
+      - text: Md. Code, Criminal Procedure, § 11-810
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=11-810&enactments=False&archived=False
+      - text: Md. Code, Criminal Procedure, § 11-811
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=11-811&enactments=False&archived=False
+      - text: Md. Code, Criminal Procedure, § 11-813
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=11-813&enactments=False&archived=False
+      - text: Md. Code, Criminal Procedure, § 11-815(c)
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=11-815&enactments=False&archived=False
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code Regs. 07.03.17.06. (E)
+        url: http://mdrules.elaws.us/comar/07.03.17.06
+      - text: Md. Code Regs. 07.03.17.19.
+        url: http://mdrules.elaws.us/comar/07.03.17.19
+      - text: Md. Code Regs. 07.03.17.24.
+        url: http://mdrules.elaws.us/comar/07.03.17.24
+      - text: MD Supplemental Nutrition Assistance Program (SNAP) Manual Section 103, 103.5, 103.6
+        url: https://dhs.maryland.gov/documents/Manuals/FSP%20(Food%20Supplement%20Program)%20Manual/103%20Residents%20of%20Shelters%20for%20Battered%20Women%20and%20Children/103-Resident-of-Shelter-rev-8-2020-2-final.pdf
+    criteria_met:
+      - 47
+      - 48
+      - 49
+      - 51
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code Regs. 07.03.03.07-1 (I)(3)
+        url: http://mdrules.elaws.us/comar/07.03.03.07-1
+      - text: Md. Code Regs. 07.03.03.04
+        url: http://mdrules.elaws.us/comar/07.03.03.04
+      - text: Md. Code Regs. 07.03.03.20 (B)(2)(b)
+        url: http://mdrules.elaws.us/comar/07.03.03.20
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+    criteria_maybe_met: []
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code, Real Property, § 8-5A-02
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-5A-02&enactments=False&archived=False
+      - text: Md. Code, Real Property, § 8-5A-03
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-5A-03&enactments=False&archived=False
+      - text: Md. Code, Real Property, § 8-5A-04
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-5A-04
+      - text: Md. Code, Real Property, § 8-5A-05
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=grp&section=8-5A-05&enactments=False&archived=False
+    criteria_met:
+      - 69
+      - 70
+      - 72
+      - 76
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Md. Code, Criminal Procedure § 2-204
+        url: http://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcp&section=2-204&enactments=False&archived=False
+    criteria_met: []
+    criteria_maybe_met: []

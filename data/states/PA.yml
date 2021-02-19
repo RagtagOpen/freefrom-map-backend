@@ -1,5 +1,5 @@
-code: AR
-name: Arkansas
+code: PA
+name: Pennsylvania
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,14 +7,17 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: 23 Pa. Cons. Stat. § 6102
+        url: https://www.legis.state.pa.us/cfdocs/legis/LI/consCheck.cfm?txtType=HTM&ttl=23&div=0&chpt=61&sctn=2&subsctn=0
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Unpaid and protected leave available for employees in Philadelphia
+      text: Ordinance, Bill No. 090660-A
+      url: https://www.phila.gov/HumanRelations/PDF/DomesticOrSexualViolenceOrdinance.pdf
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
@@ -26,16 +29,14 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
-    criteria_met:
-      - 20
-    criteria_maybe_met:
-      - 22
+      - text: 4 Pa. Code §402
+        url: https://www.legis.state.pa.us/cfdocs/legis/LI/uconsCheck.cfm?txtType=HTM&yr=1936&sessInd=2&smthLwInd=2&act=001&chpt=4
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +56,34 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Manual for Compensation Assistance by Victims Compensation Assistance Program Pennsylvania Commission on Crime and Delinquency Office of Victims’ Services
+        url: https://www.pccd.pa.gov/Victim-Services/Documents/2018%20VCAP%20Manual.pdf
+      - text: 37 Pa. Code §411.18, §411.31 & §411.32
+        url: https://www.pccd.pa.gov/Victim-Services/Documents/APPEALS%20PROCESS.pdf
     criteria_met:
       - 34
       - 35
       - 38
-      - 43
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
+      - text: PA Compass Family Safety Information
+        url: https://www.compass.state.pa.us/compass.web/menuitems/DomesticViolenceInfo.aspx?Language=EN
     criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
-  - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
-    innovative_policy_idea: ~
-    honorable_mention: ~
-    resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
-    criteria_met:
-      - 53
       - 54
       - 55
-    criteria_maybe_met:
-      - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -114,24 +99,22 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
-    criteria_met:
-      - 72
-      - 73
-      - 76
+    resource_links: []
+    criteria_met: []
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Professionals may not report without the consent of the survivor with certain exemptions
+      text: 18 Pa. Cons. Stat. § 5106
+      url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.051..HTM#:~:text=%C2%A7%205106.,by%20firearm%20or%20criminal%20act.&text=(2)%20upon%20whom%20injuries%20have,penal%20law%20of%20this%20Commonwealth%3B&text=The%20report%20shall%20state%20the,extent%20of%20the%20person's%20injuries
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
+      - text: 18 Pa. Cons. Stat. § 2711
+        url: https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/18/00.027.011.000..HTM
     criteria_met:
       - 80
     criteria_maybe_met: []

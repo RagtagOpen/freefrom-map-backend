@@ -1,0 +1,160 @@
+code: MN
+name: Minnesota
+grade: 0
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: The Minnesota Department of Human Services Domestic Violence Information brochure includes in its definition of domestic violence “taking money or property without permission or against your wishes”
+      text: Minn. DHS Domestic Violence Information
+      url: https://edocs.dhs.state.mn.us/lfserver/Public/DHS-3477-ENG
+    resource_links:
+      - text: Minn. Stat. §518B.01
+        url: https://www.revisor.mn.gov/statutes/cite/518B.01#:~:text=A%20minor%20age%2016%20or,best%20interests%20of%20the%20minor
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Minn. Stat. §181.940
+        url: https://www.revisor.mn.gov/statutes/cite/181.940
+      - text: Minn. Stat. §181.9413 (b)(1)
+        url: https://www.revisor.mn.gov/statutes/cite/181.9413
+      - text: Minn. Stat. §181.942
+        url: https://www.revisor.mn.gov/statutes/cite/181.942
+      - text: Minn. Dept. of Labor and Industry Brochure
+        url: https://www.dli.mn.gov/sites/default/files/pdf/sick_leave.pdf
+    criteria_met:
+      - 3
+      - 5
+      - 6
+      - 9
+    criteria_maybe_met:
+      - 10
+  - title: Safe Workplaces
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Minn. Stat. § 268.095 (9)
+        url: https://www.revisor.mn.gov/statutes/cite/268.095
+    criteria_met:
+      - 20
+    criteria_maybe_met:
+      - 22
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Minn. Stat. § 611A.52 (8)
+        url: https://www.revisor.mn.gov/statutes/cite/611A.52
+      - text: Minn. Stat. § 611A.53 (2)
+        url: https://www.revisor.mn.gov/statutes/cite/611A.53
+      - text: Minn. Stat. § 611A.56 (7)
+        url: https://www.revisor.mn.gov/statutes/cite/611A.56
+      - text: Minn. Stat. § 611A.57 (5)
+        url: https://www.revisor.mn.gov/statutes/cite/611A.57
+      - text: Minn. Stat. § 611A.675
+        url: https://www.revisor.mn.gov/statutes/cite/611A.675
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Minn. R. 0011.21
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=cm_001121#
+      - text: Minn. R. 0002.19
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=cm_000219#
+      - text: Minn. R. 0004.04
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=CM_000404
+      - text: Minn. R. 0002.29
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=cm_000229#
+    criteria_met:
+      - 46
+      - 49
+      - 51
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Minn. R. 0010.18.33
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=cm_00101833#
+      - text: Minn. R.  0011.30
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=cm_001130#
+      - text: Minn. R. 0028.15
+        url: https://www.dhs.state.mn.us/main/idcplg?IdcService=GET_DYNAMIC_CONVERSION&RevisionSelectionMethod=LatestReleased&dDocName=cm_002815#
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+    criteria_maybe_met: []
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Minn. Stat. § 504B.206
+        url: https://www.revisor.mn.gov/statutes/cite/504b.206
+    criteria_met:
+      - 69
+      - 75
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met:
+      - text: Minn. R. Stat. §629.341
+        url: https://www.revisor.mn.gov/statutes/cite/629.341
+      - text: Minn. R. Stat  §626.52
+        url: https://www.revisor.mn.gov/statutes/cite/626.52
+    criteria_maybe_met: []

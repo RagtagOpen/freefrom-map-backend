@@ -1,5 +1,5 @@
-code: AR
-name: Arkansas
+code: OH
+name: Ohio
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,8 +7,8 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: Ohio Rev. Code § 3113.31(A)(1)
+        url: http://codes.ohio.gov/orc/3113.31v1
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -26,16 +26,14 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
-    criteria_met:
-      - 20
-    criteria_maybe_met:
-      - 22
+      - text: Ohio Rev. Code § 4141.01
+        url: http://codes.ohio.gov/orc/4141
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +53,54 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: Ohio Rev. Code § 2743.51
+        url: http://codes.ohio.gov/orc/2743.51
+      - text: Ohio Rev. Code § 2743.20
+        url: http://codes.ohio.gov/orc/2743.20v1
+      - text: Ohio Rev. Code § 2743.53
+        url: http://codes.ohio.gov/orc/2743.53v1
+      - text: Ohio Rev. Code § 2743.56(A)(1)
+        url: http://codes.ohio.gov/orc/2743.56v1
+      - text: Ohio Rev. Code § 2743.60(C)
+        url: http://codes.ohio.gov/orc/2743
+      - text: Ohio Rev. Code § 2743.61
+        url: http://codes.ohio.gov/orc/2743.61v1
+      - text: Ohio Rev. Code § 2743.65
+        url: http://codes.ohio.gov/orc/2743.65v1
+      - text: Ohio Rev. Code § 2743.67
+        url: http://codes.ohio.gov/orc/2743.67v1
+      - text: Crime Victims Compensation Guidelines
+        url: https://www.ohioattorneygeneral.gov/Individuals-and-Families/Victims/Apply-for-Victims-Compensation/Crime-Victims-Compensation-Guidelines
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
+      - 40
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
-    grade: 2
+    grade: 3
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
+      - text: Ohio Revised Code §5107.714
+        url: http://codes.ohio.gov/orc/5107.714v1
+      - text: Ohio Revised Code §5107.18 (B)
+        url: http://codes.ohio.gov/orc/5107.18v1
+      - text: Ohio Revised Code §5107.711
+        url: http://codes.ohio.gov/orc/5107.711v1
     criteria_met:
       - 53
       - 54
       - 55
-    criteria_maybe_met:
       - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -114,24 +116,19 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Rental Protections
-    grade: -1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
-    criteria_met:
-      - 72
-      - 73
-      - 76
+    resource_links: []
+    criteria_met: []
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
     grade: -1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
+      - text: Ohio Revised Code § 2935.032
+        url: http://codes.ohio.gov/orc/2935.032#:~:text=The%20report%20shall%20document%20the,other%20significant%20facts%20or%20circumstances
     criteria_met:
       - 80
     criteria_maybe_met: []

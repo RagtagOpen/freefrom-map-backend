@@ -1,5 +1,5 @@
-code: AR
-name: Arkansas
+code: ND
+name: North Dakota
 grade: -1
 categories:
   - title: Economic Abuse Defined in State Laws
@@ -7,14 +7,17 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A § 9-15-103
-        url: https://codes.findlaw.com/ar/title-9-family-law/ar-code-sect-9-15-103.html
+      - text: N.D. Cen. Code §14-07.1-01 (2019)
+        url: https://www.legis.nd.gov/cencode/t14c07-1.pdf#nameddest=14-07p1-01
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: Protected leave is available for survivors who are state employees
+      text: N.D. Cen. Code §54-06-14.6 (2019)
+      url: https://www.legis.nd.gov/cencode/t54c06.pdf
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
@@ -26,16 +29,18 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Unemployment Insurance (UI) Accessibility
-    grade: 1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 11-10-513(b)(3)(A)
-        url: https://codes.findlaw.com/ar/title-11-labor-and-industrial-relations/ar-code-sect-11-10-513.html
+      - text: N.D. Cen. Code § 52-06-02 (j)(1) (2019)
+        url: https://www.legis.nd.gov/cencode/t52c06.pdf
+      - text: N.D. Cen. Code §52-06-02 (j)(2, 4-5) (2019)
+        url: https://www.legis.nd.gov/cencode/t52c06.pdf
     criteria_met:
       - 20
-    criteria_maybe_met:
       - 22
+    criteria_maybe_met: []
   - title: Litigation Abuse Protections
     grade: 0
     innovative_policy_idea: ~
@@ -55,50 +60,36 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-90-701-719
-        url: https://law.justia.com/codes/arkansas/2017/title-16/subtitle-6/chapter-90/subchapter-7/section-16-90-719/
-      - text: Arkansas Crime Victims Reparations Board Rule and Regulations
-        url: http://170.94.37.152/REGS/143.00.14-001P-14019.pdf
-      - text: 2019 Rule Change Summary
-        url: https://portal-assets.ark.org/185/files/CVRB%20-%202019%20Rule%20Change%20(Markup).pdf
-      - text: VOCA Application PDF
-        url: https://arkansasag.gov/site/assets/files/1088/crime_victims_application_5-_11-23-15.pdf
+      - text: N.D. Admin. Code 94-03-03-03
+        url: https://www.legis.nd.gov/information/acdata/pdf/94-03-03.pdf
+      - text: N.D. Admin. Code 94-03-04
+        url: https://www.legis.nd.gov/information/acdata/pdf/94-03-04.pdf
+      - text: North Dakota Crime Victims Compensation
+        url: https://docr.nd.gov/crime-victims-compensation
     criteria_met:
       - 34
       - 35
-      - 38
-      - 43
       - 44
-      - 45
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 0
     innovative_policy_idea: ~
     honorable_mention: ~
-    resource_links:
-      - text: A.C.R. § 3502.3 The SNAP Requirement to Work, SNAP Manual (2018) P 26
-        url: http://170.94.37.152/REGS/016.20.18-006F-18767.pdf
-      - text: A.C.A § 20-76-803
-        url: https://law.justia.com/codes/arkansas/2019/title-20/subtitle-5/chapter-76/subchapter-8/section-20-76-803/
-      - text: AR SNAP Website
-        url: https://humanservices.arkansas.gov/about-dhs/dco/snap
-    criteria_met:
-      - 46
-    criteria_maybe_met:
-      - 51
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
   - title: Temporary Assistance for Needy Families (TANF) Accessibility
     grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Ark. Code R. § 208.00.13-001 (p 2, 3) and Section 3.11
-        url: http://170.94.37.152/REGS/208.00.13-001F-13845.pdf
+      - text: N.D. Admin. Code 75-02-01.2-35.1 (3)(c) and 75-02-01.2-52 (2)(j)
+        url: https://www.legis.nd.gov/information/acdata/pdf/75-02-01.2.pdf
     criteria_met:
       - 53
       - 54
       - 55
-    criteria_maybe_met:
-      - 56
+    criteria_maybe_met: []
   - title: Safe Banking Protections
     grade: 0
     innovative_policy_idea: ~
@@ -118,11 +109,12 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. § 18-16-112
-        url: https://codes.findlaw.com/ar/title-18-property/ar-code-sect-18-16-112.html
+      - text: N.D. Cent. Code § 47-16-17.1 (2019)
+        url: https://www.legis.nd.gov/cencode/t47c16.pdf#nameddest=47-16-1
+      - text: N.D. Cen. Code §47-16-17.1(2) (2019)
+        url: https://www.legis.nd.gov/cencode/t47c16.pdf#nameddest=47-16-17
     criteria_met:
-      - 72
-      - 73
+      - 69
       - 76
     criteria_maybe_met: []
   - title: Alternatives to Law Enforcement Responses
@@ -130,8 +122,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: A.C.A. §16-81-113
-        url: https://codes.findlaw.com/ar/title-16-practice-procedure-and-courts/ar-code-sect-16-81-113.html
+      - text: N.D. Cent. Code §14-07.1-11(1), (2) (West 1999)
+        url: https://www.legis.nd.gov/cencode/t14c07-1.pdf#nameddest=14-07p1-11
+      - text: N.D. Model Law Enforcement Domestic Violence Policy, Third Edition (June 2012)
+        url: https://www.cawsnorthdakota.org/wp-content/uploads/2014/09/NDModel2012DomesticViolencePolicy.pdf
     criteria_met:
       - 80
     criteria_maybe_met: []

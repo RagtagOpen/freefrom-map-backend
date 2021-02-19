@@ -1,0 +1,164 @@
+code: RI
+name: Rhode Island
+grade: 1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 15 R.I. Gen. Laws § 15-15-1
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE15/15-15/15-15-1.HTM
+      - text: 15 R.I.  Gen. Laws § 15-5-16
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE15/15-5/15-5-16.HTM
+      - text: 28 R.I. Gen. Laws § 28-57-3
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-3.HTM
+      - text: 8 R.I. Gen. Laws § 8.8.1-1
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE8/8-8.1/8-8.1-1.HTM
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 28 R.I.  Gen. Laws § 28-57-5(a)
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-5.HTM
+      - text: 28 R.I.  Gen. Laws § 28-57-6(a)(4)
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-6.HTM
+      - text: 28 R.I.  Gen. Laws § 28-57-6(f)(3)
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-6.HTM
+      - text: 28 R.I.  Gen. Laws § 28-57-5
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-5.HTM
+    criteria_met:
+      - 3
+      - 4
+      - 5
+      - 9
+      - 10
+    criteria_maybe_met: []
+  - title: Safe Workplaces
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 12 R.I.  Gen. Laws §12-28-10
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-28/12-28-10.HTM
+      - text: 28 R.I.  Gen. Laws  § 28-57-11
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-11.HTM
+    criteria_met:
+      - 12
+      - 13
+      - 17
+      - 18
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 28 R.I. Gen. Laws § 28-44-17.1
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-44/28-44-17.1.HTM
+    criteria_met:
+      - 20
+      - 22
+    criteria_maybe_met: []
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 12 R.I. Gen. Laws §12-25-19
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-25/12-25-19.HTM
+      - text: 12 R.I. Gen. Laws §12-25-21
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-25/12-25-21.HTM
+      - text: 12 R.I. Gen. Laws §12-25-22
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-25/12-25-22.HTM
+      - text: 12 R.I. Gen. Laws §12-25-25
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-25/12-25-25.HTM
+      - text: Rules and Regulations Pertaining to the Crime Victim Compensation Program
+        url: https://d10k7k7mywg42z.cloudfront.net/assets/5ab3ad5323f81205e648b4ed/120_RICR_00_00_2.pdf
+    criteria_met:
+      - 34
+      - 35
+      - 40
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 40 R.I. Gen. Laws §40-6-8
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE40/40-6/40-6-8.HTM
+      - text: 40 R.I. Gen. Laws §40-20-3
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE40/40-22/40-22-3.HTM
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 40 R.I. Gen. Laws § 40-5.2-10(j)(1)
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE40/40-5.2/40-5.2-10.HTM
+      - text: 40 R.I.Gen. Laws § 40-5.2-34
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE40/40-5.2/40-5.2-34.HTM
+    criteria_met:
+      - 53
+      - 54
+      - 55
+      - 56
+    criteria_maybe_met: []
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 34 R.I. Gen. Laws § 34-37-4
+        url: http://webserver.rilin.state.ri.us/Statutes/title34/34-37/34-37-4.HTM
+    criteria_met:
+      - 73
+    criteria_maybe_met:
+      - 75
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: 12 R.I. Gen. Laws Ann. § 12-29-3(b)
+        url: http://webserver.rilin.state.ri.us/statutes/title12/12-29/12-29-3.HTM
+      - text: 12 R.I. Gen. Laws Ann. § 12-29-9
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE12/12-29/12-29-9.HTM
+    criteria_met:
+      - 80
+      - 81
+    criteria_maybe_met: []

@@ -1,0 +1,155 @@
+code: OR
+name: Oregon
+grade: 1
+categories:
+  - title: Economic Abuse Defined in State Laws
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Rev. Stat. § 135.230
+        url: https://www.oregonlaws.org/ors/135.230
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Paid and Protective Leave
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: (2)(a) Notwithstanding ORS 659A.285, an eligible employee of the public employer who is a victim of domestic violence, a victim of harassment, a victim of sexual assault or a victim of stalking shall be granted leave with pay from employment for the purposes specified in ORS 659A.272. (b) Leave with pay authorized by this section is in addition to any vacation, sick, personal business or other form of paid or unpaid leave available to the eligible employee. However, an eligible employee must exhaust all other forms of paid leave before the employee may use the paid leave established under this section. (c) An eligible employee may take up to 160 hours of leave with pay authorized by this section in each calendar year.
+      text: Or. Rev. Stat. § 659A.283(2)
+      url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
+    resource_links:
+      - text: Or. Rev. Stat. § 659A.272, § 659A.277, § 659A.280(2)
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
+    criteria_met:
+      - 3
+      - 5
+      - 8
+      - 9
+      - 10
+    criteria_maybe_met: []
+  - title: Safe Workplaces
+    grade: 3
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Rev. Stat. § 659A.290, § 659A.280(5)
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
+    criteria_met:
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      - 17
+      - 18
+    criteria_maybe_met: []
+  - title: Unemployment Insurance (UI) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Rev. Stat. §657.176(12)
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors657.html
+    criteria_met:
+      - 20
+    criteria_maybe_met:
+      - 22
+  - title: Litigation Abuse Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Designated Tort for Intimate Partner Violence
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Victims of Crime Compensation Accessibility
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Rev. Stat. §147.015, §147.035, §147.145, §147.055, §147.227
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors147.html
+    criteria_met:
+      - 34
+      - 35
+      - 39
+      - 40
+      - 44
+    criteria_maybe_met: []
+  - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+    grade: 1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Admin. R. 461-130-0327
+        url: https://apps.state.or.us/cf1/caf/arm/A/461-130-0327.htm
+      - text: Or. Admin. R. 461-110-0370
+        url: https://apps.state.or.us/cf1/caf/arm/A/461-135-0575.htm
+      - text: Or. Admin. R. 461-110-0370 (9)
+        url: https://sharedsystems.dhsoha.state.or.us/caf/arm/A/461-110-0370.htm
+    criteria_met:
+      - 46
+      - 48
+      - 49
+    criteria_maybe_met: []
+  - title: Temporary Assistance for Needy Families (TANF) Accessibility
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention:
+      description: Temporary Assistance for Domestic Violence Survivors (TA-DVS) provides financial help to support families whose safety is at risk due to domestic violence
+      text: OR DHS Self-Sufficiency Program
+      url: https://www.oregon.gov/DHS/ABUSE/DOMESTIC/pages/tadvs.aspx
+    resource_links:
+      - text: Or. Rev. Stat. § 411.117
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors411.html
+    criteria_met:
+      - 53
+      - 54
+      - 55
+    criteria_maybe_met:
+      - 56
+  - title: Safe Banking Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Coerced and Fraudulent Debt Protections
+    grade: 0
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links: []
+    criteria_met: []
+    criteria_maybe_met: []
+  - title: Rental Protections
+    grade: 2
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Rev. Stat. § 90.325 (3)(b),  § 90.445,  § 90.449, § 90.453
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors090.html
+    criteria_met:
+      - 69
+      - 70
+      - 73
+      - 74
+      - 75
+    criteria_maybe_met: []
+  - title: Alternatives to Law Enforcement Responses
+    grade: -1
+    innovative_policy_idea: ~
+    honorable_mention: ~
+    resource_links:
+      - text: Or. Rev. Stat. §  133.055 (2)(a)
+        url: https://www.oregonlaws.org/ors/133.055
+    criteria_met:
+      - 80
+    criteria_maybe_met: []
