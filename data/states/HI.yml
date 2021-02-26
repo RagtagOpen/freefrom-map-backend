@@ -1,6 +1,6 @@
 code: HI
 name: Hawaii
-grade: 1
+grade: 0
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
@@ -80,8 +80,8 @@ categories:
       - 34
       - 35
       - 37
-    criteria_maybe_met:
       - 38
+    criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
     grade: 0
     innovative_policy_idea: ~
