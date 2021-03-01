@@ -4,9 +4,10 @@ import os
 from flask import Flask, request, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
-from flask_cors import cross_origin
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
 
 load_dotenv()
 
