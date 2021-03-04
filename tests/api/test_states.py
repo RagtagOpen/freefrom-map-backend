@@ -41,7 +41,7 @@ class StatesTestCase(unittest.TestCase):
             name='California',
         ).save()
 
-        response = self.client.get('/states')
+        response = self.client.get('/states?details=true')
         self.assertEqual(response.status_code, 200)
         json_response = json.loads(response.data)
         self.assertEqual(len(json_response), 2)

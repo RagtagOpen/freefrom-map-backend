@@ -50,7 +50,7 @@ class State(BaseMixin, db.Model):
     def __repr__(self):
         return '<id {}>'.format(self.code)
 
-    def serialize(self):
+    def serialize(self, details=True):
         resource_links = [resource_link.serialize() for resource_link in self.resource_links]
 
         grade = self.grades[0].serialize() if self.grades else None
@@ -59,39 +59,40 @@ class State(BaseMixin, db.Model):
         innovative_policy_ideas = []
         honorable_mentions = []
 
-        # Get the most recent grade for each category
-        for category in Category.query.all():
-            category_grade = StateCategoryGrade.query.filter_by(
-                state_code=self.code,
-                category_id=category.id,
-            ).order_by(StateCategoryGrade.created_at.desc()).first()
-            if category_grade:
-                category_grades.append(category_grade.serialize())
+        if details:
+            # Get the most recent grade for each category
+            for category in Category.query.all():
+                category_grade = StateCategoryGrade.query.filter_by(
+                    state_code=self.code,
+                    category_id=category.id,
+                ).order_by(StateCategoryGrade.created_at.desc()).first()
+                if category_grade:
+                    category_grades.append(category_grade.serialize())
 
-            innovative_policy_idea = InnovativePolicyIdea.query.filter_by(
-                state=self.code,
-                category_id=category.id,
-                active=True
-            ).order_by(InnovativePolicyIdea.created_at.desc()).first()
-            if innovative_policy_idea:
-                innovative_policy_ideas.append(innovative_policy_idea.serialize())
+                innovative_policy_idea = InnovativePolicyIdea.query.filter_by(
+                    state=self.code,
+                    category_id=category.id,
+                    active=True
+                ).order_by(InnovativePolicyIdea.created_at.desc()).first()
+                if innovative_policy_idea:
+                    innovative_policy_ideas.append(innovative_policy_idea.serialize())
 
-            honorable_mention = HonorableMention.query.filter_by(
-                state=self.code,
-                category_id=category.id,
-                active=True
-            ).order_by(HonorableMention.created_at.desc()).first()
-            if honorable_mention:
-                honorable_mentions.append(honorable_mention.serialize())
+                honorable_mention = HonorableMention.query.filter_by(
+                    state=self.code,
+                    category_id=category.id,
+                    active=True
+                ).order_by(HonorableMention.created_at.desc()).first()
+                if honorable_mention:
+                    honorable_mentions.append(honorable_mention.serialize())
 
-        # Get the most recent score for each criterion
-        for criterion in Criterion.query.all():
-            criterion_score = Score.query.filter_by(
-                criterion_id=criterion.id,
-                state=self.code,
-            ).order_by(Score.created_at.desc()).first()
-            if criterion_score:
-                criterion_scores.append(criterion_score.serialize())
+            # Get the most recent score for each criterion
+            for criterion in Criterion.query.all():
+                criterion_score = Score.query.filter_by(
+                    criterion_id=criterion.id,
+                    state=self.code,
+                ).order_by(Score.created_at.desc()).first()
+                if criterion_score:
+                    criterion_scores.append(criterion_score.serialize())
 
         return {
             'code': self.code,
