@@ -145,7 +145,7 @@ class Criterion(BaseMixin, Deactivatable, db.Model):
         db.Integer,
         db.ForeignKey('categories.id'),
         nullable=False,
-        index=True,
+        index=True
     )
     title = db.Column(db.String())
     recommendation_text = db.Column(db.String())
@@ -274,6 +274,12 @@ class StateCategoryGrade(BaseMixin, db.Model):
         }
 
 
+db.Index('state_category_created_at_idx',
+    StateCategoryGrade.state_code,
+    StateCategoryGrade.category_id,
+    StateCategoryGrade.created_at.desc()
+)
+
 class Score(BaseMixin, db.Model):
     __tablename__ = 'scores'
 
@@ -319,7 +325,11 @@ class Score(BaseMixin, db.Model):
         }
 
 
-db.Index('state_criterion_created_at', Score.state, Score.criterion_id, Score.created_at)
+db.Index('state_criterion_created_at',
+    Score.criterion_id,
+    Score.state,
+    Score.created_at.desc()
+)
 
 
 class Link(BaseMixin, Deactivatable, db.Model):
@@ -379,7 +389,12 @@ class ResourceLink(Link):
     }
 
 
-db.Index('state_category', Link.state, Link.category_id)
+db.Index('link_state_category',
+    Link.state,
+    Link.category_id,
+    Link.active,
+    Link.created_at.desc()
+)
 
 
 class HonorableMention(Link):
@@ -406,7 +421,8 @@ db.Index(
     'honorable_mention_state_category_active',
     HonorableMention.state,
     HonorableMention.category_id,
-    HonorableMention.active
+    HonorableMention.active,
+    HonorableMention.created_at.desc()
 )
 
 
@@ -433,5 +449,6 @@ db.Index(
     'innovative_idea_state_category_active',
     InnovativePolicyIdea.state,
     InnovativePolicyIdea.category_id,
-    InnovativePolicyIdea.active
+    InnovativePolicyIdea.active,
+    InnovativePolicyIdea.created_at.desc()
 )
