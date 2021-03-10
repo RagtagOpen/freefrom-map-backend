@@ -218,7 +218,7 @@ def get_state(code_):
 @app.route('/states', methods=['GET'])
 def get_states():
     states = State.query.all()
-    sorted_states = sorted(states, key=lambda state: state.total)
+    sorted_states = sorted(states, key=lambda state: state.total, reverse=True)
     details = request.args.get('details') == 'true'
     return jsonify([state.serialize(details) for state in sorted_states]), 200
 
