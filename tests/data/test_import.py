@@ -30,6 +30,7 @@ class TestImport(unittest.TestCase):
 
         state = State.query.filter_by(code='AK').first()
         self.assertIsNotNone(state)
+        self.assertEqual(state.total, 6)
 
         state_grade = StateGrade.query.filter_by(state_code='AK').first()
         self.assertEqual(state_grade.grade, -1)

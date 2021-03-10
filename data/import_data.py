@@ -43,8 +43,9 @@ def import_state(path):
         state_data = yaml.load(file, Loader=yaml.FullLoader)
         code = state_data['code']
         name = state_data['name']
+        total = state_data['total']
 
-        State(code=code, name=name).save()
+        State(code=code, name=name, total=total).save()
 
         grade = state_data['grade']
         StateGrade(state_code=code, grade=grade).save()

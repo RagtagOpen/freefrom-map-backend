@@ -39,13 +39,15 @@ class State(BaseMixin, db.Model):
 
     code = db.Column(db.String(2), primary_key=True)
     name = db.Column(db.String())
+    total = db.Column(db.Integer())
     grades = db.relationship('StateGrade', order_by='desc(StateGrade.created_at)', lazy=True)
     scores = db.relationship('Score', lazy=True)
     resource_links = db.relationship('ResourceLink', lazy=True)
 
-    def __init__(self, code, name=None):
+    def __init__(self, code, name=None, total=0):
         self.code = code
         self.name = name
+        self.total = total
 
     def __repr__(self):
         return '<id {}>'.format(self.code)
@@ -97,6 +99,7 @@ class State(BaseMixin, db.Model):
         return {
             'code': self.code,
             'name': self.name,
+            'total': self.total,
             'grade': grade,
             'category_grades': category_grades,
             'criterion_scores': criterion_scores,
