@@ -12,10 +12,7 @@ categories:
         url: https://codes.findlaw.com/md/family-law/md-code-fam-law-sect-4-701.html
       - text: Md. Code, Fam. Law, § 4-501
         url: https://codes.findlaw.com/md/family-law/md-code-fam-law-sect-4-501.html
-    criteria_met:
-      - 3
-      - 5
-      - 8
+    criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
     grade: 1
@@ -26,7 +23,10 @@ categories:
         url: https://law.justia.com/codes/maryland/2018/labor-and-employment/title-3/subtitle-13/section-3-1305/
       - text: Md. Code, Labor and Employment, § 3-1309(c)
         url: https://law.justia.com/codes/maryland/2018/labor-and-employment/title-3/subtitle-13/section-3-1309/
-    criteria_met: []
+    criteria_met:
+      - 3
+      - 5
+      - 8
     criteria_maybe_met:
       - 10
   - title: Safe Workplaces
@@ -83,7 +83,7 @@ categories:
       - 44
     criteria_maybe_met: []
   - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
-    grade: 1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:

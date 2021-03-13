@@ -20,14 +20,15 @@ categories:
       text: Or. Rev. Stat. § 659A.283(2)
       url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
     resource_links:
-      - text: Or. Rev. Stat. § 659A.272, § 659A.277, § 659A.280(2)
-        url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
+      - text: Or. Rev. Stat. §  659A.272, §  659A.277,  § 659A.280(2), (5)
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.htm
     criteria_met:
       - 3
       - 5
       - 8
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 3

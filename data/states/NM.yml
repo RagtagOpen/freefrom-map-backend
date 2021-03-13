@@ -25,6 +25,8 @@ categories:
         url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-4
       - text: N.M. Stat. Ann § 50-4A-5
         url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-5
+      - text: N.M. Stat. Ann § 50-4A-6
+        url: https://www.nmonesource.com/nmos/nmsa/en/item/4420/index.do#!b/50-4A-6
     criteria_met:
       - 3
       - 5
@@ -33,6 +35,7 @@ categories:
       - 8
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 1

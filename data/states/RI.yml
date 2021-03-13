@@ -31,12 +31,15 @@ categories:
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-6.HTM
       - text: 28 R.I.  Gen. Laws § 28-57-5
         url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-5.HTM
+      - text: 28 R.I.  Gen. Laws § 28-57-11
+        url: http://webserver.rilin.state.ri.us/Statutes/TITLE28/28-57/28-57-11.HTM
     criteria_met:
       - 3
       - 4
       - 5
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 2

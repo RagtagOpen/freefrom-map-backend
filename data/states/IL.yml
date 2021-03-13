@@ -1,7 +1,7 @@
 code: IL
 name: Illinois
 total: 27
-grade: 1
+grade: 2
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
@@ -29,6 +29,7 @@ categories:
       - 8
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 2

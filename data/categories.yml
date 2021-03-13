@@ -25,6 +25,8 @@
       id: 9
     - text: Survivors are not required to prove that they have experienced intimate partner violence to access leave, or can access leave with a sworn statement from either the survivor or a qualified third party that intimate partner violence occurred
       id: 10
+    - text: Employers must keep employees’ reasoning for leave and related documentation confidential
+      id: 83
   adverse_criteria:
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence has occurred in order to access leave
       id: 11

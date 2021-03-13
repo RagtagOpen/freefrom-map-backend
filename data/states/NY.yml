@@ -25,6 +25,7 @@ categories:
       - 7
       - 9
       - 10
+      - 83
     criteria_maybe_met:
       - 6
   - title: Safe Workplaces
@@ -59,7 +60,7 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Designated Tort for Intimate Partner Violence
-    grade: 2
+    grade: 1
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:

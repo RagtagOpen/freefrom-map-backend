@@ -1,7 +1,7 @@
 code: HI
 name: Hawaii
 total: 15
-grade: 0
+grade: 1
 categories:
   - title: Economic Abuse Defined in State Laws
     grade: 0
@@ -25,6 +25,7 @@ categories:
       - 6
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0
@@ -105,6 +106,8 @@ categories:
         url: https://humanservices.hawaii.gov/wp-content/uploads/2018/09/656.1.pdf
       - text: HI TANF Brochure (2015)
         url: https://humanservices.hawaii.gov/bessd/files/2015/01/TANF-Brochure-2015.pdf
+      - text: H.A.R. § 17-656 seq.
+        url: https://humanservices.hawaii.gov/wp-content/uploads/2014/01/17-656.pdf
     criteria_met:
       - 53
       - 54
