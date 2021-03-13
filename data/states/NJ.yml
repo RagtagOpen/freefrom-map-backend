@@ -20,9 +20,9 @@ categories:
     honorable_mention: ~
     resource_links:
       - text: N.J. Stat. Ann. § 34:11C-3
-        url: https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu
+        url: https://codes.findlaw.com/nj/title-34-labor-and-workmens-compensation/nj-st-sect-34-11c-3.html
       - text: N.J. Stat. Ann. § 34:11C-4
-        url: https://lis.njleg.state.nj.us/nxt/gateway.dll?f=templates&fn=default.htm&vid=Publish:10.1048/Enu
+        url: https://codes.findlaw.com/nj/title-34-labor-and-workmens-compensation/nj-st-sect-34-11c-4.html
     criteria_met:
       - 3
       - 5
@@ -30,6 +30,7 @@ categories:
       - 7
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 0

@@ -15,7 +15,7 @@ categories:
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
-    grade: 1
+    grade: 2
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
@@ -32,6 +32,7 @@ categories:
       - 5
       - 9
       - 10
+      - 83
     criteria_maybe_met: []
   - title: Safe Workplaces
     grade: 3
@@ -168,7 +169,10 @@ categories:
   - title: Coerced and Fraudulent Debt Protections
     grade: 0
     innovative_policy_idea: ~
-    honorable_mention: ~
+    honorable_mention:
+      description: When a court issues a protective order they are able to declare certain debts are coerced.
+      text: Cal. Fam. Code §6342.5
+      url: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=FAM&sectionNum=6342.5
     resource_links: []
     criteria_met: []
     criteria_maybe_met: []
