@@ -46,7 +46,7 @@ class FormsTestCase(unittest.TestCase):
 
     @patch('app.services.post_google', return_value={'result': 'error'})
     def test_submit_form_google_error(self, mock_post):
-        response = self.client.post('/forms/feedback', json={})
+        response = self.client.post('/forms/give-feedback', json={})
         self.assertEqual(response.status_code, 500)
         mock_post.assert_called_once()
 
