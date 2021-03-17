@@ -25,10 +25,10 @@ class FormsTestCase(unittest.TestCase):
         }
         # we add a 'form' field to the payload sent to the Google API
         google_payload = data.copy()
-        google_payload['form'] = 'feedback'
+        google_payload['form'] = 'give-feedback'
         mock_post.return_value = google_payload
 
-        response = self.client.post('/forms/feedback', json=data)
+        response = self.client.post('/forms/give-feedback', json=data)
         self.assertEqual(response.status_code, 201)
         mock_post.assert_called_once_with(google_payload)
 
