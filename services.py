@@ -111,11 +111,11 @@ def update_or_create_criterion(data, criterion=None):
 
 
 forms = [
-    'feedback',
-    'report_missing_info',
-    'partner_with_freefrom',
-    'build_collective_survivor_power',
-    'policy_ideas',
+    'give-feedback',
+    'report-missing-info',
+    'partner-with-freefrom',
+    'survivor-power',
+    'policy-ideas',
 ]
 
 

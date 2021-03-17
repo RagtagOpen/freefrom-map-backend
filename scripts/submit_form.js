@@ -4,11 +4,11 @@ var SCRIPT_PROPERTIES = PropertiesService.getScriptProperties();
 const EMAIL_ADDRESS = "";  // set this!
 
 const formIdToNameMap = new Map([
-  ["feedback", "Give Feedback"],
-  ["report_missing_info", "Report Missing or Outdated Information"],
-  ["partner_with_freefrom", "Partner with FreeFrom"],
-  ["build_collective_survivor_power", "Build Collective Survivor Power"],
-  ["policy_ideas", "Share your Policy Ideas"],
+  ["give-feedback", "Give Feedback"],
+  ["report-missing-info", "Report Missing or Outdated Information"],
+  ["partner-with-freefrom", "Partner with FreeFrom"],
+  ["survivor-power", "Build Collective Survivor Power"],
+  ["policy-ideas", "Share Your Policy Ideas"],
 ]);
 
 function setup() {
