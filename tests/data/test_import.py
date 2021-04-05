@@ -31,6 +31,7 @@ class TestImport(unittest.TestCase):
         state = State.query.filter_by(code='AK').first()
         self.assertIsNotNone(state)
         self.assertEqual(state.total, 6)
+        self.assertIsNone(state.quote)
 
         state_grade = StateGrade.query.filter_by(state_code='AK').first()
         self.assertEqual(state_grade.grade, -1)
@@ -77,7 +78,19 @@ class TestImport(unittest.TestCase):
         criteria_met = Score.query.filter_by(state='AK', meets_criterion='yes').all()
         criteria_not_met = Score.query.filter_by(state='AK', meets_criterion='no').all()
         self.assertEqual(len(criteria_met), 13)
-        self.assertEqual(len(criteria_not_met), 69)
+        self.assertEqual(len(criteria_not_met), 70)
+
+    def test_import_state_with_quote(self):
+        # import_state assumes that categories and criteria have
+        # already been imported
+        import_categories()
+
+        wv_path = absolute_file_path('states/WV.yml')
+        import_state(wv_path)
+
+        state = State.query.filter_by(code='WV').first()
+        self.assertIsNotNone(state)
+        self.assertEqual(state.quote, 'I just feel so alone.')
 
     def test_import_categories(self):
         import_categories()
@@ -104,7 +117,7 @@ class TestImport(unittest.TestCase):
         )
 
         criteria = Criterion.query.all()
-        self.assertEqual(len(criteria), 82)
+        self.assertEqual(len(criteria), 83)
 
         # Check a few criteria
         criterion1 = Criterion.query.filter_by(

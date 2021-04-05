@@ -21,6 +21,7 @@ class StateTestCase(unittest.TestCase):
         self.state = State(
             code='NY',
             name='New York',
+            quote='A quote from a survivor',
             total=34,
         ).save()
         other_state = create_state(code='AZ')
@@ -136,6 +137,7 @@ class StateTestCase(unittest.TestCase):
             {
                 'code': 'NY',
                 'name': 'New York',
+                'quote': 'A quote from a survivor',
                 'total': 34,
                 'grade': self.state_grade1.serialize(),
                 'category_grades': [
@@ -167,6 +169,7 @@ class StateTestCase(unittest.TestCase):
             {
                 'code': state.code,
                 'name': state.name,
+                'quote': None,
                 'total': 0,
                 'grade': None,
                 'category_grades': [],

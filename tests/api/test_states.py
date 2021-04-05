@@ -18,6 +18,7 @@ class StatesTestCase(unittest.TestCase):
         state = State(
             code='NY',
             name='New York',
+            quote='A quote from a survivor',
         ).save()
         response = self.client.get(f'/states/{state.code}')
         self.assertEqual(response.status_code, 200)
@@ -34,11 +35,13 @@ class StatesTestCase(unittest.TestCase):
         state_ny = State(
             code='NY',
             name='New York',
+            quote='A quote from a NY survivor',
         ).save()
 
         state_ca = State(
             code='CA',
             name='California',
+            quote='A quote from a CA survivor',
         ).save()
 
         response = self.client.get('/states?details=true')
