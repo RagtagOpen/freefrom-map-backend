@@ -58,9 +58,9 @@ categories:
       - text: W. Va. Code §14-2A-3
         url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=3#2A
       - text: W. Va. Code §14-2A-4
-        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=10#2A
-      - text: W. Va. Code § 14-2A-10
         url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=4#2A
+      - text: W. Va. Code § 14-2A-10
+        url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=10#2A
       - text: W. Va. Code § 14-2A-14(d)
         url: http://www.wvlegislature.gov/WVCODE/ChapterEntire.cfm?chap=14&art=2A&section=14#2A
       - text: W. Va. Code § 14-2A-15
@@ -92,7 +92,7 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: W. Va. Income Maintenance Manual, Ch. 7
+      - text: W. Va. Income Maintenance Manual, Ch. 13
         url: http://dhhr.wv.gov/bcf/Services/familyassistance/Documents/252/252_ch13_8.pdf
     criteria_met:
       - 53

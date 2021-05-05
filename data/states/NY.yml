@@ -84,12 +84,14 @@ categories:
         url: https://www.nysenate.gov/legislation/laws/EXC/625-A
       - text: NY E.X.C. §627
         url: https://www.nysenate.gov/legislation/laws/EXC/627
-      - text: NY E.X.C. §628
+      - text: NY E.X.C. §629
         url: https://www.nysenate.gov/legislation/laws/EXC/629
       - text: NY E.X.C. §630
         url: https://www.nysenate.gov/legislation/laws/EXC/630
-      - text: Application and Instructions https://ovs.ny.gov/sites/default/files/general-form/2013ovsclaimapplication.pdf
-        url: New York State Office of Victim Services FAQ https://ovs.ny.gov/faq
+      - text: Application and Instructions
+        url: https://ovs.ny.gov/sites/default/files/general-form/2013ovsclaimapplication.pdf
+      - text: New York State Office of Victim Services FAQ
+        url: https://ovs.ny.gov/faq
     criteria_met:
       - 34
       - 35
@@ -117,8 +119,8 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: NY S.O.S § 349
-        url: https://www.nysenate.gov/legislation/laws/SOS/349
+      - text: NY S.O.S § 349(a)
+        url: https://codes.findlaw.com/ny/social-services-law/sos-sect-349-a.html
       - text: NY TANF State Plan
         url: https://otda.ny.gov/policy/tanf/TANF-State-Plan-2021-2023.pdf
     criteria_met:
@@ -147,7 +149,7 @@ categories:
     honorable_mention: ~
     resource_links:
       - text: NY Real Property Law § 227-C
-        url: https://www.nysenate.gov/legislation/laws/RPP/227-C
+        url: https://codes.findlaw.com/ny/real-property-law/rpp-sect-227-c.html
     criteria_met:
       - 69
       - 70

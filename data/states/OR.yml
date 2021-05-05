@@ -21,8 +21,8 @@ categories:
       text: Or. Rev. Stat. § 659A.283(2)
       url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
     resource_links:
-      - text: Or. Rev. Stat. §  659A.272, §  659A.277,  § 659A.280(2), (5)
-        url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.htm
+      - text: Or. Rev. Stat. § 659A.272, § 659A.277, § 659A.280(2), (5)
+        url: https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html
     criteria_met:
       - 3
       - 5
@@ -93,9 +93,7 @@ categories:
     resource_links:
       - text: Or. Admin. R. 461-130-0327
         url: https://apps.state.or.us/cf1/caf/arm/A/461-130-0327.htm
-      - text: Or. Admin. R. 461-110-0370
-        url: https://apps.state.or.us/cf1/caf/arm/A/461-135-0575.htm
-      - text: Or. Admin. R. 461-110-0370 (9)
+      - text: Or. Admin. R. 461-110-0375
         url: https://sharedsystems.dhsoha.state.or.us/caf/arm/A/461-110-0370.htm
     criteria_met:
       - 46
@@ -137,7 +135,7 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Or. Rev. Stat. § 90.325 (3)(b),  § 90.445,  § 90.449, § 90.453
+      - text: Or. Rev. Stat. § 90.325 (3)(b), § 90.445, § 90.449, § 90.453
         url: https://www.oregonlegislature.gov/bills_laws/ors/ors090.html
     criteria_met:
       - 69
@@ -151,7 +149,7 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Or. Rev. Stat. §  133.055 (2)(a)
+      - text: Or. Rev. Stat. § 133.055 (2)(a)
         url: https://www.oregonlaws.org/ors/133.055
     criteria_met:
       - 80

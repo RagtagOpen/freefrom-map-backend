@@ -131,8 +131,7 @@ class TestImport(unittest.TestCase):
             'Survivor experiences and research shows that involving law enforcement ' +
             'in responses to intimate partner violence can cause more harm to ' +
             'survivors and their families. Survivors should be able to decide when ' +
-            'and how they want to involve law enforcement. See our recent statement ' +
-            'for more information on this topic.'
+            'and how they want to involve law enforcement.'
         )
         self.assertEqual(criterion1.category_id, category1.id)
         self.assertTrue(criterion1.adverse)

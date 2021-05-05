@@ -61,8 +61,10 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: N.H. Code Admin. R. Jus 605.02 and 606.7
-        url: http://www.gencourt.state.nh.us/rules/state_agencies/jus600.htm
+      - text: N.H. Code Admin. R. Jus 605.02
+        url: https://regulations.justia.com/states/new-hampshire/jus/chapter-jus-600/part-jus-605/jus-605-02/
+      - text: N.H. Code Admin. R. Jus 606.7
+        url: https://regulations.justia.com/states/new-hampshire/jus/chapter-jus-600/part-jus-606/jus-606-07/
       - text: New Hampshire Victim’s Compensation Program, What I must do to be eligible
         url: https://www.doj.nh.gov/grants-management/victims-compensation-program/documents/brochure.pdf
     criteria_met:
