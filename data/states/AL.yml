@@ -12,7 +12,7 @@ categories:
       - text: Ala. Code § 30-5-2
         url: https://codes.findlaw.com/al/title-30-marital-and-domestic-relations/al-code-sect-30-5-2.html
       - text: Ala. Code § 13A-6-139
-        url: http://alisondb.legislature.state.al.us/alison/codeofalabama/1975/coatoc.htm
+        url: https://codes.findlaw.com/al/title-13a-criminal-code/al-code-sect-13a-6-139-1.html
     criteria_met: []
     criteria_maybe_met: []
   - title: Paid and Protective Leave
@@ -59,10 +59,10 @@ categories:
         url: https://casetext.com/statute/code-of-alabama/title-15-criminal-procedure/chapter-23-alabama-crime-victims/article-1-crime-victims-compensation
       - text: AL Crime Victims’ Compensation Commission
         url: https://acvcc.alabama.gov
-      - text: Administrative Rules Update
+      - text: AL Crime Victim’s Compensation Commission Administrative Rules Update
         url: https://acvcc.alabama.gov/ruleupdate.htm
       - text: Alabama Victim’s Programs
-        url: https://adeca.alabama.gov/Divisions/lets/Pages/VictimsPrograms.aspx
+        url: https://adeca.alabama.gov/voca
     criteria_met:
       - 34
       - 35

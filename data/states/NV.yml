@@ -11,7 +11,7 @@ categories:
     resource_links:
       - text: Nev. Rev. Stat. § 33.018
         url: https://www.leg.state.nv.us/nrs/nrs-033.html#NRS033Sec018
-      - text: Nev. Rev. Stat. §  207.190(1)
+      - text: Nev. Rev. Stat. § 207.190(1)
         url: https://www.leg.state.nv.us/nrs/nrs-207.html#NRS207Sec190
     criteria_met: []
     criteria_maybe_met: []
@@ -20,7 +20,7 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Nev. Rev. Stat. §  608.0198
+      - text: Nev. Rev. Stat. § 608.0198
         url: https://www.leg.state.nv.us/nrs/nrs-608.html#NRS608Sec0198
     criteria_met:
       - 3
@@ -88,12 +88,12 @@ categories:
         url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec100
       - text: Nev. Rev. Stat. § 217.102
         url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec102
-      - text: Nev. Rev. Stat. §  217.110
+      - text: Nev. Rev. Stat. § 217.110
         url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec110
       - text: Nev. Rev. Stat. § 217.112 (1),(2)
         url: https://www.leg.state.nv.us/nrs/NRS-217.html#NRS217Sec112
-      - text: Nev. Rev. Stat. §  217.117
-        url: leg.state.nv.us/NRS/NRS-217.html#NRS217Sec117
+      - text: Nev. Rev. Stat. § 217.117
+        url: https://www.leg.state.nv.us/nrs/NRS-217.html#NRS217Sec117
       - text: Nev. Rev. Stat. § 217.140
         url: https://www.leg.state.nv.us/NRS/NRS-217.html#NRS217Sec140
       - text: Nev. Rev. Stat. § 217.200
@@ -119,8 +119,8 @@ categories:
     innovative_policy_idea: ~
     honorable_mention: ~
     resource_links:
-      - text: Nev. Rev. Stat. § 422A.600. https://www.leg.state.nv.us/nrs/NRS-422A.html#NRS422ASec600
-        url: Nevada
+      - text: Nev. Rev. Stat. § 422A.600
+        url: https://www.leg.state.nv.us/nrs/NRS-422A.html#NRS422ASec600
       - text: TANF State Plan, p 23
         url: https://dwss.nv.gov/uploadedFiles/dwssnvgov/content/TANF/Revised%202019%20Final%20Draft%20TANF%20State%20Plan%20in%20color%20signed%203.26.20.pdf
       - text: Nevada TANF Eligibility—Domestic Violence, p 3
@@ -151,12 +151,10 @@ categories:
     resource_links:
       - text: Nev. Rev. Stat. § 118A.345
         url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec345
-      - text: Nev. Rev. Stat. § 118A.345(2)
-        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec345
-      - text: Nev. Rev. Stat. § 118A.345(5)
+      - text: Nev. Rev. Stat. § 118A.347
         url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec347
       - text: Nev. Rev. Stat. § 118A.510(h)
-        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec51
+        url: https://www.leg.state.nv.us/nrs/nrs-118a.html#NRS118ASec510
     criteria_met:
       - 69
       - 70
