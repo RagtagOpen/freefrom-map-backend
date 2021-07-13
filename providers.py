@@ -18,3 +18,15 @@ def post_google(data):
     )
     json_response = json.loads(response.text)
     return json_response
+
+
+def get_categories_from_cms():
+    response = requests.get('http://freefrom-cms.nitro/categories.json?cache=false')
+    json_response = json.loads(response.text)
+    return json_response['data']
+
+
+def get_states_from_cms():
+    response = requests.get('http://freefrom-cms.nitro/states.json?cache=false')
+    json_response = json.loads(response.text)
+    return json_response['data']

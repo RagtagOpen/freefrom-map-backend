@@ -1,5 +1,7 @@
 import strings
 from auth import AuthError, requires_auth
+from providers import get_categories_from_cms, get_states_from_cms
+
 import os
 from flask import Flask, request, jsonify, abort
 from flask_sqlalchemy import SQLAlchemy
@@ -16,6 +18,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 import services  # noqa: E402
+import data.importer  # noqa: E402
 
 from models import (  # noqa: E402
     Category,
@@ -228,6 +231,18 @@ def submit_form(name_):
     data = request.get_json()
     form = services.submit_form_to_google(name_, data)
     return form, 201
+
+
+@app.route('/import', methods=['POST'])
+@cross_origin(headers=['Content-Type', 'Authorization'])
+def import_data():
+    categories_json = get_categories_from_cms()
+    states_json = get_states_from_cms()
+
+    data.importer.import_categories(categories_json)
+    data.importer.import_states(states_json)
+
+    return jsonify({'success': True}), 200
 
 
 # This doesn't need authentication
