@@ -26,12 +26,12 @@ def import_category(category_json):
 
     for criterion_json in category_json['criteria']:
         criterion_json['category_id'] = category_json['id']
-        import_criterion(criterion_json, category_json['id'])
+        import_criterion(criterion_json)
 
     return category.serialize(with_criteria=True)
 
 
-def import_criterion(criterion_json, category_id):
+def import_criterion(criterion_json):
     criterion = Criterion.query.get(criterion_json['id'])
     criterion = update_or_create_criterion(criterion_json, criterion=criterion)
 

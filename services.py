@@ -75,8 +75,6 @@ def update_or_create_link(data, link=None):
             link = subclass(category_id=category_id, state=state, id=data.get('id'))
         else:
             link = subclass(category_id=category_id, state=state)
-    elif category_id is not None and category_id != link.category_id:
-        raise ValueError(strings.cannot_change_category)
     elif state is not None and state != link.state:
         raise ValueError(strings.cannot_change_state)
     elif link_type is not None and not isinstance(link, subclass):
@@ -88,6 +86,8 @@ def update_or_create_link(data, link=None):
         link.url = data['url']
     if 'description' in data.keys():
         link.description = data['description']
+    if 'category_id' in data.keys():
+        link.category_id = category_id
 
     # You cannot reactivate a link after deactivating it
     if 'active' in data.keys() and not data['active']:
