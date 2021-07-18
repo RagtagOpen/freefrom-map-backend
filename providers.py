@@ -21,12 +21,18 @@ def post_google(data):
 
 
 def get_categories_from_cms():
-    response = requests.get('http://freefrom-cms.nitro/categories.json?cache=false')
+    if 'CMS_URL' not in os.environ:
+        return []
+
+    response = requests.get(f'{os.environ["CMS_URL"]}/categories.json?cache=false')
     json_response = json.loads(response.text)
     return json_response['data']
 
 
 def get_states_from_cms():
-    response = requests.get('http://freefrom-cms.nitro/states.json?cache=false')
+    if 'CMS_URL' not in os.environ:
+        return []
+
+    response = requests.get(f'{os.environ["CMS_URL"]}/states.json?cache=false')
     json_response = json.loads(response.text)
     return json_response['data']
