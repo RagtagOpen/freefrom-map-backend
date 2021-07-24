@@ -120,7 +120,8 @@ class Category(BaseMixin, Deactivatable, db.Model):
     help_text = db.Column(db.String())
     criteria = db.relationship('Criterion', backref='category', lazy=True)
 
-    def __init__(self, title=None, help_text=None):
+    def __init__(self, id=None, title=None, help_text=None):
+        self.id = id
         self.title = title
         self.help_text = help_text
         self.active = True
@@ -345,7 +346,8 @@ class Link(BaseMixin, Deactivatable, db.Model):
         'polymorphic_identity': 'link'
     }
 
-    def __init__(self, category_id, state, text=None, url=None):
+    def __init__(self, category_id, state, text=None, url=None, id=None):
+        self.id = id
         self.category_id = category_id
         self.state = state
         self.text = text
@@ -393,8 +395,8 @@ class HonorableMention(Link):
         'polymorphic_identity': 'honorable_mention'
     }
 
-    def __init__(self, category_id, state, text=None, url=None, description=None):
-        super().__init__(category_id, state, text, url)
+    def __init__(self, category_id, state, text=None, url=None, description=None, id=None):
+        super().__init__(category_id, state, text, url, id)
 
         self.description = description
         self.created_at = datetime.datetime.utcnow()
@@ -421,8 +423,8 @@ class InnovativePolicyIdea(Link):
         'polymorphic_identity': 'innovative_policy'
     }
 
-    def __init__(self, category_id, state, text=None, url=None, description=None):
-        super().__init__(category_id, state, text, url)
+    def __init__(self, category_id, state, text=None, url=None, description=None, id=None):
+        super().__init__(category_id, state, text, url, id)
         self.description = description
         self.created_at = datetime.datetime.utcnow()
 

@@ -1,6 +1,9 @@
 from models import (
     Category,
     Criterion,
+    StateGrade,
+    StateCategoryGrade,
+    Score,
     HonorableMention,
     InnovativePolicyIdea,
     ResourceLink
@@ -9,7 +12,7 @@ from providers import post_google
 import strings
 
 
-def update_or_create_category(data, category=Category()):
+def update_or_create_category(data, category=None):
     '''
     Takes a dict of data where the keys are fields of the category model.
     Valid keys are title, help_text, and active. The
@@ -17,6 +20,13 @@ def update_or_create_category(data, category=Category()):
 
     Once created, a category's category cannot be changed.
     '''
+
+    if category is None:
+        if 'id' in data:
+            category = Category(id=data.get('id'))
+        else:
+            category = Category()
+
     if 'title' in data:
         category.title = data['title']
     if 'help_text' in data:
@@ -60,9 +70,11 @@ def update_or_create_link(data, link=None):
     if link is None:
         if subclass is None:
             raise ValueError(strings.require_link_type)
-        link = subclass(category_id=category_id, state=state)
-    elif category_id is not None and category_id != link.category_id:
-        raise ValueError(strings.cannot_change_category)
+
+        if 'id' in data:
+            link = subclass(category_id=category_id, state=state, id=data.get('id'))
+        else:
+            link = subclass(category_id=category_id, state=state)
     elif state is not None and state != link.state:
         raise ValueError(strings.cannot_change_state)
     elif link_type is not None and not isinstance(link, subclass):
@@ -72,6 +84,10 @@ def update_or_create_link(data, link=None):
         link.text = data['text']
     if 'url' in data.keys():
         link.url = data['url']
+    if 'description' in data.keys():
+        link.description = data['description']
+    if 'category_id' in data.keys():
+        link.category_id = category_id
 
     # You cannot reactivate a link after deactivating it
     if 'active' in data.keys() and not data['active']:
@@ -89,8 +105,13 @@ def update_or_create_criterion(data, criterion=None):
     Once created, a criterion's category cannot be changed.
     '''
     category_id = data.get('category_id')
+
     if criterion is None:
-        criterion = Criterion(category_id=category_id)
+        if 'id' in data:
+            criterion = Criterion(id=data.get('id'), category_id=category_id)
+        else:
+            criterion = Criterion(category_id=category_id)
+
     elif category_id is not None and category_id != criterion.category_id:
         raise ValueError(strings.cannot_change_category)
 
@@ -108,6 +129,84 @@ def update_or_create_criterion(data, criterion=None):
         criterion.deactivate()
 
     return criterion.save()
+
+
+def update_or_create_score(criterion_id, state_code, meets_criterion):
+    '''
+    Takes a criterion id, a state code, and whether the state meets that criterion.
+    If the current score for this state/criterion does not match what is provided,
+    or no score exists, a new score is created with this information.
+    '''
+    score = Score.query.filter_by(criterion_id=criterion_id, state=state_code) \
+        .order_by(Score.created_at.desc()).first()
+
+    if score is None or score.meets_criterion != meets_criterion:
+        score = Score(
+            criterion_id=criterion_id,
+            state=state_code,
+            meets_criterion=meets_criterion,
+        ).save()
+
+    return score
+
+
+def update_or_create_state_category_grade(category_id, state_code, grade):
+    '''
+    Takes a category id, a state code, and the grade for that state and category.
+    If the current grade for this state/category does not match what is provided, or if no grade
+    exists, a new grade is created with this information.
+    '''
+    state_category_grade = StateCategoryGrade.query.filter_by(
+        state_code=state_code,
+        category_id=category_id,
+    ).order_by(StateCategoryGrade.created_at.desc()).first()
+
+    if state_category_grade is None or state_category_grade.grade != grade:
+        state_category_grade = StateCategoryGrade(
+            state_code=state_code,
+            category_id=category_id,
+            grade=grade,
+        ).save()
+
+    return state_category_grade
+
+
+def update_state(data, state):
+    '''
+    Updates information about the provided state, including the total, quote, overall grade,
+    scores, category grades, and links. It is not possible to create a new state.
+    '''
+    if 'total' in data:
+        state.total = data['total']
+    if 'quote' in data:
+        state.quote = data['quote']
+    if 'grade' in data and int(data['grade']) != state.grades[0].grade:
+        StateGrade(
+            state_code=state.code,
+            grade=int(data['grade'])
+        ).save()
+    if 'criteria_met' in data:
+        for criterion_met in data['criteria_met']:
+            update_or_create_score(
+                criterion_met['id'],
+                state.code,
+                criterion_met['meets_criterion'],
+            )
+    if 'category_grades' in data:
+        for category_grade_data in data['category_grades']:
+            update_or_create_state_category_grade(
+                category_grade_data['id'],
+                state.code,
+                int(category_grade_data['grade']),
+            )
+    for link_type in ['resource_link', 'honorable_mention', 'innovative_policy_idea']:
+        for link_data in data[f'{link_type}s']:
+            link = get_subclass_from_link_type(link_type).query.get(link_data['id'])
+            link_data['type'] = link_type
+
+            update_or_create_link(link_data, link)
+
+    return state.save()
 
 
 forms = [

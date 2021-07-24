@@ -18,3 +18,21 @@ def post_google(data):
     )
     json_response = json.loads(response.text)
     return json_response
+
+
+def get_categories_from_cms():
+    if 'CMS_URL' not in os.environ:
+        return []
+
+    response = requests.get(f'{os.environ["CMS_URL"]}/categories.json?cache=false')
+    json_response = json.loads(response.text)
+    return json_response['data']
+
+
+def get_states_from_cms():
+    if 'CMS_URL' not in os.environ:
+        return []
+
+    response = requests.get(f'{os.environ["CMS_URL"]}/states.json?cache=false')
+    json_response = json.loads(response.text)
+    return json_response['data']

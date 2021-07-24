@@ -251,20 +251,6 @@ class ResourceLinksTestCase(unittest.TestCase):
         })
 
     @patch('auth.is_token_valid', return_value=True)
-    def test_put_link_cannot_change_category(self, mock_auth):
-        link = ResourceLink(state=self.state1_code, category_id=self.category.id).save()
-
-        data = {
-            'category_id': 1,
-        }
-
-        response = self.client.put('/links/%i' % link.id, json=data, headers=auth_headers())
-        self.assertEqual(response.status_code, 400)
-
-        json_response = json.loads(response.data)
-        self.assertEqual(json_response['description'], strings.cannot_change_category)
-
-    @patch('auth.is_token_valid', return_value=True)
     def test_put_link_cannot_change_state(self, mock_auth):
         link = ResourceLink(state=self.state1_code, category_id=self.category.id).save()
 
