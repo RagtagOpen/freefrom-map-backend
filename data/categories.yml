@@ -1,4 +1,5 @@
 - title: Economic Abuse Defined in State Laws
+  slug: economic-abuse
   help_text: We cannot begin to address economic abuse (which occurs in 99% of intimate partner violence cases) without properly defining it in state laws.
   ideal_criteria:
     - text: "The state’s definition of intimate partner violence includes all or similar language to the following: Committing acts of economic abuse, including but not limited to: controlling, regulating, monitoring or depleting the other party’s movements, finances, economic resources, credit, access to services, basic necessities, ability to work and/or ability to pursue education or job training"
@@ -7,6 +8,7 @@
     - text: A definition that explicitly excludes economic abuse or tactics
       id: 2
 - title: Paid and Protective Leave
+  slug: paid-leave
   help_text: Survivors in the U.S. lose an estimated 8 million days of paid work each year dealing with the consequences of the intimate partner violence they’ve experienced. Paid and protected leave ensures survivors do not jeopardize their financial security or risk unemployment by taking time off.
   ideal_criteria:
     - text: Survivors are given leave from work to deal with the consequences of abuse
@@ -31,6 +33,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence has occurred in order to access leave
       id: 11
 - title: Safe Workplaces
+  slug: safe-workplace
   help_text: A safe work environment for a survivor includes protection from discrimination, the ability to request reasonable accommodations without fear of job loss or retaliation, and guaranteed confidentiality of their status as a survivor.
   ideal_criteria:
     - text: Employers are prohibited from discriminating or retaliating against employees based on their status as a survivor
@@ -51,6 +54,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence has occurred to access protections
       id: 19
 - title: Unemployment Insurance (UI) Accessibility
+  slug: ui-accessibility
   help_text: UI is a benefit to cover lost wages for authorized U.S. workers who have been laid off. Typically, those who leave or quit a job without a ‘just cause’ are ineligible to receive UI. However, survivors should remain eligible to receive UI if they need to leave or quit their job due to the harm they experience.
   ideal_criteria:
     - text: Survivors who must leave or quit work due to intimate partner violence remain eligible for benefits
@@ -63,6 +67,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence has occurred to access the program
       id: 23
 - title: Litigation Abuse Protections
+  slug: litigation-abuse
   help_text: Litigation abuse occurs when a harm-doer misuses the legal and court system to further harm and control survivors. There are necessary protections needed in the court system to prevent harm-doers from committing litigation abuse against survivors.
   ideal_criteria:
     - text: State protects survivors from litigation abuse by their harm-doer
@@ -77,6 +82,7 @@
       id: 28
   adverse_criteria: []
 - title: Designated Tort for Intimate Partner Violence
+  slug: designated-tort
   help_text: Survivors should not be held solely responsible for paying the expenses related to the harm they’ve experienced. Survivors should be afforded the right to bring a civil lawsuit against their harm-doer to recoup the costs of that harm.
   ideal_criteria:
     - text: Survivors have the right to sue their harm-doers through a designated intimate partner violence gender-based violence tort
@@ -91,6 +97,7 @@
     - text: Designated tort excludes any gender identities and sexualities
       id: 33
 - title: Victims of Crime Compensation Accessibility
+  slug: vocca
   help_text: Compensation is available in every state for victims of crime to help pay for their expenses. While there are federal limitations on how the program is operated, this category considers the areas in which states can improve the accessibility and impact of the compensation program for survivors.
   ideal_criteria:
     - text: Survivors can appeal eligibility determination
@@ -119,6 +126,7 @@
     - text: Compensation is not available to survivors with a criminal record
       id: 45
 - title: Supplemental Nutrition Assistance Program (SNAP) Accessibility
+  slug: snap
   help_text: SNAP is a federal food assistance program administered at the state-level. 80% of survivors rely on SNAP to meet their basic needs. States can take action to make SNAP more accessible to survivors through certain exemptions and/or special considerations.
   ideal_criteria:
     - text: Survivors are eligible for  exemptions or deferments from work or job training requirements
@@ -137,6 +145,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence occurred to access exemptions and / or special considerations
       id: 52
 - title: Temporary Assistance for Needy Families (TANF) Accessibility
+  slug: tanf
   help_text: TANF is a federal cash assistance program administered at the state-level. Two thirds of survivors rely on TANF to address their basic needs. States can take action to make the program more accessible to survivors through certain exemptions and / or special considerations.
   ideal_criteria:
     - text: Survivors are eligible for exemptions or deferments from work or job training requirements
@@ -151,6 +160,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence has occurred to access exemptions or special considerations
       id: 57
 - title: Safe Banking Protections
+  slug: safe-banking
   help_text: There are approximately 28.4 million survivors that are currently banked and underserved in the U.S. In fact, only half of survivors report having access to a safe bank account that is protected from their harm-doer. Survivors must be afforded protections so their money and assets are kept safe and they can begin building the financial security necessary for long-term safety.
   ideal_criteria:
     - text: Financial institutions operating within the state are required to be trained in intimate partner violence or economic abuse
@@ -165,6 +175,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence occurred to access protections
       id: 62
 - title: Coerced and Fraudulent Debt Protections
+  slug: corced-and-fraudulent-debt
   help_text: Coerced and fraudulent debt (which 52% of survivors experience) occurs when a harm-doer incurs debt in a survivors’ name without their knowledge or consent. Coerced and fraudulent debt financially devastates a survivor, damages their credit (42% of survivors report damage to their credit and an additional 14% haven’t checked their credit score) and causes additional hurdles to their financial freedom. State action must protect survivors from such debt and provide necessary relief.
   ideal_criteria:
     - text: Survivors have the right to sue their harm-doers for coerced and fraudulent debt through a designated tort
@@ -181,6 +192,7 @@
     - text: Survivors are required to produce a protective order or police report proving that intimate partner violence occurred to access protections
       id: 68
 - title: Rental Protections
+  slug: rental-protections
   help_text: Rental protections are essential to a survivor's housing security and an important part of their long-term safety. Rental protections   include the ability to terminate a lease early without penalties and omit credit scores on rental applications.
   ideal_criteria:
     - text: Survivors are eligible to terminate a lease early
@@ -201,6 +213,7 @@
     - text: Survivors are required to produce a protective order or police report proving intimate partner violence occurred to access protections
       id: 76
 - title: Alternatives to Law Enforcement Responses
+  slug: alternatives-to-law-enforcement
   help_text: Survivor experiences and research shows that involving law enforcement in responses to intimate partner violence can cause more harm to survivors and their families. Survivors should be able to decide when and how they want to involve law enforcement.
   ideal_criteria:
     - text: State has a task force or something similar to study, design and/or implement non-law enforcement responses to intimate partner violence
