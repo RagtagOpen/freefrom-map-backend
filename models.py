@@ -117,12 +117,14 @@ class Category(BaseMixin, Deactivatable, db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String())
+    slug = db.Column(db.String(), index=True)
     help_text = db.Column(db.String())
     criteria = db.relationship('Criterion', backref='category', lazy=True)
 
-    def __init__(self, id=None, title=None, help_text=None):
+    def __init__(self, id=None, title=None, slug=None, help_text=None):
         self.id = id
         self.title = title
+        self.slug = slug
         self.help_text = help_text
         self.active = True
 
