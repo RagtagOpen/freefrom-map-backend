@@ -36,3 +36,10 @@ def get_states_from_cms():
     response = requests.get(f'{os.environ["CMS_URL"]}/states.json?cache=false')
     json_response = json.loads(response.text)
     return json_response['data']
+
+def get_state_from_cms(id):
+    if 'CMS_URL' not in os.environ:
+        return []
+
+    response = requests.get(f'{os.environ["CMS_URL"]}/states/{id}.json?cache=false')
+    return json.loads(response.text)
