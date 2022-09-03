@@ -20,12 +20,13 @@ def import_states(states_json):
 
 
 def import_category(category_json):
-    category = Category.query.get(category_json['id'])
+    slug = category_json.get('slug')
+    category = Category.query.filter_by(slug=slug)
 
     category = update_or_create_category(category_json, category)
 
     for criterion_json in category_json['criteria']:
-        criterion_json['category_id'] = category_json['id']
+        criterion_json['category_id'] = category.id
         import_criterion(criterion_json)
 
     return category.serialize(with_criteria=True)

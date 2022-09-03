@@ -1,6 +1,6 @@
 import strings
 from auth import AuthError, requires_auth
-from providers import get_categories_from_cms, get_states_from_cms
+from providers import get_categories_from_cms, get_state_from_cms
 
 import os
 from flask import Flask, request, jsonify, abort
@@ -236,11 +236,16 @@ def submit_form(name_):
 @app.route('/import', methods=['POST'])
 @cross_origin(headers=['Content-Type', 'Authorization'])
 def import_data():
-    categories_json = get_categories_from_cms()
-    states_json = get_states_from_cms()
+    request_json = request.get_json()
+    uri = request_json.get('sender').get('uri')
 
-    data.importer.import_categories(categories_json)
-    data.importer.import_states(states_json)
+    if uri.__contains__('states'):
+        canonical_id = request_json.get('sender').get('canonicalId')
+        state_json = get_state_from_cms(canonical_id)
+        data.importer.import_state(state_json)
+    else:
+        categories_json = get_categories_from_cms()
+        data.importer.import_categories(categories_json)
 
     return jsonify({'success': True}), 200
 
