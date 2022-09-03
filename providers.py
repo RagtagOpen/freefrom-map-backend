@@ -37,6 +37,7 @@ def get_states_from_cms():
     json_response = json.loads(response.text)
     return json_response['data']
 
+
 def get_state_from_cms(id):
     if 'CMS_URL' not in os.environ:
         return []

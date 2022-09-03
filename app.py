@@ -237,10 +237,10 @@ def submit_form(name_):
 @cross_origin(headers=['Content-Type', 'Authorization'])
 def import_data():
     request_json = request.get_json()
-    uri = request_json.get("sender").get("uri")
+    uri = request_json.get('sender').get('uri')
 
-    if uri.__contains__("states"):
-        canonical_id = request_json.get("sender").get("canonicalId")
+    if uri.__contains__('states'):
+        canonical_id = request_json.get('sender').get('canonicalId')
         state_json = get_state_from_cms(canonical_id)
         data.importer.import_state(state_json)
     else:
